@@ -86,6 +86,10 @@ def extract_comments(driver, url, max_comments):
                 # Extract aria-label to determine if it's a top-level comment or reply
                 aria_label = element.get_attribute("arialabel")
 
+                # Extract time information
+                time_element = element.find_element(By.CSS_SELECTOR, "faceplate-timeago time")
+                time_ago = time_element.text.strip()
+
                 if "thread level" in aria_label:
                     comment_info = f"Comment thread level {depth}: Reply from {author}"
                 else:
@@ -96,10 +100,13 @@ def extract_comments(driver, url, max_comments):
                     "author": author,
                     "depth": depth,
                     "parent_id": parent_id,
-                    "comment_info": comment_info
+                    "comment_info": comment_info,
+                    "time_ago": time_ago
                 })
 
-                print(f"Extracted: {comment_info}")
+                print(f"Extracted: {comment_info} - {time_ago}")
+                print(f"Comment: {comment_text}")
+                print("-" * 50)  # Separator for better readability
 
             except NoSuchElementException:
                 print("Skipping a comment due to missing elements")
@@ -116,9 +123,10 @@ def extract_comments(driver, url, max_comments):
 
     return comments
 
+
 def generate_ai_comment(title, comments, persona):
     print("Generating AI comment... Please wait.")
-    prompt = f"{PERSONAS[persona]} Based on the following article title generate an appropriate and insightful comment response to the article title, DO NOT INTERACT WITH THE OTHER EXISTING COMMENTS IN ANY WAY, ONLY RESPOND TO THE TITLE! Use the existing comments to determine an appropriate length for your answer, if they have short answers, so should you. :\n\nTitle: {title}\n\nExisting comments:\n"
+    prompt = f"{PERSONAS[persona]} Based on the following article title generate an appropriate and insightful comment response to the article title, DO NOT INTERACT WITH THE OTHER EXISTING COMMENTS IN ANY WAY, ONLY RESPOND TO THE TITLE! Use the existing comments to determine an appropriate length for your answer, if they have short answers, so should you. :\n\n Article Title: {title}\n\nExisting comments:\n"
 
     for comment in comments:
         indent = "  " * comment["depth"]
