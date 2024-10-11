@@ -138,17 +138,19 @@ def extract_comments(driver, url, max_comments):
     custom_print(f"Extracted {len(comments)} comments in total")
     return comments
 
-def generate_ai_comment(title, comments, persona, include_comments):
+def generate_ai_comment(title, comments, persona, include_comments, ai_response_length=0):
     custom_print("Generating AI comment...")
     
+    length_instruction = f"Generate a response that is approximately {ai_response_length} words long. " if ai_response_length > 0 else ""
+    
     if include_comments:
-        prompt = f"{PERSONAS[persona]} Based on the following article title and existing comments, generate an appropriate and insightful comment response to the article title. DO NOT INTERACT WITH THE OTHER EXISTING COMMENTS IN ANY WAY, ONLY RESPOND TO THE TITLE! Use the existing comments to determine an appropriate length for your answer, if they have short answers, so should you. :\n\nTitle: {title}\n\nExisting comments:\n"
+        prompt = f"{PERSONAS[persona]} {length_instruction}Based on the following article title and existing comments, generate an appropriate and insightful comment response to the article title. DO NOT INTERACT WITH THE OTHER EXISTING COMMENTS IN ANY WAY, ONLY RESPOND TO THE TITLE! Use the existing comments to determine an appropriate length for your answer, if they have short answers, so should you. :\n\nTitle: {title}\n\nExisting comments:\n"
 
         for comment in comments:
             indent = "  " * comment["depth"]
             prompt += f"{indent}{comment['comment_info']} - {comment['time_ago']}:\n{indent}{comment['text']}\n\n"
     else:
-        prompt = f"{PERSONAS[persona]} Based on the following article title, generate an appropriate and insightful comment response. :\n\nTitle: {title}\n"
+        prompt = f"{PERSONAS[persona]} {length_instruction}Based on the following article title, generate an appropriate and insightful comment response. :\n\nTitle: {title}\n"
 
     prompt += "\nGenerated comment:"
 
@@ -249,7 +251,8 @@ def login_and_scrape_reddit(
     max_wait_time,
     custom_headers,
     persona,
-    include_comments
+    include_comments,
+    ai_response_length  
 ):
     chrome_options = Options()
     chrome_options.add_argument("--start-maximized")
@@ -323,9 +326,11 @@ def login_and_scrape_reddit(
 
                     comments = extract_comments(driver, url, max_comments)
 
-                    custom_print(f"Generating AI comment for post {index}...")
-                    ai_comment = generate_ai_comment(title, comments, persona, include_comments)
+                    
 
+                    custom_print(f"Generating AI comment for post {index}...")
+                    ai_comment = generate_ai_comment(title, comments, persona, include_comments, ai_response_length) 
+                    
                     if ai_comment:
                         custom_print(f"Waiting random time before posting comment for post {index}...")
                         wait_time = random.uniform(min_wait_time, max_wait_time)

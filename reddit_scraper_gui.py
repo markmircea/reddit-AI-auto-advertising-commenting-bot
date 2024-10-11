@@ -217,7 +217,7 @@ class RedditScraperGUI(QMainWindow):
         self.layout.addLayout(wait_time_layout)
 
         self.persona = QComboBox()
-        self.persona.addItems(["teenager", "normal", "educated", "bot"])
+        self.persona.addItems(["normal", "teenager", "educated", "bot"])
         self.layout.addWidget(QLabel("AI Persona:"))
         self.layout.addWidget(self.persona)
         
@@ -228,9 +228,7 @@ class RedditScraperGUI(QMainWindow):
         self.include_comments.setChecked(True)
         self.layout.addWidget(self.include_comments)
 
-        self.include_comments = QCheckBox("Include comments in AI prompt")
-        self.include_comments.setChecked(True)
-        self.layout.addWidget(self.include_comments)
+        
 
         # Start button
         self.start_button = QPushButton(SVGIcon(ICONS["start"]), "Start Scraping")
