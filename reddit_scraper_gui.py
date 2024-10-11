@@ -1,5 +1,4 @@
 # File: reddit_scraper_gui.py
-
 import sys
 from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, 
                              QLabel, QLineEdit, QComboBox, QSpinBox, QCheckBox, QPushButton, 
@@ -18,15 +17,27 @@ class ScraperWorker(QThread):
     def __init__(self, params):
         super().__init__()
         self.params = params
+        self.total_comments = self.calculate_total_comments()
+        self.current_comment = 0
+
+    def calculate_total_comments(self):
+        return len(self.params['subreddits']) * self.params['max_articles'] * self.params['max_comments']
 
     def run(self):
         try:
-            set_print_function(self.update_log.emit)
+            set_print_function(self.custom_print)
             all_results = login_and_scrape_reddit(**self.params)
             self.scraping_finished.emit(all_results)
         except Exception as e:
             self.update_status.emit(f"Error: {str(e)}")
             print(f"Error in ScraperWorker: {str(e)}") 
+
+    def custom_print(self, message):
+        self.update_log.emit(message)
+        if "Extracted comment" in message:
+            self.current_comment += 1
+            progress = int((self.current_comment / self.total_comments) * 100)
+            self.update_progress.emit(progress)
 
 
 class RedditScraperGUI(QMainWindow):
@@ -102,7 +113,7 @@ class RedditScraperGUI(QMainWindow):
         self.results_display.setReadOnly(True)
         self.layout.addWidget(QLabel("Results:"))
         self.layout.addWidget(self.results_display)
-
+        
     def create_input(self, label, default, is_password=False):
         layout = QHBoxLayout()
         layout.addWidget(QLabel(label))
