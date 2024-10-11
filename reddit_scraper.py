@@ -1,6 +1,7 @@
 import time
 import requests
 import json
+import random
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -240,11 +241,12 @@ def post_comment(driver, ai_comment, post_url):
 def login_and_scrape_reddit(
     username,
     password,
-    subreddits,  # Changed from 'subreddit' to 'subreddits'
+    subreddits,
     sort_type,
     max_articles,
     max_comments,
-    pause_enabled,
+    min_wait_time,
+    max_wait_time,
     custom_headers,
     persona,
     include_comments
@@ -264,6 +266,7 @@ def login_and_scrape_reddit(
 
     all_collected_info = []  # To store results from all subreddits
 
+
     try:
         custom_print("Navigating to Reddit login page...")
         driver.get("https://www.reddit.com/login/")
@@ -278,16 +281,17 @@ def login_and_scrape_reddit(
             username_field.send_keys(username)
             password_field.send_keys(password)
             
-            custom_print("Waiting for login button...")
-            login_button = wait_for_element(driver, By.CSS_SELECTOR, "button[type='submit']")
-            if login_button:
-                custom_print("Clicking login button...")
-                login_button.click()
-            custom_print("Waiting for login to complete...")
-            time.sleep(5)  # Wait for login to complete. You might want to replace this with a more robust check.
-        else:
-            custom_print("Could not find username or password field. Aborting.")
-            return []
+            custom_print("Logging in.. Waiting for articles to load...")
+            
+            try:
+                WebDriverWait(driver, 240).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, "shreddit-post"))
+                )
+                custom_print("Logged in. Articles loaded successfully")
+            except TimeoutException:
+                custom_print("Timeout waiting for login.")
+                custom_print("Closing WebDriver...")
+                driver.quit()
 
         for subreddit in subreddits:
             custom_print(f"\nStarting to scrape subreddit: r/{subreddit}")
@@ -323,6 +327,11 @@ def login_and_scrape_reddit(
                     ai_comment = generate_ai_comment(title, comments, persona, include_comments)
 
                     if ai_comment:
+                        custom_print(f"Waiting random time before posting comment for post {index}...")
+                        wait_time = random.uniform(min_wait_time, max_wait_time)
+                        custom_print(f"Waiting for {wait_time:.2f} seconds...")
+                        time.sleep(wait_time)
+                        
                         custom_print(f"Posting AI-generated comment for post {index}...")
                         post_success = post_comment(driver, ai_comment, url)
                         if not post_success:
@@ -336,10 +345,7 @@ def login_and_scrape_reddit(
                         "ai_comment": ai_comment,
                     })
 
-                    if pause_enabled:
-                        custom_print(f"Pausing for 2 seconds before next post...")
-                        time.sleep(2)  # Short pause between posts
-
+                    
                 except StaleElementReferenceException:
                     custom_print(f"Stale element reference for post {index}. Skipping...")
                 except NoSuchElementException as e:
