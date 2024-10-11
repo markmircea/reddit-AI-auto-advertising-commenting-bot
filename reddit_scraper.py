@@ -302,12 +302,19 @@ def login_and_scrape_reddit(
             subreddit_url = f"https://www.reddit.com/r/{subreddit}/{sort_type}/"
             driver.get(subreddit_url)
             custom_print("Waiting for page to load...")
-            time.sleep(5)  # Wait for page to load
+            
+            WebDriverWait(driver, 240).until(
+                EC.presence_of_element_located((By.TAG_NAME, "article"))
+                )
+            custom_print("Articles loaded.")
+
 
             custom_print("Scrolling to load more content...")
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
             custom_print("Waiting for content to load after scrolling...")
             time.sleep(5)  # Wait for content to load after scrolling
+            custom_print("Articles loaded.")
+
 
             custom_print("Finding posts...")
             posts = driver.find_elements(By.TAG_NAME, "article")

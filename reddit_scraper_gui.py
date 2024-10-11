@@ -1,8 +1,10 @@
 import sys
+import json
+import os
 from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, 
                              QLabel, QLineEdit, QComboBox, QSpinBox, QCheckBox, QPushButton, 
                              QTextEdit, QProgressBar, QListWidget, QMenuBar, QMenu, QDialog,
-                             QDialogButtonBox, QFormLayout, QMessageBox, QFrame)
+                             QDialogButtonBox, QFormLayout, QMessageBox, QFrame, QFileDialog)
 from PyQt6.QtCore import Qt, QThread, pyqtSignal, QUrl
 from PyQt6.QtGui import QAction, QIcon, QDesktopServices
 from PyQt6.QtSvg import QSvgRenderer
@@ -168,11 +170,11 @@ class RedditScraperGUI(QMainWindow):
         self.setGeometry(100, 100, 800, 600)
 
         self.create_menu_bar()
-
+        
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         self.layout = QVBoxLayout(central_widget)
-
+        
         # Input fields
         self.username = self.create_input("Username:", "bigbootyrob")
         self.password = self.create_input("Password:", "1893Apple", is_password=True)
@@ -254,6 +256,9 @@ class RedditScraperGUI(QMainWindow):
         self.layout.addWidget(self.results_display)
 
         self.apply_styles()
+        
+        self.load_settings_if_exists()
+
 
     def apply_styles(self):
         self.setStyleSheet("""
@@ -322,15 +327,30 @@ class RedditScraperGUI(QMainWindow):
                 background: none;
             }
         """)
-
+    
+    
     def create_menu_bar(self):
         menu_bar = self.menuBar()
 
         # File menu
         file_menu = menu_bar.addMenu(SVGIcon(ICONS["file"]), "&File")
-        save_action = QAction(SVGIcon(ICONS["save"]), "Save Results", self)
-        save_action.triggered.connect(self.save_results)
-        file_menu.addAction(save_action)
+        
+        save_settings_action = QAction(SVGIcon(ICONS["save"]), "Save Settings", self)
+        save_settings_action.triggered.connect(lambda: self.save_settings("settings.json"))
+        file_menu.addAction(save_settings_action)
+
+
+        import_settings_action = QAction(SVGIcon(ICONS["file"]), "Import Settings", self)
+        import_settings_action.triggered.connect(self.import_settings)
+        file_menu.addAction(import_settings_action)
+
+        export_log_action = QAction(SVGIcon(ICONS["file"]), "Export Log", self)
+        export_log_action.triggered.connect(self.export_log)
+        file_menu.addAction(export_log_action)
+
+        export_results_action = QAction(SVGIcon(ICONS["file"]), "Export Results", self)
+        export_results_action.triggered.connect(self.export_results)
+        file_menu.addAction(export_results_action)
 
         # Settings menu
         settings_menu = menu_bar.addMenu(SVGIcon(ICONS["settings"]), "&Settings")
@@ -347,6 +367,76 @@ class RedditScraperGUI(QMainWindow):
         buy_license_action.triggered.connect(self.buy_license)
         license_menu.addAction(buy_license_action)
 
+    def save_settings(self, default_filename="settings.json"):
+        settings = {
+            "username": self.username.text(),
+            "password": self.password.text(),
+            "subreddits": [self.subreddit_list.item(i).text() for i in range(self.subreddit_list.count())],
+            "sort_type": self.sort_type.currentText(),
+            "max_articles": self.max_articles.value(),
+            "max_comments": self.max_comments.value(),
+            "min_wait_time": self.min_wait_time.value(),
+            "max_wait_time": self.max_wait_time.value(),
+            "persona": self.persona.currentText(),
+            "include_comments": self.include_comments.isChecked(),
+            "ai_response_length": self.ai_response_length.value()
+        }
+
+        file_name, _ = QFileDialog.getSaveFileName(self, "Save Settings", default_filename, "JSON Files (*.json)")
+        if file_name:
+            with open(file_name, 'w') as f:
+                json.dump(settings, f, indent=4)
+            self.update_status(f"Settings saved to {file_name}")
+
+    def import_settings(self):
+        file_name, _ = QFileDialog.getOpenFileName(self, "Import Settings", "settings.json", "JSON Files (*.json)")
+        if file_name:
+            self.load_settings(file_name)
+
+    def load_settings(self, file_name):
+        try:
+            with open(file_name, 'r') as f:
+                settings = json.load(f)
+
+            self.username.setText(settings.get("username", ""))
+            self.password.setText(settings.get("password", ""))
+            self.subreddit_list.clear()
+            self.subreddit_list.addItems(settings.get("subreddits", []))
+            self.sort_type.setCurrentText(settings.get("sort_type", "hot"))
+            self.max_articles.setValue(settings.get("max_articles", 10))
+            self.max_comments.setValue(settings.get("max_comments", 10))
+            self.min_wait_time.setValue(settings.get("min_wait_time", 4))
+            self.max_wait_time.setValue(settings.get("max_wait_time", 6))
+            self.persona.setCurrentText(settings.get("persona", "normal"))
+            self.include_comments.setChecked(settings.get("include_comments", True))
+            self.ai_response_length.setValue(settings.get("ai_response_length", 0))
+
+            self.update_status(f"Settings imported from {file_name}")
+        except Exception as e:
+            QMessageBox.warning(self, "Import Error", f"Failed to import settings: {str(e)}")
+
+    def load_settings_if_exists(self):
+        if os.path.exists("settings.json"):
+            self.load_settings("settings.json")
+
+    def export_log(self):
+        file_name, _ = QFileDialog.getSaveFileName(self, "Export Log", "", "Text Files (*.txt)")
+        if file_name:
+            try:
+                with open(file_name, 'w', encoding='utf-8') as f:
+                    f.write(self.log_display.toPlainText())
+                self.update_status(f"Log exported to {file_name}")
+            except Exception as e:
+                QMessageBox.warning(self, "Export Error", f"Failed to export log: {str(e)}")
+
+    def export_results(self):
+        file_name, _ = QFileDialog.getSaveFileName(self, "Export Results", "", "Text Files (*.txt)")
+        if file_name:
+            with open(file_name, 'w', encoding='utf-8') as f:
+                f.write(self.results_display.toPlainText())
+            self.update_status(f"Results exported to {file_name}")
+
+    
     def create_input(self, label, default, is_password=False):
         layout = QHBoxLayout()
         layout.addWidget(QLabel(label))

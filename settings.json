@@ -1,0 +1,16 @@
+{
+    "username": "bigbootyrob",
+    "password": "1893Apple",
+    "subreddits": [
+        "AskReddit",
+        "AITAH"
+    ],
+    "sort_type": "hot",
+    "max_articles": 11,
+    "max_comments": 12,
+    "min_wait_time": 2,
+    "max_wait_time": 15,
+    "persona": "normal",
+    "include_comments": false,
+    "ai_response_length": 5
+}
