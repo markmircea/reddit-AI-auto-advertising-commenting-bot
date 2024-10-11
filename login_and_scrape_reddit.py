@@ -34,12 +34,25 @@ SORT_TYPES = ["hot", "new", "top", "rising"]
 def get_user_input(prompt, default, options=None):
     if options:
         print(f"{prompt} Options: {', '.join(options)}")
-    user_input = input(f"{prompt} (default: {default}): ").strip().lower()
-    if options and user_input and user_input not in options:
-        print(f"Invalid option. Using default: {default}")
-        return default
-    return user_input if user_input else default
-
+    
+    if default.lower() in ['yes', 'no']:
+        default_char = 'y' if default.lower() == 'yes' else 'n'
+        user_input = input(f"{prompt} (y/n, default: {default_char}): ").strip().lower()
+        if user_input == '':
+            return default.lower() == 'yes'
+        elif user_input in ['y', 'yes']:
+            return True
+        elif user_input in ['n', 'no']:
+            return False
+        else:
+            print(f"Invalid input. Using default: {default}")
+            return default.lower() == 'yes'
+    else:
+        user_input = input(f"{prompt} (default: {default}): ").strip().lower()
+        if options and user_input and user_input not in options:
+            print(f"Invalid option. Using default: {default}")
+            return default
+        return user_input if user_input else default
 
 def wait_for_element(driver, by, value, timeout=10):
     try:
@@ -124,13 +137,17 @@ def extract_comments(driver, url, max_comments):
     return comments
 
 
-def generate_ai_comment(title, comments, persona):
+def generate_ai_comment(title, comments, persona, include_comments):
     print("Generating AI comment... Please wait.")
-    prompt = f"{PERSONAS[persona]} Based on the following article title generate an appropriate and insightful comment response to the article title, DO NOT INTERACT WITH THE OTHER EXISTING COMMENTS IN ANY WAY, ONLY RESPOND TO THE TITLE! Use the existing comments to determine an appropriate length for your answer, if they have short answers, so should you. :\n\n Article Title: {title}\n\nExisting comments:\n"
+    
+    if include_comments:
+        prompt = f"{PERSONAS[persona]} Based on the following article title and existing comments, generate an appropriate and insightful comment response to the article title. DO NOT INTERACT WITH THE OTHER EXISTING COMMENTS IN ANY WAY, ONLY RESPOND TO THE TITLE! Use the existing comments to determine an appropriate length for your answer, if they have short answers, so should you. :\n\nTitle: {title}\n\nExisting comments:\n"
 
-    for comment in comments:
-        indent = "  " * comment["depth"]
-        prompt += f"{indent}{comment['comment_info']}:\n{indent}{comment['text']}\n\n"
+        for comment in comments:
+            indent = "  " * comment["depth"]
+            prompt += f"{indent}{comment['comment_info']} - {comment['time_ago']}:\n{indent}{comment['text']}\n\n"
+    else:
+        prompt = f"{PERSONAS[persona]} Based on the following article title, generate an appropriate and insightful comment response. :\n\nTitle: {title}\n"
 
     prompt += "\nGenerated comment:"
 
@@ -156,7 +173,6 @@ def generate_ai_comment(title, comments, persona):
     except Exception as e:
         print(f"Error generating AI comment: {str(e)}")
         return None
-    
     
 def post_comment(driver, ai_comment, post_url):
     print("Attempting to post the AI-generated comment...")
@@ -198,22 +214,24 @@ def post_comment(driver, ai_comment, post_url):
 
     # Get all cookies from the driver
     cookies = {cookie["name"]: cookie["value"] for cookie in driver.get_cookies()}
+    
+    return True
 
     # Make the POST request
-    response = requests.post(
-        f"https://www.reddit.com/svc/shreddit/t4_{post_id}/create-comment",
-        headers=headers,
-        cookies=cookies,
-        data=comment_data,
-    )
+  #  response = requests.post(
+   #     f"https://www.reddiet.com/svc/shreddit/t3_{post_id}/create-comment",
+   #     headers=headers,
+   #     cookies=cookies,
+   #     data=comment_data,
+  #  )
 
-    print(f"Response status: {response.status_code}")
+  #  print(f"Response status: {response.status_code}")
     # print(f'Response headers: {response.headers}')
 
-    if response.status_code == 200:
-        return True
-    else:
-        return False
+  #  if response.status_code == 200:
+  #      return True
+  #  else:
+  #      return False
 
 
 def login_and_scrape_reddit(
@@ -226,6 +244,7 @@ def login_and_scrape_reddit(
     pause_enabled,
     custom_headers,
     persona,
+    include_comments
 ):
     chrome_options = Options()
     chrome_options.add_argument("--start-maximized")
@@ -299,13 +318,13 @@ def login_and_scrape_reddit(
                 )
 
                 # Generate AI comment
-                ai_comment = generate_ai_comment(title, comments, persona)
+                ai_comment = generate_ai_comment(title, comments, persona, include_comments)
 
                 if ai_comment:
                     print(f"AI-generated comment ({persona} persona): {ai_comment}")
                     post_success = post_comment(
                         driver, ai_comment, url
-                    )  # Updated to include url
+                    )  
                     if not post_success:
                         print("Failed to post comment after multiple attempts.")
 
@@ -358,12 +377,11 @@ def main():
             "Enter the maximum number of comments to scrape per article", "10"
         )
     )
-    pause_enabled = (
-        get_user_input("Enable pausing between posts? (yes/no)", "no").lower() == "yes"
-    )
+    pause_enabled = get_user_input("Enable pausing between posts?", "no")
     persona = get_user_input(
         "Choose AI response persona", "normal", list(PERSONAS.keys())
     )
+    include_comments = get_user_input("Include comments in AI prompt?", "yes")
 
     header_options = [
         "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
@@ -393,6 +411,7 @@ def main():
         pause_enabled,
         custom_headers,
         persona,
+        include_comments
     )
 
     # Display summary of collected information
