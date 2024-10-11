@@ -252,13 +252,23 @@ def login_and_scrape_reddit(
     custom_headers,
     persona,
     include_comments,
-    ai_response_length  
+    ai_response_length,
+    proxy_settings
+
 ):
     chrome_options = Options()
     chrome_options.add_argument("--start-maximized")
 
     for header in custom_headers:
         chrome_options.add_argument(f"--{header}")
+        #Proxy settings if enabled
+    if proxy_settings.get("enabled", False):
+        proxy_string = f"{proxy_settings['type'].lower()}://{proxy_settings['host']}:{proxy_settings['port']}"
+        chrome_options.add_argument(f'--proxy-server={proxy_string}')
+
+        # If username and password are provided, set up authentication
+        if proxy_settings.get("username") and proxy_settings.get("password"):
+            chrome_options.add_argument(f"--proxy-auth={proxy_settings['username']}:{proxy_settings['password']}")
 
     try:
         driver = webdriver.Chrome(options=chrome_options)

@@ -85,6 +85,57 @@ class ScraperWorker(QThread):
             progress = int((self.current_comment / self.total_comments) * 100)
             self.update_progress.emit(progress)
             
+class ProxySettingsDialog(QDialog):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Proxy Settings")
+        self.setModal(True)
+
+        layout = QFormLayout(self)
+
+        self.proxy_enabled = QCheckBox("Enable Proxy")
+        self.proxy_type = QComboBox()
+        self.proxy_type.addItems(["HTTP", "HTTPS", "SOCKS4", "SOCKS5"])
+        self.proxy_host = QLineEdit()
+        self.proxy_port = QSpinBox()
+        self.proxy_port.setRange(1, 65535)
+        self.proxy_username = QLineEdit()
+        self.proxy_password = QLineEdit()
+        self.proxy_password.setEchoMode(QLineEdit.EchoMode.Password)
+
+        layout.addRow("Enable Proxy:", self.proxy_enabled)
+        layout.addRow("Proxy Type:", self.proxy_type)
+        layout.addRow("Proxy Host:", self.proxy_host)
+        layout.addRow("Proxy Port:", self.proxy_port)
+        layout.addRow("Username:", self.proxy_username)
+        layout.addRow("Password:", self.proxy_password)
+
+        buttons = QDialogButtonBox(
+            QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel,
+            Qt.Orientation.Horizontal, self)
+        buttons.accepted.connect(self.accept)
+        buttons.rejected.connect(self.reject)
+        layout.addRow(buttons)
+
+    def get_proxy_settings(self):
+        return {
+            "enabled": self.proxy_enabled.isChecked(),
+            "type": self.proxy_type.currentText(),
+            "host": self.proxy_host.text(),
+            "port": self.proxy_port.value(),
+            "username": self.proxy_username.text(),
+            "password": self.proxy_password.text()
+        }
+
+    def set_proxy_settings(self, settings):
+        self.proxy_enabled.setChecked(settings.get("enabled", False))
+        self.proxy_type.setCurrentText(settings.get("type", "HTTP"))
+        self.proxy_host.setText(settings.get("host", ""))
+        self.proxy_port.setValue(settings.get("port", 8080))
+        self.proxy_username.setText(settings.get("username", ""))
+        self.proxy_password.setText(settings.get("password", ""))            
+
+
 class TitleBar(QWidget):
     def __init__(self, parent):
         super().__init__()
@@ -170,7 +221,9 @@ class RedditScraperGUI(QMainWindow):
         self.setGeometry(100, 100, 800, 600)
 
         self.create_menu_bar()
-        
+        self.proxy_settings = {}  # Add this line to store proxy settings
+
+
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         self.layout = QVBoxLayout(central_widget)
@@ -201,8 +254,8 @@ class RedditScraperGUI(QMainWindow):
         self.layout.addWidget(QLabel("Sort Type:"))
         self.layout.addWidget(self.sort_type)
 
-        self.max_articles = self.create_spinbox("Max Articles per Subreddit:", 1, 100, 10)
-        self.max_comments = self.create_spinbox("Max Comments per Article:", 1, 50, 10)
+        self.max_articles = self.create_spinbox("Max Articles per Subreddit:", 1, 1000, 10)
+        self.max_comments = self.create_spinbox("Max Comments per Article:", 1, 1000, 10)
         
         # Added new input fields for random wait time
         wait_time_layout = QHBoxLayout()
@@ -224,7 +277,7 @@ class RedditScraperGUI(QMainWindow):
         self.layout.addWidget(self.persona)
         
         # AI response length
-        self.ai_response_length = self.create_spinbox("AI Response Length (words, 0 for default):", 0, 1000, 0)
+        self.ai_response_length = self.create_spinbox("AI Response Length (in words, 0 for default-auto):", 0, 1000, 0)
 
         self.include_comments = QCheckBox("Include comments in AI prompt")
         self.include_comments.setChecked(True)
@@ -328,7 +381,13 @@ class RedditScraperGUI(QMainWindow):
             }
         """)
     
-    
+    def open_proxy_settings(self):
+        dialog = ProxySettingsDialog(self)
+        dialog.set_proxy_settings(self.proxy_settings)
+        if dialog.exec() == QDialog.DialogCode.Accepted:
+            self.proxy_settings = dialog.get_proxy_settings()
+            self.update_status("Proxy settings updated")
+            
     def create_menu_bar(self):
         menu_bar = self.menuBar()
 
@@ -357,7 +416,8 @@ class RedditScraperGUI(QMainWindow):
         proxy_action = QAction(SVGIcon(ICONS["settings"]), "Proxy Settings", self)
         proxy_action.triggered.connect(self.open_proxy_settings)
         settings_menu.addAction(proxy_action)
-
+        
+        
         # License menu
         license_menu = menu_bar.addMenu(SVGIcon(ICONS["license"]), "&License")
         enter_key_action = QAction(SVGIcon(ICONS["key"]), "Enter License Key", self)
@@ -379,7 +439,8 @@ class RedditScraperGUI(QMainWindow):
             "max_wait_time": self.max_wait_time.value(),
             "persona": self.persona.currentText(),
             "include_comments": self.include_comments.isChecked(),
-            "ai_response_length": self.ai_response_length.value()
+            "ai_response_length": self.ai_response_length.value(),
+            "proxy_settings": self.proxy_settings, 
         }
 
         file_name, _ = QFileDialog.getSaveFileName(self, "Save Settings", default_filename, "JSON Files (*.json)")
@@ -410,7 +471,7 @@ class RedditScraperGUI(QMainWindow):
             self.persona.setCurrentText(settings.get("persona", "normal"))
             self.include_comments.setChecked(settings.get("include_comments", True))
             self.ai_response_length.setValue(settings.get("ai_response_length", 0))
-
+            self.proxy_settings = settings.get("proxy_settings", {}) 
             self.update_status(f"Settings imported from {file_name}")
         except Exception as e:
             QMessageBox.warning(self, "Import Error", f"Failed to import settings: {str(e)}")
@@ -493,7 +554,8 @@ class RedditScraperGUI(QMainWindow):
             "persona": self.persona.currentText(),
             "include_comments": self.include_comments.isChecked(),
             "custom_headers": [],
-            "ai_response_length": self.ai_response_length.value()  # Add this line
+            "ai_response_length": self.ai_response_length.value(),
+            "proxy_settings": self.proxy_settings
         }
 
 
@@ -531,8 +593,11 @@ class RedditScraperGUI(QMainWindow):
         QMessageBox.information(self, "Save Results", "Save functionality not implemented yet.")
 
     def open_proxy_settings(self):
-        # Implement proxy settings dialog
-        QMessageBox.information(self, "Proxy Settings", "Proxy settings functionality not implemented yet.")
+        dialog = ProxySettingsDialog(self)
+        dialog.set_proxy_settings(self.proxy_settings)
+        if dialog.exec() == QDialog.DialogCode.Accepted:
+            self.proxy_settings = dialog.get_proxy_settings()
+            self.update_status("Proxy settings updated")
 
     def enter_license_key(self):
         dialog = LicenseDialog(self)

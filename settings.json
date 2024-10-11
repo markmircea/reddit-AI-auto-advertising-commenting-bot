@@ -5,12 +5,20 @@
         "AskReddit",
         "AITAH"
     ],
-    "sort_type": "hot",
-    "max_articles": 11,
-    "max_comments": 12,
-    "min_wait_time": 2,
-    "max_wait_time": 15,
+    "sort_type": "rising",
+    "max_articles": 99,
+    "max_comments": 50,
+    "min_wait_time": 999,
+    "max_wait_time": 999,
     "persona": "normal",
     "include_comments": false,
-    "ai_response_length": 5
+    "ai_response_length": 5,
+    "proxy_settings": {
+        "enabled": false,
+        "type": "HTTP",
+        "host": "1212",
+        "port": 8080,
+        "username": "",
+        "password": ""
+    }
 }
