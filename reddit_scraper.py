@@ -240,7 +240,7 @@ def post_comment(driver, ai_comment, post_url):
 def login_and_scrape_reddit(
     username,
     password,
-    subreddit,
+    subreddits,  # Changed from 'subreddit' to 'subreddits'
     sort_type,
     max_articles,
     max_comments,
@@ -249,7 +249,6 @@ def login_and_scrape_reddit(
     persona,
     include_comments
 ):
-    custom_print("Initializing Chrome WebDriver...")
     chrome_options = Options()
     chrome_options.add_argument("--start-maximized")
 
@@ -263,7 +262,7 @@ def login_and_scrape_reddit(
         custom_print(f"Error initializing WebDriver: {e}")
         return []
 
-    collected_info = []
+    all_collected_info = []  # To store results from all subreddits
 
     try:
         custom_print("Navigating to Reddit login page...")
@@ -290,59 +289,66 @@ def login_and_scrape_reddit(
             custom_print("Could not find username or password field. Aborting.")
             return []
 
-        custom_print(f"Navigating to subreddit: r/{subreddit}, sort type: {sort_type}")
-        subreddit_url = f"https://www.reddit.com/r/{subreddit}/{sort_type}/"
-        driver.get(subreddit_url)
-        custom_print("Waiting for page to load...")
-        time.sleep(5)  # Wait for page to load
+        for subreddit in subreddits:
+            custom_print(f"\nStarting to scrape subreddit: r/{subreddit}")
+            custom_print(f"Navigating to subreddit: r/{subreddit}, sort type: {sort_type}")
+            subreddit_url = f"https://www.reddit.com/r/{subreddit}/{sort_type}/"
+            driver.get(subreddit_url)
+            custom_print("Waiting for page to load...")
+            time.sleep(5)  # Wait for page to load
 
-        custom_print("Scrolling to load more content...")
-        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        custom_print("Waiting for content to load after scrolling...")
-        time.sleep(5)  # Wait for content to load after scrolling
+            custom_print("Scrolling to load more content...")
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+            custom_print("Waiting for content to load after scrolling...")
+            time.sleep(5)  # Wait for content to load after scrolling
 
-        custom_print("Finding posts...")
-        posts = driver.find_elements(By.TAG_NAME, "article")
-        custom_print(f"Found {len(posts)} posts")
+            custom_print("Finding posts...")
+            posts = driver.find_elements(By.TAG_NAME, "article")
+            custom_print(f"Found {len(posts)} posts")
 
-        for index, post in enumerate(posts[:max_articles], 1):
-            try:
-                custom_print(f"Processing post {index}...")
-                title = post.get_attribute("aria-label")
-                shreddit_post = post.find_element(By.TAG_NAME, "shreddit-post")
-                url = "https://www.reddit.com" + shreddit_post.get_attribute("permalink")
+            collected_info = []
+            for index, post in enumerate(posts[:max_articles], 1):
+                try:
+                    custom_print(f"Processing post {index}...")
+                    title = post.get_attribute("aria-label")
+                    shreddit_post = post.find_element(By.TAG_NAME, "shreddit-post")
+                    url = "https://www.reddit.com" + shreddit_post.get_attribute("permalink")
 
-                custom_print(f"Post {index} - Title: {title}")
-                custom_print(f"Post {index} - URL: {url}")
+                    custom_print(f"Post {index} - Title: {title}")
+                    custom_print(f"Post {index} - URL: {url}")
 
-                comments = extract_comments(driver, url, max_comments)
+                    comments = extract_comments(driver, url, max_comments)
 
-                custom_print(f"Generating AI comment for post {index}...")
-                ai_comment = generate_ai_comment(title, comments, persona, include_comments)
+                    custom_print(f"Generating AI comment for post {index}...")
+                    ai_comment = generate_ai_comment(title, comments, persona, include_comments)
 
-                if ai_comment:
-                    custom_print(f"Posting AI-generated comment for post {index}...")
-                    post_success = post_comment(driver, ai_comment, url)
-                    if not post_success:
-                        custom_print(f"Failed to post comment for post {index}")
+                    if ai_comment:
+                        custom_print(f"Posting AI-generated comment for post {index}...")
+                        post_success = post_comment(driver, ai_comment, url)
+                        if not post_success:
+                            custom_print(f"Failed to post comment for post {index}")
 
-                collected_info.append({
-                    "title": title,
-                    "url": url,
-                    "comments": comments,
-                    "ai_comment": ai_comment,
-                })
+                    collected_info.append({
+                        "subreddit": subreddit,
+                        "title": title,
+                        "url": url,
+                        "comments": comments,
+                        "ai_comment": ai_comment,
+                    })
 
-                if pause_enabled:
-                    custom_print(f"Pausing for 2 seconds before next post...")
-                    time.sleep(2)  # Short pause between posts
+                    if pause_enabled:
+                        custom_print(f"Pausing for 2 seconds before next post...")
+                        time.sleep(2)  # Short pause between posts
 
-            except StaleElementReferenceException:
-                custom_print(f"Stale element reference for post {index}. Skipping...")
-            except NoSuchElementException as e:
-                custom_print(f"Element not found for post {index}: {str(e)}. Skipping...")
-            except Exception as e:
-                custom_print(f"An error occurred processing post {index}: {str(e)}. Skipping...")
+                except StaleElementReferenceException:
+                    custom_print(f"Stale element reference for post {index}. Skipping...")
+                except NoSuchElementException as e:
+                    custom_print(f"Element not found for post {index}: {str(e)}. Skipping...")
+                except Exception as e:
+                    custom_print(f"An error occurred processing post {index}: {str(e)}. Skipping...")
+
+            all_collected_info.extend(collected_info)
+            custom_print(f"Scraping completed for r/{subreddit}. Total posts processed: {len(collected_info)}")
 
     except Exception as e:
         custom_print(f"An unexpected error occurred: {str(e)}")
@@ -350,5 +356,5 @@ def login_and_scrape_reddit(
         custom_print("Closing WebDriver...")
         driver.quit()
 
-    custom_print(f"Scraping completed. Total posts processed: {len(collected_info)}")
-    return collected_info
+    custom_print(f"Scraping completed for all subreddits. Total posts processed: {len(all_collected_info)}")
+    return all_collected_info
