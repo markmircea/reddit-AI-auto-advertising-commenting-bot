@@ -5,7 +5,7 @@
         "AskReddit"
     ],
     "sort_type": "hot",
-    "max_articles": 50,
+    "max_articles": 500,
     "max_comments": 0,
     "min_wait_time": 4,
     "max_wait_time": 6,
@@ -19,7 +19,9 @@
         "persona": "normal",
         "custom_model": "google/gemma-2-9b-it:free",
         "custom_prompt": "I want you to generate an useful comment based on the {title} of this reddit post that incorporates my {website}. My {website} is about {product}. You should reply with the comment directly in a humorus fasion while also seeming human {length}",
-        "product_description": "food",
-        "website_address": "food.com"
+        "product_keywords": "food",
+        "website_address": "food.com",
+        "similarity_threshold": 0.5,
+        "similarity_method": "Simple (simple_semantic_similarity)"
     }
 }

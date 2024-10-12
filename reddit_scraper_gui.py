@@ -5,7 +5,7 @@ import random
 import time
 import traceback
 from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, 
-                             QLabel, QLineEdit, QComboBox, QSpinBox, QCheckBox, QPushButton, 
+                             QLabel, QLineEdit, QComboBox, QSpinBox, QDoubleSpinBox, QCheckBox, QPushButton, 
                              QTextEdit, QProgressBar, QListWidget, QMenuBar, QMenu, QDialog,
                              QDialogButtonBox, QFormLayout, QMessageBox, QFrame, QFileDialog, QPlainTextEdit, QGroupBox, QInputDialog, QTableWidget, QTableWidgetItem, QHeaderView,
                              QStyledItemDelegate, QStyleOptionViewItem, QStyle)
@@ -40,6 +40,7 @@ ICONS = {
     "start": '''<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>'''
 }
 
+
 class HTMLDelegate(QStyledItemDelegate):
     def paint(self, painter, option, index):
         options = QStyleOptionViewItem(option)
@@ -59,18 +60,20 @@ class HTMLDelegate(QStyledItemDelegate):
         painter.save()
         painter.translate(textRect.topLeft())
         painter.setClipRect(textRect.translated(-textRect.topLeft()))
+        doc.setTextWidth(textRect.width())
         doc.documentLayout().draw(painter, ctx)
         painter.restore()
 
     def sizeHint(self, option, index):
         options = QStyleOptionViewItem(option)
         self.initStyleOption(options, index)
-        
+    
         doc = QTextDocument()
         doc.setHtml(options.text)
         doc.setTextWidth(options.rect.width())
-        
+    
         return QSize(int(doc.idealWidth()), int(doc.size().height()))
+
 
 class CommentReviewDialog(QDialog):
     def __init__(self, comments, parent=None):
@@ -81,30 +84,31 @@ class CommentReviewDialog(QDialog):
         layout = QVBoxLayout(self)
 
         self.table = QTableWidget(self)
-        self.table.setColumnCount(5)
-        self.table.setHorizontalHeaderLabels(["Post", "Subreddit", "AI Comment", "Edit", "Keep"])
-        self.table.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.ResizeToContents)
-        self.table.horizontalHeader().setSectionResizeMode(2, QHeaderView.ResizeMode.Stretch)
-        self.table.setItemDelegateForColumn(2, HTMLDelegate())
+        self.table.setColumnCount(6)  # Added an extra column for number of comments
+        self.table.setHorizontalHeaderLabels(["Post", "Subreddit", "Number of Comments", "AI Comment", "Edit", "Keep"])
+        self.table.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Interactive)
+        self.table.horizontalHeader().setSectionResizeMode(3, QHeaderView.ResizeMode.Stretch)
+        self.table.setItemDelegateForColumn(3, HTMLDelegate())
 
         for i, comment in enumerate(comments):
             self.table.insertRow(i)
             self.table.setItem(i, 0, QTableWidgetItem(comment['title']))
             self.table.setItem(i, 1, QTableWidgetItem(comment['subreddit']))
+            self.table.setItem(i, 2, QTableWidgetItem(str(len(comment.get('comments', [])))))
             
             full_comment = comment['ai_comment'].replace('\n', '<br>')
             comment_item = QTableWidgetItem(full_comment)
             comment_item.setData(Qt.ItemDataRole.UserRole, comment['url'])  # Store URL in user role
-            self.table.setItem(i, 2, comment_item)
+            self.table.setItem(i, 3, comment_item)
 
             edit_button = QPushButton("Edit")
             edit_button.clicked.connect(lambda _, row=i: self.edit_comment(row))
-            self.table.setCellWidget(i, 3, edit_button)
+            self.table.setCellWidget(i, 4, edit_button)
 
             checkbox = QTableWidgetItem()
             checkbox.setFlags(Qt.ItemFlag.ItemIsUserCheckable | Qt.ItemFlag.ItemIsEnabled)
             checkbox.setCheckState(Qt.CheckState.Checked)
-            self.table.setItem(i, 4, checkbox)
+            self.table.setItem(i, 5, checkbox)
 
         self.table.resizeRowsToContents()
         layout.addWidget(self.table)
@@ -126,7 +130,7 @@ class CommentReviewDialog(QDialog):
             new_comment_html = "<p style='white-space: pre-wrap;'>{}</p>".format(new_comment.replace('\n', '<br>'))
             self.table.setItem(row, 2, QTableWidgetItem(new_comment_html))
             self.table.resizeRowToContents(row)
-
+            
     def get_selected_comments(self):
         selected_comments = []
         for i in range(self.table.rowCount()):
@@ -141,6 +145,20 @@ class CommentReviewDialog(QDialog):
                 }
                 selected_comments.append(comment)
         return selected_comments
+
+    def resizeEvent(self, event):
+        super().resizeEvent(event)
+        self.table.resizeRowsToContents()
+
+    def showEvent(self, event):
+        super().showEvent(event)
+        # Set initial column widths
+        total_width = self.table.viewport().width()
+        self.table.setColumnWidth(0, int(total_width * 0.2))  # Post
+        self.table.setColumnWidth(1, int(total_width * 0.1))  # Subreddit
+        self.table.setColumnWidth(2, int(total_width * 0.5))  # AI Comment
+        self.table.setColumnWidth(3, int(total_width * 0.1))  # Edit
+        self.table.setColumnWidth(4, int(total_width * 0.1))  # Keep
 
 class CommentEditDialog(QDialog):
     def __init__(self, comment, parent=None):
@@ -219,8 +237,10 @@ class ScraperWorker(QThread):
                 persona=self.params['persona'],
                 custom_model=self.params['custom_model'],
                 custom_prompt=self.params['custom_prompt'],
-                product_description=self.params['product_description'],
-                website_address=self.params['website_address']
+                product_keywords=self.params['product_keywords'],
+                website_address=self.params['website_address'],
+                similarity_threshold=self.params['similarity_threshold'],  # Add this line
+                similarity_method=self.params['similarity_method']
             )
             self.update_log.emit("Scraping process completed.")
             self.scraping_finished.emit(all_results, self.driver)
@@ -473,7 +493,7 @@ class AdvancedSettingsDialog(QDialog):
         self.setWindowTitle("Advanced Settings")
         self.setModal(True)
         self.setMinimumWidth(500)
-        self.setMinimumHeight(500)  # Increased height to accommodate new fields
+        self.setMinimumHeight(550)  # Increased height to accommodate new fields
 
         layout = QVBoxLayout(self)
 
@@ -499,10 +519,22 @@ class AdvancedSettingsDialog(QDialog):
         self.custom_model.setPlaceholderText("e.g., google/gemma-2-9b-it:free")
         form_layout.addRow("Custom OpenRouter Model:", self.custom_model)
 
-        # New fields for product description and website address
-        self.product_description = QLineEdit(self)
-        self.product_description.setPlaceholderText("Enter product keywords")
-        form_layout.addRow("Product Description:", self.product_description)
+        # New fields for product keywords and website address
+        self.product_keywords = QLineEdit(self)
+        self.product_keywords.setPlaceholderText("Enter product keywords (seperated by , )")
+        form_layout.addRow("Product Keywords:", self.product_keywords)
+        
+        # Add similarity threshold input
+        self.similarity_threshold = QDoubleSpinBox(self)
+        self.similarity_threshold.setRange(0.0, 1.0)
+        self.similarity_threshold.setSingleStep(0.01)
+        self.similarity_threshold.setValue(0.5)  # Default value
+        form_layout.addRow("Similarity Threshold:", self.similarity_threshold)
+        
+        self.similarity_method = QComboBox(self)
+        self.similarity_method.addItems(["TensorFlow (semantic_similarity)", "Simple (simple_semantic_similarity)"])
+        form_layout.addRow("Similarity Method:", self.similarity_method)
+
 
         self.website_address = QLineEdit(self)
         self.website_address.setPlaceholderText("Enter website URL")
@@ -533,8 +565,10 @@ class AdvancedSettingsDialog(QDialog):
             "persona": self.persona.currentText(),
             "custom_model": self.custom_model.text(),
             "custom_prompt": self.custom_prompt.toPlainText(),
-            "product_description": self.product_description.text(),
-            "website_address": self.website_address.text()
+            "product_keywords": self.product_keywords.text(),
+            "website_address": self.website_address.text(),
+            "similarity_threshold": self.similarity_threshold.value(),
+            "similarity_method": self.similarity_method.currentText(),
         }
 
     def set_settings(self, settings):
@@ -544,14 +578,20 @@ class AdvancedSettingsDialog(QDialog):
         self.persona.setCurrentText(settings.get("persona", "normal"))
         self.custom_model.setText(settings.get("custom_model", ""))
         self.custom_prompt.setPlainText(settings.get("custom_prompt", ""))
-        self.product_description.setText(settings.get("product_description", ""))
+        self.product_keywords.setText(settings.get("product_keywords", ""))
         self.website_address.setText(settings.get("website_address", ""))
+        self.similarity_threshold.setValue(settings.get("similarity_threshold", 0.5))
+        self.similarity_method.setCurrentText(settings.get("similarity_method", "TensorFlow (semantic_similarity)"))
 
 class RedditScraperGUI(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Reddit AI Commenter Pro")
-        self.setGeometry(100, 100, 800, 600)
+                # Get the available geometry of the screen
+        screen_geometry = QApplication.primaryScreen().availableGeometry()
+        
+        # Set the window width to 800 and height to the maximum available height
+        self.setGeometry(100, 100, 800, screen_geometry.height())
 
         self.create_menu_bar()
         self.proxy_settings = {}
@@ -561,7 +601,9 @@ class RedditScraperGUI(QMainWindow):
             "scroll_retries": 2,
             "button_retries": 2,
             "persona": "normal",
-            "custom_model": "google/gemma-2-9b-it:free"
+            "custom_model": "google/gemma-2-9b-it:free",
+            "product_keywords": "",
+            "similarity_threshold": 0.5,
         }
 
         
@@ -607,6 +649,8 @@ class RedditScraperGUI(QMainWindow):
         
         self.subreddit_list = QListWidget()
         self.subreddit_list.addItem("AskReddit")  # Default entry
+        self.subreddit_list.setMaximumHeight(100)  # Limit height to approximately 3 input boxes
+
         self.layout.addWidget(self.subreddit_list)
         
         self.sort_type = QComboBox()
@@ -680,6 +724,7 @@ class RedditScraperGUI(QMainWindow):
         self.log_display.setReadOnly(True)
         self.layout.addWidget(QLabel("Log:"))
         self.layout.addWidget(self.log_display)
+        self.log_display.setMinimumHeight(300)
 
         # Results display
         self.results_display = QTextEdit()
@@ -996,7 +1041,10 @@ class RedditScraperGUI(QMainWindow):
             "do_not_post": self.do_not_post.isChecked(),
             "openrouter_api_key": self.advanced_settings.get("openrouter_api_key", "").strip(),
             "custom_prompt": self.advanced_settings.get("custom_prompt", "").strip(),
-      
+            "product_keywords": self.advanced_settings.get("product_keywords", ""),
+            "similarity_threshold": self.advanced_settings.get("similarity_threshold", 0.5),
+            "similarity_method": self.advanced_settings.get("similarity_method", "TensorFlow (semantic_similarity)"),
+
             **self.advanced_settings  # Include advanced settings
         }
 
@@ -1048,10 +1096,19 @@ class RedditScraperGUI(QMainWindow):
             except Exception as e:
                 self.update_log(f"Error posting comment: {str(e)}")
                 self.update_log(f"Full error details: {traceback.format_exc()}")
+            
+            # Force the GUI to update after each comment
+            QApplication.processEvents()
 
         self.update_status("Finished posting selected comments")
         self.update_log("All selected comments have been processed.")
         self.start_button.setEnabled(True)
+
+    def update_log(self, message):
+        self.log_display.append(message)
+        self.log_display.verticalScrollBar().setValue(self.log_display.verticalScrollBar().maximum())
+        # Force the GUI to update immediately
+        QApplication.processEvents()
             
     def update_progress(self, value):
         self.progress_bar.setValue(value)
@@ -1059,19 +1116,20 @@ class RedditScraperGUI(QMainWindow):
     def update_status(self, status):
         self.status_label.setText(status)
 
-    def update_log(self, message):
-        self.log_display.append(message)
-        self.log_display.verticalScrollBar().setValue(self.log_display.verticalScrollBar().maximum())
+    
 
     def display_results(self, results):
+        self.results_display.clear()
         for post in results:
             self.results_display.append(f"Subreddit: r/{post['subreddit']}")
             self.results_display.append(f"Title: {post['title']}")
             self.results_display.append(f"URL: {post['url']}")
-            self.results_display.append(f"Number of comments: {len(post['comments'])}")
-            self.results_display.append(f"AI comment: {post['ai_comment']}")
+            if 'comments' in post:
+                self.results_display.append(f"Number of comments: {len(post['comments'])}")
+            self.results_display.append(f"AI comment: {post['ai_comment'][:100]}...")  # Display first 100 chars of AI comment
             self.results_display.append("\n")
 
+        self.results_display.append(f"Total posts scraped: {len(results)}")
         self.start_button.setEnabled(True)
         self.status_label.setText("Scraping completed")
 

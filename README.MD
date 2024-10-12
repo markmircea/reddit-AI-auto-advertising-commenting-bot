@@ -32,6 +32,16 @@ Follow these steps to run your Python script on a new computer:
      ```
      pip install package_name
      ```
+     Install keyword vector
+     ```
+     python -m spacy download en_core_web_lg
+     ```
+   - Make sure Tensor flow version matches spacy
+     ```
+     pip install --upgrade spacy tensorflow
+     ```
+
+   - If you are having issues with crashing, disable TensorFlow neural word vectors, or modify the threshold to be higher.
 
 4. **Transfer your script**
    - Copy your Python script file(s) to the new computer

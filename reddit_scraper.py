@@ -3,6 +3,11 @@ import requests
 import json
 import random
 import os
+import spacy
+import logging
+import re
+import nltk
+from nltk.stem import PorterStemmer
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
@@ -32,6 +37,74 @@ PERSONAS = {
 }
 
 SORT_TYPES = ["hot", "new", "top", "rising"]
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+# Load the English model (do this at the beginning of your script)
+nlp = spacy.load("en_core_web_md")
+nltk.download('punkt_tab', quiet=True)
+
+def semantic_similarity(keywords, title, threshold=0.5):
+    if nlp is None:
+        logger.error("spaCy model not loaded. Skipping semantic similarity check.")
+        return False
+
+    try:
+        title_doc = nlp(title)
+        for keyword in keywords:
+            try:
+                keyword_doc = nlp(keyword)
+                similarity = title_doc.similarity(keyword_doc)
+                custom_print(f"Similarity between '{keyword}' and '{title}': {similarity}")
+                if similarity > threshold:
+                    return True
+            except ValueError as e:
+                custom_print(f"Error processing keyword '{keyword}': {str(e)}")
+                continue
+    except Exception as e:
+        custom_print(f"Error in semantic_similarity function: {str(e)}")
+        return False
+
+    return False
+
+# Initialize the Porter Stemmer
+ps = PorterStemmer()
+
+def preprocess_text(text):
+    # Convert to lowercase
+    text = text.lower()
+    # Remove apostrophes
+    text = text.replace("'", "")
+    # Remove non-alphanumeric characters and replace with space
+    text = re.sub(r'[^a-zA-Z0-9\s]', ' ', text)
+    # Tokenize the text
+    tokens = nltk.word_tokenize(text)
+    # Stem the tokens
+    stemmed_tokens = [ps.stem(token) for token in tokens]
+    return ' '.join(stemmed_tokens)
+
+def simple_semantic_similarity(keywords, title):
+    try:
+        # Preprocess the title
+        processed_title = preprocess_text(title)
+        
+        # Preprocess and stem each keyword
+        processed_keywords = [preprocess_text(keyword) for keyword in keywords]
+        
+        # Check if any processed keyword is in the processed title
+        for keyword in processed_keywords:
+            if keyword in processed_title:
+                logger.info(f"Keyword '{keyword}' found in title: '{title}'")
+                return True
+        
+        logger.info(f"No keywords found in title: '{title}'")
+        return False
+
+    except Exception as e:
+        logger.error(f"Error in simple_semantic_similarity function: {str(e)}")
+        return False
+
+    
 
 custom_print_function = print
 
@@ -286,11 +359,11 @@ def extract_comments(driver, url, max_comments, scroll_retries, button_retries):
 
     return comments
 
-def generate_ai_comment(title, persona, ai_response_length=0, openrouter_api_key=None, custom_model=None, custom_prompt=None, product_description=None, website_address=None):
+def generate_ai_comment(title, persona, ai_response_length=0, openrouter_api_key=None, custom_model=None, custom_prompt=None, product_keywords=None, website_address=None):
     custom_print("Generating AI comment...")
     
     # Default API key (replace with your actual default key)
-    DEFAULT_API_KEY = "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"
+    DEFAULT_API_KEY = "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"
     
     length_instruction = f"Generate a response that is approximately {ai_response_length} words long. " if ai_response_length > 0 else ""
     
@@ -298,13 +371,13 @@ def generate_ai_comment(title, persona, ai_response_length=0, openrouter_api_key
         prompt = custom_prompt.format(
             title=title,
             length=length_instruction,
-            product=product_description or "",
+            product=product_keywords or "",
             website=website_address or ""
         )
     else:
         prompt = f"{PERSONAS[persona]} {length_instruction}Based on the following article title, generate an appropriate and insightful comment response. "
-        if product_description:
-            prompt += f"Incorporate information about this product: {product_description}. "
+        if product_keywords:
+            prompt += f"Incorporate information about this product: {product_keywords}. "
         if website_address:
             prompt += f"Include this website in your response: {website_address}. "
         prompt += f"\n\nTitle: {title}\n"
@@ -312,43 +385,45 @@ def generate_ai_comment(title, persona, ai_response_length=0, openrouter_api_key
     prompt += "\nGenerated comment:"
 
     custom_print(f"Sending request to AI model with prompt length: {len(prompt)} characters")
+    return "HERE IS AI COMMENT"
+   # try:
+   #     # Use the provided API key if it's not blank, otherwise use the default
+   #     api_key = openrouter_api_key.strip() if openrouter_api_key and openrouter_api_key.strip() else DEFAULT_API_KEY
+   #     
+   #     headers = {
+   #         "Authorization": f"Bearer {api_key}",
+   #         "HTTP-Referer": YOUR_SITE_URL,
+   #         "X-Title": YOUR_APP_NAME,
+   #     }
+   #     
+   #     payload = {
+   #         "model": custom_model or "google/gemma-2-9b-it:free",
+   #         "messages": [{"role": "user", "content": prompt}],
+   #     }
 
-    try:
-        # Use the provided API key if it's not blank, otherwise use the default
-        api_key = openrouter_api_key.strip() if openrouter_api_key and openrouter_api_key.strip() else DEFAULT_API_KEY
+   #     response = requests.post(
+   #         url="https://openrouter.ai/api/v1/chat/completions",
+   #         headers=headers,
+   #         json=payload
+   #     )
         
-        headers = {
-            "Authorization": f"Bearer {api_key}",
-            "HTTP-Referer": YOUR_SITE_URL,
-            "X-Title": YOUR_APP_NAME,
-        }
-        
-        payload = {
-            "model": custom_model or "google/gemma-2-9b-it:free",
-            "messages": [{"role": "user", "content": prompt}],
-        }
+   #     response.raise_for_status()
+   #     ai_comment = response.json()["choices"][0]["message"]["content"]
+   #     custom_print("AI comment generated successfully")
+   #     custom_print(f"Generated comment: {ai_comment}")
+   #     return ai_comment
+   # except requests.exceptions.RequestException as e:
+   #     custom_print(f"Error making request to OpenRouter API: {str(e)}")
+   #     if hasattr(e, 'response') and e.response is not None:
+   #         custom_print(f"Response status code: {e.response.status_code}")
+   #         custom_print(f"Response content: {e.response.text}")
+   #     return None
+   # except Exception as e:
+   #     custom_print(f"Unexpected error generating AI comment: {str(e)}")
+   #     return None
 
-        response = requests.post(
-            url="https://openrouter.ai/api/v1/chat/completions",
-            headers=headers,
-            json=payload
-        )
-        
-        response.raise_for_status()
-        ai_comment = response.json()["choices"][0]["message"]["content"]
-        custom_print("AI comment generated successfully")
-        custom_print(f"Generated comment: {ai_comment}")
-        return ai_comment
-    except requests.exceptions.RequestException as e:
-        custom_print(f"Error making request to OpenRouter API: {str(e)}")
-        if hasattr(e, 'response') and e.response is not None:
-            custom_print(f"Response status code: {e.response.status_code}")
-            custom_print(f"Response content: {e.response.text}")
-        return None
-    except Exception as e:
-        custom_print(f"Unexpected error generating AI comment: {str(e)}")
-        return None
-     
+
+   
 def post_comment(driver, ai_comment, post_url):
     custom_print(f"Attempting to post the AI-generated comment to URL: {post_url}")
     
@@ -445,8 +520,10 @@ def login_and_scrape_reddit(
     persona,
     custom_model,
     custom_prompt,
-    product_description,
-    website_address
+    product_keywords,
+    website_address,
+    similarity_threshold,  
+    similarity_method,
 ):
     
     chrome_options = Options()
@@ -498,9 +575,10 @@ def login_and_scrape_reddit(
             custom_print("Logging in.. Waiting for articles to load...")
             
             try:
-                WebDriverWait(driver, 240).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, "shreddit-post"))
-                )
+                #WebDriverWait(driver, 240).until(
+                #EC.presence_of_element_located((By.CSS_SELECTOR, "shreddit-post"))
+                #)
+                wait_for_element(driver, By.CSS_SELECTOR, "shreddit-post")
                 custom_print("Logged in. Articles loaded successfully")
             except TimeoutException:
                 custom_print("Timeout waiting for login.")
@@ -523,9 +601,12 @@ def login_and_scrape_reddit(
             articles_scraped = 0
             last_height = driver.execute_script("return document.body.scrollHeight")
             processed_urls = set()
+            no_new_posts_count = 0
+            max_no_new_posts = 10  # Maximum number of scrolls without new posts before giving up
 
-            # Split product description into keywords
-            product_keywords = [kw.strip().lower() for kw in product_description.split(',')]
+
+            # Split product keywords into keywords
+            product_keywords = [kw.strip().lower() for kw in product_keywords.split(',')]
 
             while articles_scraped < max_articles:
                 custom_print("Finding posts...")
@@ -547,17 +628,25 @@ def login_and_scrape_reddit(
                         custom_print(f"Processing post {articles_scraped + 1}...")
                         title = post.get_attribute("aria-label")
 
-                        custom_print(f"Post {articles_scraped + 1} - Title: {title}")
-                        custom_print(f"Post {articles_scraped + 1} - URL: {url}")
+                        custom_print(f"Post {articles_scraped + 1}/{max_articles} - Title: {title}")
+                        custom_print(f"Post {articles_scraped + 1}/{max_articles} - URL: {url}")
 
                         # Check if the title contains any of the product keywords
-                        title_lower = title.lower()
-                        if any(keyword in title_lower for keyword in product_keywords):
-                            custom_print(f"Relevant keywords found in post {articles_scraped + 1}")
+                        title = title.lower()
+                        
+                        if similarity_method == "TensorFlow (semantic_similarity)":
+                            is_relevant = semantic_similarity(product_keywords, title, threshold=similarity_threshold)
+                        else:  # "Simple (simple_semantic_similarity)"
+                            is_relevant = simple_semantic_similarity(product_keywords, title)
+
+                        if is_relevant:
+                            custom_print(f"Relevant content found in post {articles_scraped + 1}")
 
                             comments = []
                             if max_comments > 0:
+                                custom_print(f"Extracting up to {max_comments} comments...")
                                 comments = extract_comments(driver, url, max_comments, scroll_retries, button_retries)
+                                custom_print(f"Extracted {len(comments)} comments")
 
                             custom_print(f"Generating AI comment for post {articles_scraped + 1}...")
                             ai_comment = generate_ai_comment(
@@ -567,7 +656,7 @@ def login_and_scrape_reddit(
                                 openrouter_api_key,
                                 custom_model,
                                 custom_prompt,
-                                product_description,
+                                product_keywords,
                                 website_address
                             )
 
@@ -578,6 +667,7 @@ def login_and_scrape_reddit(
                                 "comments": comments,
                                 "ai_comment": ai_comment,
                             })
+                           
                         else:
                             custom_print(f"No relevant keywords found in post {articles_scraped + 1}. Skipping...")
 
@@ -595,28 +685,38 @@ def login_and_scrape_reddit(
                 custom_print(f"Processed {articles_scraped} posts so far")
 
                 if not new_posts_processed:
-                    # Scroll down to load more content
-                    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-                    time.sleep(2)  # Wait for new content to load
-
-                    # Calculate new scroll height and compare with last scroll height
-                    new_height = driver.execute_script("return document.body.scrollHeight")
-                    if new_height == last_height:
-                        custom_print("No more posts to load.")
+                    no_new_posts_count += 1
+                    custom_print(f"No new posts found. Scroll attempt {no_new_posts_count}/{max_no_new_posts}")
+                    if no_new_posts_count >= max_no_new_posts:
+                        custom_print(f"No new posts found after {max_no_new_posts} scrolls. Moving to next subreddit.")
                         break
-                    last_height = new_height
+                else:
+                    no_new_posts_count = 0  # Reset the counter if new posts were processed
+
+                # Scroll down to load more content
+                last_height = driver.execute_script("return document.body.scrollHeight")
+                driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+                time.sleep(2)  # Wait for new content to load
+                new_height = driver.execute_script("return document.body.scrollHeight")
+                if new_height == last_height:
+                    no_new_posts_count += 1
+                    custom_print(f"Page height didn't change. Scroll attempt {no_new_posts_count}/{max_no_new_posts}")
+                    if no_new_posts_count >= max_no_new_posts:
+                        custom_print("No more posts to load after multiple scroll attempts.")
+                        break
+                else:
+                    custom_print("Scrolled successfully, new content loaded.")
+                    no_new_posts_count = 0  # Reset the counter if the page height changed
 
             all_collected_info.extend(collected_info)
-            custom_print(f"Scraping completed for r/{subreddit}. Total posts processed: {len(collected_info)}")
+            custom_print(f"Scraping completed for r/{subreddit}. Total relevant posts processed: {len(collected_info)}")
 
     except Exception as e:
         custom_print(f"An unexpected error occurred: {str(e)}")
     finally:
         custom_print("Scraping process completed.")
 
-        
-
-    custom_print(f"Scraping completed for all subreddits. Total posts processed: {len(all_collected_info)}")
+    custom_print(f"Scraping completed for all subreddits. Total relevant posts processed: {len(all_collected_info)}")
     return all_collected_info, driver
 
 if __name__ == "__main__":

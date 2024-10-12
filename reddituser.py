@@ -119,7 +119,7 @@ def generate_ai_comment(title, comments, persona, product_website, product_descr
     relevance_score = calculate_relevance(title, product_description)
     
     if relevance_score > 0.1:  # Adjust this threshold as needed
-        prompt = f"{PERSONAS[persona]} Based on the following article title, generate an appropriate and insightful comment. If relevant, mention the product described below, but do so naturally and without forcing it. Be transparent about mentioning a product. Use the existing comments to determine an appropriate length for your answer.\n\nTitle: {title}\n\nProduct Description: {product_description}\nProduct Website: {product_website}\n\nRelevance Score: {relevance_score}\n\nExisting comments:\n"
+        prompt = f"{PERSONAS[persona]} Based on the following article title, generate an appropriate and insightful comment. If relevant, mention the product described below, but do so naturally and without forcing it. Be transparent about mentioning a product. Use the existing comments to determine an appropriate length for your answer.\n\nTitle: {title}\n\nProduct Keywords: {product_description}\nProduct Website: {product_website}\n\nRelevance Score: {relevance_score}\n\nExisting comments:\n"
     else:
         prompt = f"{PERSONAS[persona]} Based on the following article title, generate an appropriate and insightful comment response to the article title. Use the existing comments to determine an appropriate length for your answer.\n\nTitle: {title}\n\nExisting comments:\n"
 
