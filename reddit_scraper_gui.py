@@ -2,15 +2,18 @@ import sys
 import json
 import os
 import random
+import time
+import traceback
 from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, 
                              QLabel, QLineEdit, QComboBox, QSpinBox, QCheckBox, QPushButton, 
                              QTextEdit, QProgressBar, QListWidget, QMenuBar, QMenu, QDialog,
-                             QDialogButtonBox, QFormLayout, QMessageBox, QFrame, QFileDialog, QGroupBox, QInputDialog)
-from PyQt6.QtCore import Qt, QThread, pyqtSignal, QUrl, QPoint
-from PyQt6.QtGui import QAction, QIcon, QDesktopServices, QPainter, QPixmap, QColor
+                             QDialogButtonBox, QFormLayout, QMessageBox, QFrame, QFileDialog, QPlainTextEdit, QGroupBox, QInputDialog, QTableWidget, QTableWidgetItem, QHeaderView,
+                             QStyledItemDelegate, QStyleOptionViewItem, QStyle)
+from PyQt6.QtCore import Qt, QThread, pyqtSignal, QUrl, QPoint, QSize
+from PyQt6.QtGui import QAction, QIcon, QDesktopServices, QPainter, QPixmap, QColor, QTextDocument, QAbstractTextDocumentLayout
 from PyQt6.QtSvg import QSvgRenderer
 
-from reddit_scraper import login_and_scrape_reddit, set_print_function
+from reddit_scraper import login_and_scrape_reddit, set_print_function, post_comment
 
 class SVGIcon(QIcon):
     def __init__(self, svg_string, color="#D7DADC"):
@@ -37,6 +40,127 @@ ICONS = {
     "start": '''<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>'''
 }
 
+class HTMLDelegate(QStyledItemDelegate):
+    def paint(self, painter, option, index):
+        options = QStyleOptionViewItem(option)
+        self.initStyleOption(options, index)
+
+        style = option.widget.style() if option.widget else QApplication.style()
+
+        doc = QTextDocument()
+        doc.setHtml(options.text)
+
+        options.text = ""
+        style.drawControl(QStyle.ControlElement.CE_ItemViewItem, options, painter)
+
+        ctx = QAbstractTextDocumentLayout.PaintContext()
+
+        textRect = style.subElementRect(QStyle.SubElement.SE_ItemViewItemText, options)
+        painter.save()
+        painter.translate(textRect.topLeft())
+        painter.setClipRect(textRect.translated(-textRect.topLeft()))
+        doc.documentLayout().draw(painter, ctx)
+        painter.restore()
+
+    def sizeHint(self, option, index):
+        options = QStyleOptionViewItem(option)
+        self.initStyleOption(options, index)
+        
+        doc = QTextDocument()
+        doc.setHtml(options.text)
+        doc.setTextWidth(options.rect.width())
+        
+        return QSize(int(doc.idealWidth()), int(doc.size().height()))
+
+class CommentReviewDialog(QDialog):
+    def __init__(self, comments, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Review AI Generated Comments")
+        self.setGeometry(100, 100, 1200, 800)
+
+        layout = QVBoxLayout(self)
+
+        self.table = QTableWidget(self)
+        self.table.setColumnCount(5)
+        self.table.setHorizontalHeaderLabels(["Post", "Subreddit", "AI Comment", "Edit", "Keep"])
+        self.table.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.ResizeToContents)
+        self.table.horizontalHeader().setSectionResizeMode(2, QHeaderView.ResizeMode.Stretch)
+        self.table.setItemDelegateForColumn(2, HTMLDelegate())
+
+        for i, comment in enumerate(comments):
+            self.table.insertRow(i)
+            self.table.setItem(i, 0, QTableWidgetItem(comment['title']))
+            self.table.setItem(i, 1, QTableWidgetItem(comment['subreddit']))
+            
+            full_comment = comment['ai_comment'].replace('\n', '<br>')
+            comment_item = QTableWidgetItem(full_comment)
+            comment_item.setData(Qt.ItemDataRole.UserRole, comment['url'])  # Store URL in user role
+            self.table.setItem(i, 2, comment_item)
+
+            edit_button = QPushButton("Edit")
+            edit_button.clicked.connect(lambda _, row=i: self.edit_comment(row))
+            self.table.setCellWidget(i, 3, edit_button)
+
+            checkbox = QTableWidgetItem()
+            checkbox.setFlags(Qt.ItemFlag.ItemIsUserCheckable | Qt.ItemFlag.ItemIsEnabled)
+            checkbox.setCheckState(Qt.CheckState.Checked)
+            self.table.setItem(i, 4, checkbox)
+
+        self.table.resizeRowsToContents()
+        layout.addWidget(self.table)
+
+        self.send_button = QPushButton("Send Selected Comments")
+        self.send_button.clicked.connect(self.accept)
+        layout.addWidget(self.send_button)
+
+        cancel_button = QPushButton("Cancel")
+        cancel_button.clicked.connect(self.reject)
+        layout.addWidget(cancel_button)
+
+    def edit_comment(self, row):
+        current_comment = self.table.item(row, 2).text()
+        current_comment = current_comment.replace('<br>', '\n').replace('<p style=\'white-space: pre-wrap;\'>', '').replace('</p>', '')
+        dialog = CommentEditDialog(current_comment, self)
+        if dialog.exec() == QDialog.DialogCode.Accepted:
+            new_comment = dialog.comment_edit.toPlainText()
+            new_comment_html = "<p style='white-space: pre-wrap;'>{}</p>".format(new_comment.replace('\n', '<br>'))
+            self.table.setItem(row, 2, QTableWidgetItem(new_comment_html))
+            self.table.resizeRowToContents(row)
+
+    def get_selected_comments(self):
+        selected_comments = []
+        for i in range(self.table.rowCount()):
+            if self.table.item(i, 4).checkState() == Qt.CheckState.Checked:
+                comment_html = self.table.item(i, 2).text()
+                comment_text = comment_html.replace('<br>', '\n').replace('<p style=\'white-space: pre-wrap;\'>', '').replace('</p>', '')
+                comment = {
+                    'title': self.table.item(i, 0).text(),
+                    'subreddit': self.table.item(i, 1).text(),
+                    'ai_comment': comment_text,
+                    'url': self.table.item(i, 2).data(Qt.ItemDataRole.UserRole)  # Retrieve URL from user role
+                }
+                selected_comments.append(comment)
+        return selected_comments
+
+class CommentEditDialog(QDialog):
+    def __init__(self, comment, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Edit Comment")
+        self.setGeometry(200, 200, 600, 400)
+
+        layout = QVBoxLayout(self)
+
+        self.comment_edit = QPlainTextEdit(self)
+        self.comment_edit.setPlainText(comment)
+        layout.addWidget(self.comment_edit)
+
+        buttons = QDialogButtonBox(
+            QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel,
+            Qt.Orientation.Horizontal, self)
+        buttons.accepted.connect(self.accept)
+        buttons.rejected.connect(self.reject)
+        layout.addWidget(buttons)
+
 class LicenseDialog(QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -58,21 +182,24 @@ class ScraperWorker(QThread):
     update_progress = pyqtSignal(int)
     update_status = pyqtSignal(str)
     update_log = pyqtSignal(str)
-    scraping_finished = pyqtSignal(list)
+    scraping_finished = pyqtSignal(list, object)  # Changed to pass driver object
 
     def __init__(self, params):
         super().__init__()
         self.params = params
         self.total_comments = self.calculate_total_comments()
         self.current_comment = 0
-
+        self.driver = None
+        
     def calculate_total_comments(self):
         return len(self.params['subreddits']) * self.params['max_articles'] * self.params['max_comments']
+
 
     def run(self):
         try:
             set_print_function(self.custom_print)
-            all_results = login_and_scrape_reddit(
+            self.update_log.emit("Starting the scraping process...")
+            all_results, self.driver = login_and_scrape_reddit(
                 username=self.params['username'],
                 password=self.params['password'],
                 subreddits=self.params['subreddits'],
@@ -95,9 +222,11 @@ class ScraperWorker(QThread):
                 product_description=self.params['product_description'],
                 website_address=self.params['website_address']
             )
-            self.scraping_finished.emit(all_results)
+            self.update_log.emit("Scraping process completed.")
+            self.scraping_finished.emit(all_results, self.driver)
         except Exception as e:
             self.update_status.emit(f"Error: {str(e)}")
+            self.update_log.emit(f"Error in ScraperWorker: {str(e)}")
             print(f"Error in ScraperWorker: {str(e)}")
     def custom_print(self, message):
         self.update_log.emit(message)
@@ -875,9 +1004,55 @@ class RedditScraperGUI(QMainWindow):
         self.worker.update_progress.connect(self.update_progress)
         self.worker.update_status.connect(self.update_status)
         self.worker.update_log.connect(self.update_log)
-        self.worker.scraping_finished.connect(self.display_results)
+        self.worker.scraping_finished.connect(self.handle_scraping_finished)
         self.worker.start()
         
+    def handle_scraping_finished(self, results, driver):
+        self.update_log("Scraping process finished. Handling results...")
+        self.driver = driver  # Store the driver object
+        if self.do_not_post.isChecked():
+            self.update_log("Review mode is active. Opening comment review dialog...")
+            dialog = CommentReviewDialog(results, self)
+            if dialog.exec() == QDialog.DialogCode.Accepted:
+                selected_comments = dialog.get_selected_comments()
+                self.update_log(f"User selected {len(selected_comments)} comments for posting.")
+                self.post_selected_comments(selected_comments)
+            else:
+                self.update_log("User cancelled comment review.")
+        else:
+            self.update_log("Automatically posting all generated comments...")
+            self.post_selected_comments(results)
+        self.display_results(results)
+
+    def post_selected_comments(self, selected_comments):
+        self.update_log(f"Preparing to post {len(selected_comments)} comments...")
+        for comment in selected_comments:
+            wait_time = random.uniform(self.min_wait_time.value(), self.max_wait_time.value())
+            self.update_log(f"Waiting {wait_time:.2f} seconds before posting comment...")
+            time.sleep(wait_time)
+        
+            self.update_log(f"Posting comment for '{comment['title']}' in r/{comment['subreddit']}...")
+            self.update_log(f"Comment URL: {comment.get('url', 'URL not available')}")
+            self.update_log(f"AI Comment: {comment['ai_comment'][:100]}...")  # Log first 100 chars of the comment
+        
+            try:
+                if 'url' not in comment or not comment['url']:
+                    raise ValueError("Comment URL is missing or empty")
+            
+                success = post_comment(self.driver, comment['ai_comment'], comment['url'])
+            
+                if success:
+                    self.update_log(f"Successfully posted comment in r/{comment['subreddit']}")
+                else:
+                    self.update_log(f"Failed to post comment in r/{comment['subreddit']}")
+            except Exception as e:
+                self.update_log(f"Error posting comment: {str(e)}")
+                self.update_log(f"Full error details: {traceback.format_exc()}")
+
+        self.update_status("Finished posting selected comments")
+        self.update_log("All selected comments have been processed.")
+        self.start_button.setEnabled(True)
+            
     def update_progress(self, value):
         self.progress_bar.setValue(value)
 

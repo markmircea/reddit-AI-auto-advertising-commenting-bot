@@ -350,49 +350,60 @@ def generate_ai_comment(title, persona, ai_response_length=0, openrouter_api_key
         return None
      
 def post_comment(driver, ai_comment, post_url):
-    custom_print("Attempting to post the AI-generated comment...")
-
-    # Extract post ID from URL
-    post_id = post_url.split("/")[-3]
-    custom_print(f"Extracted postid: {post_id}")
-
-    # Get CSRF token from cookie
-    csrf_token = driver.get_cookie("csrf_token")["value"]
-
-    # Prepare the comment data
-    comment_data = {
-        "content": json.dumps(
-            {
-                "document": [
-                    {
-                        "e": "par",
-                        "c": [
-                            {
-                                "e": "text",
-                                "t": ai_comment,
-                                "f": [[0, 0, len(ai_comment)]],
-                            }
-                        ],
-                    }
-                ]
-            }
-        ),
-        "mode": "richText",
-        "richTextMedia": json.dumps([]),
-        "csrf_token": csrf_token,
-    }
-
-    # Set up the request headers
-    headers = {
-        "Content-Type": "application/x-www-form-urlencoded",
-    }
-
-    # Get all cookies from the driver
-    cookies = {cookie["name"]: cookie["value"] for cookie in driver.get_cookies()}
+    custom_print(f"Attempting to post the AI-generated comment to URL: {post_url}")
     
-    return True
+    if not post_url:
+        custom_print("Error: post_url is None or empty")
+        return False
 
-    # Make the POST request
+    try:
+        # Extract post ID from URL
+        post_id = post_url.split("/")[-3]
+        custom_print(f"Extracted postid: {post_id}")
+
+        # Get CSRF token from cookie
+        csrf_token = driver.get_cookie("csrf_token")
+        if not csrf_token:
+            custom_print("Error: CSRF token not found in cookies")
+            return False
+        csrf_token = csrf_token["value"]
+        custom_print(f"CSRF Token: {csrf_token}")
+
+        # Prepare the comment data
+        comment_data = {
+            "content": json.dumps(
+                {
+                    "document": [
+                        {
+                            "e": "par",
+                            "c": [
+                                {
+                                    "e": "text",
+                                    "t": ai_comment,
+                                    "f": [[0, 0, len(ai_comment)]],
+                                }
+                            ],
+                        }
+                    ]
+                }
+            ),
+            "mode": "richText",
+            "richTextMedia": json.dumps([]),
+            "csrf_token": csrf_token,
+        }
+
+        # Set up the request headers
+        headers = {
+            "Content-Type": "application/x-www-form-urlencoded",
+        }
+
+        # Get all cookies from the driver
+        cookies = {cookie["name"]: cookie["value"] for cookie in driver.get_cookies()}
+        
+        custom_print("Comment data and headers prepared successfully")
+        
+        # For testing purposes, we'll just return True here
+        # Make the POST request
     # response = requests.post(
     #     f"https://www.reddit.com/svc/shreddit/t3_{post_id}/create-comment",
     #     headers=headers,
@@ -405,6 +416,14 @@ def post_comment(driver, ai_comment, post_url):
     #     return True
     # else:
     #     return False
+        # In a real scenario, you would make the POST request here
+        custom_print("Comment would be posted here in a real scenario")
+        return True
+
+    except Exception as e:
+        custom_print(f"Error in post_comment: {str(e)}")
+        return False
+
 
 def login_and_scrape_reddit(
     username,
@@ -428,8 +447,8 @@ def login_and_scrape_reddit(
     custom_prompt,
     product_description,
     website_address
-
 ):
+    
     chrome_options = Options()
     chrome_options.add_argument("--start-maximized")
 
@@ -517,7 +536,7 @@ def login_and_scrape_reddit(
                 for post in posts:
                     if articles_scraped >= max_articles:
                         break
-
+                    
                     try:
                         shreddit_post = post.find_element(By.TAG_NAME, "shreddit-post")
                         url = "https://www.reddit.com" + shreddit_post.get_attribute("permalink")
@@ -551,18 +570,6 @@ def login_and_scrape_reddit(
                                 product_description,
                                 website_address
                             )
-                            if ai_comment and not do_not_post:
-                                custom_print(f"Waiting random time before posting comment for post {articles_scraped + 1}...")
-                                wait_time = random.uniform(min_wait_time, max_wait_time)
-                                custom_print(f"Waiting for {wait_time:.2f} seconds...")
-                                time.sleep(wait_time)
-                                
-                                custom_print(f"Posting AI-generated comment for post {articles_scraped + 1}...")
-                                post_success = post_comment(driver, ai_comment, url)
-                                if not post_success:
-                                    custom_print(f"Failed to post comment for post {articles_scraped + 1}")
-                            elif do_not_post:
-                                custom_print(f"Skipping comment posting for post {articles_scraped + 1} (do not post option enabled)")
 
                             collected_info.append({
                                 "subreddit": subreddit,
@@ -605,11 +612,12 @@ def login_and_scrape_reddit(
     except Exception as e:
         custom_print(f"An unexpected error occurred: {str(e)}")
     finally:
-        custom_print("Closing WebDriver...")
-        driver.quit()
+        custom_print("Scraping process completed.")
+
+        
 
     custom_print(f"Scraping completed for all subreddits. Total posts processed: {len(all_collected_info)}")
-    return all_collected_info
+    return all_collected_info, driver
 
 if __name__ == "__main__":
     # This block can be used for testing the script directly

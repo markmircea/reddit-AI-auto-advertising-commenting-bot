@@ -5,11 +5,11 @@
         "AskReddit"
     ],
     "sort_type": "hot",
-    "max_articles": 1000,
+    "max_articles": 50,
     "max_comments": 0,
     "min_wait_time": 4,
     "max_wait_time": 6,
-    "ai_response_length": 0,
+    "ai_response_length": 5,
     "proxy_settings": {},
     "fingerprint_settings": {},
     "advanced_settings": {
