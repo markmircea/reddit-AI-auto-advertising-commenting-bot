@@ -1,14 +1,14 @@
 import sys
 import json
 import os
+import random
 from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, 
                              QLabel, QLineEdit, QComboBox, QSpinBox, QCheckBox, QPushButton, 
                              QTextEdit, QProgressBar, QListWidget, QMenuBar, QMenu, QDialog,
-                             QDialogButtonBox, QFormLayout, QMessageBox, QFrame, QFileDialog)
-from PyQt6.QtCore import Qt, QThread, pyqtSignal, QUrl
-from PyQt6.QtGui import QAction, QIcon, QDesktopServices
+                             QDialogButtonBox, QFormLayout, QMessageBox, QFrame, QFileDialog, QGroupBox, QInputDialog)
+from PyQt6.QtCore import Qt, QThread, pyqtSignal, QUrl, QPoint
+from PyQt6.QtGui import QAction, QIcon, QDesktopServices, QPainter, QPixmap, QColor
 from PyQt6.QtSvg import QSvgRenderer
-from PyQt6.QtGui import QPainter, QPixmap
 
 from reddit_scraper import login_and_scrape_reddit, set_print_function
 
@@ -72,12 +72,33 @@ class ScraperWorker(QThread):
     def run(self):
         try:
             set_print_function(self.custom_print)
-            all_results = login_and_scrape_reddit(**self.params)
+            all_results = login_and_scrape_reddit(
+                username=self.params['username'],
+                password=self.params['password'],
+                subreddits=self.params['subreddits'],
+                sort_type=self.params['sort_type'],
+                max_articles=self.params['max_articles'],
+                max_comments=self.params['max_comments'],
+                min_wait_time=self.params['min_wait_time'],
+                max_wait_time=self.params['max_wait_time'],
+                custom_headers=self.params['custom_headers'],
+                ai_response_length=self.params['ai_response_length'],
+                proxy_settings=self.params['proxy_settings'],
+                fingerprint_settings=self.params['fingerprint_settings'],
+                do_not_post=self.params['do_not_post'],
+                openrouter_api_key=self.params['openrouter_api_key'],
+                scroll_retries=self.params['scroll_retries'],
+                button_retries=self.params['button_retries'],
+                persona=self.params['persona'],
+                custom_model=self.params['custom_model'],
+                custom_prompt=self.params['custom_prompt'],
+                product_description=self.params['product_description'],
+                website_address=self.params['website_address']
+            )
             self.scraping_finished.emit(all_results)
         except Exception as e:
             self.update_status.emit(f"Error: {str(e)}")
-            print(f"Error in ScraperWorker: {str(e)}") 
-
+            print(f"Error in ScraperWorker: {str(e)}")
     def custom_print(self, message):
         self.update_log.emit(message)
         if "Extracted comment" in message:
@@ -135,7 +156,110 @@ class ProxySettingsDialog(QDialog):
         self.proxy_username.setText(settings.get("username", ""))
         self.proxy_password.setText(settings.get("password", ""))            
 
+class BrowserFingerprintDialog(QDialog):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Browser Fingerprint Settings")
+        self.setModal(True)
 
+        layout = QVBoxLayout(self)
+
+        self.enable_fingerprinting = QCheckBox("Enable Custom Fingerprinting")
+        layout.addWidget(self.enable_fingerprinting)
+
+        form_layout = QFormLayout()
+
+        # User Agent
+        self.user_agent_input = QLineEdit()
+        form_layout.addRow("User Agent:", self.user_agent_input)
+
+        # Platform
+        self.platform_input = QLineEdit()
+        form_layout.addRow("Platform:", self.platform_input)
+
+        # Screen Resolution
+        resolution_layout = QHBoxLayout()
+        self.screen_width = QSpinBox()
+        self.screen_width.setRange(800, 3840)
+        self.screen_height = QSpinBox()
+        self.screen_height.setRange(600, 2160)
+        resolution_layout.addWidget(self.screen_width)
+        resolution_layout.addWidget(QLabel("x"))
+        resolution_layout.addWidget(self.screen_height)
+        form_layout.addRow("Screen Resolution:", resolution_layout)
+
+        layout.addLayout(form_layout)
+
+        self.randomize_button = QPushButton("Randomize Settings")
+        self.randomize_button.clicked.connect(self.randomize_settings)
+        layout.addWidget(self.randomize_button)
+
+        buttons = QDialogButtonBox(
+            QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel,
+            Qt.Orientation.Horizontal, self)
+        buttons.accepted.connect(self.accept)
+        buttons.rejected.connect(self.reject)
+        layout.addWidget(buttons)
+
+        self.setStyleSheet("""
+            QDialog {
+                background-color: #121212;
+                color: #E0E0E0;
+            }
+            QLabel, QCheckBox {
+                color: #E0E0E0;
+            }
+            QLineEdit, QSpinBox {
+                background-color: #2A2A2A;
+                color: #E0E0E0;
+                border: 1px solid #444444;
+                border-radius: 4px;
+                padding: 5px;
+            }
+            QPushButton {
+                background-color: #1DB954;
+                color: white;
+                border: none;
+                padding: 8px 15px;
+                border-radius: 4px;
+            }
+            QPushButton:hover {
+                background-color: #1ED760;
+            }
+            QPushButton:pressed {
+                background-color: #1AA34A;
+            }
+        """)
+
+    def randomize_settings(self):
+        user_agents = [
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Safari/605.1.15",
+            "Mozilla/5.0 (X11; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0"
+        ]
+        platforms = ["Windows", "MacIntel", "Linux x86_64"]
+        
+        self.user_agent_input.setText(random.choice(user_agents))
+        self.platform_input.setText(random.choice(platforms))
+        self.screen_width.setValue(random.choice([1366, 1920, 2560]))
+        self.screen_height.setValue(random.choice([768, 1080, 1440]))
+
+    def get_fingerprint_settings(self):
+        return {
+            "enabled": self.enable_fingerprinting.isChecked(),
+            "userAgent": self.user_agent_input.text(),
+            "platform": self.platform_input.text(),
+            "screen.width": str(self.screen_width.value()),
+            "screen.height": str(self.screen_height.value())
+        }
+
+    def set_fingerprint_settings(self, settings):
+        self.enable_fingerprinting.setChecked(settings.get("enabled", False))
+        self.user_agent_input.setText(settings.get("userAgent", ""))
+        self.platform_input.setText(settings.get("platform", ""))
+        self.screen_width.setValue(int(settings.get("screen.width", 1920)))
+        self.screen_height.setValue(int(settings.get("screen.height", 1080)))
+        
 class TitleBar(QWidget):
     def __init__(self, parent):
         super().__init__()
@@ -213,32 +337,139 @@ class TitleBar(QWidget):
         painter.setPen(Qt.PenStyle.NoPen)
         painter.setBrush(QColor("#1A1A1B"))
         painter.drawRect(self.rect())
+        
+class AdvancedSettingsDialog(QDialog):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Advanced Settings")
+        self.setModal(True)
+        self.setMinimumWidth(500)
+        self.setMinimumHeight(500)  # Increased height to accommodate new fields
+
+        layout = QVBoxLayout(self)
+
+        form_layout = QFormLayout()
+
+        self.openrouter_api_key = QLineEdit(self)
+        self.openrouter_api_key.setEchoMode(QLineEdit.EchoMode.Password)
+        form_layout.addRow("OpenRouter API Key:", self.openrouter_api_key)
+
+        self.scroll_retries = QSpinBox(self)
+        self.scroll_retries.setRange(0, 20)
+        form_layout.addRow("Comment Scroll Retry Attempts:", self.scroll_retries)
+
+        self.button_retries = QSpinBox(self)
+        self.button_retries.setRange(0, 20)
+        form_layout.addRow("Comment 'View More' Button Retry Attempts:", self.button_retries)
+
+        self.persona = QComboBox(self)
+        self.persona.addItems(["normal", "teenager", "educated", "bot"])
+        form_layout.addRow("AI Persona:", self.persona)
+
+        self.custom_model = QLineEdit(self)
+        self.custom_model.setPlaceholderText("e.g., google/gemma-2-9b-it:free")
+        form_layout.addRow("Custom OpenRouter Model:", self.custom_model)
+
+        # New fields for product description and website address
+        self.product_description = QLineEdit(self)
+        self.product_description.setPlaceholderText("Enter product keywords")
+        form_layout.addRow("Product Description:", self.product_description)
+
+        self.website_address = QLineEdit(self)
+        self.website_address.setPlaceholderText("Enter website URL")
+        form_layout.addRow("Website Address:", self.website_address)
+
+        layout.addLayout(form_layout)
+
+        # Custom prompt input
+        prompt_label = QLabel("Custom AI Prompt:")
+        self.custom_prompt = QTextEdit(self)
+        self.custom_prompt.setPlaceholderText("Enter your custom prompt here. Use {title}, {length}, {product}, and {website} as placeholders. ex: I want you to generate an useful comment based on the {title} of this reddit post that incorporates my {website}. My {website} is about {product}. {length}")
+        self.custom_prompt.setMinimumHeight(100)
+        layout.addWidget(prompt_label)
+        layout.addWidget(self.custom_prompt)
+
+        buttons = QDialogButtonBox(
+            QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel,
+            Qt.Orientation.Horizontal, self)
+        buttons.accepted.connect(self.accept)
+        buttons.rejected.connect(self.reject)
+        layout.addWidget(buttons)
+
+    def get_settings(self):
+        return {
+            "openrouter_api_key": self.openrouter_api_key.text(),
+            "scroll_retries": self.scroll_retries.value(),
+            "button_retries": self.button_retries.value(),
+            "persona": self.persona.currentText(),
+            "custom_model": self.custom_model.text(),
+            "custom_prompt": self.custom_prompt.toPlainText(),
+            "product_description": self.product_description.text(),
+            "website_address": self.website_address.text()
+        }
+
+    def set_settings(self, settings):
+        self.openrouter_api_key.setText(settings.get("openrouter_api_key", ""))
+        self.scroll_retries.setValue(settings.get("scroll_retries", 2))
+        self.button_retries.setValue(settings.get("button_retries", 2))
+        self.persona.setCurrentText(settings.get("persona", "normal"))
+        self.custom_model.setText(settings.get("custom_model", ""))
+        self.custom_prompt.setPlainText(settings.get("custom_prompt", ""))
+        self.product_description.setText(settings.get("product_description", ""))
+        self.website_address.setText(settings.get("website_address", ""))
 
 class RedditScraperGUI(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Reddit Scraper Pro")
+        self.setWindowTitle("Reddit AI Commenter Pro")
         self.setGeometry(100, 100, 800, 600)
 
         self.create_menu_bar()
-        self.proxy_settings = {}  # Add this line to store proxy settings
+        self.proxy_settings = {}
+        self.fingerprint_settings = {}
+        self.advanced_settings = {
+            "openrouter_api_key": "",
+            "scroll_retries": 2,
+            "button_retries": 2,
+            "persona": "normal",
+            "custom_model": "google/gemma-2-9b-it:free"
+        }
 
-
+        
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         self.layout = QVBoxLayout(central_widget)
         
+        # Add Save and Advanced Settings buttons
+        button_layout = QHBoxLayout()
+        self.save_button = QPushButton(SVGIcon(ICONS["save"]), "Save Settings")
+        self.save_button.clicked.connect(self.save_settings_button_clicked)  # Change this line
+
+        self.advanced_settings_button = QPushButton(SVGIcon(ICONS["settings"]), "Advanced Settings")
+        self.advanced_settings_button.clicked.connect(self.open_advanced_settings)
+        
+        button_layout.addWidget(self.save_button)
+        button_layout.addWidget(self.advanced_settings_button)
+        self.layout.addLayout(button_layout)
+
+        # Add a separator line
+        separator = QFrame()
+        separator.setFrameShape(QFrame.Shape.HLine)
+        separator.setFrameShadow(QFrame.Shadow.Sunken)
+        self.layout.addWidget(separator)
+
         # Input fields
         self.username = self.create_input("Username:", "bigbootyrob")
         self.password = self.create_input("Password:", "1893Apple", is_password=True)
-        
+
         # Subreddit input and list
         subreddit_layout = QHBoxLayout()
         self.subreddit_input = QLineEdit()
+        self.subreddit_input.setPlaceholderText("Enter subreddit name")
         self.subreddit_input.returnPressed.connect(self.add_subreddit)
-        self.add_subreddit_button = QPushButton(SVGIcon(ICONS["add"]), "Add Subreddit")
+        self.add_subreddit_button = QPushButton(SVGIcon(ICONS["add"]), "Add")
         self.add_subreddit_button.clicked.connect(self.add_subreddit)
-        self.remove_subreddit_button = QPushButton(SVGIcon(ICONS["remove"]), "Remove Subreddit")
+        self.remove_subreddit_button = QPushButton(SVGIcon(ICONS["remove"]), "Remove")
         self.remove_subreddit_button.clicked.connect(self.remove_subreddit)
         subreddit_layout.addWidget(self.subreddit_input)
         subreddit_layout.addWidget(self.add_subreddit_button)
@@ -255,11 +486,12 @@ class RedditScraperGUI(QMainWindow):
         self.layout.addWidget(self.sort_type)
 
         self.max_articles = self.create_spinbox("Max Articles per Subreddit:", 1, 1000, 10)
-        self.max_comments = self.create_spinbox("Max Comments per Article:", 1, 1000, 10)
+        self.max_comments = self.create_spinbox("Max Comments per Article:", 0, 1000, 10)        
+        # New input fields for retry attempts
         
-        # Added new input fields for random wait time
+        # Wait time input fields
         wait_time_layout = QHBoxLayout()
-        wait_time_layout.addWidget(QLabel("Wait time before posting - in (seconds):"))
+        wait_time_layout.addWidget(QLabel("Wait time before posting (seconds):"))
         self.min_wait_time = QSpinBox()
         self.min_wait_time.setRange(0, 3600)
         self.min_wait_time.setValue(4)
@@ -271,23 +503,41 @@ class RedditScraperGUI(QMainWindow):
         wait_time_layout.addWidget(self.max_wait_time)
         self.layout.addLayout(wait_time_layout)
 
-        self.persona = QComboBox()
-        self.persona.addItems(["normal", "teenager", "educated", "bot"])
-        self.layout.addWidget(QLabel("AI Persona:"))
-        self.layout.addWidget(self.persona)
+        
         
         # AI response length
-        self.ai_response_length = self.create_spinbox("AI Response Length (in words, 0 for default-auto):", 0, 1000, 0)
+        self.ai_response_length = self.create_spinbox("AI Response Length (words, 0 for auto):", 0, 1000, 0)
 
-        self.include_comments = QCheckBox("Include comments in AI prompt")
-        self.include_comments.setChecked(True)
-        self.layout.addWidget(self.include_comments)
+         
 
-        
+        # New checkbox for not posting comments
+        self.do_not_post = QCheckBox("Generate AI comments only (do not post)")
+        self.layout.addWidget(self.do_not_post)
 
         # Start button
-        self.start_button = QPushButton(SVGIcon(ICONS["start"]), "Start Scraping")
+        self.start_button = QPushButton(SVGIcon(ICONS["start"]), "Start Scraping, Generating and Posting Comments")
         self.start_button.clicked.connect(self.start_scraping)
+        self.start_button.setStyleSheet("""
+            QPushButton {
+                background-color: #1DB954;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-weight: bold;
+                font-size: 16px;
+            }
+            QPushButton:hover {
+                background-color: #1ED760;
+            }
+            QPushButton:pressed {
+                background-color: #1AA34A;
+            }
+            QPushButton:disabled {
+                background-color: #CCCCCC;
+                color: #666666;
+            }
+        """)
         self.layout.addWidget(self.start_button)
 
         # Progress bar and status
@@ -311,62 +561,102 @@ class RedditScraperGUI(QMainWindow):
         self.apply_styles()
         
         self.load_settings_if_exists()
-
+        
+    def save_settings_button_clicked(self):
+        self.save_settings()
 
     def apply_styles(self):
-        self.setStyleSheet("""
-            QMainWindow {
-                background-color: #1A1A1B;
-                color: #D7DADC;
-            }
-            QMenuBar {
-                background-color: #1A1A1B;
-                color: #D7DADC;
-                border-bottom: 1px solid #343536;
-            }
-            QMenuBar::item:selected {
-                background-color: #272729;
-            }
-            QMenu {
-                background-color: #1A1A1B;
-                color: #D7DADC;
-                border: 1px solid #343536;
-            }
-            QMenu::item:selected {
-                background-color: #272729;
-            }
-            QLabel, QCheckBox, QRadioButton {
-                color: #D7DADC;
-            }
+        # Add specific styles for the new buttons
+        self.save_button.setStyleSheet("""
             QPushButton {
-                background-color: #FF4500;
+                background-color: #4CAF50;
                 color: white;
                 border: none;
-                padding: 5px 10px;
-                border-radius: 3px;
+                padding: 8px 15px;
+                border-radius: 4px;
+                font-weight: bold;
             }
             QPushButton:hover {
-                background-color: #FF5722;
+                background-color: #45a049;
+            }
+            QPushButton:pressed {
+                background-color: #3d8b40;
+            }
+        """)
+        
+        self.advanced_settings_button.setStyleSheet("""
+            QPushButton {
+                background-color: #008CBA;
+                color: white;
+                border: none;
+                padding: 8px 15px;
+                border-radius: 4px;
+                font-weight: bold;
+            }
+            QPushButton:hover {
+                background-color: #007B9E;
+            }
+            QPushButton:pressed {
+                background-color: #006A87;
+            }
+        """)
+        self.setStyleSheet("""
+            QMainWindow, QDialog {
+                background-color: #121212;
+                color: #E0E0E0;
+            }
+            QMenuBar {
+                background-color: #1E1E1E;
+                color: #E0E0E0;
+                border-bottom: 1px solid #333333;
+            }
+            QMenuBar::item:selected {
+                background-color: #2A2A2A;
+            }
+            QMenu {
+                background-color: #1E1E1E;
+                color: #E0E0E0;
+                border: 1px solid #333333;
+            }
+            QMenu::item:selected {
+                background-color: #2A2A2A;
+            }
+            QLabel, QCheckBox, QRadioButton {
+                color: #E0E0E0;
+            }
+            QPushButton {
+                background-color: #1DB954;
+                color: white;
+                border: none;
+                padding: 8px 15px;
+                border-radius: 4px;
+            }
+            QPushButton:hover {
+                background-color: #1ED760;
+            }
+            QPushButton:pressed {
+                background-color: #1AA34A;
             }
             QLineEdit, QTextEdit, QListWidget, QComboBox, QSpinBox {
-                background-color: #272729;
-                color: #D7DADC;
-                border: 1px solid #343536;
-                border-radius: 3px;
+                background-color: #2A2A2A;
+                color: #E0E0E0;
+                border: 1px solid #444444;
+                border-radius: 4px;
                 padding: 5px;
             }
             QProgressBar {
-                border: 1px solid #343536;
-                border-radius: 3px;
+                border: 1px solid #444444;
+                border-radius: 4px;
                 text-align: center;
                 color: white;
             }
             QProgressBar::chunk {
-                background-color: #FF4500;
+                background-color: #1DB954;
+                border-radius: 3px;
             }
             QScrollBar:vertical {
                 border: none;
-                background: #272729;
+                background: #2A2A2A;
                 width: 10px;
                 margin: 0px 0px 0px 0px;
             }
@@ -398,7 +688,6 @@ class RedditScraperGUI(QMainWindow):
         save_settings_action.triggered.connect(lambda: self.save_settings("settings.json"))
         file_menu.addAction(save_settings_action)
 
-
         import_settings_action = QAction(SVGIcon(ICONS["file"]), "Import Settings", self)
         import_settings_action.triggered.connect(self.import_settings)
         file_menu.addAction(import_settings_action)
@@ -417,6 +706,13 @@ class RedditScraperGUI(QMainWindow):
         proxy_action.triggered.connect(self.open_proxy_settings)
         settings_menu.addAction(proxy_action)
         
+        fingerprint_action = QAction(SVGIcon(ICONS["settings"]), "Browser Fingerprint Settings", self)
+        fingerprint_action.triggered.connect(self.open_fingerprint_settings)
+        settings_menu.addAction(fingerprint_action)
+        
+        advanced_settings_action = QAction(SVGIcon(ICONS["settings"]), "Advanced Settings", self)
+        advanced_settings_action.triggered.connect(self.open_advanced_settings)
+        settings_menu.addAction(advanced_settings_action)
         
         # License menu
         license_menu = menu_bar.addMenu(SVGIcon(ICONS["license"]), "&License")
@@ -426,6 +722,20 @@ class RedditScraperGUI(QMainWindow):
         buy_license_action = QAction(SVGIcon(ICONS["buy"]), "Buy License", self)
         buy_license_action.triggered.connect(self.buy_license)
         license_menu.addAction(buy_license_action)
+        
+    def open_advanced_settings(self):
+        dialog = AdvancedSettingsDialog(self)
+        dialog.set_settings(self.advanced_settings)
+        if dialog.exec() == QDialog.DialogCode.Accepted:
+            self.advanced_settings = dialog.get_settings()
+            self.update_status("Advanced settings updated")
+            
+    def open_fingerprint_settings(self):
+        dialog = BrowserFingerprintDialog(self)
+        dialog.set_fingerprint_settings(self.fingerprint_settings)
+        if dialog.exec() == QDialog.DialogCode.Accepted:
+            self.fingerprint_settings = dialog.get_fingerprint_settings()
+            self.update_status("Browser fingerprint settings updated")
 
     def save_settings(self, default_filename="settings.json"):
         settings = {
@@ -437,10 +747,10 @@ class RedditScraperGUI(QMainWindow):
             "max_comments": self.max_comments.value(),
             "min_wait_time": self.min_wait_time.value(),
             "max_wait_time": self.max_wait_time.value(),
-            "persona": self.persona.currentText(),
-            "include_comments": self.include_comments.isChecked(),
             "ai_response_length": self.ai_response_length.value(),
-            "proxy_settings": self.proxy_settings, 
+            "proxy_settings": self.proxy_settings,
+            "fingerprint_settings": self.fingerprint_settings,
+            "advanced_settings": self.advanced_settings,
         }
 
         file_name, _ = QFileDialog.getSaveFileName(self, "Save Settings", default_filename, "JSON Files (*.json)")
@@ -448,7 +758,7 @@ class RedditScraperGUI(QMainWindow):
             with open(file_name, 'w') as f:
                 json.dump(settings, f, indent=4)
             self.update_status(f"Settings saved to {file_name}")
-
+            
     def import_settings(self):
         file_name, _ = QFileDialog.getOpenFileName(self, "Import Settings", "settings.json", "JSON Files (*.json)")
         if file_name:
@@ -468,10 +778,10 @@ class RedditScraperGUI(QMainWindow):
             self.max_comments.setValue(settings.get("max_comments", 10))
             self.min_wait_time.setValue(settings.get("min_wait_time", 4))
             self.max_wait_time.setValue(settings.get("max_wait_time", 6))
-            self.persona.setCurrentText(settings.get("persona", "normal"))
-            self.include_comments.setChecked(settings.get("include_comments", True))
             self.ai_response_length.setValue(settings.get("ai_response_length", 0))
-            self.proxy_settings = settings.get("proxy_settings", {}) 
+            self.proxy_settings = settings.get("proxy_settings", {})
+            self.fingerprint_settings = settings.get("fingerprint_settings", {})
+            self.advanced_settings = settings.get("advanced_settings", self.advanced_settings)
             self.update_status(f"Settings imported from {file_name}")
         except Exception as e:
             QMessageBox.warning(self, "Import Error", f"Failed to import settings: {str(e)}")
@@ -497,7 +807,6 @@ class RedditScraperGUI(QMainWindow):
                 f.write(self.results_display.toPlainText())
             self.update_status(f"Results exported to {file_name}")
 
-    
     def create_input(self, label, default, is_password=False):
         layout = QHBoxLayout()
         layout.addWidget(QLabel(label))
@@ -551,13 +860,16 @@ class RedditScraperGUI(QMainWindow):
             "max_comments": self.max_comments.value(),
             "min_wait_time": self.min_wait_time.value(),
             "max_wait_time": self.max_wait_time.value(),
-            "persona": self.persona.currentText(),
-            "include_comments": self.include_comments.isChecked(),
             "custom_headers": [],
             "ai_response_length": self.ai_response_length.value(),
-            "proxy_settings": self.proxy_settings
+            "proxy_settings": self.proxy_settings,
+            "fingerprint_settings": self.fingerprint_settings,
+            "do_not_post": self.do_not_post.isChecked(),
+            "openrouter_api_key": self.advanced_settings.get("openrouter_api_key", "").strip(),
+            "custom_prompt": self.advanced_settings.get("custom_prompt", "").strip(),
+      
+            **self.advanced_settings  # Include advanced settings
         }
-
 
         self.worker = ScraperWorker(params)
         self.worker.update_progress.connect(self.update_progress)
@@ -565,7 +877,7 @@ class RedditScraperGUI(QMainWindow):
         self.worker.update_log.connect(self.update_log)
         self.worker.scraping_finished.connect(self.display_results)
         self.worker.start()
-
+        
     def update_progress(self, value):
         self.progress_bar.setValue(value)
 

@@ -7,1049 +7,815 @@ Logging in.. Waiting for articles to load...
 Logged in. Articles loaded successfully
 
 Starting to scrape subreddit: r/AskReddit
-Navigating to subreddit: r/AskReddit, sort type: hot
+Navigating to subreddit: r/AskReddit, sort type: rising
 Waiting for page to load...
-Scrolling to load more content...
-Waiting for content to load after scrolling...
+Articles loaded.
 Finding posts...
-Found 53 posts
+Found 28 posts
 Processing post 1...
-Post 1 - Title: People who slept with their best friend, what happened?
-Post 1 - URL: https://www.reddit.com/r/AskReddit/comments/1g16x4f/people_who_slept_with_their_best_friend_what/
-Extracting comments from: https://www.reddit.com/r/AskReddit/comments/1g16x4f/people_who_slept_with_their_best_friend_what/
+Post 1 - Title: What is that one song that makes you feel like you’re floating?
+Post 1 - URL: https://www.reddit.com/r/AskReddit/comments/1g1g9wd/what_is_that_one_song_that_makes_you_feel_like/
+Extracting comments from: https://www.reddit.com/r/AskReddit/comments/1g1g9wd/what_is_that_one_song_that_makes_you_feel_like/
 Navigated to post page
 Waiting for comments to load...
 Comments loaded successfully
-Found 100 comments
-Extracted comment 1: Comment from IllustriousResolve33 - 1h ago
-Comment text: We said “no homo” and forgot about it
-Extracted comment 2: Comment thread level 1: Reply from AlphaOmega926 - 23m ago
-Comment text: Ayoooooooo
-Extracted comment 3: Comment from DaintySoleil - 2h ago
-Comment text: we ended up laughing about it but now there’s a lot more awkwardness during movie nights
-Extracted comment 4: Comment thread level 1: Reply from AmaroWolfwood - 3m ago
-Comment text: Omg just bang again already
-Extracted comment 5: Comment from dyslexicassfuck - 1h ago
-Comment text: We got married, where together for 22 years.eventually divorced which is a bummer loosing your husband and bestfriend
-Extracted comment 6: Comment thread level 1: Reply from Jasakido - 42m ago
-Comment text: Why did you guys divorce if you don’t mine me asking?
-Extracted comment 7: Comment thread level 2: Reply from atlantadessertsindex - 22m ago
-Comment text: According to OP’s post history they got together at 16 and husband eventually had an affair.
-Extracted comment 8: Comment thread level 2: Reply from babbletags1 - 38m ago
-Comment text: They cheated on each other with their best friends.
-Extracted comment 9: Comment thread level 3: Reply from Volsunga - 27m ago
-Comment text: Well, if you like Pina Coladas....
-Extracted comment 10: Comment thread level 3: Reply from ShinzoTheThird - 36m ago
-Comment text: Haha good one
-Extracted comment 11: Comment from SereneTalyn - 2h ago
-Comment text: We became closer, but it complicated our friendship afterward.
-Extracted comment 12: Comment thread level 1: Reply from AspieAsshole - 32m ago
-Comment text: Yeah, that's about right. I always had a thing for her, but she didn't like girls, except for one time, when she said I gave her the best orgasms of her life, then refused to talk about it after that night.
+No 'View more comments' button found or not clickable
+No 'View more comments' button found or not clickable
+Extracted comment 1: Comment from Jake02345 - 16m ago
+Comment text: Tripping
+Extracted comment 2: Comment from JeniS12345 - 14m ago
+Comment text: “My Ordinary Life”.
+Extracted comment 3: Comment from FoxyHellcat - 8m ago
+Comment text: ZHU - Faded. Looove that song. It’s so rhythmic and sensual too…🥰
+Extracted comment 4: Comment from Yeeaaaarrrgh - 14m ago
+Comment text: Your Gold Dress by The Dukes of Stratosphear.
+Extracted comment 5: Comment from AdLegitimate3246 - 16m ago
+Comment text: https://youtu.be/9dmINkrAYRY?si=UGRDPVbiP_vE6k6w
+Extracted comment 6: Comment from HeadstonePoetry - 15m ago
+Comment text: Planet Caravan, Black Sabbath
+Extracted comment 7: Comment from Sharp-Horse-7809 - 13m ago
+Comment text: Million Dreams
+Extracted comment 8: Comment from Ishayaa - 12m ago
+Comment text: Merry-Go-Round of Life from Howl’s Moving Castle 😮‍💨
+Extracted comment 9: Comment from Sinua_am_I - 12m ago
+Comment text: Locket by Crumb
+Extracted comment 10: Comment from highonstabs7160 - 8m ago
+Comment text: Renegade, Aaryan Shah
+Extracted comment 11: Comment from ThinParsle - 1m ago
+Comment text: 
+Extracted comment 12: Comment from Few-Ruin-742 - in 1m
+Comment text: Breathe - Pink Floyd
+Scrolling down to load more comments...
+No 'View more comments' button found or not clickable
+No 'View more comments' button found or not clickable
+Scrolling down to load more comments...
+No 'View more comments' button found or not clickable
+No 'View more comments' button found or not clickable
+Could only find 12 comments. There may not be 50 comments available.
 Closing comment extraction window
-Extracted 12 comments in total
 Generating AI comment for post 1...
 Generating AI comment...
-Sending request to AI model with prompt length: 350 characters
-AI comment generated successfully
-Generated comment: 
-
-Mixed feelings, always a risk.  
-
-Waiting random time before posting comment for post 1...
-Waiting for 13.08 seconds...
-Posting AI-generated comment for post 1...
-Attempting to post the AI-generated comment...
-Extracted postid: 1g16x4f
+Sending request to AI model with prompt length: 358 characters
+Error generating AI comment: 429 Client Error: Too Many Requests for url: https://openrouter.ai/api/v1/chat/completions
 Processing post 2...
-Post 2 - Title: What's your views on making online friends? Are they worth it?
-Post 2 - URL: https://www.reddit.com/r/AskReddit/comments/1g1637m/whats_your_views_on_making_online_friends_are/
-Extracting comments from: https://www.reddit.com/r/AskReddit/comments/1g1637m/whats_your_views_on_making_online_friends_are/
+Post 2 - Title: Imagine: you're dying, and you can listen to only one last song. What would it be?
+Post 2 - URL: https://www.reddit.com/r/AskReddit/comments/1g1fhs7/imagine_youre_dying_and_you_can_listen_to_only/
+Extracting comments from: https://www.reddit.com/r/AskReddit/comments/1g1fhs7/imagine_youre_dying_and_you_can_listen_to_only/
 Navigated to post page
 Waiting for comments to load...
-Comments loaded successfully
-Found 89 comments
-Extracted comment 1: Comment from charminggbea - 2h ago
-Comment text: ngl, online friends can be awesome, especially if you click with people who get you in ways irl friends might not. but it can also feel kinda distant sometimes if you never meet them face to face. worth it if you vibe, but you gotta be careful who you trust
-Extracted comment 2: Comment thread level 1: Reply from CelestialCrafter00 - 2h ago
-Comment text: I’d say online friends are more worth it than irl friends. Online you can meet people with similar interests from all over the world. Irl it’s the same 50 people you see all the time.
-Extracted comment 3: Comment thread level 2: Reply from throwawey20202020 - 1h ago
-Comment text: Online friends can offer fresh perspectives, but there's something special about face-to-face connections that online can’t fully replace.
-Extracted comment 4: Comment thread level 1: Reply from Miriam_Sugarplum_70 - 1h ago
-Comment text: I have online friends I met at FIVEM, we have fun in game but I really feel close to them online but I really dont feel like meeting them irl
-Extracted comment 5: Comment from LovelyBerns - 2h ago
-Comment text: online friends are like bonus snacks in life unexpected and surprisingly satisfying
-Extracted comment 6: Comment thread level 1: Reply from NaughtyCrystalX - 2h ago
-Comment text: especially those ones you meet in online games, separated by distance but united by the same passion for gaming.
-Extracted comment 7: Comment from Tonio46 - 5m ago
-Comment text: Better than offline friends. Online friends probably won’t hurt you as much.
-Extracted comment 8: Comment from OpalFawnTurner - 2h ago
-Comment text: 
-Extracted comment 9: Comment from annawhittee - 19m ago
-Comment text: I cant really trust someone deeper if i dont see them. I think it's a superficial friendship/company
-Extracted comment 10: Comment from BlondeHeartbreaker3 - 2h ago
-Comment text: 
-Extracted comment 11: Comment from Random-Gif-Bot - 3h ago
-Comment text: Easy to make, easier to walk away from
-Extracted comment 12: Comment from Fizzy-Twinkle - 2h ago
-Comment text: Honestly, some of my closest friendships started online. It's surprising how deep the connection can be when you bond over shared interests, even if you've never met IRL.
+An error occurred while extracting comments: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+
 Closing comment extraction window
-Extracted 12 comments in total
-Generating AI comment for post 2...
-Generating AI comment...
-Sending request to AI model with prompt length: 357 characters
-AI comment generated successfully
-Generated comment: 
-
-Totally worth it, met my best frend online  
-
-Waiting random time before posting comment for post 2...
-Waiting for 13.70 seconds...
-Posting AI-generated comment for post 2...
-Attempting to post the AI-generated comment...
-Extracted postid: 1g1637m
-Processing post 3...
-Post 3 - Title: What is your age without saying how old you are?
-Post 3 - URL: https://www.reddit.com/r/AskReddit/comments/1g0q691/what_is_your_age_without_saying_how_old_you_are/
-Extracting comments from: https://www.reddit.com/r/AskReddit/comments/1g0q691/what_is_your_age_without_saying_how_old_you_are/
-Navigated to post page
-Waiting for comments to load...
-Comments loaded successfully
-Found 100 comments
-Extracted comment 1: Comment from Mathe-Omi - 17h ago
-Comment text: I wrote my master thesis on a typewriter.
-Extracted comment 2: Comment thread level 1: Reply from wishfuldancer_ - 13h ago
-Comment text: I am of the firm belief that kids today should know the horror of footnotes on a manual typewriter.
-Extracted comment 3: Comment thread level 2: Reply from SaltConnection1109 - 12h ago
-Comment text: OMG! That feeling when you were in your groove, typing away and then realized you were at the bottom of the page and only had room for ONE footnote but you have 3 notated.
-Extracted comment 4: Comment thread level 1: Reply from thoawaydatrash - 16h ago
-Comment text: So you were in grad school and a hipster in the early 2010s, huh?
-Extracted comment 5: Comment from Anonymous92916 - 14h ago
-Comment text: Old enough to remember the adult section blocked off by a curtain in the video store.
-Extracted comment 6: Comment thread level 1: Reply from Fire_Crotch96 - 13h ago
-Comment text: Oooo, good one. 36?
-Extracted comment 7: Comment thread level 2: Reply from Anonymous92916 - 13h ago
-Comment text: Early 40s
-Extracted comment 8: Comment thread level 3: Reply from C4ptainchr0nic - 11h ago
-Comment text: I'm 35 and I snuck in one once when I was about 13, from the same store is stole a penthouse mag from
-Extracted comment 9: Comment from Lazy_Influence_1067 - 17h ago
-Comment text: Couldn’t use the phone when i went on the internet
-Extracted comment 10: Comment thread level 1: Reply from TheDrunkScientist - 12h ago
-Comment text: Lololol. The sound of dial up lives in my head.
-Extracted comment 11: Comment thread level 2: Reply from Lazy_Influence_1067 - 12h ago
-Comment text: And my mom yelling at me when I sneak online and not tell her when she tried to use the phone
-Extracted comment 12: Comment from JoeMorgue - 17h ago
-Comment text: I watched a space shuttle explode on live TV in primary school.
-Closing comment extraction window
-Extracted 12 comments in total
-Generating AI comment for post 3...
-Generating AI comment...
-Sending request to AI model with prompt length: 343 characters
-AI comment generated successfully
-Generated comment: 
-
-still got my first grey hair.  🤪  
-
-Waiting random time before posting comment for post 3...
-Waiting for 10.92 seconds...
-Posting AI-generated comment for post 3...
-Attempting to post the AI-generated comment...
-Extracted postid: 1g0q691
-Processing post 4...
-Post 4 - Title: What stereotype are you most like?
-Post 4 - URL: https://www.reddit.com/r/AskReddit/comments/1g16zm1/what_stereotype_are_you_most_like/
-Extracting comments from: https://www.reddit.com/r/AskReddit/comments/1g16zm1/what_stereotype_are_you_most_like/
-Navigated to post page
-Waiting for comments to load...
-Comments loaded successfully
-Found 56 comments
-Extracted comment 1: Comment from Radiant-Lilyy88 - 2h ago
-Comment text: the outsider who never quite fits in no matter how hard she tries
-Extracted comment 2: Comment thread level 1: Reply from MelancholicCl0wn - 1h ago
-Comment text: Same
-Extracted comment 3: Comment thread level 1: Reply from IllustriousQuail4130 - 1h ago
-Comment text: story of my life
-Extracted comment 4: Comment from curiousashy - 59m ago
-Comment text: the overthinker, got a PhD in analyzing everything twice, y’know?
-Extracted comment 5: Comment from Nice-Nerve-2247 - 1h ago
-Comment text: Stereotypical nerd/geek. I've started playing dnd with my friends, I take double science, have a small collection of comics and am trying to learn Japanese.
-Extracted comment 6: Comment thread level 1: Reply from taurussy - 1h ago
-Comment text: god dammit why does everyone have a dnd group but me, where ARE all these people coming from
-Extracted comment 7: Comment thread level 1: Reply from sanirsamcildirdim - 1h ago
-Comment text: 
-Extracted comment 8: Comment thread level 2: Reply from sanirsamcildirdim - 13m ago
-Comment text: 
-Extracted comment 9: Comment from Inky-Skies - 1h ago
-Comment text: The starving artist
-Extracted comment 10: Comment from An-Otter-Kay - 1h ago
-Comment text: The engineer that doesn't know how to talk to women...
-Extracted comment 11: Comment from Luwe95 - 47m ago
-Comment text: The former gifted child
-Extracted comment 12: Comment from PresentationNice7043 - 1h ago
-Comment text: Florida natives being crazy.
-Closing comment extraction window
-Extracted 12 comments in total
-Generating AI comment for post 4...
-Generating AI comment...
-Sending request to AI model with prompt length: 329 characters
-AI comment generated successfully
-Generated comment: 
-
-The bookworm, probobly 😂  
-
-Waiting random time before posting comment for post 4...
-Waiting for 6.20 seconds...
-Posting AI-generated comment for post 4...
-Attempting to post the AI-generated comment...
-Extracted postid: 1g16zm1
-Processing post 5...
-Post 5 - Title: In your opinion , what are the reasons to cut someone out of your life?
-Post 5 - URL: https://www.reddit.com/r/AskReddit/comments/1g178uo/in_your_opinion_what_are_the_reasons_to_cut/
-Extracting comments from: https://www.reddit.com/r/AskReddit/comments/1g178uo/in_your_opinion_what_are_the_reasons_to_cut/
-Navigated to post page
-Waiting for comments to load...
-Comments loaded successfully
-Found 97 comments
-Extracted comment 1: Comment from charmingnicole - 1h ago
-Comment text: tbh, there are a few big reasons. like, if they’re super toxic and always bring you down, or if they don’t respect your boundaries. also, if they’re constantly lying or just not a good vibe anymore, it’s time to bounce. life’s too short for that negativity
-Extracted comment 2: Comment thread level 1: Reply from Tugonmynugz - 27m ago
-Comment text: Someone i used to play pool with would just lie and lie about the stupidest of things. It's just like he wanted pats on the back all the time. And his breath stunk.
-Extracted comment 3: Comment thread level 1: Reply from Major_Piccolo_2908 - 18m ago
-Comment text: Also being an extreme jerk!!
-Extracted comment 4: Comment from BlondeHeartbreaker8 - 56m ago
-Comment text: If someone constantly disappoints you and doesn’t keep their promises, you may need to reconsider that friendship.
-Extracted comment 5: Comment from doctoralboardroom87 - 58m ago
-Comment text: You get to a certain age (or at least I did) and you start to realize which of your relationships are one-sided (you put all the effort in and you get zero effort back). I didn't so much as cut people off... just matched their effort on the relationship and everything sort of worked itself out.
-Extracted comment 6: Comment thread level 1: Reply from Hardtimez17 - 28m ago
-Comment text: Thisss!!!
-Extracted comment 7: Comment thread level 1: Reply from Major_Piccolo_2908 - 16m ago
-Comment text: This makes so much sense!!
-Extracted comment 8: Comment thread level 1: Reply from Own_Chocolate_6810 - 8m ago
-Comment text: Adulting quietly I like to call it as you have to be adult enough to be like “nope this is a load of cr/p I can be doing without “ .
-Extracted comment 9: Comment from ActuaryCool846 - 1h ago
-Comment text: Do they make you happy?
-Extracted comment 10: Comment thread level 1: Reply from Acceptable_Topic_588 - 34m ago
-Comment text: I am on the fence on this one
-Extracted comment 11: Comment from bigjimbay - 54m ago
-Comment text: Does this thing bring me joy?
-Extracted comment 12: Comment from Silver6Rules - 55m ago
-Comment text: Got tired of being used. Tired of being contacted only when they needed something. Tired of being the first to reach out. Tired of being emotionally drained from their presence. Once I stopped reaching out, so did they. Proved my suspicions right. Good riddance.
-Closing comment extraction window
-Extracted 12 comments in total
-Generating AI comment for post 5...
-Generating AI comment...
-Sending request to AI model with prompt length: 366 characters
-AI comment generated successfully
-Generated comment: 
-
-Toxicity, drama, and fake friends.  
-
-Waiting random time before posting comment for post 5...
-Waiting for 13.57 seconds...
-Posting AI-generated comment for post 5...
-Attempting to post the AI-generated comment...
-Extracted postid: 1g178uo
-Processing post 6...
-Post 6 - Title: What makes you different from others ? 
-Post 6 - URL: https://www.reddit.com/r/AskReddit/comments/1g1779j/what_makes_you_different_from_others/
-Extracting comments from: https://www.reddit.com/r/AskReddit/comments/1g1779j/what_makes_you_different_from_others/
-Navigated to post page
-Waiting for comments to load...
-Comments loaded successfully
-Found 54 comments
-Extracted comment 1: Comment from charmingnicole - 1h ago
-Comment text: i just embrace my quirks instead of hiding them
-Extracted comment 2: Comment from MelancholicCl0wn - 1h ago
-Comment text: I'm ugly
-Extracted comment 3: Comment thread level 1: Reply from italiccock - 1h ago
-Comment text: 
-Extracted comment 4: Comment from Several_East_8535 - 48m ago
-Comment text: My complete lack of navigational ability. I've sometimes got completely lost in my own hometown - where I've lived for over 23 years.
-Extracted comment 5: Comment from DonnaPhillips01 - 1h ago
-Comment text: My name
-Extracted comment 6: Comment from SweepyNanami - 1h ago
-Comment text: I'm extremely awful at every social situation
-Extracted comment 7: Comment from Ariel-Athena-18 - 1h ago
-Comment text: My sense of humour
-Extracted comment 8: Comment from ngwepenatorp58 - 1h ago
-Comment text: 
-Extracted comment 9: Comment from Adventurous-Lock1569 - 58m ago
-Comment text: 
-Extracted comment 10: Comment from Billy3Thumbs_ - 50m ago
-Comment text: I can fold my scrotum into an origami swan
-Extracted comment 11: Comment from Business_Cat_3914 - 1h ago
-Comment text: 
-Extracted comment 12: Comment from Ok_Art_5349 - 1h ago
-Comment text: 
-Closing comment extraction window
-Extracted 12 comments in total
-Generating AI comment for post 6...
-Generating AI comment...
-Sending request to AI model with prompt length: 334 characters
-AI comment generated successfully
-Generated comment: 
-
-Experiences shape us all differently.  
-
-Waiting random time before posting comment for post 6...
-Waiting for 2.79 seconds...
-Posting AI-generated comment for post 6...
-Attempting to post the AI-generated comment...
-Extracted postid: 1g1779j
-Processing post 7...
-Post 7 - Title: What will never cease to make you smile?
-Post 7 - URL: https://www.reddit.com/r/AskReddit/comments/1g17gx6/what_will_never_cease_to_make_you_smile/
-Extracting comments from: https://www.reddit.com/r/AskReddit/comments/1g17gx6/what_will_never_cease_to_make_you_smile/
-Navigated to post page
-Waiting for comments to load...
-Comments loaded successfully
-Found 68 comments
-Extracted comment 1: Comment from laraalanee - 42m ago
-Comment text: Watching a dog stick its head out of a car window, tongue out, ears flapping in the wind. Their pure joy is contagious!
-Extracted comment 2: Comment thread level 1: Reply from calhoon2005 - 28m ago
-Comment text: That and them doing the zoomies
-Extracted comment 3: Comment from annawhittex - 43m ago
-Comment text: Old couples holding hands
-Extracted comment 4: Comment from BlondeHeartbreaker3 - 34m ago
-Comment text: The unexpected kindness of a stranger, like a genuine compliment or selfless help, always brightens my day.
-Extracted comment 5: Comment from ferretf - 49m ago
-Comment text: Dad jokes
-Extracted comment 6: Comment from BabeButterfly_ - 37m ago
-Comment text: Cats! They are just purrrfect!
-Extracted comment 7: Comment from nottherealslash - 45m ago
-Comment text: Seeing the Milky Way
-Extracted comment 8: Comment from EnigmaticJuno - 44m ago
-Comment text: my family and friends! they are always there to support and appreciate me and I love them
-Extracted comment 9: Comment from ukman29 - 55m ago
-Comment text: The video of the cyclist flipping off a driver when he beeps at her for cutting him up, only to crash and fly over her handlebars a few moments later.
-Extracted comment 10: Comment thread level 1: Reply from muchomistakes - 22m ago
-Comment text: You can’t just say something like this.
-Extracted comment 11: Comment from DaringCyrus - 53m ago
-Comment text: a cup of coffee, relaxing nature and my cat!
-Extracted comment 12: Comment from Middle-Ad9764 - 32m ago
-Comment text: Random acts of kindness, truly hilarious moments in comedy, meaningful eye contact, and dogs reuniting with their humans after a long time.
-Closing comment extraction window
-Extracted 12 comments in total
-Generating AI comment for post 7...
-Generating AI comment...
-Sending request to AI model with prompt length: 335 characters
-AI comment generated successfully
-Generated comment: 
-
-Sunsets and good dogs :)
-Waiting random time before posting comment for post 7...
-Waiting for 2.50 seconds...
-Posting AI-generated comment for post 7...
-Attempting to post the AI-generated comment...
-Extracted postid: 1g17gx6
-Processing post 8...
-Post 8 - Title: What's the greatest day of your life till now?
-Post 8 - URL: https://www.reddit.com/r/AskReddit/comments/1g16q2b/whats_the_greatest_day_of_your_life_till_now/
-Extracting comments from: https://www.reddit.com/r/AskReddit/comments/1g16q2b/whats_the_greatest_day_of_your_life_till_now/
-Navigated to post page
-Waiting for comments to load...
-Comments loaded successfully
-Found 37 comments
-Extracted comment 1: Comment from BlondeHeartbreaker9 - 2h ago
-Comment text: The day I overcame a serious illness. It was like being reborn; I felt immense gratitude for life and for those who stood by me throughout the process.
-Extracted comment 2: Comment from Nice-Nerve-2247 - 2h ago
-Comment text: I went to a hockey game with my dad and caught a puck. On the way home, he let me drive for the first time. So that was a good day.
-Extracted comment 3: Comment from Thick_Advisor_987 - 2h ago
-Comment text: The day my kid was born
-Extracted comment 4: Comment from BabeBlossom_ - 1h ago
-Comment text: The day I realized every problem is in my head. That day I felt an a big relief.
-Extracted comment 5: Comment thread level 1: Reply from ChainInevitable3545 - 31m ago
-Comment text: Wish to reach that day!
-Extracted comment 6: Comment from CharmingMyvra - 2h ago
-Comment text: The greatest day was when I graduated; pure joy!
-Extracted comment 7: Comment from 2Naan_Dhaan1 - 1h ago
-Comment text: The day I won 2nd place in a university competition. This may be normal for others but this is the 1st time when a larger group of people acknowledged me and my work so it's special.
-Extracted comment 8: Comment thread level 1: Reply from lifesnotperfect - 24m ago
-Comment text: Thats great :) What was the competition for?
-Extracted comment 9: Comment thread level 2: Reply from 2Naan_Dhaan1 - 19m ago
-Comment text: It was a drama competition and I wrote the script and directed it☺️ The judge really like the way I wrote the script.
-Extracted comment 10: Comment thread level 3: Reply from lifesnotperfect - 6m ago
-Comment text: That’s so cool!! Definitely a moment to be proud of :)
-Extracted comment 11: Comment from th3_sauce - 2h ago
-Comment text: ♫Today's the greatest--day I've ever known! Can't live for tomorrow; tomorrow's much too long...♪
-Extracted comment 12: Comment from NatureLoverInPixels - 1h ago
-Comment text: the day i found a 20 in my old jacket
-Closing comment extraction window
-Extracted 12 comments in total
-Generating AI comment for post 8...
-Generating AI comment...
-Sending request to AI model with prompt length: 341 characters
-AI comment generated successfully
-Generated comment: 
-
-My wedding day, hands down.  
-
-Waiting random time before posting comment for post 8...
-Waiting for 12.69 seconds...
-Posting AI-generated comment for post 8...
-Attempting to post the AI-generated comment...
-Extracted postid: 1g16q2b
-Processing post 9...
-Post 9 - Title: What small thing annoys you to an irrational degree?
-Post 9 - URL: https://www.reddit.com/r/AskReddit/comments/1g0yjyc/what_small_thing_annoys_you_to_an_irrational/
-Extracting comments from: https://www.reddit.com/r/AskReddit/comments/1g0yjyc/what_small_thing_annoys_you_to_an_irrational/
-Navigated to post page
-Waiting for comments to load...
-Comments loaded successfully
-Found 100 comments
-Extracted comment 1: Comment from WabiSabi0912 - 10h ago
-Comment text: Groups of people who walk down the street, taking up the entire width of the sidewalk. When they walk slowly & then suddenly stop, it is rage inducing.
-Extracted comment 2: Comment thread level 1: Reply from clarissacole2413 - 8h ago
-Comment text: I can't stand it when they are walking towards me, a single human on the sidewalk, and they don't form a fucking line but instead either shoulder check me or force me into the road. This shit has been on my mind so often with school staring back up. They act like they are the only ones that exist!
-Extracted comment 3: Comment thread level 2: Reply from Vortika - 7h ago
-Comment text: Lately that's been pissing me off so much that if the person in my path doesn't make any space at all I just keep directly in my path until I either walk right into them or they dodge out of the way. Maybe not the best idea but they take the hint
-Extracted comment 4: Comment thread level 3: Reply from Fritzo2162 - 3h ago
-Comment text: I’m 6’4” 230lbs and I absolutely do this. In fact I’ll rent myself out to do this for others if needed.
-Extracted comment 5: Comment thread level 2: Reply from Xaephos - 7h ago
-Comment text: Being a tall, relatively in shape man, I have the distinct advantage of being able to win at sidewalk chicken but for anyone else out there - just stop moving. They are then forced to either move out of the way or deliberately knock you to the ground. Very few people will do the latter.
-Extracted comment 6: Comment thread level 1: Reply from Dramatic_Arugula_252 - 7h ago
-Comment text: I grew up in a large family, and we’d make sure we were not doing this as we walked. It’s so easy to do and it’s sooooo annoying.
-Extracted comment 7: Comment from hilltopper11 - 11h ago
-Comment text: When people don't fucking use headphones in public
-Extracted comment 8: Comment thread level 1: Reply from Far-Candle-5700 - 10h ago
-Comment text: There are few sounds that are worse than someone listening to the first 2 seconds of a tik tok and skipping it over and over
-Extracted comment 9: Comment thread level 2: Reply from Important-Emu-9192 - 7h ago
-Comment text: I was on a bus the other day and someone was doing this and an older lady in front of them turned around and went “did you know headphones exist? I’m going to be on this bus for 30 minutes, I really don’t need to listen to that”
-Extracted comment 10: Comment thread level 1: Reply from jiffysdidit - 10h ago
-Comment text: On the train can fuck right off
-Extracted comment 11: Comment thread level 2: Reply from hilltopper11 - 10h ago
-Comment text: I swear those people need to get smacked
-Extracted comment 12: Comment thread level 2: Reply from pumpkinpretzel - 9h ago
-Comment text: Also in waiting rooms.
-Closing comment extraction window
-Extracted 12 comments in total
-Generating AI comment for post 9...
-Generating AI comment...
-Sending request to AI model with prompt length: 347 characters
-AI comment generated successfully
-Generated comment: 
-
-People who chew with their mouth open. 🙄  
-
-Waiting random time before posting comment for post 9...
-Waiting for 2.05 seconds...
-Posting AI-generated comment for post 9...
-Attempting to post the AI-generated comment...
-Extracted postid: 1g0yjyc
-Processing post 10...
-Post 10 - Title: What behavior do most people accept that you find creepy?
-Post 10 - URL: https://www.reddit.com/r/AskReddit/comments/1g0yx1z/what_behavior_do_most_people_accept_that_you_find/
-Extracting comments from: https://www.reddit.com/r/AskReddit/comments/1g0yx1z/what_behavior_do_most_people_accept_that_you_find/
-Navigated to post page
-Waiting for comments to load...
-Comments loaded successfully
-Found 99 comments
-Extracted comment 1: Comment from RecordingComplete969 - 8h ago
-Comment text: People who stand way too close while talking to you like, why do I need to smell your shampoo to have a conversation?
-Extracted comment 2: Comment thread level 1: Reply from Sinthe741 - 5h ago
-Comment text: And when you take a step back, the other person closes that gap.
-Extracted comment 3: Comment thread level 2: Reply from FaeShroom - 5h ago
-Comment text: I HATE THAT SO MUCH
-Extracted comment 4: Comment thread level 2: Reply from Nahmad - 2h ago
-Comment text: So I have a trick for this, learnt from years in a customer facing service role. When you take the step back, leave one foot where it is to act as a kind of physical barrier. When they try to take a step forward, their foot will bump yours and it usually gets them to stay where they are. Doesn't work 100% of the time but it's better than the weird backing away that will happen otherwise
-Extracted comment 5: Comment thread level 1: Reply from StealingYourPension - 5h ago
-Comment text: It's the shitty breath for me
-Extracted comment 6: Comment thread level 1: Reply from GuyFromDeathValley - 4h ago
-Comment text: especially at the checkout in the supermarket. When people stand so fuckin close to me that they constantly bump into me. super annoying. Like the hell you think that's gonna do, you think the queue is gonna move faster now? fuck off, dude..
-Extracted comment 7: Comment from ProfessorDelicious6 - 9h ago
-Comment text: Filming in a gym when other people are around.
-Extracted comment 8: Comment thread level 1: Reply from Sudden-Hearing-3086 - 7h ago
-Comment text: at least censor other gym goers’ faces
-Extracted comment 9: Comment thread level 2: Reply from Icy_Zucchini3344 - 6h ago
-Comment text: won't like to see my struggling face on somebody else's page
-Extracted comment 10: Comment from miss_kimba - 7h ago
-Comment text: “Is that your boooooyfriend?”.
-“Do you have a girlfriend at preschool?”.
-“He’s going to be a heartbreaker.”
-Extracted comment 11: Comment thread level 1: Reply from tdavidg4547 - 6h ago
-Comment text: Oh my god my extended family did this all the time and I hated it. Made me feel super self conscious too when I did actually have girlfriends, would never talk about it
-Extracted comment 12: Comment thread level 2: Reply from No_Doughnut3185 - 5h ago
-Comment text: This happened to me too! When I got my first boyfriend in middle school, I didn't tell my family for awhile because I didn't want them to tease me about it.
-Closing comment extraction window
-Extracted 12 comments in total
-Generating AI comment for post 10...
-Generating AI comment...
-Sending request to AI model with prompt length: 352 characters
-AI comment generated successfully
-Generated comment: 
-
-People staring, makes me hella uncomfortable.  
-
-Waiting random time before posting comment for post 10...
-Waiting for 14.26 seconds...
-Posting AI-generated comment for post 10...
-Attempting to post the AI-generated comment...
-Extracted postid: 1g0yx1z
-Processing post 11...
-Post 11 - Title: What's the most unique talent you have?
-Post 11 - URL: https://www.reddit.com/r/AskReddit/comments/1g16be9/whats_the_most_unique_talent_you_have/
-Extracting comments from: https://www.reddit.com/r/AskReddit/comments/1g16be9/whats_the_most_unique_talent_you_have/
-Navigated to post page
-Waiting for comments to load...
-Comments loaded successfully
-Found 65 comments
-Extracted comment 1: Comment from JewelJasminee - 2h ago
-Comment text: 
-Extracted comment 2: Comment thread level 1: Reply from FormABruteSquad - 1h ago
-Comment text: use your toes
-Extracted comment 3: Comment from [deleted] - 2h ago
-Comment text: Oh my god I can do the same. Have you tried doing it in front of a pet ?
-Extracted comment 4: Comment thread level 1: Reply from estrella_de_mar - 1h ago
-Comment text: Oh my god I can do the same. Have you tried doing it in front of a pet ?
-Extracted comment 5: Comment thread level 1: Reply from nw11111 - 2h ago
-Comment text: Are you a dolphin? Do your dolphin friends get irritated? What are you saying? Can’t they just swim away from you? So many questions. How did you type this? Do dolphins commonly use reddit?
-Extracted comment 6: Comment from uPsyDeDown13 - 2h ago
-Comment text: good at remember where I saw things. Has anybody seen nail clippers. Ya 2nd junk drawer down, top right corner next to florida key chain with no keys on it.
-Extracted comment 7: Comment from Herbism - 2h ago
-Comment text: Reading people. I can confidently know so much about you just by having a 30 second conversation.
-Extracted comment 8: Comment thread level 1: Reply from uPsyDeDown13 - 2h ago
-Comment text: My mom is the like the guy in Lie to Me. She'll ask you questions and tell if you're lying. It's a great talent for a person to have...unless its your mom. Then it sucks.
-Extracted comment 9: Comment thread level 1: Reply from InsaneLazyGamer - 2h ago
-Comment text: That's nothing, Redditors can determine the status and health of your relationship as well as whether your partner is a psychopath littered with red flags and if you should divorce or go no contact with them from a single post.
-Extracted comment 10: Comment thread level 1: Reply from TshepoM55 - 2h ago
-Comment text: That's a great skill.
-Extracted comment 11: Comment from CozyEzme - 2h ago
-Comment text: i can flawlessly identify a snack's flavor just by smell alone
-Extracted comment 12: Comment from EnvironmentalHalf677 - 2h ago
-Comment text: I can sleep.
-Closing comment extraction window
-Extracted 12 comments in total
-Generating AI comment for post 11...
-Generating AI comment...
-Sending request to AI model with prompt length: 334 characters
-AI comment generated successfully
-Generated comment: 
-
-Juggle chain saws I guess? 
-
-Waiting random time before posting comment for post 11...
-Waiting for 8.90 seconds...
-Posting AI-generated comment for post 11...
-Attempting to post the AI-generated comment...
-Extracted postid: 1g16be9
-Scraping completed for r/AskReddit. Total posts processed: 11
-
-Starting to scrape subreddit: r/AITAH
-Navigating to subreddit: r/AITAH, sort type: hot
-Waiting for page to load...
-Scrolling to load more content...
-Waiting for content to load after scrolling...
-Finding posts...
-Found 53 posts
-Processing post 1...
-Post 1 - Title: AITAH for refusing full custody of my daughter after my husband asked for a divorce?
-Post 1 - URL: https://www.reddit.com/r/AITAH/comments/1g12s28/aitah_for_refusing_full_custody_of_my_daughter/
-Extracting comments from: https://www.reddit.com/r/AITAH/comments/1g12s28/aitah_for_refusing_full_custody_of_my_daughter/
-Navigated to post page
-Waiting for comments to load...
-Comments loaded successfully
-Found 100 comments
-Extracted comment 1: Comment from Ghost3022 - 6h ago
-Comment text: You're certainly no more of an AH than men who do the same thing. You're not wrong for granting his wish for a divorce. And you're not wrong for not letting him be single and free of responsibility. You both brought this child into the world so you both are responsible for her 50/50. What exactly that responsibility looks like will be determined by the courts. But in reality, neither one of you deserve this child that you're both fighting to get rid of. Hopefully an arrangement works out where at least someone loves this child the way that she deserves to be loved.
-Extracted comment 2: Comment thread level 1: Reply from OscillatingFox - 6h ago
-Comment text: My friend just got divorced. Her husband asked for literally no custody. Zero. He wants to be able to see the kids at weekends/when he feels like it but not for them to stay with him or to take any custodial responsibility. He's also all about the many ways he feels my friend should be doing a better job as a parent and frequently accuses her of alienating him from the kids he doesn't want living with him.
-Extracted comment 3: Comment thread level 2: Reply from RiverSong_777 - 5h ago
-Comment text: My father didn’t even ask for visitation in the divorce and never paid child support but was very surprised I wasn’t interested in any contact once I was an adult with a full-time job. Some people simply shouldn’t be parents.
-Extracted comment 4: Comment thread level 3: Reply from Rubberbangirl66 - 3h ago
-Comment text: Same, dad took off, we became poorer, but we had a lot of fun. I did not see him for 18 mos, and I loved it
-Extracted comment 5: Comment thread level 4: Reply from LastTangoOfDemocracy - 3h ago
-Comment text: My dad stuck around but I wish to god he hadn't. Having 2 parents around is not always for the best.
-Extracted comment 6: Comment thread level 5: Reply from ASweetTweetRose - 1h ago
-Comment text: My Dad wouldn’t divorce my Mom because in his mind the father always completely abandoned the kids to the mother and he didn’t want to do that to us. I wish he had divorced my Mom but it was his sticking around that saved me. Maybe.
-Extracted comment 7: Comment thread level 3: Reply from shimmyfromalaska - 1h ago
-Comment text: Same. I lived in a small island town and my dad would see us walking and he would cross the street to avoid contact. I’m very close to his siblings and my grandmother. Such a weird dynamic and definitely impacted how I viewed relationships.
-Extracted comment 8: Comment thread level 3: Reply from 21-characters - 3h ago
-Comment text: Neither of my parents ever particularly loved me. I pretty much raised myself and am actually satisfied with my child-free life. I never felt I would be a good parent. I do ok with my dogs and am happy with them.
-Extracted comment 9: Comment thread level 4: Reply from NemoOfConsequence - 2h ago
-Comment text: My parents never loved me. I love my child enough for ten people.
-Extracted comment 10: Comment thread level 4: Reply from prismaticcroissant - 2h ago
-Comment text: Same. I love my cats but sometimes even they feel like too much responsibility. I also raised my siblings because after my mom divorced and remarried, she started acting like a teenager. My dad also admitted to me as a child that he never wanted kids and had my brother and I DNA tested, which was ridiculous because we look like him.
-Extracted comment 11: Comment thread level 2: Reply from Competitive_Pen7192 - 4h ago
-Comment text: I really despise Fathers who want no child custody responsibilities but want the right to see their children at their own whim.
-Extracted comment 12: Comment thread level 3: Reply from Story_of_Amanda - 4h ago
-Comment text: My ex only takes the kids on weekends I work (every other weekend). He’ll get them Friday after he gets off work (not even at a consistent time) and bring them home Sunday evening as I’m getting off work. I had to leave work early last week (not an easy thing to do with my job) ‘cause my son ended up getting sick. Even though I ended up finding out his dad had taken off work that day but it would’ve taken him 2.5 hours to get his truck and come get him. He doesn’t help pay for anything, everything falls on me. And he’s talking about wanting to move 12 hours away 🙄
-Closing comment extraction window
-Extracted 12 comments in total
-Generating AI comment for post 1...
-Generating AI comment...
-Sending request to AI model with prompt length: 379 characters
-AI comment generated successfully
-Generated comment: 
-
-NTA, sounds rough, good for you  
-
-Waiting random time before posting comment for post 1...
-Waiting for 7.29 seconds...
-Posting AI-generated comment for post 1...
-Attempting to post the AI-generated comment...
-Extracted postid: 1g12s28
+An error occurred processing post 2: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0051BD10]
+	(No symbol) [0x0051CABD]
+	(No symbol) [0x005325A2]
+	(No symbol) [0x0050DE65]
+	(No symbol) [0x005A735B]
+	(No symbol) [0x0059AB03]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
 Processing post 2...
-Post 2 - Title: AITAH for not wanting to accept my brother's apology after he lied to CPS.
-Post 2 - URL: https://www.reddit.com/r/AITAH/comments/1g0t1pj/aitah_for_not_wanting_to_accept_my_brothers/
-Extracting comments from: https://www.reddit.com/r/AITAH/comments/1g0t1pj/aitah_for_not_wanting_to_accept_my_brothers/
-Navigated to post page
-Waiting for comments to load...
-Comments loaded successfully
-Found 100 comments
-Extracted comment 1: Comment from [deleted] - 15h ago
-Comment text: Not to mention that it goes into a record that could add up if they make more unfounded accusations. OP could lose their kids just based on that.
-Extracted comment 2: Comment thread level 1: Reply from TaisharMalkier69 - 15h ago
-Comment text: Not to mention that it goes into a record that could add up if they make more unfounded accusations. OP could lose their kids just based on that.
-Extracted comment 3: Comment thread level 2: Reply from trinlayk - 11h ago
-Comment text: I'm wondering if Bro & SIL are going after custody of OP's kids for whatever motivations.
-Extracted comment 4: Comment thread level 3: Reply from Just-Education773 - 7h ago
-Comment text: Me thinking they walked in to be like " oh if something is wrong and you need someone to take them in, we will do that!" But only God knows what they're up to.
-Extracted comment 5: Comment thread level 4: Reply from Alone-Angle1593 - 6h ago
-Comment text: THIS!
-Extracted comment 6: Comment thread level 3: Reply from Disastrous-Panda5530 - 8h ago
-Comment text: This was my first thought as well.
-Extracted comment 7: Comment thread level 3: Reply from Great1331 - 8h ago
-Comment text: Ding ding ding ding ding
-Extracted comment 8: Comment thread level 2: Reply from 18k_gold - 10h ago
-Comment text: This is not true, my ex kept calling CPS on me frequently just because she didn't want me to have any custody or rights to see our child. She called so many times they were getting tired of the blatant lies. The worst was once she said I tied her to a chair, cut her face and torture the child. The police got involved in that one, saw there was no evidence of bruising on her and no cut on her face. When our kid was questioned they kept saying no to everything about abuse. CPS and the police were pissed off for the false allegation and warned her. So she called anonymously going forward. Then she took me to court multiple times and tried to use that CPS kept coming to my house because I was always under investigation for abuse. I showed the judge the letters that showed I was cleared of everything, no abuse or neglect was ever founded. I told the judge that she is the one who is wasting resources and time of everyone by constantly calling CPS on me as she believes if they get called enough I would lose my custody. She asked the judge for full custody and no contact for me. The judge yelled at her and threw the case out.
-Extracted comment 9: Comment thread level 3: Reply from AdventurousPark4200 - 8h ago
-Comment text: That sounds rough, and it's crazy how far she went with the false accusations just to keep you from having any rights. The fact that she made such wild claims and even involved the police shows how extreme it got. It’s good that CPS and the police saw through it and that the judge called her out for wasting everyone’s time. Using those reports in court backfired on her, and it’s great that the judge saw the truth and threw out the case. Sounds like a stressful situation, but at least the system worked in your favor in the end.
-Extracted comment 10: Comment thread level 4: Reply from VeterinarianKindly14 - 6h ago
-Comment text: Yeah, that really is wild. It’s messed up how far she went with those accusations just to try to control you. Glad to hear the judge called her out and that the truth came to light. It must’ve been super stressful, but it’s a relief the system worked out for you in the end.
-Extracted comment 11: Comment thread level 5: Reply from Top-Standard-1408 - 6h ago
-Comment text: Exactly. I was an activist and my hometown cops hated me. The cops made a false report to CPS 3x. After the last time, CPS told the cops that they would go to the state and have charges pressed, if they did it again.
-Extracted comment 12: Comment thread level 3: Reply from Anon_457 - 2h ago
-Comment text: Just because it didn't happen for you didn't mean it's not true. My nephew is young, naive and clumsy. When he was 6, I gave him a shower when the water suddenly turned boiling hot. He ended up with a pretty bad burn on his forehead and CPS got called. After that case was closed and he healed up, he then decided that he was Spiderman and tried to climb down from the top of a bunk bed head first. He fell off the bed, landed on a concrete floor and cracked his skull in two places. CPS came for a visit again and it was the same caseworker. She explained that his file would stay open for at least a year. Thankfully those were the only two bad accidents he's had so it's most likely closed by now.
-Closing comment extraction window
-Extracted 12 comments in total
-Generating AI comment for post 2...
-Generating AI comment...
-Sending request to AI model with prompt length: 369 characters
-AI comment generated successfully
-Generated comment: 
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+Processing post 2...
+An error occurred processing post 2: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
+. Skipping...
+An unexpected error occurred: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+	GetHandleVerifier [0x006A5523+24195]
+	(No symbol) [0x0063AA04]
+	(No symbol) [0x00532093]
+	(No symbol) [0x0050E22B]
+	(No symbol) [0x005A173F]
+	(No symbol) [0x005B4BB9]
+	(No symbol) [0x0059A8D6]
+	(No symbol) [0x0056BA27]
+	(No symbol) [0x0056C43D]
+	GetHandleVerifier [0x0096CE13+2938739]
+	GetHandleVerifier [0x009BEC69+3274185]
+	GetHandleVerifier [0x007309C2+594722]
+	GetHandleVerifier [0x00737EDC+624700]
+	(No symbol) [0x006437CD]
+	(No symbol) [0x00640528]
+	(No symbol) [0x006406C5]
+	(No symbol) [0x00632CA6]
+	BaseThreadInitThunk [0x75DEFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779A80CE+286]
+	RtlGetAppContainerNamedObjectPath [0x779A809E+238]
 
-NTA, that's messed up dude. 
-
-Waiting random time before posting comment for post 2...
-Waiting for 5.24 seconds...
-Posting AI-generated comment for post 2...
-Attempting to post the AI-generated comment...
-Extracted postid: 1g0t1pj
-Processing post 3...
-Post 3 - Title: AITAH for giving my son a downpayment on a house but not my daughter?
-Post 3 - URL: https://www.reddit.com/r/AITAH/comments/1g0rb58/aitah_for_giving_my_son_a_downpayment_on_a_house/
-Extracting comments from: https://www.reddit.com/r/AITAH/comments/1g0rb58/aitah_for_giving_my_son_a_downpayment_on_a_house/
-Navigated to post page
-Waiting for comments to load...
-Comments loaded successfully
-Found 100 comments
-Extracted comment 1: Comment from slyest_fox - 17h ago
-Comment text: NTA. I agree with the other commenter. Tell her that you have supported them each financially in the way that they needed. She got rehab and he got a house. Or ignore her and don’t explain it at all because you don’t owe an explanation to a grown adult that’s acting like a spoiled brat. She doesn’t need help with a house and her brother does. Why is that a problem for her?
-Extracted comment 2: Comment thread level 1: Reply from sofalba_xo - 16h ago
-Comment text: He is just helping his son get on his feet. His daughter is already well-off, so it makes sense that his son would need more financial support at this point.
-Extracted comment 3: Comment thread level 2: Reply from Sensitive-World7272 - 16h ago
-Comment text: Is the daughter well off though? OP mentions the husband has a vacation home, but does his daughter have financial security? Is there a prenup that would put her in a difficult position if her husband left her?
-Extracted comment 4: Comment thread level 3: Reply from Sepelrastas - 15h ago
-Comment text: They already helped their daughter through rehab and "getting to her feet”.
-Extracted comment 5: Comment thread level 4: Reply from horriblegoose_ - 14h ago
-Comment text: So much of it has to do with what the parents can provide in the time of need but also the scope of the need.
-Extracted comment 6: Comment thread level 5: Reply from Mulewrangler - 13h ago
-Comment text: Sounds like it's past time for your parents, if they aren't going to throw him out, to make him start paying rent. Enough rent to cover what he's costing them. When he complains have them add up, as best they can, how much they've spent on him. Which will be much more than what they spent on you.
-Extracted comment 7: Comment thread level 6: Reply from AdventurousPark4200 - 8h ago
-Comment text: It definitely sounds like it's time for your parents to give him a wake-up call. If they won’t kick him out, they should at least start charging him rent to cover what he’s costing them. It’ll probably shock him to see how much they've spent on him compared to you.
-Extracted comment 8: Comment thread level 4: Reply from frogsgoribbit737 - 13h ago
-Comment text: I mean.. it doesn't matter. I have a brother who has gotten 10s of thousands of dollars from my family where as I have not and yeah it makes me a bit resentful. They see me as being fine financially because I don't NEED rent money, but we have a very strict budget and have debt and will never be able to buy a house in this economy. Meanwhile they gave my brother a house. Because he needed help getting on his feet.
-Extracted comment 9: Comment thread level 5: Reply from haleorshine - 12h ago
-Comment text: Yeah, I totally understand what the parents are doing here, and I'm not saying they should help their daughter and her husband buy a third vacation home, but being unequal in distribution of money to your kids is bound to create resentment.
-Extracted comment 10: Comment thread level 6: Reply from Downtown-Film-8056 - 7h ago
-Comment text: Totally agree. It’s one thing to help your kids when they genuinely need it, but buying a third vacation home is a whole different story. Unequal financial treatment can definitely create resentment, though. Sitting down with the daughter and explaining the support given so far and future intentions might help ease tensions. But yeah, with your parents, if neither of you owns a home and they gave your brother one, that’s just straight up unfair. And of course, you’d likely be the one they lean on for help later on.
-Extracted comment 11: Comment thread level 4: Reply from gardengirl99 - 12h ago
-Comment text: Yeah, out of pocket rehab would've been crazy expensive.
-Extracted comment 12: Comment thread level 3: Reply from RexSki970 - 15h ago
-Comment text: I mean, not really.
-Closing comment extraction window
-Extracted 12 comments in total
-Generating AI comment for post 3...
-Generating AI comment...
-Sending request to AI model with prompt length: 364 characters
-AI comment generated successfully
-Generated comment: 
-
-That's complicated,  lots of factors tbh.  
-
-Waiting random time before posting comment for post 3...
-Waiting for 8.47 seconds...
-Posting AI-generated comment for post 3...
-Attempting to post the AI-generated comment...
-Extracted postid: 1g0rb58
-Processing post 4...
-Post 4 - Title: AITAH for complaining about the guy airing his nuts out at my dance studio?
-Post 4 - URL: https://www.reddit.com/r/AITAH/comments/1g17271/aitah_for_complaining_about_the_guy_airing_his/
-Extracting comments from: https://www.reddit.com/r/AITAH/comments/1g17271/aitah_for_complaining_about_the_guy_airing_his/
-Navigated to post page
-Waiting for comments to load...
-Comments loaded successfully
-Found 98 comments
-Extracted comment 1: Comment from Fattydog - 45m ago
-Comment text: He likes it. He loves you seeing them. He’s getting off on your discomfort. He’s vile.
-Extracted comment 2: Comment thread level 1: Reply from Links_slut - 40m ago
-Comment text: Idk the owner, I’m sending an anonymous email but I’m not sure who will receive it. It would suck if it went to his wife who’s likely complicit
-Extracted comment 3: Comment thread level 2: Reply from Fattydog - 34m ago
-Comment text: If it’s her, then get the police involved asap. There will likely be underage girls in some of those classes.
-Extracted comment 4: Comment thread level 3: Reply from Various-Tangerine-55 - 14m ago
-Comment text: Yeah, it is technically sexual harrassment, and also indecent exposure. He is knowingly showing his genitals in a public space, and acknowledging that he is doing it.
-Extracted comment 5: Comment thread level 3: Reply from SeamsFun - 16m ago
-Comment text: I don't believe there are underage girls in a pole class, but it is indecent exposure and should be reported. I'd definitely get the police involved.
-Extracted comment 6: Comment thread level 2: Reply from queenchubkins - 8m ago
-Comment text: If you don’t get results with an email, start blasting them on social media. I promise things will change if it gets around they’re allowing a man to purposely expose himself.
-Extracted comment 7: Comment thread level 1: Reply from Daphne_Brown - 15m ago
-Comment text: Illegal? I’m no expert but not in every state. Indecent exposure laws usually apply to public exposure.l, not necessarily exposure on private property. In Texas where I live? Illegal. Everywhere else? Maybe. Maybe not.
-Extracted comment 8: Comment from Helpful_Librarian_87 - 1h ago
-Comment text: If you’re not the only one bothered by this (& I can’t imagine many people are thrilled by Kev’s antics), you all need to speak the fuck up. And if that doesn’t work, all of you need to stand together and flat refuse to be near any pole that has, may have had or will in the future have nasty Kevin nutsack juice on it.
-Extracted comment 9: Comment thread level 1: Reply from Links_slut - 1h ago
-Comment text: Ewwwww good point about the pole juices 🤢 thank god it’s *not the same one I use
-Extracted comment 10: Comment thread level 2: Reply from lazarusprojection - 36m ago
-Comment text: If you ARE the only one bothered by it speak the fuck up. Just say "would you please wear underwear to class". He's just an exhibitionist collecting spank bank material.
-Extracted comment 11: Comment thread level 3: Reply from Helpful_Librarian_87 - 29m ago
-Comment text: Well yeah, but sometimes you need more than one voice. Especially if that which you are protesting about is connected to the upper echelon
-Extracted comment 12: Comment thread level 2: Reply from odersowasinderart - 21m ago
-Comment text: It’s basically go decent or go home. If he decides to wear Speedo’s I might say, well you are in your underwear too. But shit as a man I don’t want to see his balls out either.
-Closing comment extraction window
-Extracted 12 comments in total
-Generating AI comment for post 4...
-Generating AI comment...
-Sending request to AI model with prompt length: 370 characters
-AI comment generated successfully
-Generated comment: 
-
-YTA, some dudes just don't know.  
-
-Waiting random time before posting comment for post 4...
-Waiting for 3.60 seconds...
-Posting AI-generated comment for post 4...
-Attempting to post the AI-generated comment...
-Extracted postid: 1g17271
-Processing post 5...
-Post 5 - Title: AITAH for suing my best friend of 13 years after he pushed me into shark-infested waters as a prank?
-Post 5 - URL: https://www.reddit.com/r/AITAH/comments/1g0u3uc/aitah_for_suing_my_best_friend_of_13_years_after/
-Extracting comments from: https://www.reddit.com/r/AITAH/comments/1g0u3uc/aitah_for_suing_my_best_friend_of_13_years_after/
-Navigated to post page
-Waiting for comments to load...
-Comments loaded successfully
-Found 100 comments
-Extracted comment 1: Comment from blueeyed94 - 14h ago
-Comment text: I would choose the sharks over your "friend". NTA
-Extracted comment 2: Comment thread level 1: Reply from agoldgold - 13h ago
-Comment text: Sharks can't betray you. They can only shark sharkily and you expect them to do just that.
-Extracted comment 3: Comment thread level 2: Reply from jaxon7au - 12h ago
-Comment text: Yeah, I’d rather be friends with a sharkily shark than that jerk.
-Extracted comment 4: Comment thread level 3: Reply from cuntmong - 11h ago
-Comment text: What if you're on a sinking electric boat. If you jump off one side you'll get electrocuted, but if you jump off the other side you'll get eaten by sharks. And the only other option is to get rescued by OPs friend
-Extracted comment 5: Comment thread level 4: Reply from Mysterious_Detail_57 - 10h ago
-Comment text: Instructions unclear, got my dick stuck in a propeller
-Extracted comment 6: Comment thread level 5: Reply from _Rye_Toast_ - 10h ago
-Comment text: Mine is stuck in a shark. Help.
-Extracted comment 7: Comment thread level 6: Reply from Anarchyantz - 8h ago
-Comment text: Help me step shark!
-Extracted comment 8: Comment thread level 6: Reply from SmokingUmbrellas - 9h ago
-Comment text: That really escalated.
-Extracted comment 9: Comment thread level 4: Reply from Reasonable_racoon - 3h ago
-Comment text: I was discussing this recently with my friend, the late, great Hannibal Lecter. We were also talking about asylum seekers, you know they leave the asylums, so the have to look for new ones, that's why they're called asylum seekers. I came up with that name.
-Extracted comment 10: Comment thread level 3: Reply from El_Duderino304 - 10h ago
-Comment text: See, but I was friends with a shark until he pushed me onto human infested land. They're not all cool.
-Extracted comment 11: Comment thread level 2: Reply from DannyVee89 - 12h ago
-Comment text: Based on how horrible this story is, I'm willing to bet this "friend" has done plenty of other deplorable things and will continue to do them to other people.
-Extracted comment 12: Comment thread level 2: Reply from notevensuprisedbru - 11h ago
-Comment text: Humans aren’t food. They’re friends. -Bruce
-Closing comment extraction window
-Extracted 12 comments in total
-Generating AI comment for post 5...
-Generating AI comment...
-Sending request to AI model with prompt length: 395 characters
-AI comment generated successfully
-Generated comment: 
-
-YTA, that's messed up dude.  
-
-Waiting random time before posting comment for post 5...
-Waiting for 7.58 seconds...
-Posting AI-generated comment for post 5...
-Attempting to post the AI-generated comment...
-Extracted postid: 1g0u3uc
-Processing post 6...
-Post 6 - Title: AITA for removing my pregnant wife's hands from my plate and telling her to stop fucking grabbing food off my plate while I'm eating when she has her own plate in front of her?
-Post 6 - URL: https://www.reddit.com/r/AITAH/comments/1g0n4r3/aita_for_removing_my_pregnant_wifes_hands_from_my/
-Extracting comments from: https://www.reddit.com/r/AITAH/comments/1g0n4r3/aita_for_removing_my_pregnant_wifes_hands_from_my/
-Navigated to post page
-Waiting for comments to load...
-Comments loaded successfully
-Found 100 comments
-Extracted comment 1: Comment from kdawnbear - 17h ago
-Comment text: Go to a food bank or a soup kitchen. Make that a part of your regular routine. Get on food stamps. Pregnancy is a dangerous time to restrict food, and you need to start figuring out how you're going to get enough food when you have another mouth to feed. Your wife and your child NEED more food. And so do you.
-Extracted comment 2: Comment thread level 1: Reply from DragonflyNo3208 - 14h ago
-Comment text: Im pretty sure she could get on wic as well worst they can do is deny her
-Extracted comment 3: Comment thread level 2: Reply from jtho78 - 14h ago
-Comment text: WIC is a great program to use in addition to food stamps
-Extracted comment 4: Comment thread level 3: Reply from Accomplished-Pen-394 - 13h ago
-Comment text: WIC is an amazing resource. I wish people would stop vilifying food banks, food stamps, and WIC. Especially in this day and age where food is expensive for most of the population.
-Extracted comment 5: Comment thread level 4: Reply from countess-petofi - 11h ago
-Comment text: Before she retired, my mother was a nutritionist working for Cooperative Extension, and her job was to go out to anyone who was receiving help from any of those programs who requested her (the service was 100% optional), and she'd teach them to cook with what they were getting. She still has people come up to her and introduce her to the kids they were expecting when she taught them to cook with the WIC foods. I wish every county had the same program available.
-Extracted comment 6: Comment thread level 5: Reply from Tiggie200 - 10h ago
-Comment text: I use an app called Supercook.
-Extracted comment 7: Comment thread level 5: Reply from restyourbreastshoney - 9h ago
-Comment text: I don't know if it was your mom, but I partook of this service 20ish years ago, and the lady was amazing. I can literally taste the sauce i made with the baby food!! I'm so grateful that it was available to us it really improved our lives immeasurably in a time when we were financially struggling. Thank your mom for me!!
-Extracted comment 8: Comment thread level 4: Reply from Upper-Requirement-93 - 12h ago
-Comment text: They vilify it and then the same motherfuckers blame people who beg for 'not using it', as if food is the only need when homeless and shelters don't fill up. All to save themselves from the idea they might be vulnerable in that situation too.
-Extracted comment 9: Comment thread level 5: Reply from Accomplished-Pen-394 - 12h ago
-Comment text: I don’t think they realize how quickly you can go from having money to having nothing. I wish people who qualified would take advantage of it because it would make things even a wee bit easier
-Extracted comment 10: Comment thread level 5: Reply from Scared-Listen6033 - 10h ago
-Comment text: Don't forget that these same ppl also are the ones who fight at every turn against abortion. They don't want to help with your pregnancy, baby or kids through their taxes but they want to control a woman's reproductive rights. If mom and baby die off starvation during pregnancy BC mom could've access an abortion they're cool with it since it didn't cost them anything... JMO
-Extracted comment 11: Comment thread level 3: Reply from strivetoresist - 12h ago
-Comment text: WIC was easier to qualify for than food stamps in my experience.
-Extracted comment 12: Comment thread level 4: Reply from obvusthrowawayobv - 12h ago
-Comment text: Depends on the state, but a food pantry is the freaking easiest by a long shot.
-Closing comment extraction window
-Extracted 12 comments in total
-Generating AI comment for post 6...
-Generating AI comment...
-Sending request to AI model with prompt length: 471 characters
-AI comment generated successfully
-Generated comment: YTA, seriously man  😕  
-
-Waiting random time before posting comment for post 6...
-Waiting for 5.83 seconds...
-Posting AI-generated comment for post 6...
-Attempting to post the AI-generated comment...
-Extracted postid: 1g0n4r3
-Processing post 7...
-Post 7 - Title: AITAH for telling my kids that being fat is a bad thing?
-Post 7 - URL: https://www.reddit.com/r/AITAH/comments/1g0nh57/aitah_for_telling_my_kids_that_being_fat_is_a_bad/
-Extracting comments from: https://www.reddit.com/r/AITAH/comments/1g0nh57/aitah_for_telling_my_kids_that_being_fat_is_a_bad/
-Navigated to post page
-Waiting for comments to load...
-Comments loaded successfully
-Found 100 comments
-Extracted comment 1: Comment from AnitaIvanaMartini - 14h ago
-Comment text: My mother, 5’7” 115lbs her whole life, used to say, “Food is glorious, enjoy it all, but never forget that there are eating foods, and there are tasting foods. As long as you never confuse the two, you will stay healthy and enjoy every delicious thing!”
-Extracted comment 2: Comment thread level 1: Reply from RepresentativePin162 - 10h ago
-Comment text: I say there's food and then there's treats or snacks. Food is nutritious and contains things we need usually and usually eat more of it compared to a snack or treat. Apple? Snack. Pasta with veg? Food. Lollipop? Treat. Very much annoys my 5 and 9 year old when they're complaining of being absolutely so hungry and they just really want to eat or buy lollipop/gum/gummy worms/ ice cream. Eating and tasting is good too but I'm pedantic with words, so I personally wouldn't use that one.
-Extracted comment 3: Comment thread level 2: Reply from Economy-Ad5635 - 4h ago
-Comment text: Based off of your reasoning, an apple would be a food, not a snack. Apples have soluble and insoluble fiber, sugar, vitamins, minerals, etc. All things we need, now a caramel apple on the other hand, I would consider a treat.
-Extracted comment 4: Comment thread level 3: Reply from Courthouse49 - 4h ago
-Comment text: Snacks can be nutritious. I don't think they're inherently bad. Sorry, don't mind me jumping in here lol
-Extracted comment 5: Comment thread level 1: Reply from mushluvgrowth - 11h ago
-Comment text: I did something similar to raise my child With a healthier relationship to food than I after being raised by a parent with an eating disorder. There's foods that our bodies need because they have the vitamins and nutrients we require to not only stay alive but be healthy. Then there's the foods we want because they taste good but they Don't make us healthy and sometimes they lead to not feeling good. It's okay to eat those foods, the important part is not overeating them and balancing them with the healthy foods our body does need. But in explaining to her that it leads to us not feeling good instead of being bad, I taught her how to connect with her body. She chose to eat less sugar because she noticed it gave her a headache. She self regulated based on connection to how food made her feel, not fear or control. Then I took it a step further and I did explain the difference between quality. Like processed food versus raw ingredients. Example-A McDonald's hamburger does not have the same nutritional value as a homemade hamburger. A store-bought box lasagna comes with a bunch of additives that are not in a made from scratch lasagna. Again, these foods are okay to eat, you just want to try to balance them with nutritious food and not only eat that. It's all about everything in moderation. I Fully understand that processed food has no value at all and is bad for us. But when you restrict something it just makes kids want to do it more. Or internalize that they are bad for eating those things. My mom fed me a ton of processed food but was very very strict on sweets and sugars. This just simply led to me stealing coins from her so that I could sneak to the gas station on my bike, which itself was dangerous, and I would gorge out on these things in extreme excess instead of having one after dinner. It led to lying, stealing, hiding and drove a wedge in our communication and relationship. Then because she was obsessed with weight but not health of the food, I thought because I was skinny I was healthy. I just happen to have a really weird metabolism and I cannot gain weight no matter what I eat. Only time I gain weight is when my hormones are off and then it happens really really fast and nothing I can do to lose the weight. My weight has never been good dependant. So for years I justified the way I ate because I wasn't gaining weight. But I was far from healthy, had nutritional deficiencies and health issues related to such. But there was also a lot of misinformation around nutrition when I was growing up. Like fat being bad and vegetable oils and seed oils being a healthy replacement. We ate margarine instead of butter. Only to find out the opposite is true. But this was fueled by fear and trauma as we had early amd repeated heart attacks and strokes in our family. My mother had watched her own father, have four heart attacks, open heart surgery, and then finally die of a stroke all before the age of 55. But Turns out it's something genetic and unrelated to diet. However, the diet of low-fat and processed food makes us even more unhealthy increasing the same risk we thought we were avoiding. So I go with moderation and balance.
-Extracted comment 6: Comment thread level 2: Reply from BarrySix - 4h ago
-Comment text: Paragraphs make text much more readable.
-Extracted comment 7: Comment thread level 3: Reply from 2high4much - 4h ago
-Comment text: Paragraphs make text readable*
-Extracted comment 8: Comment thread level 1: Reply from HappyLove4 - 4h ago
-Comment text: You realize your mom, at 5’7” and 115 pounds, was/is underweight? And at the very least, I imagine she was significantly under-muscled at that weight, too.
-Extracted comment 9: Comment thread level 2: Reply from love_me_some_cats - 3h ago
-Comment text: That caught my attention too - like that's a wonderful sentiment about food but becomes remarkably less so from a chronically underweight person.
-Extracted comment 10: Comment thread level 3: Reply from Anatella3696 - 45m ago
-Comment text: I was 5’3” and 115 pounds and everyone and their mother said I was too skinny. It was constant. Everyone felt comfortable saying so.
-Extracted comment 11: Comment thread level 2: Reply from LusterForBuster - 2h ago
-Comment text: I was gonna say, at 5'5 when I was 115lbs I was a size 0... And I was 15.
-Extracted comment 12: Comment thread level 1: Reply from Severe_Memory7360 - 14h ago
-Comment text: Oooh, I really like this. Good job mom!
-Closing comment extraction window
-Extracted 12 comments in total
-Generating AI comment for post 7...
-Generating AI comment...
-Sending request to AI model with prompt length: 351 characters
-AI comment generated successfully
-Generated comment: 
-
-NTA. Healthy habits are important.  
-
-Waiting random time before posting comment for post 7...
-Waiting for 6.09 seconds...
-Posting AI-generated comment for post 7...
-Attempting to post the AI-generated comment...
-Extracted postid: 1g0nh57
-Processing post 8...
-Post 8 - Title: AITA for telling my brother his son isn’t his after overhearing my SIL’s affair?
-Post 8 - URL: https://www.reddit.com/r/AITAH/comments/1g0rbl5/aita_for_telling_my_brother_his_son_isnt_his/
-Extracting comments from: https://www.reddit.com/r/AITAH/comments/1g0rbl5/aita_for_telling_my_brother_his_son_isnt_his/
-Navigated to post page
-Waiting for comments to load...
-Comments loaded successfully
-Found 100 comments
-Extracted comment 1: Comment from Candid_Process1831 - 17h ago
-Comment text: NTA! Your brother is your brother and he deserved to know the truth!!!
-Extracted comment 2: Comment thread level 1: Reply from 69lovelysunshine - 17h ago
-Comment text: Thank you so much! I think the same way ...
-Extracted comment 3: Comment thread level 2: Reply from FindingFit6035 - 16h ago
-Comment text: His wife broke the family by getting into an affair. It's better your brother knows now instead of later. Besides from the sound of it it still sounds like the affair is going on.
-Extracted comment 4: Comment thread level 3: Reply from cosmopolite24 - 15h ago
-Comment text: What family? The child isn’t his and the wife is a cheater. There was an illusion of a family but not an actual family
-Extracted comment 5: Comment thread level 4: Reply from Relevant_Theme_468 - 13h ago
-Comment text: Precisely. OP just pulled the curtain down. Ask yourself, if brother suspected he was being cheated on, would he have even gotten married? Ben needs to be aware of his true heritage - genetic disorders are not easily ignored or should they be dismissed.
-Extracted comment 6: Comment thread level 5: Reply from bonzai113 - 13h ago
-Comment text: I was 33 when I learned I was an affair child. It’s a very harsh change of reality.
-Extracted comment 7: Comment thread level 6: Reply from Hagedoorn - 7h ago
-Comment text: You would have preferred to know your father was someone else growing up? I realise that this maybe hard to answer in hindsight, for when you were a child.
-Extracted comment 8: Comment thread level 4: Reply from DivineTarot - 13h ago
-Comment text: An illusion that, from the looks of it, was already leaning towards falling apart whenever his ex decided she was ready to swing on the branches.
-Extracted comment 9: Comment thread level 3: Reply from Pockpicketts - 12h ago
-Comment text: Especially because she’s still actively involved in a relationship with Mark: the phone call said it all.
-Extracted comment 10: Comment thread level 3: Reply from MidLifeEducation - 12h ago
-Comment text: His wife broke the family by getting into an affair.
-Extracted comment 11: Comment thread level 4: Reply from YourStrictMum - 3h ago
-Comment text: Heey a lil unfair to insult sex workers by associating them with that trash of a person ;)
-Extracted comment 12: Comment thread level 3: Reply from Acceptable-Wind-7332 - 6h ago
-Comment text: Yep, this. OP is not breaking the family, the wife did that when she broke the brothers trust and had an affair.
-Closing comment extraction window
-Extracted 12 comments in total
-Generating AI comment for post 8...
-Generating AI comment...
-Sending request to AI model with prompt length: 375 characters
-AI comment generated successfully
-Generated comment: 
-
-YTA, seriously dude, what were you thinking? 
-
-Waiting random time before posting comment for post 8...
-Waiting for 2.89 seconds...
-Posting AI-generated comment for post 8...
-Attempting to post the AI-generated comment...
-Extracted postid: 1g0rbl5
-Processing post 9...
-Post 9 - Title: AITAH for telling my nearly 50 year old wife to get her shit together?
-Post 9 - URL: https://www.reddit.com/r/AITAH/comments/1g0xeyz/aitah_for_telling_my_nearly_50_year_old_wife_to/
-Extracting comments from: https://www.reddit.com/r/AITAH/comments/1g0xeyz/aitah_for_telling_my_nearly_50_year_old_wife_to/
-Navigated to post page
-Waiting for comments to load...
-Comments loaded successfully
-Found 99 comments
-Extracted comment 1: Comment from TwoBionicknees - 11h ago
-Comment text: NTA. But you need to speak to a divorce lawyer to see where you are at right now and then sit down and talk to her.
-Extracted comment 2: Comment thread level 1: Reply from sphynxmom76 - 10h ago
-Comment text: Sounds like she's having a mid-life crisis. Get thee back to couples counseling.
-Extracted comment 3: Comment thread level 2: Reply from sparksgirl1223 - 9h ago
-Comment text: I wondered this or menopause kicking her ass as a second possibility
-Extracted comment 4: Comment thread level 3: Reply from BigJSunshine - 8h ago
-Comment text: I’m guessing menopause
-Extracted comment 5: Comment thread level 4: Reply from Mewkie - 8h ago
-Comment text: Thirding. Hormones can be a bitch
-Extracted comment 6: Comment thread level 5: Reply from Downtown-Film-8056 - 7h ago
-Comment text: TRUE!
-Extracted comment 7: Comment thread level 6: Reply from Soggy-Necessary3731 - 6h ago
-Comment text: It might have been dismissive of her feelings but so were her words to her husband. Saying she "has never been happy with him"... those are divorce words. I am sorry but respect for your partner's feelings goes both ways. Menopause may explain her behavior, but it does not excuse it.
-Extracted comment 8: Comment thread level 4: Reply from Critical-Bee8581 - 3h ago
-Comment text: I came here to say the same! It obvs isn't the only issue, but it could be exacerbating it.
-Extracted comment 9: Comment thread level 3: Reply from 60jb - 8h ago
-Comment text: menopause can be 20 years of hell, try to love them through it if you can. they will reward you in the end. dont be a door mat. but it is real and its hard for them too. Try to hang on it really is worth it as long as shes not screwing around with other people.
-Extracted comment 10: Comment thread level 4: Reply from Dad_of_the_suburbs - 3h ago
-Comment text: If he’s in for 20 years of this shit he’s better off to divorce now and find someone else.
-Extracted comment 11: Comment thread level 2: Reply from JuleeeNAJ - 9h ago
-Comment text: I'm 50 next year,my midlife crisis was "i haven't been anywhere i want to travel!" So for the last 1.5 yrs hubby and I have taken every chance we can to travel.
-Skipping comment 12 due to missing elements
-Closing comment extraction window
-Extracted 11 comments in total
-Generating AI comment for post 9...
-Generating AI comment...
-Sending request to AI model with prompt length: 365 characters
-AI comment generated successfully
-Generated comment: 
-
-Oof, probably not the best approach.  
-
-Waiting random time before posting comment for post 9...
-Waiting for 6.84 seconds...
-Posting AI-generated comment for post 9...
-Attempting to post the AI-generated comment...
-Extracted postid: 1g0xeyz
-Processing post 10...
-Post 10 - Title: AITA for calling out my sister’s “unique” parenting style at a family gathering?
-Post 10 - URL: https://www.reddit.com/r/AITAH/comments/1g15ulz/aita_for_calling_out_my_sisters_unique_parenting/
-Extracting comments from: https://www.reddit.com/r/AITAH/comments/1g15ulz/aita_for_calling_out_my_sisters_unique_parenting/
-Navigated to post page
-Waiting for comments to load...
-Comments loaded successfully
-Found 91 comments
-Extracted comment 1: Comment from Imaginary-Yak-6487 - 2h ago
-Comment text: I’d be more concerned about them running out into the road, than climbing trees & playing in the mud.
-Extracted comment 2: Comment thread level 1: Reply from TootsNYC - 59m ago
-Comment text: Those sound so stereotypical that this feels fake
-Extracted comment 3: Comment thread level 2: Reply from PerfectSuggestion487 - 33m ago
-Comment text: For sure. I have 3 kids of my own and I've cared for countless kids...I've never seen a kid make a mud pie.
-Extracted comment 4: Comment thread level 3: Reply from drag0ninawag0n - 9m ago
-Comment text: My kids do! We have an outdoor play kitchen with all kinds of pots/pans/utensils/dishes, and everything gets used as food. More often leaves than mud. Inside we're pretty orderly, but outside they're allowed to run wild as long as they're not doing something life threatening or hurting anyone. I can imagine my brother writing this post, he thinks it's awful I allow them risky play outdoors.
-Extracted comment 5: Comment thread level 4: Reply from PerfectSuggestion487 - 6m ago
-Comment text: My kids definitely made "grass salads" when they had the outdoor kitchen too...but a kid making a mud pie at a park? Sounds made up.
-Extracted comment 6: Comment thread level 3: Reply from Lumpy_Marsupial_1559 - 6m ago
-Comment text: I have made the pie of mud, as well as mud cakes and castles. My kids tended to prefer making 'potions', but that was mostly due to having a couple of trees with colourful seeds/berries (we still call one of them 'the poison-berry tree - it's not poisonous).
-Extracted comment 7: Comment thread level 2: Reply from Imaginary-Yak-6487 - 21m ago
-Comment text: I’m Gen X, we had no parental supervision, unless our folks remembered we were around. They did teach us while very young, not to play in the road, don’t put anything in a light socket, fire is hot, just basic safety shit so we didn’t get hurt, like we paid attention, lol. Other than that we were out the door til dark.
-Extracted comment 8: Comment thread level 3: Reply from PerfectSuggestion487 - 1m ago
-Comment text: OP says the kids were playing in the street. Also, lots of Gen X kids didn't survive this form of parenting.  Some of them are still missing...
-Extracted comment 9: Comment from Open_Equal_1515 - 3h ago
-Comment text: ah , yes , the classic “free-range parenting” approach , where every backyard BBQ doubles as an audition for survivor: family edition. and who can blame you for being worried ? one minute , it’s “exploring their independence ,” and the next , it’s the great mud pie catastrophe of 2024.
-Extracted comment 10: Comment thread level 1: Reply from OutlandishnessNo07 - 2h ago
-Comment text: I laughed way too much at this!
-Extracted comment 11: Comment thread level 2: Reply from WeirdPinkHair - 2h ago
-Comment text: Running inyo the street needs context. Are we talking quiet cul-de-sac or busy road? The first is ok IF there is someone keeping an eye out fir the occasional car (at family gatherings it's not always the parents) but if the second then thats parental stupidity.
-Extracted comment 12: Comment thread level 3: Reply from Heeler_Haven - 1h ago
-Comment text: If a kid starts digging up my flowerbeds, lawn, or yard in general to make mud pies I'm reading them and the parents the riot act........ if you want to permit your children to destroy your environment that you pay for, go-ahead, but allowing them to destroy other people's property and getting pissy about getting called out on it is a completely different story......
-Closing comment extraction window
-Extracted 12 comments in total
-Generating AI comment for post 10...
-Generating AI comment...
-Sending request to AI model with prompt length: 375 characters
-AI comment generated successfully
-Generated comment: YTA, boundaries are important. 
-
-Waiting random time before posting comment for post 10...
-Waiting for 9.86 seconds...
-Posting AI-generated comment for post 10...
-Attempting to post the AI-generated comment...
-Extracted postid: 1g15ulz
-Processing post 11...
-Post 11 - Title: AITAH for breaking up with my boyfriend because I felt like he was too excited about my being a virgin?
-Post 11 - URL: https://www.reddit.com/r/AITAH/comments/1g111ah/aitah_for_breaking_up_with_my_boyfriend_because_i/
-Extracting comments from: https://www.reddit.com/r/AITAH/comments/1g111ah/aitah_for_breaking_up_with_my_boyfriend_because_i/
-Navigated to post page
-Waiting for comments to load...
-Comments loaded successfully
-Found 99 comments
-Extracted comment 1: Comment from -AppropriateLyrics - 6h ago
-Comment text: Nope, that's a fantastic reason to break it off.
-Extracted comment 2: Comment thread level 1: Reply from steve_buscemi_on_911 - 2h ago
-Comment text: Absolutely, that’s a perfectly valid reason to end things.
-Extracted comment 3: Comment from jrpapaya - 9h ago
-Comment text: NTA. If it makes you feel weird then that’s how it makes you feel. You don’t have to push past that feeling.
-Extracted comment 4: Comment thread level 1: Reply from fredshark - 3h ago
-Comment text: NTA. Your feelings are valid, and you shouldn’t have to ignore them.
-Extracted comment 5: Comment from Avocado_Toastttt - 6h ago
-Comment text: Very proud of you
-Extracted comment 6: Comment from Economy_Comfort6164 - 9h ago
-Comment text: You are definitely not the asshole. The second that he revealed his sudden fetish that he had for virgins it was your sign to leave. It was so mature of you to be able to break it off and set boundaries for yourself.
-Extracted comment 7: Comment thread level 1: Reply from FastCabinet9090 - 8h ago
-Comment text: Thank you! That’s how I felt as well. But the person I spoke to about it irl said that I should have at least given it some more effort since my ex was trying to be understanding and to make it a good first time for me, and he couldn’t control having that fetish.
-Extracted comment 8: Comment thread level 2: Reply from Fleetdancer - 7h ago
-Comment text: He thinks you not having sex makes you pure, but I'd bet a million bucks he doesn't consider himself unpure for having fucked. Does that mean he thinks of his exes as unpure? That's not a mind set you want in a partner.
-Extracted comment 9: Comment thread level 2: Reply from Economy_Comfort6164 - 8h ago
-Comment text: The person who you spoke to about it irl should have understood that whether or not he has able to control his fetishes it doesn't mean you have to be the one that he gets to "experience" this fetish with. It would have just opened more opportunities for him to make you feel uncomfortable.
-Extracted comment 10: Comment thread level 2: Reply from AgonistPhD - 8h ago
-Comment text: ...is that person also a creep?
-Extracted comment 11: Comment thread level 2: Reply from herejusttoargue909 - 7h ago
-Comment text: Whoever you talked to irl is an idiot
-Extracted comment 12: Comment thread level 2: Reply from DMPinhead - 8h ago
-Comment text: You are absolutely not wrong about feeling the way you do. For me, the whole “fetish” thing makes me queasy, as that suggests he’s been with multiple virgins (well, maybe not, but that’s the image that comes to mind).
-Closing comment extraction window
-Extracted 12 comments in total
-Generating AI comment for post 11...
-Generating AI comment...
-Sending request to AI model with prompt length: 398 characters
-AI comment generated successfully
-Generated comment: YTA, that's weird as hell  
-
-Waiting random time before posting comment for post 11...
-Waiting for 10.62 seconds...
-Posting AI-generated comment for post 11...
-Attempting to post the AI-generated comment...
-Extracted postid: 1g111ah
-Scraping completed for r/AITAH. Total posts processed: 11
 Closing WebDriver...
-Scraping completed for all subreddits. Total posts processed: 22
+Scraping completed for all subreddits. Total posts processed: 0
