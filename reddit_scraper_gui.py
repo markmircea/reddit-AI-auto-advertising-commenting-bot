@@ -84,31 +84,30 @@ class CommentReviewDialog(QDialog):
         layout = QVBoxLayout(self)
 
         self.table = QTableWidget(self)
-        self.table.setColumnCount(6)  # Added an extra column for number of comments
-        self.table.setHorizontalHeaderLabels(["Post", "Subreddit", "Number of Comments", "AI Comment", "Edit", "Keep"])
+        self.table.setColumnCount(5)
+        self.table.setHorizontalHeaderLabels(["Post", "Subreddit", "AI Comment", "Edit", "Keep"])
         self.table.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Interactive)
-        self.table.horizontalHeader().setSectionResizeMode(3, QHeaderView.ResizeMode.Stretch)
-        self.table.setItemDelegateForColumn(3, HTMLDelegate())
+        self.table.horizontalHeader().setSectionResizeMode(2, QHeaderView.ResizeMode.Stretch)
+        self.table.setItemDelegateForColumn(2, HTMLDelegate())
 
         for i, comment in enumerate(comments):
             self.table.insertRow(i)
             self.table.setItem(i, 0, QTableWidgetItem(comment['title']))
             self.table.setItem(i, 1, QTableWidgetItem(comment['subreddit']))
-            self.table.setItem(i, 2, QTableWidgetItem(str(len(comment.get('comments', [])))))
             
             full_comment = comment['ai_comment'].replace('\n', '<br>')
             comment_item = QTableWidgetItem(full_comment)
             comment_item.setData(Qt.ItemDataRole.UserRole, comment['url'])  # Store URL in user role
-            self.table.setItem(i, 3, comment_item)
+            self.table.setItem(i, 2, comment_item)
 
             edit_button = QPushButton("Edit")
             edit_button.clicked.connect(lambda _, row=i: self.edit_comment(row))
-            self.table.setCellWidget(i, 4, edit_button)
+            self.table.setCellWidget(i, 3, edit_button)
 
             checkbox = QTableWidgetItem()
             checkbox.setFlags(Qt.ItemFlag.ItemIsUserCheckable | Qt.ItemFlag.ItemIsEnabled)
             checkbox.setCheckState(Qt.CheckState.Checked)
-            self.table.setItem(i, 5, checkbox)
+            self.table.setItem(i, 4, checkbox)
 
         self.table.resizeRowsToContents()
         layout.addWidget(self.table)
@@ -522,14 +521,14 @@ class AdvancedSettingsDialog(QDialog):
         # New fields for product keywords and website address
         self.product_keywords = QLineEdit(self)
         self.product_keywords.setPlaceholderText("Enter product keywords (seperated by , )")
-        form_layout.addRow("Product Keywords:", self.product_keywords)
+        form_layout.addRow("Product Keywords (seperate by , ):", self.product_keywords)
         
         # Add similarity threshold input
         self.similarity_threshold = QDoubleSpinBox(self)
         self.similarity_threshold.setRange(0.0, 1.0)
         self.similarity_threshold.setSingleStep(0.01)
         self.similarity_threshold.setValue(0.5)  # Default value
-        form_layout.addRow("Similarity Threshold:", self.similarity_threshold)
+        form_layout.addRow("Similarity Threshold (1 is exact match, for Tensorflow only):", self.similarity_threshold)
         
         self.similarity_method = QComboBox(self)
         self.similarity_method.addItems(["TensorFlow (semantic_similarity)", "Simple (simple_semantic_similarity)"])
@@ -688,7 +687,7 @@ class RedditScraperGUI(QMainWindow):
         self.layout.addWidget(self.do_not_post)
 
         # Start button
-        self.start_button = QPushButton(SVGIcon(ICONS["start"]), "Start Scraping, Generating and Posting Comments")
+        self.start_button = QPushButton(SVGIcon(ICONS["start"]), "Start Scraping, Generating and Reviewing Comments")
         self.start_button.clicked.connect(self.start_scraping)
         self.start_button.setStyleSheet("""
             QPushButton {

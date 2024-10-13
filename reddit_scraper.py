@@ -21,6 +21,8 @@ from selenium.common.exceptions import (
     WebDriverException,
     StaleElementReferenceException,
 )
+import os
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
 # Constants
 #OPENROUTER_API_KEY = "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"
@@ -46,7 +48,7 @@ nltk.download('punkt_tab', quiet=True)
 
 def semantic_similarity(keywords, title, threshold=0.5):
     if nlp is None:
-        logger.error("spaCy model not loaded. Skipping semantic similarity check.")
+        custom_print("spaCy model not loaded. Skipping semantic similarity check.")
         return False
 
     try:
@@ -56,13 +58,17 @@ def semantic_similarity(keywords, title, threshold=0.5):
                 keyword_doc = nlp(keyword)
                 similarity = title_doc.similarity(keyword_doc)
                 custom_print(f"Similarity between '{keyword}' and '{title}': {similarity}")
+                logger.info(f"Similarity between '{keyword}' and '{title}': {similarity}")
+
                 if similarity > threshold:
                     return True
             except ValueError as e:
                 custom_print(f"Error processing keyword '{keyword}': {str(e)}")
+                logger.info(f"Error processing keyword '{keyword}': {str(e)}")
                 continue
     except Exception as e:
         custom_print(f"Error in semantic_similarity function: {str(e)}")
+        logger.info(f"Error in semantic_similarity function: {str(e)}")
         return False
 
     return False
@@ -94,14 +100,14 @@ def simple_semantic_similarity(keywords, title):
         # Check if any processed keyword is in the processed title
         for keyword in processed_keywords:
             if keyword in processed_title:
-                logger.info(f"Keyword '{keyword}' found in title: '{title}'")
+                custom_print(f"Keyword '{keyword}' found in title: '{title}'")
                 return True
         
-        logger.info(f"No keywords found in title: '{title}'")
+        custom_print(f"No keywords found in title: '{title}'")
         return False
 
     except Exception as e:
-        logger.error(f"Error in simple_semantic_similarity function: {str(e)}")
+        custom_print(f"Error in simple_semantic_similarity function: {str(e)}")
         return False
 
     
@@ -385,42 +391,41 @@ def generate_ai_comment(title, persona, ai_response_length=0, openrouter_api_key
     prompt += "\nGenerated comment:"
 
     custom_print(f"Sending request to AI model with prompt length: {len(prompt)} characters")
-    return "HERE IS AI COMMENT"
-   # try:
-   #     # Use the provided API key if it's not blank, otherwise use the default
-   #     api_key = openrouter_api_key.strip() if openrouter_api_key and openrouter_api_key.strip() else DEFAULT_API_KEY
-   #     
-   #     headers = {
-   #         "Authorization": f"Bearer {api_key}",
-   #         "HTTP-Referer": YOUR_SITE_URL,
-   #         "X-Title": YOUR_APP_NAME,
-   #     }
-   #     
-   #     payload = {
-   #         "model": custom_model or "google/gemma-2-9b-it:free",
-   #         "messages": [{"role": "user", "content": prompt}],
-   #     }
-
-   #     response = requests.post(
-   #         url="https://openrouter.ai/api/v1/chat/completions",
-   #         headers=headers,
-   #         json=payload
-   #     )
+    #return "HERE IS AI COMMENT"
+    try:
+        # Use the provided API key if it's not blank, otherwise use the default
+        api_key = openrouter_api_key.strip() if openrouter_api_key and openrouter_api_key.strip() else DEFAULT_API_KEY
         
-   #     response.raise_for_status()
-   #     ai_comment = response.json()["choices"][0]["message"]["content"]
-   #     custom_print("AI comment generated successfully")
-   #     custom_print(f"Generated comment: {ai_comment}")
-   #     return ai_comment
-   # except requests.exceptions.RequestException as e:
-   #     custom_print(f"Error making request to OpenRouter API: {str(e)}")
-   #     if hasattr(e, 'response') and e.response is not None:
-   #         custom_print(f"Response status code: {e.response.status_code}")
-   #         custom_print(f"Response content: {e.response.text}")
-   #     return None
-   # except Exception as e:
-   #     custom_print(f"Unexpected error generating AI comment: {str(e)}")
-   #     return None
+        headers = {
+            "Authorization": f"Bearer {api_key}",
+            "HTTP-Referer": YOUR_SITE_URL,
+            "X-Title": YOUR_APP_NAME,
+        }
+        
+        payload = {
+            "model": custom_model or "google/gemma-2-9b-it:free",
+            "messages": [{"role": "user", "content": prompt}],
+        }
+        response = requests.post(
+            url="https://openrouter.ai/api/v1/chat/completions",
+            headers=headers,
+            json=payload
+        )
+       
+        response.raise_for_status()
+        ai_comment = response.json()["choices"][0]["message"]["content"]
+        custom_print("AI comment generated successfully")
+        custom_print(f"Generated comment: {ai_comment}")
+        return ai_comment
+    except requests.exceptions.RequestException as e:
+        custom_print(f"Error making request to OpenRouter API: {str(e)}")
+        if hasattr(e, 'response') and e.response is not None:
+            custom_print(f"Response status code: {e.response.status_code}")
+            custom_print(f"Response content: {e.response.text}")
+        return None
+    except Exception as e:
+        custom_print(f"Unexpected error generating AI comment: {str(e)}")
+        return None
 
 
    
