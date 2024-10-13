@@ -249,10 +249,17 @@ class ScraperWorker(QThread):
             print(f"Error in ScraperWorker: {str(e)}")
     def custom_print(self, message):
         self.update_log.emit(message)
+        write_to_log_file(message)
         if "Extracted comment" in message:
             self.current_comment += 1
             progress = int((self.current_comment / self.total_comments) * 100)
             self.update_progress.emit(progress)
+        
+def write_to_log_file(message):
+    with open('log.txt', 'a', encoding='utf-8') as log_file:
+        log_file.write(message + '\n')  
+def clear_log_file():
+    open('log.txt', 'w').close()  
             
 class ProxySettingsDialog(QDialog):
     def __init__(self, parent=None):
@@ -683,7 +690,7 @@ class RedditScraperGUI(QMainWindow):
          
 
         # New checkbox for not posting comments
-        self.do_not_post = QCheckBox("Generate AI comments only (do not post)")
+        self.do_not_post = QCheckBox("Generate AI comments only (do not review)")
         self.layout.addWidget(self.do_not_post)
 
         # Start button
@@ -1013,6 +1020,7 @@ class RedditScraperGUI(QMainWindow):
             self.subreddit_list.takeItem(row)
 
     def start_scraping(self):
+        clear_log_file()
         self.start_button.setEnabled(False)
         self.progress_bar.setValue(0)
         self.log_display.clear()
@@ -1058,6 +1066,9 @@ class RedditScraperGUI(QMainWindow):
         self.update_log("Scraping process finished. Handling results...")
         self.driver = driver  # Store the driver object
         if self.do_not_post.isChecked():
+            self.update_log("Skipping Review...")
+            self.display_results(results)
+        else:
             self.update_log("Review mode is active. Opening comment review dialog...")
             dialog = CommentReviewDialog(results, self)
             if dialog.exec() == QDialog.DialogCode.Accepted:
@@ -1066,10 +1077,10 @@ class RedditScraperGUI(QMainWindow):
                 self.post_selected_comments(selected_comments)
             else:
                 self.update_log("User cancelled comment review.")
-        else:
-            self.update_log("Automatically posting all generated comments...")
-            self.post_selected_comments(results)
+            
         self.display_results(results)
+        self.start_button.setEnabled(True)
+        self.status_label.setText("Scraping completed")
 
     def post_selected_comments(self, selected_comments):
         self.update_log(f"Preparing to post {len(selected_comments)} comments...")
@@ -1079,31 +1090,25 @@ class RedditScraperGUI(QMainWindow):
             time.sleep(wait_time)
         
             self.update_log(f"Posting comment for '{comment['title']}' in r/{comment['subreddit']}...")
-            self.update_log(f"Comment URL: {comment.get('url', 'URL not available')}")
+            self.update_log(f"Comment URL: {comment['url']}")
             self.update_log(f"AI Comment: {comment['ai_comment'][:100]}...")  # Log first 100 chars of the comment
         
-            try:
-                if 'url' not in comment or not comment['url']:
-                    raise ValueError("Comment URL is missing or empty")
-            
-                success = post_comment(self.driver, comment['ai_comment'], comment['url'])
-            
-                if success:
-                    self.update_log(f"Successfully posted comment in r/{comment['subreddit']}")
-                else:
-                    self.update_log(f"Failed to post comment in r/{comment['subreddit']}")
-            except Exception as e:
-                self.update_log(f"Error posting comment: {str(e)}")
-                self.update_log(f"Full error details: {traceback.format_exc()}")
-            
+            success = post_comment(self.driver, comment['ai_comment'], comment['url'])
+        
+            if success:
+                self.update_log(f"Successfully posted comment in r/{comment['subreddit']}")
+            else:
+                self.update_log(f"Failed to post comment in r/{comment['subreddit']}")
+        
             # Force the GUI to update after each comment
             QApplication.processEvents()
 
         self.update_status("Finished posting selected comments")
         self.update_log("All selected comments have been processed.")
-        self.start_button.setEnabled(True)
+        self.driver.quit()
 
     def update_log(self, message):
+        write_to_log_file(message)
         self.log_display.append(message)
         self.log_display.verticalScrollBar().setValue(self.log_display.verticalScrollBar().maximum())
         # Force the GUI to update immediately

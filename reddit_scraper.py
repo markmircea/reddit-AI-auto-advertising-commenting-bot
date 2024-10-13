@@ -391,41 +391,42 @@ def generate_ai_comment(title, persona, ai_response_length=0, openrouter_api_key
     prompt += "\nGenerated comment:"
 
     custom_print(f"Sending request to AI model with prompt length: {len(prompt)} characters")
-    #return "HERE IS AI COMMENT"
-    try:
-        # Use the provided API key if it's not blank, otherwise use the default
-        api_key = openrouter_api_key.strip() if openrouter_api_key and openrouter_api_key.strip() else DEFAULT_API_KEY
+    return "HERE IS AI COMMENT"
+   # try:
+   #     # Use the provided API key if it's not blank, otherwise use the default
+   #     api_key = openrouter_api_key.strip() if openrouter_api_key and openrouter_api_key.strip() else DEFAULT_API_KEY
+   #     
+   #     headers = {
+   #         "Authorization": f"Bearer {api_key}",
+   #         "HTTP-Referer": YOUR_SITE_URL,
+   #         "X-Title": YOUR_APP_NAME,
+   #     }
+   #     
+   #     payload = {
+   #         "model": custom_model or "google/gemma-2-9b-it:free",
+   #         "messages": [{"role": "user", "content": prompt}],
+   #     }
+
+   #     response = requests.post(
+   #         url="https://openrouter.ai/api/v1/chat/completions",
+   #         headers=headers,
+   #         json=payload
+   #     )
         
-        headers = {
-            "Authorization": f"Bearer {api_key}",
-            "HTTP-Referer": YOUR_SITE_URL,
-            "X-Title": YOUR_APP_NAME,
-        }
-        
-        payload = {
-            "model": custom_model or "google/gemma-2-9b-it:free",
-            "messages": [{"role": "user", "content": prompt}],
-        }
-        response = requests.post(
-            url="https://openrouter.ai/api/v1/chat/completions",
-            headers=headers,
-            json=payload
-        )
-       
-        response.raise_for_status()
-        ai_comment = response.json()["choices"][0]["message"]["content"]
-        custom_print("AI comment generated successfully")
-        custom_print(f"Generated comment: {ai_comment}")
-        return ai_comment
-    except requests.exceptions.RequestException as e:
-        custom_print(f"Error making request to OpenRouter API: {str(e)}")
-        if hasattr(e, 'response') and e.response is not None:
-            custom_print(f"Response status code: {e.response.status_code}")
-            custom_print(f"Response content: {e.response.text}")
-        return None
-    except Exception as e:
-        custom_print(f"Unexpected error generating AI comment: {str(e)}")
-        return None
+   #     response.raise_for_status()
+   #     ai_comment = response.json()["choices"][0]["message"]["content"]
+   #     custom_print("AI comment generated successfully")
+   #     custom_print(f"Generated comment: {ai_comment}")
+   #     return ai_comment
+   # except requests.exceptions.RequestException as e:
+   #     custom_print(f"Error making request to OpenRouter API: {str(e)}")
+   #     if hasattr(e, 'response') and e.response is not None:
+   #         custom_print(f"Response status code: {e.response.status_code}")
+   #         custom_print(f"Response content: {e.response.text}")
+   #     return None
+   # except Exception as e:
+   #     custom_print(f"Unexpected error generating AI comment: {str(e)}")
+   #     return None
 
 
    
