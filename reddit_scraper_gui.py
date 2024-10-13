@@ -251,7 +251,8 @@ class ScraperWorker(QThread):
                 product_keywords=self.params['product_keywords'],
                 website_address=self.params['website_address'],
                 similarity_threshold=self.params['similarity_threshold'],  # Add this line
-                similarity_method=self.params['similarity_method']
+                similarity_method=self.params['similarity_method'],
+                tensorflow_sleep_time=self.params['tensorflow_sleep_time'] 
             )
             self.update_log.emit("Scraping process completed.")
             self.scraping_finished.emit(all_results, self.driver)
@@ -261,10 +262,17 @@ class ScraperWorker(QThread):
             print(f"Error in ScraperWorker: {str(e)}")
     def custom_print(self, message):
         self.update_log.emit(message)
+        write_to_log_file(message)
         if "Extracted comment" in message:
             self.current_comment += 1
             progress = int((self.current_comment / self.total_comments) * 100)
             self.update_progress.emit(progress)
+            
+def write_to_log_file(message):
+    with open('log.txt', 'a', encoding='utf-8') as log_file:
+        log_file.write(message + '\n')  
+def clear_log_file():
+    open('log.txt', 'w').close()  
             
 class ProxySettingsDialog(QDialog):
     def __init__(self, parent=None):
@@ -508,8 +516,8 @@ class AdvancedSettingsDialog(QDialog):
         self.setWindowTitle("Advanced Settings")
         self.setModal(True)
         self.setMinimumWidth(500)
-        self.setMinimumHeight(550)  # Increased height to accommodate new fields
-
+        self.setMinimumHeight(600)
+        
         layout = QVBoxLayout(self)
 
         form_layout = QFormLayout()
@@ -546,8 +554,15 @@ class AdvancedSettingsDialog(QDialog):
         self.similarity_threshold.setValue(0.5)  # Default value
         form_layout.addRow("Similarity Threshold (1 is exact match, for Tensorflow only):", self.similarity_threshold)
         
+        self.tensorflow_sleep_time = QDoubleSpinBox(self)
+        self.tensorflow_sleep_time.setRange(0.0, 10.0)
+        self.tensorflow_sleep_time.setSingleStep(0.1)
+        self.tensorflow_sleep_time.setValue(1.0)  # Default value
+        form_layout.addRow("TensorFlow Sleep Time (seconds, for Tensorflow only):", self.tensorflow_sleep_time)
+
+        
         self.similarity_method = QComboBox(self)
-        self.similarity_method.addItems(["TensorFlow (semantic_similarity)", "Simple (simple_semantic_similarity)"])
+        self.similarity_method.addItems(["Simple (keyword matching only)", "TensorFlow (semantic_similarity)"])
         form_layout.addRow("Similarity Method:", self.similarity_method)
 
 
@@ -584,6 +599,7 @@ class AdvancedSettingsDialog(QDialog):
             "website_address": self.website_address.text(),
             "similarity_threshold": self.similarity_threshold.value(),
             "similarity_method": self.similarity_method.currentText(),
+            "tensorflow_sleep_time": self.tensorflow_sleep_time.value(),
         }
 
     def set_settings(self, settings):
@@ -596,7 +612,8 @@ class AdvancedSettingsDialog(QDialog):
         self.product_keywords.setText(settings.get("product_keywords", ""))
         self.website_address.setText(settings.get("website_address", ""))
         self.similarity_threshold.setValue(settings.get("similarity_threshold", 0.5))
-        self.similarity_method.setCurrentText(settings.get("similarity_method", "TensorFlow (semantic_similarity)"))
+        self.similarity_method.setCurrentText(settings.get("similarity_method", "Simple (keyword matching only)"))
+        self.tensorflow_sleep_time.setValue(settings.get("tensorflow_sleep_time", 1.0))
 
 class RedditScraperGUI(QMainWindow):
     def __init__(self):
@@ -1045,6 +1062,7 @@ class RedditScraperGUI(QMainWindow):
             self.subreddit_list.takeItem(row)
 
     def start_scraping(self):
+        clear_log_file()
         self.start_button.setEnabled(False)
         self.progress_bar.setValue(0)
         self.log_display.clear()
@@ -1075,6 +1093,7 @@ class RedditScraperGUI(QMainWindow):
             "product_keywords": self.advanced_settings.get("product_keywords", ""),
             "similarity_threshold": self.advanced_settings.get("similarity_threshold", 0.5),
             "similarity_method": self.advanced_settings.get("similarity_method", "TensorFlow (semantic_similarity)"),
+            "tensorflow_sleep_time": self.advanced_settings.get("tensorflow_sleep_time", 1.0),
 
             **self.advanced_settings  # Include advanced settings
         }
@@ -1103,6 +1122,8 @@ class RedditScraperGUI(QMainWindow):
                 self.update_log("User cancelled comment review.")
             
         self.display_results(results)
+        self.start_button.setEnabled(True)
+        self.status_label.setText("Scraping completed")
 
     def post_selected_comments(self, selected_comments):
         self.update_log(f"Preparing to post {len(selected_comments)} comments...")
@@ -1137,6 +1158,7 @@ class RedditScraperGUI(QMainWindow):
         self.start_button.setEnabled(True)
 
     def update_log(self, message):
+        write_to_log_file(message)
         self.log_display.append(message)
         self.log_display.verticalScrollBar().setValue(self.log_display.verticalScrollBar().maximum())
         # Force the GUI to update immediately

@@ -47,15 +47,17 @@ logger = logging.getLogger(__name__)
 nlp = spacy.load("en_core_web_md")
 nltk.download('punkt_tab', quiet=True)
 
-def semantic_similarity(keywords, title, threshold=0.5):
+def semantic_similarity(keywords, title, threshold=0.5, sleep_time=1):
     if nlp is None:
         custom_print("spaCy model not loaded. Skipping semantic similarity check.")
         return False
 
     try:
+        
         title_doc = nlp(title)
         for keyword in keywords:
             try:
+                time.sleep(sleep_time)
                 keyword_doc = nlp(keyword)
                 similarity = title_doc.similarity(keyword_doc)
                 custom_print(f"Similarity between '{keyword}' and '{title}': {similarity}")
@@ -530,6 +532,7 @@ def login_and_scrape_reddit(
     website_address,
     similarity_threshold,  
     similarity_method,
+    tensorflow_sleep_time
 ):
     options = uc.ChromeOptions()
     options.add_argument("--start-maximized")
@@ -643,7 +646,7 @@ def login_and_scrape_reddit(
                         title = title.lower()
                         
                         if similarity_method == "TensorFlow (semantic_similarity)":
-                            is_relevant = semantic_similarity(product_keywords, title, threshold=similarity_threshold)
+                            is_relevant = semantic_similarity(product_keywords, title, threshold=similarity_threshold, sleep_time=tensorflow_sleep_time)
                         else:  # "Simple (simple_semantic_similarity)"
                             is_relevant = simple_semantic_similarity(product_keywords, title)
 

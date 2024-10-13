@@ -1,9 +1,7 @@
 Starting the scraping process...
 WebDriver initialized successfully
-WebDriver initialized successfully
 Navigating to Reddit login page...
 Navigating to Reddit login page...
-Waiting for username field...
 Waiting for username field...
 Waiting for password field...
 Waiting for password field...
@@ -11,8 +9,6 @@ Entering username and password...
 Entering username and password...
 Logging in.. Waiting for articles to load...
 Logging in.. Waiting for articles to load...
-Timeout waiting for element: shreddit-post
-Timeout waiting for element: shreddit-post
 Logged in. Articles loaded successfully
 Logged in. Articles loaded successfully
 
@@ -20,795 +16,2495 @@ Starting to scrape subreddit: r/AskReddit
 
 Starting to scrape subreddit: r/AskReddit
 Waiting for page to load...
-Waiting for page to load...
-Articles loaded.
 Articles loaded.
 Finding posts...
 Finding posts...
 Found 3 posts
+Found 3 posts
 Processing post 1...
-Processing post 1...
-Post 1/500 - Title: What was your “Oh shit, this person is a psychopath” moment when meeting people?
-Post 1/500 - Title: What was your “Oh shit, this person is a psychopath” moment when meeting people?
-Post 1/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g271g8/what_was_your_oh_shit_this_person_is_a_psychopath/
-Post 1/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g271g8/what_was_your_oh_shit_this_person_is_a_psychopath/
-No keywords found in title: 'what was your “oh shit, this person is a psychopath” moment when meeting people?'
-No keywords found in title: 'what was your “oh shit, this person is a psychopath” moment when meeting people?'
+Post 1/150 - Title: What's a sign to leave a party that not a lot of young people know?
+Post 1/150 - Title: What's a sign to leave a party that not a lot of young people know?
+Post 1/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2gbkc/whats_a_sign_to_leave_a_party_that_not_a_lot_of/
+Post 1/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2gbkc/whats_a_sign_to_leave_a_party_that_not_a_lot_of/
+Similarity between 'food' and 'what's a sign to leave a party that not a lot of young people know?': 0.40674644708633423
+Similarity between 'food' and 'what's a sign to leave a party that not a lot of young people know?': 0.40674644708633423
 No relevant keywords found in post 1. Skipping...
 No relevant keywords found in post 1. Skipping...
 Processing post 2...
 Processing post 2...
-Post 2/500 - Title: What's a sign to leave a party that not a lot of young people know?
-Post 2/500 - Title: What's a sign to leave a party that not a lot of young people know?
-Post 2/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2gbkc/whats_a_sign_to_leave_a_party_that_not_a_lot_of/
-Post 2/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2gbkc/whats_a_sign_to_leave_a_party_that_not_a_lot_of/
-No keywords found in title: 'what's a sign to leave a party that not a lot of young people know?'
+Post 2/150 - Title: What’s something that has a dangerously misleading name?
+Post 2/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2f91a/whats_something_that_has_a_dangerously_misleading/
+Similarity between 'food' and 'what’s something that has a dangerously misleading name?': 0.39414849877357483
+Similarity between 'food' and 'what’s something that has a dangerously misleading name?': 0.39414849877357483
 No relevant keywords found in post 2. Skipping...
-No keywords found in title: 'what's a sign to leave a party that not a lot of young people know?'
 No relevant keywords found in post 2. Skipping...
 Processing post 3...
 Processing post 3...
-Post 3/500 - Title: What’s something you think everyone should experience at least once in their lifetime?
-Post 3/500 - Title: What’s something you think everyone should experience at least once in their lifetime?
-Post 3/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2js7y/whats_something_you_think_everyone_should/
-No keywords found in title: 'what’s something you think everyone should experience at least once in their lifetime?'
+Post 3/150 - Title: What creation truly show how scary humans can be?
+Post 3/150 - Title: What creation truly show how scary humans can be?
+Post 3/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2bf50/what_creation_truly_show_how_scary_humans_can_be/
+Post 3/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2bf50/what_creation_truly_show_how_scary_humans_can_be/
+Similarity between 'food' and 'what creation truly show how scary humans can be?': 0.41845032572746277
 No relevant keywords found in post 3. Skipping...
 Processed 3 posts so far
-Post 3/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2js7y/whats_something_you_think_everyone_should/
-No keywords found in title: 'what’s something you think everyone should experience at least once in their lifetime?'
 No relevant keywords found in post 3. Skipping...
 Processed 3 posts so far
 Scrolled successfully, new content loaded.
 Scrolled successfully, new content loaded.
 Finding posts...
 Finding posts...
-Found 28 posts
-Found 28 posts
-Processing post 4...
-Processing post 4...
-Post 4/500 - Title: What the worst date you have ever been on?
-Post 4/500 - Title: What the worst date you have ever been on?
-Post 4/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2lct9/what_the_worst_date_you_have_ever_been_on/
-Post 4/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2lct9/what_the_worst_date_you_have_ever_been_on/
-No keywords found in title: 'what the worst date you have ever been on?'
-No relevant keywords found in post 4. Skipping...
-No keywords found in title: 'what the worst date you have ever been on?'
-No relevant keywords found in post 4. Skipping...
-Processing post 5...
-Processing post 5...
-Post 5/500 - Title: What creation truly show how scary humans can be?
-Post 5/500 - Title: What creation truly show how scary humans can be?
-Post 5/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2bf50/what_creation_truly_show_how_scary_humans_can_be/
-Post 5/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2bf50/what_creation_truly_show_how_scary_humans_can_be/
-No keywords found in title: 'what creation truly show how scary humans can be?'
-No relevant keywords found in post 5. Skipping...
-No keywords found in title: 'what creation truly show how scary humans can be?'
-No relevant keywords found in post 5. Skipping...
-Processing post 6...
-Processing post 6...
-Post 6/500 - Title: What was the worst morning you could wake up to?
-Post 6/500 - Title: What was the worst morning you could wake up to?
-Post 6/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ml9e/what_was_the_worst_morning_you_could_wake_up_to/
-No keywords found in title: 'what was the worst morning you could wake up to?'
-No relevant keywords found in post 6. Skipping...
-Post 6/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ml9e/what_was_the_worst_morning_you_could_wake_up_to/
-No keywords found in title: 'what was the worst morning you could wake up to?'
-No relevant keywords found in post 6. Skipping...
-Processing post 7...
-Processing post 7...
-Post 7/500 - Title: How do we stop overthinking?
-Post 7/500 - Title: How do we stop overthinking?
-Post 7/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2lmg8/how_do_we_stop_overthinking/
-Post 7/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2lmg8/how_do_we_stop_overthinking/
-No keywords found in title: 'how do we stop overthinking?'
-No relevant keywords found in post 7. Skipping...
-No keywords found in title: 'how do we stop overthinking?'
-No relevant keywords found in post 7. Skipping...
-Processing post 8...
-Processing post 8...
-Post 8/500 - Title: What's a seemingly small decision you made that ended up drastically changing your life? 
-Post 8/500 - Title: What's a seemingly small decision you made that ended up drastically changing your life? 
-Post 8/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g29lsn/whats_a_seemingly_small_decision_you_made_that/
-Post 8/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g29lsn/whats_a_seemingly_small_decision_you_made_that/
-No keywords found in title: 'what's a seemingly small decision you made that ended up drastically changing your life? '
-No relevant keywords found in post 8. Skipping...
-No keywords found in title: 'what's a seemingly small decision you made that ended up drastically changing your life? '
-No relevant keywords found in post 8. Skipping...
-Processing post 9...
-Processing post 9...
-Post 9/500 - Title: What's the most important advice, that you would remember for a long time and from who it was?
-Post 9/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2mrhx/whats_the_most_important_advice_that_you_would/
-No keywords found in title: 'what's the most important advice, that you would remember for a long time and from who it was?'
-No relevant keywords found in post 9. Skipping...
-Post 9/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2mrhx/whats_the_most_important_advice_that_you_would/
-No keywords found in title: 'what's the most important advice, that you would remember for a long time and from who it was?'
-No relevant keywords found in post 9. Skipping...
-Processing post 10...
-Processing post 10...
-Post 10/500 - Title: If you can eat only one food for the rest of your life, what would it be?
-Post 10/500 - Title: If you can eat only one food for the rest of your life, what would it be?
-Post 10/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2l8hr/if_you_can_eat_only_one_food_for_the_rest_of_your/
-Keyword 'food' found in title: 'if you can eat only one food for the rest of your life, what would it be?'
-Relevant content found in post 10
-Generating AI comment for post 10...
-Generating AI comment...
-Sending request to AI model with prompt length: 373 characters
-Keyword 'food' found in title: 'if you can eat only one food for the rest of your life, what would it be?'
-Relevant content found in post 10
-Generating AI comment for post 10...
-Generating AI comment...
-Sending request to AI model with prompt length: 373 characters
-Processing post 11...
-Processing post 11...
-Post 11/500 - Title: What's the first image that comes to mind when you hear the phrase "punchable face"?
-Post 11/500 - Title: What's the first image that comes to mind when you hear the phrase "punchable face"?
-Post 11/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2kbxn/whats_the_first_image_that_comes_to_mind_when_you/
-Post 11/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2kbxn/whats_the_first_image_that_comes_to_mind_when_you/
-No keywords found in title: 'what's the first image that comes to mind when you hear the phrase "punchable face"?'
-No relevant keywords found in post 11. Skipping...
-No keywords found in title: 'what's the first image that comes to mind when you hear the phrase "punchable face"?'
-No relevant keywords found in post 11. Skipping...
-Processing post 12...
-Processing post 12...
-Post 12/500 - Title: Are you single right now? Why?
-Post 12/500 - Title: Are you single right now? Why?
-Post 12/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2l2zq/are_you_single_right_now_why/
-No keywords found in title: 'are you single right now? why?'
-No relevant keywords found in post 12. Skipping...
-Post 12/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2l2zq/are_you_single_right_now_why/
-No keywords found in title: 'are you single right now? why?'
-No relevant keywords found in post 12. Skipping...
-Processing post 13...
-Processing post 13...
-Post 13/500 - Title: whats your top favorite video game ?
-Post 13/500 - Title: whats your top favorite video game ?
-Post 13/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2mgha/whats_your_top_favorite_video_game/
-No keywords found in title: 'whats your top favorite video game ?'
-No relevant keywords found in post 13. Skipping...
-Post 13/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2mgha/whats_your_top_favorite_video_game/
-No keywords found in title: 'whats your top favorite video game ?'
-No relevant keywords found in post 13. Skipping...
-Processing post 14...
-Processing post 14...
-Post 14/500 - Title: For people who’ve gone through a breakup, what was the hardest part for you?
-Post 14/500 - Title: For people who’ve gone through a breakup, what was the hardest part for you?
-Post 14/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2litx/for_people_whove_gone_through_a_breakup_what_was/
-Post 14/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2litx/for_people_whove_gone_through_a_breakup_what_was/
-No keywords found in title: 'for people who’ve gone through a breakup, what was the hardest part for you?'
-No relevant keywords found in post 14. Skipping...
-No keywords found in title: 'for people who’ve gone through a breakup, what was the hardest part for you?'
-No relevant keywords found in post 14. Skipping...
-Processing post 15...
-Processing post 15...
-Post 15/500 - Title: people who work 7 days a week: why?
-Post 15/500 - Title: people who work 7 days a week: why?
-Post 15/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2mpmy/people_who_work_7_days_a_week_why/
-No keywords found in title: 'people who work 7 days a week: why?'
-No relevant keywords found in post 15. Skipping...
-Post 15/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2mpmy/people_who_work_7_days_a_week_why/
-No keywords found in title: 'people who work 7 days a week: why?'
-No relevant keywords found in post 15. Skipping...
-Processing post 16...
-Processing post 16...
-Post 16/500 - Title: What is the funniest prank a parent, grandparent, aunt or uncle has ever pulled on you, siblings and cousins?
-Post 16/500 - Title: What is the funniest prank a parent, grandparent, aunt or uncle has ever pulled on you, siblings and cousins?
-Post 16/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2bl0m/what_is_the_funniest_prank_a_parent_grandparent/
-Post 16/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2bl0m/what_is_the_funniest_prank_a_parent_grandparent/
-No keywords found in title: 'what is the funniest prank a parent, grandparent, aunt or uncle has ever pulled on you, siblings and cousins?'
-No relevant keywords found in post 16. Skipping...
-No keywords found in title: 'what is the funniest prank a parent, grandparent, aunt or uncle has ever pulled on you, siblings and cousins?'
-No relevant keywords found in post 16. Skipping...
-Processing post 17...
-Processing post 17...
-Post 17/500 - Title: What circumstances led you to leave a date early?
-Post 17/500 - Title: What circumstances led you to leave a date early?
-Post 17/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2nk9l/what_circumstances_led_you_to_leave_a_date_early/
-Post 17/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2nk9l/what_circumstances_led_you_to_leave_a_date_early/
-No keywords found in title: 'what circumstances led you to leave a date early?'
-No relevant keywords found in post 17. Skipping...
-No keywords found in title: 'what circumstances led you to leave a date early?'
-No relevant keywords found in post 17. Skipping...
-Processing post 18...
-Processing post 18...
-Post 18/500 - Title:  What TV shows gets your perfect 10/10 rating?
-Post 18/500 - Title:  What TV shows gets your perfect 10/10 rating?
-Post 18/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g1zsnn/what_tv_shows_gets_your_perfect_1010_rating/
-No keywords found in title: ' what tv shows gets your perfect 10/10 rating?'
-No relevant keywords found in post 18. Skipping...
-Post 18/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g1zsnn/what_tv_shows_gets_your_perfect_1010_rating/
-No keywords found in title: ' what tv shows gets your perfect 10/10 rating?'
-No relevant keywords found in post 18. Skipping...
-Processing post 19...
-Processing post 19...
-Post 19/500 - Title: What fashion trends baffle you?
-Post 19/500 - Title: What fashion trends baffle you?
-Post 19/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2h7xl/what_fashion_trends_baffle_you/
-No keywords found in title: 'what fashion trends baffle you?'
-No relevant keywords found in post 19. Skipping...
-No keywords found in title: 'what fashion trends baffle you?'
-No relevant keywords found in post 19. Skipping...
-Processing post 20...
-Processing post 20...
-Post 20/500 - Title: What's a mind-blowing fact about the universe you would like everybody to know?
-Post 20/500 - Title: What's a mind-blowing fact about the universe you would like everybody to know?
-Post 20/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2azbj/whats_a_mindblowing_fact_about_the_universe_you/
-No keywords found in title: 'what's a mind-blowing fact about the universe you would like everybody to know?'
-No relevant keywords found in post 20. Skipping...
-Post 20/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2azbj/whats_a_mindblowing_fact_about_the_universe_you/
-No keywords found in title: 'what's a mind-blowing fact about the universe you would like everybody to know?'
-No relevant keywords found in post 20. Skipping...
-Processing post 21...
-Post 21/500 - Title: Uber Drivers, who tf are y’all on the phone with all the time? 
-Post 21/500 - Title: Uber Drivers, who tf are y’all on the phone with all the time? 
-Post 21/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2c8nd/uber_drivers_who_tf_are_yall_on_the_phone_with/
-Post 21/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2c8nd/uber_drivers_who_tf_are_yall_on_the_phone_with/
-No keywords found in title: 'uber drivers, who tf are y’all on the phone with all the time? '
-No relevant keywords found in post 21. Skipping...
-No keywords found in title: 'uber drivers, who tf are y’all on the phone with all the time? '
-No relevant keywords found in post 21. Skipping...
-Processing post 22...
-Processing post 22...
-Post 22/500 - Title: What’s a 10/10 song that not many people know about?
-Post 22/500 - Title: What’s a 10/10 song that not many people know about?
-Post 22/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g27ilj/whats_a_1010_song_that_not_many_people_know_about/
-No keywords found in title: 'what’s a 10/10 song that not many people know about?'
-No relevant keywords found in post 22. Skipping...
-Post 22/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g27ilj/whats_a_1010_song_that_not_many_people_know_about/
-No keywords found in title: 'what’s a 10/10 song that not many people know about?'
-No relevant keywords found in post 22. Skipping...
-Processing post 23...
-Processing post 23...
-Post 23/500 - Title: What's something you miss from your childhood? 
-Post 23/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2b50w/whats_something_you_miss_from_your_childhood/
-Post 23/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2b50w/whats_something_you_miss_from_your_childhood/
-No keywords found in title: 'what's something you miss from your childhood? '
-No relevant keywords found in post 23. Skipping...
-No keywords found in title: 'what's something you miss from your childhood? '
-No relevant keywords found in post 23. Skipping...
-Processing post 24...
-Processing post 24...
-Post 24/500 - Title: who are you when no one is looking?
-Post 24/500 - Title: who are you when no one is looking?
-Post 24/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2lfg8/who_are_you_when_no_one_is_looking/
-No keywords found in title: 'who are you when no one is looking?'
-No relevant keywords found in post 24. Skipping...
-Post 24/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2lfg8/who_are_you_when_no_one_is_looking/
-No keywords found in title: 'who are you when no one is looking?'
-No relevant keywords found in post 24. Skipping...
-Processing post 25...
-Processing post 25...
-Post 25/500 - Title: What is your immediate red flag when dating someone new?
-Post 25/500 - Title: What is your immediate red flag when dating someone new?
-Post 25/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2bi6b/what_is_your_immediate_red_flag_when_dating/
-No keywords found in title: 'what is your immediate red flag when dating someone new?'
-No relevant keywords found in post 25. Skipping...
-Post 25/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2bi6b/what_is_your_immediate_red_flag_when_dating/
-No keywords found in title: 'what is your immediate red flag when dating someone new?'
-No relevant keywords found in post 25. Skipping...
-Processing post 26...
-Processing post 26...
-Post 26/500 - Title: What’s the toughest pill you’ve had to swallow?
-Post 26/500 - Title: What’s the toughest pill you’ve had to swallow?
-Post 26/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2mm62/whats_the_toughest_pill_youve_had_to_swallow/
-No keywords found in title: 'what’s the toughest pill you’ve had to swallow?'
-No relevant keywords found in post 26. Skipping...
-Post 26/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2mm62/whats_the_toughest_pill_youve_had_to_swallow/
-No keywords found in title: 'what’s the toughest pill you’ve had to swallow?'
-No relevant keywords found in post 26. Skipping...
-Processing post 27...
-Post 27/500 - Title: What makes you cry?
-Post 27/500 - Title: What makes you cry?
-Post 27/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2m0lg/what_makes_you_cry/
-No keywords found in title: 'what makes you cry?'
-No relevant keywords found in post 27. Skipping...
-No keywords found in title: 'what makes you cry?'
-No relevant keywords found in post 27. Skipping...
-Processing post 28...
-Processing post 28...
-Post 28/500 - Title: what does love feel like?
-Post 28/500 - Title: what does love feel like?
-Post 28/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2l4l6/what_does_love_feel_like/
-No keywords found in title: 'what does love feel like?'
-No relevant keywords found in post 28. Skipping...
-Processed 28 posts so far
-No keywords found in title: 'what does love feel like?'
-No relevant keywords found in post 28. Skipping...
-Processed 28 posts so far
-Scrolled successfully, new content loaded.
-Scrolled successfully, new content loaded.
-Finding posts...
-Finding posts...
 Found 53 posts
 Found 53 posts
-Processing post 29...
-Processing post 29...
-Post 29/500 - Title: What are some unwritten rules of partying that everyone should know?
-Post 29/500 - Title: What are some unwritten rules of partying that everyone should know?
-Post 29/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ksxm/what_are_some_unwritten_rules_of_partying_that/
-No keywords found in title: 'what are some unwritten rules of partying that everyone should know?'
-No relevant keywords found in post 29. Skipping...
-No keywords found in title: 'what are some unwritten rules of partying that everyone should know?'
-No relevant keywords found in post 29. Skipping...
-Processing post 30...
-Post 30/500 - Title: If animals could talk, what do you think your pet would say to you?
-Post 30/500 - Title: If animals could talk, what do you think your pet would say to you?
-Post 30/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2l809/if_animals_could_talk_what_do_you_think_your_pet/
-No keywords found in title: 'if animals could talk, what do you think your pet would say to you?'
-No relevant keywords found in post 30. Skipping...
-Post 30/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2l809/if_animals_could_talk_what_do_you_think_your_pet/
-No keywords found in title: 'if animals could talk, what do you think your pet would say to you?'
-No relevant keywords found in post 30. Skipping...
-Processing post 31...
-Processing post 31...
-Post 31/500 - Title: How single are you right now?
-Post 31/500 - Title: How single are you right now?
-Post 31/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g1xaad/how_single_are_you_right_now/
-Post 31/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g1xaad/how_single_are_you_right_now/
-No keywords found in title: 'how single are you right now?'
-No relevant keywords found in post 31. Skipping...
-No keywords found in title: 'how single are you right now?'
-No relevant keywords found in post 31. Skipping...
-Processing post 32...
-Post 32/500 - Title: What are some rules that exist because one person was an idiot?
-Post 32/500 - Title: What are some rules that exist because one person was an idiot?
-Post 32/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g1te2h/what_are_some_rules_that_exist_because_one_person/
-Post 32/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g1te2h/what_are_some_rules_that_exist_because_one_person/
-No keywords found in title: 'what are some rules that exist because one person was an idiot?'
-No relevant keywords found in post 32. Skipping...
-No keywords found in title: 'what are some rules that exist because one person was an idiot?'
-No relevant keywords found in post 32. Skipping...
-Processing post 33...
-Processing post 33...
-Post 33/500 - Title: What's your darkest secret?
-Post 33/500 - Title: What's your darkest secret?
-Post 33/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2nhgb/whats_your_darkest_secret/
-No keywords found in title: 'what's your darkest secret?'
-No relevant keywords found in post 33. Skipping...
-Post 33/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2nhgb/whats_your_darkest_secret/
-No keywords found in title: 'what's your darkest secret?'
-No relevant keywords found in post 33. Skipping...
-Processing post 34...
-Processing post 34...
-Post 34/500 - Title: If you could give your younger self one piece of advice, what would it be?
-Post 34/500 - Title: If you could give your younger self one piece of advice, what would it be?
-Post 34/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2lfsk/if_you_could_give_your_younger_self_one_piece_of/
-No keywords found in title: 'if you could give your younger self one piece of advice, what would it be?'
-No relevant keywords found in post 34. Skipping...
-Post 34/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2lfsk/if_you_could_give_your_younger_self_one_piece_of/
-No keywords found in title: 'if you could give your younger self one piece of advice, what would it be?'
-No relevant keywords found in post 34. Skipping...
-Processing post 35...
-Post 35/500 - Title: Who really needs to shut their pie hole?
-Post 35/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2mrnr/who_really_needs_to_shut_their_pie_hole/
-Post 35/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2mrnr/who_really_needs_to_shut_their_pie_hole/
-No keywords found in title: 'who really needs to shut their pie hole?'
-No relevant keywords found in post 35. Skipping...
-No keywords found in title: 'who really needs to shut their pie hole?'
-No relevant keywords found in post 35. Skipping...
-Processing post 36...
-Processing post 36...
-Post 36/500 - Title: Whats the dumbest way you hurt yourself?
-Post 36/500 - Title: Whats the dumbest way you hurt yourself?
-Post 36/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k65c/whats_the_dumbest_way_you_hurt_yourself/
-Post 36/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k65c/whats_the_dumbest_way_you_hurt_yourself/
-No keywords found in title: 'whats the dumbest way you hurt yourself?'
-No relevant keywords found in post 36. Skipping...
-No keywords found in title: 'whats the dumbest way you hurt yourself?'
-No relevant keywords found in post 36. Skipping...
-Processing post 37...
-Processing post 37...
-Post 37/500 - Title: What makes you feel like a loser?
-Post 37/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2mcit/what_makes_you_feel_like_a_loser/
-Post 37/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2mcit/what_makes_you_feel_like_a_loser/
-No keywords found in title: 'what makes you feel like a loser?'
-No relevant keywords found in post 37. Skipping...
-No keywords found in title: 'what makes you feel like a loser?'
-No relevant keywords found in post 37. Skipping...
-Processing post 38...
-Processing post 38...
-Post 38/500 - Title: Who’s your favorite anime character of all time?
-Post 38/500 - Title: Who’s your favorite anime character of all time?
-Post 38/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2kh5y/whos_your_favorite_anime_character_of_all_time/
-No keywords found in title: 'who’s your favorite anime character of all time?'
-No relevant keywords found in post 38. Skipping...
-Post 38/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2kh5y/whos_your_favorite_anime_character_of_all_time/
-No keywords found in title: 'who’s your favorite anime character of all time?'
-No relevant keywords found in post 38. Skipping...
-Processing post 39...
-Processing post 39...
-Post 39/500 - Title: Why do you think forgiveness is so difficult for many people?
-Post 39/500 - Title: Why do you think forgiveness is so difficult for many people?
-Post 39/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2kxf9/why_do_you_think_forgiveness_is_so_difficult_for/
-Post 39/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2kxf9/why_do_you_think_forgiveness_is_so_difficult_for/
-No keywords found in title: 'why do you think forgiveness is so difficult for many people?'
-No relevant keywords found in post 39. Skipping...
-No keywords found in title: 'why do you think forgiveness is so difficult for many people?'
-No relevant keywords found in post 39. Skipping...
-Processing post 40...
-Processing post 40...
-Post 40/500 - Title: What is something you would love to do for the first time again?
-Post 40/500 - Title: What is something you would love to do for the first time again?
-Post 40/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g21u8g/what_is_something_you_would_love_to_do_for_the/
-Post 40/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g21u8g/what_is_something_you_would_love_to_do_for_the/
-No keywords found in title: 'what is something you would love to do for the first time again?'
-No relevant keywords found in post 40. Skipping...
-No keywords found in title: 'what is something you would love to do for the first time again?'
-No relevant keywords found in post 40. Skipping...
-Processing post 41...
-Processing post 41...
-Post 41/500 - Title: How do you see yourself in the next 5 years?
-Post 41/500 - Title: How do you see yourself in the next 5 years?
-Post 41/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2meyp/how_do_you_see_yourself_in_the_next_5_years/
-Post 41/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2meyp/how_do_you_see_yourself_in_the_next_5_years/
-No keywords found in title: 'how do you see yourself in the next 5 years?'
-No relevant keywords found in post 41. Skipping...
-No keywords found in title: 'how do you see yourself in the next 5 years?'
-No relevant keywords found in post 41. Skipping...
-Processing post 42...
-Processing post 42...
-Post 42/500 - Title: Are you happy right now? Why?
-Post 42/500 - Title: Are you happy right now? Why?
-Post 42/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2m1ch/are_you_happy_right_now_why/
-Post 42/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2m1ch/are_you_happy_right_now_why/
-No keywords found in title: 'are you happy right now? why?'
-No relevant keywords found in post 42. Skipping...
-No keywords found in title: 'are you happy right now? why?'
-No relevant keywords found in post 42. Skipping...
-Processing post 43...
-Post 43/500 - Title: What costs more for men than it does for women?
-Post 43/500 - Title: What costs more for men than it does for women?
-Post 43/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g1y7mz/what_costs_more_for_men_than_it_does_for_women/
-No keywords found in title: 'what costs more for men than it does for women?'
-No relevant keywords found in post 43. Skipping...
-Post 43/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g1y7mz/what_costs_more_for_men_than_it_does_for_women/
-No keywords found in title: 'what costs more for men than it does for women?'
-No relevant keywords found in post 43. Skipping...
-Processing post 44...
-Processing post 44...
-Post 44/500 - Title: What's your favourite activity when you don't have to work? 
-Post 44/500 - Title: What's your favourite activity when you don't have to work? 
-Post 44/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2lwf8/whats_your_favourite_activity_when_you_dont_have/
-No keywords found in title: 'what's your favourite activity when you don't have to work? '
-No relevant keywords found in post 44. Skipping...
-Post 44/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2lwf8/whats_your_favourite_activity_when_you_dont_have/
-No keywords found in title: 'what's your favourite activity when you don't have to work? '
-No relevant keywords found in post 44. Skipping...
-Processing post 45...
-Processing post 45...
-Post 45/500 - Title: What does being sucessful mean to you?
-Post 45/500 - Title: What does being sucessful mean to you?
-Post 45/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ltie/what_does_being_sucessful_mean_to_you/
-Post 45/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ltie/what_does_being_sucessful_mean_to_you/
-No keywords found in title: 'what does being sucessful mean to you?'
-No relevant keywords found in post 45. Skipping...
-No keywords found in title: 'what does being sucessful mean to you?'
-No relevant keywords found in post 45. Skipping...
-Processing post 46...
-Processing post 46...
-Post 46/500 - Title: What reduces your life expectancy by at least 20 years?
-Post 46/500 - Title: What reduces your life expectancy by at least 20 years?
-Post 46/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g1p7xe/what_reduces_your_life_expectancy_by_at_least_20/
-No keywords found in title: 'what reduces your life expectancy by at least 20 years?'
-No relevant keywords found in post 46. Skipping...
-Post 46/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g1p7xe/what_reduces_your_life_expectancy_by_at_least_20/
-No keywords found in title: 'what reduces your life expectancy by at least 20 years?'
-No relevant keywords found in post 46. Skipping...
-Processing post 47...
-Processing post 47...
-Post 47/500 - Title: If money wasn't an issue what would you do with your life?
-Post 47/500 - Title: If money wasn't an issue what would you do with your life?
-Post 47/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2l0sy/if_money_wasnt_an_issue_what_would_you_do_with/
-No keywords found in title: 'if money wasn't an issue what would you do with your life?'
-No relevant keywords found in post 47. Skipping...
-Post 47/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2l0sy/if_money_wasnt_an_issue_what_would_you_do_with/
-No keywords found in title: 'if money wasn't an issue what would you do with your life?'
-No relevant keywords found in post 47. Skipping...
-Processing post 48...
-Processing post 48...
-Post 48/500 - Title: What would scare you if an AI said it?
-Post 48/500 - Title: What would scare you if an AI said it?
-Post 48/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k20b/what_would_scare_you_if_an_ai_said_it/
-No keywords found in title: 'what would scare you if an ai said it?'
-No relevant keywords found in post 48. Skipping...
-Post 48/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k20b/what_would_scare_you_if_an_ai_said_it/
-No keywords found in title: 'what would scare you if an ai said it?'
-No relevant keywords found in post 48. Skipping...
-Processing post 49...
-Processing post 49...
-Post 49/500 - Title: What is your craziest Halloween experience?
-Post 49/500 - Title: What is your craziest Halloween experience?
-Post 49/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2b9yn/what_is_your_craziest_halloween_experience/
-No keywords found in title: 'what is your craziest halloween experience?'
-No relevant keywords found in post 49. Skipping...
-Post 49/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2b9yn/what_is_your_craziest_halloween_experience/
-No keywords found in title: 'what is your craziest halloween experience?'
-No relevant keywords found in post 49. Skipping...
-Processing post 50...
-Processing post 50...
-Post 50/500 - Title: Have you ever told truth when someone ask are you fine? Why?
-Post 50/500 - Title: Have you ever told truth when someone ask are you fine? Why?
-Post 50/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2jzhr/have_you_ever_told_truth_when_someone_ask_are_you/
-Post 50/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2jzhr/have_you_ever_told_truth_when_someone_ask_are_you/
-No keywords found in title: 'have you ever told truth when someone ask are you fine? why?'
-No relevant keywords found in post 50. Skipping...
-No keywords found in title: 'have you ever told truth when someone ask are you fine? why?'
-No relevant keywords found in post 50. Skipping...
-Processing post 51...
-Processing post 51...
-Post 51/500 - Title: What animal would look the silliest wearing a top hat?
-Post 51/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2kdfq/what_animal_would_look_the_silliest_wearing_a_top/
-Post 51/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2kdfq/what_animal_would_look_the_silliest_wearing_a_top/
-No keywords found in title: 'what animal would look the silliest wearing a top hat?'
-No relevant keywords found in post 51. Skipping...
-No keywords found in title: 'what animal would look the silliest wearing a top hat?'
-No relevant keywords found in post 51. Skipping...
-Processing post 52...
-Processing post 52...
-Post 52/500 - Title: What gave you confidence?
-Post 52/500 - Title: What gave you confidence?
-Post 52/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2l9um/what_gave_you_confidence/
-No keywords found in title: 'what gave you confidence?'
-No relevant keywords found in post 52. Skipping...
-No keywords found in title: 'what gave you confidence?'
-No relevant keywords found in post 52. Skipping...
-Processing post 53...
-Processing post 53...
-Post 53/500 - Title: People who got cheated on but gave them a second chance, how did the second chance turn out?
-Post 53/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2jot1/people_who_got_cheated_on_but_gave_them_a_second/
-No keywords found in title: 'people who got cheated on but gave them a second chance, how did the second chance turn out?'
-No relevant keywords found in post 53. Skipping...
-Post 53/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2jot1/people_who_got_cheated_on_but_gave_them_a_second/
-Processed 53 posts so far
-No keywords found in title: 'people who got cheated on but gave them a second chance, how did the second chance turn out?'
-No relevant keywords found in post 53. Skipping...
-Processed 53 posts so far
-Scrolled successfully, new content loaded.
-Scrolled successfully, new content loaded.
-Finding posts...
-Finding posts...
-Found 50 posts
-Found 50 posts
-Processing post 54...
-Processing post 54...
-Post 54/500 - Title: If you could choose any celebrity to narrate the story of your life, who would it be?
-Post 54/500 - Title: If you could choose any celebrity to narrate the story of your life, who would it be?
-Post 54/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2d623/if_you_could_choose_any_celebrity_to_narrate_the/
-No keywords found in title: 'if you could choose any celebrity to narrate the story of your life, who would it be?'
-No relevant keywords found in post 54. Skipping...
-Post 54/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2d623/if_you_could_choose_any_celebrity_to_narrate_the/
-No keywords found in title: 'if you could choose any celebrity to narrate the story of your life, who would it be?'
-No relevant keywords found in post 54. Skipping...
-Processing post 55...
-Processing post 55...
-Post 55/500 - Title: If you could choose any fictional universe to live in for a year, which would it be and why?
-Post 55/500 - Title: If you could choose any fictional universe to live in for a year, which would it be and why?
-Post 55/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2aqq3/if_you_could_choose_any_fictional_universe_to/
-Post 55/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2aqq3/if_you_could_choose_any_fictional_universe_to/
-No keywords found in title: 'if you could choose any fictional universe to live in for a year, which would it be and why?'
-No relevant keywords found in post 55. Skipping...
-No keywords found in title: 'if you could choose any fictional universe to live in for a year, which would it be and why?'
-No relevant keywords found in post 55. Skipping...
-Processing post 56...
-Processing post 56...
-Post 56/500 - Title: What was the moment you realized, "Oh Shit, my roommate is a psychopath" after meeting them?
-Post 56/500 - Title: What was the moment you realized, "Oh Shit, my roommate is a psychopath" after meeting them?
-Post 56/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2jzc8/what_was_the_moment_you_realized_oh_shit_my/
-No keywords found in title: 'what was the moment you realized, "oh shit, my roommate is a psychopath" after meeting them?'
-No relevant keywords found in post 56. Skipping...
-Post 56/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2jzc8/what_was_the_moment_you_realized_oh_shit_my/
-No keywords found in title: 'what was the moment you realized, "oh shit, my roommate is a psychopath" after meeting them?'
-No relevant keywords found in post 56. Skipping...
-Processing post 57...
-Processing post 57...
-Post 57/500 - Title: Which animal do you think has the best parenting skills?
-Post 57/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k4y7/which_animal_do_you_think_has_the_best_parenting/
-No keywords found in title: 'which animal do you think has the best parenting skills?'
-No relevant keywords found in post 57. Skipping...
-Post 57/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k4y7/which_animal_do_you_think_has_the_best_parenting/
-No keywords found in title: 'which animal do you think has the best parenting skills?'
-No relevant keywords found in post 57. Skipping...
-Processing post 58...
-Post 58/500 - Title: what is the most attractive feature somebody could have?
-Post 58/500 - Title: what is the most attractive feature somebody could have?
-Post 58/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2hs8g/what_is_the_most_attractive_feature_somebody/
-Post 58/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2hs8g/what_is_the_most_attractive_feature_somebody/
-No keywords found in title: 'what is the most attractive feature somebody could have?'
-No relevant keywords found in post 58. Skipping...
-No keywords found in title: 'what is the most attractive feature somebody could have?'
-No relevant keywords found in post 58. Skipping...
-Processing post 59...
-Processing post 59...
-Post 59/500 - Title: What’s something you got overly obsessed about?
-Post 59/500 - Title: What’s something you got overly obsessed about?
-Post 59/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2no4i/whats_something_you_got_overly_obsessed_about/
-Post 59/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2no4i/whats_something_you_got_overly_obsessed_about/
-No keywords found in title: 'what’s something you got overly obsessed about?'
-No relevant keywords found in post 59. Skipping...
-No keywords found in title: 'what’s something you got overly obsessed about?'
-No relevant keywords found in post 59. Skipping...
-Processing post 60...
-Processing post 60...
-Post 60/500 - Title: What can make this world a better place to live? 
-Post 60/500 - Title: What can make this world a better place to live? 
-Post 60/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2jg6e/what_can_make_this_world_a_better_place_to_live/
-Post 60/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2jg6e/what_can_make_this_world_a_better_place_to_live/
-No keywords found in title: 'what can make this world a better place to live? '
-No relevant keywords found in post 60. Skipping...
-No keywords found in title: 'what can make this world a better place to live? '
-No relevant keywords found in post 60. Skipping...
-Processing post 61...
-Processing post 61...
-Post 61/500 - Title: What’s the worst way someone hurt you emotionally?
-Post 61/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2iro0/whats_the_worst_way_someone_hurt_you_emotionally/
-Post 61/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2iro0/whats_the_worst_way_someone_hurt_you_emotionally/
-No keywords found in title: 'what’s the worst way someone hurt you emotionally?'
-No relevant keywords found in post 61. Skipping...
-No keywords found in title: 'what’s the worst way someone hurt you emotionally?'
-No relevant keywords found in post 61. Skipping...
-Processing post 62...
-Processing post 62...
-Post 62/500 - Title: What is the biggest plot twist in movies or television in your opinion?
-Post 62/500 - Title: What is the biggest plot twist in movies or television in your opinion?
-Post 62/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2nko2/what_is_the_biggest_plot_twist_in_movies_or/
-Post 62/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2nko2/what_is_the_biggest_plot_twist_in_movies_or/
-No keywords found in title: 'what is the biggest plot twist in movies or television in your opinion?'
-No relevant keywords found in post 62. Skipping...
-No keywords found in title: 'what is the biggest plot twist in movies or television in your opinion?'
-No relevant keywords found in post 62. Skipping...
-Processing post 63...
-Processing post 63...
-Post 63/500 - Title: What is the first movie you ever remember watching in a theater?
-Post 63/500 - Title: What is the first movie you ever remember watching in a theater?
-Post 63/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2f2ww/what_is_the_first_movie_you_ever_remember/
-No keywords found in title: 'what is the first movie you ever remember watching in a theater?'
-No relevant keywords found in post 63. Skipping...
-Post 63/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2f2ww/what_is_the_first_movie_you_ever_remember/
-No keywords found in title: 'what is the first movie you ever remember watching in a theater?'
-No relevant keywords found in post 63. Skipping...
-Processing post 64...
-Processing post 64...
-Post 64/500 - Title: What are some helpful things to know about specific dating apps before signing up for them?
-Post 64/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2m4dp/what_are_some_helpful_things_to_know_about/
-No keywords found in title: 'what are some helpful things to know about specific dating apps before signing up for them?'
-No relevant keywords found in post 64. Skipping...
-Post 64/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2m4dp/what_are_some_helpful_things_to_know_about/
-No keywords found in title: 'what are some helpful things to know about specific dating apps before signing up for them?'
-No relevant keywords found in post 64. Skipping...
-Processing post 65...
-Processing post 65...
-Post 65/500 - Title: What comes to your mind when you think about Brazil?
-Post 65/500 - Title: What comes to your mind when you think about Brazil?
-Post 65/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g21hst/what_comes_to_your_mind_when_you_think_about/
-Post 65/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g21hst/what_comes_to_your_mind_when_you_think_about/
-No keywords found in title: 'what comes to your mind when you think about brazil?'
-No relevant keywords found in post 65. Skipping...
-No keywords found in title: 'what comes to your mind when you think about brazil?'
-No relevant keywords found in post 65. Skipping...
-Processing post 66...
-Processing post 66...
-Post 66/500 - Title: Gamers of reddit, what is the best experience of your life?
-Post 66/500 - Title: Gamers of reddit, what is the best experience of your life?
-Post 66/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k5ut/gamers_of_reddit_what_is_the_best_experience_of/
-No keywords found in title: 'gamers of reddit, what is the best experience of your life?'
-No relevant keywords found in post 66. Skipping...
-Post 66/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k5ut/gamers_of_reddit_what_is_the_best_experience_of/
-No keywords found in title: 'gamers of reddit, what is the best experience of your life?'
-No relevant keywords found in post 66. Skipping...
-Processing post 67...
-Processing post 67...
-Post 67/500 - Title: What’s one technique you’ve found that actually helps reduce anxiety?
-Post 67/500 - Title: What’s one technique you’ve found that actually helps reduce anxiety?
-Post 67/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2nogq/whats_one_technique_youve_found_that_actually/
-Post 67/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2nogq/whats_one_technique_youve_found_that_actually/
-No keywords found in title: 'what’s one technique you’ve found that actually helps reduce anxiety?'
-No relevant keywords found in post 67. Skipping...
-No keywords found in title: 'what’s one technique you’ve found that actually helps reduce anxiety?'
-No relevant keywords found in post 67. Skipping...
-Processing post 68...
-Processing post 68...
-Post 68/500 - Title: How do you do to make new friends IRL ?
-Post 68/500 - Title: How do you do to make new friends IRL ?
-Post 68/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2no0d/how_do_you_do_to_make_new_friends_irl/
-Post 68/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2no0d/how_do_you_do_to_make_new_friends_irl/
-No keywords found in title: 'how do you do to make new friends irl ?'
-No relevant keywords found in post 68. Skipping...
-No keywords found in title: 'how do you do to make new friends irl ?'
-No relevant keywords found in post 68. Skipping...
-Processing post 69...
-Post 69/500 - Title: What is a common insecurity that you find very attractive?
-Post 69/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2klld/what_is_a_common_insecurity_that_you_find_very/
-Post 69/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2klld/what_is_a_common_insecurity_that_you_find_very/
-No keywords found in title: 'what is a common insecurity that you find very attractive?'
-No relevant keywords found in post 69. Skipping...
-No keywords found in title: 'what is a common insecurity that you find very attractive?'
-No relevant keywords found in post 69. Skipping...
-Processing post 70...
-Processing post 70...
-Post 70/500 - Title: How did you all lose or win the genetic lottery?
-Post 70/500 - Title: How did you all lose or win the genetic lottery?
-Post 70/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2nn7f/how_did_you_all_lose_or_win_the_genetic_lottery/
-Post 70/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2nn7f/how_did_you_all_lose_or_win_the_genetic_lottery/
-No keywords found in title: 'how did you all lose or win the genetic lottery?'
-No relevant keywords found in post 70. Skipping...
-No keywords found in title: 'how did you all lose or win the genetic lottery?'
-No relevant keywords found in post 70. Skipping...
-Processing post 71...
-Processing post 71...
-Post 71/500 - Title: What is your "my plot twist has a plot twist" story?
-Post 71/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ng2e/what_is_your_my_plot_twist_has_a_plot_twist_story/
-No keywords found in title: 'what is your "my plot twist has a plot twist" story?'
-No relevant keywords found in post 71. Skipping...
-Post 71/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ng2e/what_is_your_my_plot_twist_has_a_plot_twist_story/
-No keywords found in title: 'what is your "my plot twist has a plot twist" story?'
-No relevant keywords found in post 71. Skipping...
-Processing post 72...
-Processing post 72...
-Post 72/500 - Title: Why aren’t womens fragrances long lasting?
-Post 72/500 - Title: Why aren’t womens fragrances long lasting?
-Post 72/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ll5j/why_arent_womens_fragrances_long_lasting/
-No keywords found in title: 'why aren’t womens fragrances long lasting?'
-No relevant keywords found in post 72. Skipping...
-No keywords found in title: 'why aren’t womens fragrances long lasting?'
-No relevant keywords found in post 72. Skipping...
-Processing post 73...
-Processing post 73...
-Post 73/500 - Title: What emotion do you feel the most in your life? 
-Post 73/500 - Title: What emotion do you feel the most in your life? 
-Post 73/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g27if1/what_emotion_do_you_feel_the_most_in_your_life/
-Post 73/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g27if1/what_emotion_do_you_feel_the_most_in_your_life/
-No keywords found in title: 'what emotion do you feel the most in your life? '
-No relevant keywords found in post 73. Skipping...
-No keywords found in title: 'what emotion do you feel the most in your life? '
-No relevant keywords found in post 73. Skipping...
-Processing post 74...
-Processing post 74...
-Post 74/500 - Title: What keeps you from giving up? 
-Post 74/500 - Title: What keeps you from giving up? 
-Post 74/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2n9sa/what_keeps_you_from_giving_up/
-No keywords found in title: 'what keeps you from giving up? '
-No relevant keywords found in post 74. Skipping...
-Post 74/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2n9sa/what_keeps_you_from_giving_up/
-No keywords found in title: 'what keeps you from giving up? '
-No relevant keywords found in post 74. Skipping...
-Processing post 75...
-Processing post 75...
-Post 75/500 - Title: If you became a vampire , who would you hunt?
-Post 75/500 - Title: If you became a vampire , who would you hunt?
-Post 75/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k83n/if_you_became_a_vampire_who_would_you_hunt/
-No keywords found in title: 'if you became a vampire , who would you hunt?'
-No relevant keywords found in post 75. Skipping...
-Post 75/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k83n/if_you_became_a_vampire_who_would_you_hunt/
-No keywords found in title: 'if you became a vampire , who would you hunt?'
-No relevant keywords found in post 75. Skipping...
-Processing post 76...
-Processing post 76...
-Post 76/500 - Title: What position do you fall asleep in most? 
-Post 76/500 - Title: What position do you fall asleep in most? 
-Post 76/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2jnyr/what_position_do_you_fall_asleep_in_most/
-No keywords found in title: 'what position do you fall asleep in most? '
-No relevant keywords found in post 76. Skipping...
-Post 76/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2jnyr/what_position_do_you_fall_asleep_in_most/
-No keywords found in title: 'what position do you fall asleep in most? '
-No relevant keywords found in post 76. Skipping...
-Processing post 77...
-Processing post 77...
-Post 77/500 - Title: Fans of Marvel, which joke/reference from the latest Deadpool movie did you like ?
-Post 77/500 - Title: Fans of Marvel, which joke/reference from the latest Deadpool movie did you like ?
-Post 77/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k4ww/fans_of_marvel_which_jokereference_from_the/
-No keywords found in title: 'fans of marvel, which joke/reference from the latest deadpool movie did you like ?'
-No relevant keywords found in post 77. Skipping...
-Post 77/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k4ww/fans_of_marvel_which_jokereference_from_the/
-No keywords found in title: 'fans of marvel, which joke/reference from the latest deadpool movie did you like ?'
-No relevant keywords found in post 77. Skipping...
-Processing post 78...
-Processing post 78...
-Post 78/500 - Title: What is your pettiest(!) turn-off when it comes to other people?
-Post 78/500 - Title: What is your pettiest(!) turn-off when it comes to other people?
-Post 78/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2m3xz/what_is_your_pettiest_turnoff_when_it_comes_to/
-No keywords found in title: 'what is your pettiest(!) turn-off when it comes to other people?'
-No relevant keywords found in post 78. Skipping...
-Processed 78 posts so far
-Post 78/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2m3xz/what_is_your_pettiest_turnoff_when_it_comes_to/
-No keywords found in title: 'what is your pettiest(!) turn-off when it comes to other people?'
-No relevant keywords found in post 78. Skipping...
-Processed 78 posts so far
+Processing post 4...
+Processing post 4...
+Post 4/150 - Title: What is something non sexual but feels very intimate? 
+Post 4/150 - Title: What is something non sexual but feels very intimate? 
+Post 4/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g278qa/what_is_something_non_sexual_but_feels_very/
+Post 4/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g278qa/what_is_something_non_sexual_but_feels_very/
+Similarity between 'food' and 'what is something non sexual but feels very intimate? ': 0.37227582931518555
+Similarity between 'food' and 'what is something non sexual but feels very intimate? ': 0.37227582931518555
+No relevant keywords found in post 4. Skipping...
+No relevant keywords found in post 4. Skipping...
+Processing post 5...
+Post 5/150 - Title: What's a seemingly small decision you made that ended up drastically changing your life? 
+Post 5/150 - Title: What's a seemingly small decision you made that ended up drastically changing your life? 
+Post 5/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g29lsn/whats_a_seemingly_small_decision_you_made_that/
+Post 5/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g29lsn/whats_a_seemingly_small_decision_you_made_that/
+Similarity between 'food' and 'what's a seemingly small decision you made that ended up drastically changing your life? ': 0.3895297944545746
+No relevant keywords found in post 5. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+No relevant keywords found in post 5. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+Processed 5 posts so far
+An unexpected error occurred: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+
+An error occurred processing post 6: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+. Skipping...
+Scraping process completed.
+Processed 5 posts so far
+Scraping completed for all subreddits. Total relevant posts processed: 0
+An unexpected error occurred: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.100)
+Stacktrace:
+	GetHandleVerifier [0x00485523+24195]
+	(No symbol) [0x0041AA04]
+	(No symbol) [0x00312093]
+	(No symbol) [0x002EE22B]
+	(No symbol) [0x0038173F]
+	(No symbol) [0x00394BB9]
+	(No symbol) [0x0037A8D6]
+	(No symbol) [0x0034BA27]
+	(No symbol) [0x0034C43D]
+	GetHandleVerifier [0x0074CE13+2938739]
+	GetHandleVerifier [0x0079EC69+3274185]
+	GetHandleVerifier [0x005109C2+594722]
+	GetHandleVerifier [0x00517EDC+624700]
+	(No symbol) [0x004237CD]
+	(No symbol) [0x00420528]
+	(No symbol) [0x004206C5]
+	(No symbol) [0x00412CA6]
+	BaseThreadInitThunk [0x7578FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773D809E+286]
+	RtlGetAppContainerNamedObjectPath [0x773D806E+238]
+
+Scraping process completed.
+Scraping completed for all subreddits. Total relevant posts processed: 0
+Scraping process completed.
+Scraping process finished. Handling results...
+Review mode is active. Opening comment review dialog...
+User cancelled comment review.
