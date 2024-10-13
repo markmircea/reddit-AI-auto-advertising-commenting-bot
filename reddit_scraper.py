@@ -533,6 +533,9 @@ def login_and_scrape_reddit(
 ):
     options = uc.ChromeOptions()
     options.add_argument("--start-maximized")
+    options.add_argument("--disable-webgl")
+    options.add_argument("--disable-audio-output")
+    options.add_argument("--font-rendering-hinting=none")
    
 
     # Create and add the custom header extension

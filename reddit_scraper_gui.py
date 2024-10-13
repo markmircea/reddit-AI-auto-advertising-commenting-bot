@@ -586,12 +586,8 @@ class RedditScraperGUI(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Reddit AI Commenter Pro")
-                # Get the available geometry of the screen
-        screen_geometry = QApplication.primaryScreen().availableGeometry()
+        self.setGeometry(100, 100, 1200, 800)
         
-        # Set the window width to 800 and height to the maximum available height
-        self.setGeometry(100, 100, 800, screen_geometry.height())
-
         self.create_menu_bar()
         self.proxy_settings = {}
         self.fingerprint_settings = {}
@@ -605,15 +601,14 @@ class RedditScraperGUI(QMainWindow):
             "similarity_threshold": 0.5,
         }
 
-        
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         self.layout = QVBoxLayout(central_widget)
-        
+
         # Add Save and Advanced Settings buttons
         button_layout = QHBoxLayout()
         self.save_button = QPushButton(SVGIcon(ICONS["save"]), "Save Settings")
-        self.save_button.clicked.connect(self.save_settings_button_clicked)  # Change this line
+        self.save_button.clicked.connect(lambda: self.save_settings("settings.json"))
 
         self.advanced_settings_button = QPushButton(SVGIcon(ICONS["settings"]), "Advanced Settings")
         self.advanced_settings_button.clicked.connect(self.open_advanced_settings)
@@ -659,7 +654,6 @@ class RedditScraperGUI(QMainWindow):
 
         self.max_articles = self.create_spinbox("Max Articles per Subreddit:", 1, 1000, 10)
         self.max_comments = self.create_spinbox("Max Comments per Article:", 0, 1000, 10)        
-        # New input fields for retry attempts
         
         # Wait time input fields
         wait_time_layout = QHBoxLayout()
@@ -674,13 +668,9 @@ class RedditScraperGUI(QMainWindow):
         self.max_wait_time.setValue(6)
         wait_time_layout.addWidget(self.max_wait_time)
         self.layout.addLayout(wait_time_layout)
-
-        
         
         # AI response length
         self.ai_response_length = self.create_spinbox("AI Response Length (words, 0 for auto):", 0, 1000, 0)
-
-         
 
         # New checkbox for not posting comments
         self.do_not_post = QCheckBox("Generate AI comments only (do not review, do not post)")
@@ -689,27 +679,6 @@ class RedditScraperGUI(QMainWindow):
         # Start button
         self.start_button = QPushButton(SVGIcon(ICONS["start"]), "Start Scraping, Generating and Reviewing Comments")
         self.start_button.clicked.connect(self.start_scraping)
-        self.start_button.setStyleSheet("""
-            QPushButton {
-                background-color: #1DB954;
-                color: white;
-                border: none;
-                padding: 10px 20px;
-                border-radius: 5px;
-                font-weight: bold;
-                font-size: 16px;
-            }
-            QPushButton:hover {
-                background-color: #1ED760;
-            }
-            QPushButton:pressed {
-                background-color: #1AA34A;
-            }
-            QPushButton:disabled {
-                background-color: #CCCCCC;
-                color: #666666;
-            }
-        """)
         self.layout.addWidget(self.start_button)
 
         # Progress bar and status
@@ -734,97 +703,74 @@ class RedditScraperGUI(QMainWindow):
         self.apply_styles()
         
         self.load_settings_if_exists()
-        
-    def save_settings_button_clicked(self):
-        self.save_settings()
 
     def apply_styles(self):
-        # Add specific styles for the new buttons
-        self.save_button.setStyleSheet("""
-            QPushButton {
-                background-color: #4CAF50;
-                color: white;
-                border: none;
-                padding: 8px 15px;
-                border-radius: 4px;
-                font-weight: bold;
-            }
-            QPushButton:hover {
-                background-color: #45a049;
-            }
-            QPushButton:pressed {
-                background-color: #3d8b40;
-            }
-        """)
-        
-        self.advanced_settings_button.setStyleSheet("""
-            QPushButton {
-                background-color: #008CBA;
-                color: white;
-                border: none;
-                padding: 8px 15px;
-                border-radius: 4px;
-                font-weight: bold;
-            }
-            QPushButton:hover {
-                background-color: #007B9E;
-            }
-            QPushButton:pressed {
-                background-color: #006A87;
-            }
-        """)
         self.setStyleSheet("""
             QMainWindow, QDialog {
-                background-color: #121212;
+                background-color: #1E1E1E;
                 color: #E0E0E0;
             }
             QMenuBar {
-                background-color: #1E1E1E;
+                background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                                  stop:0 #2C2C2C, stop:1 #1E1E1E);
                 color: #E0E0E0;
-                border-bottom: 1px solid #333333;
+                border-bottom: 1px solid #3A3A3A;
+                padding: 2px;
             }
             QMenuBar::item:selected {
-                background-color: #2A2A2A;
+                background-color: #3A3A3A;
+                border-radius: 4px;
             }
             QMenu {
-                background-color: #1E1E1E;
+                background-color: #2C2C2C;
                 color: #E0E0E0;
-                border: 1px solid #333333;
+                border: 1px solid #3A3A3A;
+                border-radius: 4px;
             }
             QMenu::item:selected {
-                background-color: #2A2A2A;
+                background-color: #3A3A3A;
             }
-            QLabel, QCheckBox, QRadioButton {
+            QLabel, QCheckBox {
                 color: #E0E0E0;
+                font-size: 14px;
             }
             QPushButton {
-                background-color: #1DB954;
+                background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                                  stop:0 #1DB954, stop:1 #169C46);
                 color: white;
                 border: none;
                 padding: 8px 15px;
                 border-radius: 4px;
+                font-weight: bold;
             }
             QPushButton:hover {
-                background-color: #1ED760;
+                background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                                  stop:0 #1ED760, stop:1 #1AAD4F);
             }
             QPushButton:pressed {
-                background-color: #1AA34A;
+                background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                                  stop:0 #169C46, stop:1 #14893E);
             }
-            QLineEdit, QTextEdit, QListWidget, QComboBox, QSpinBox {
+            QLineEdit, QTextEdit, QListWidget, QComboBox, QSpinBox, QDoubleSpinBox {
                 background-color: #2A2A2A;
                 color: #E0E0E0;
-                border: 1px solid #444444;
+                border: 1px solid #3A3A3A;
                 border-radius: 4px;
                 padding: 5px;
             }
+            QLineEdit:focus, QTextEdit:focus, QListWidget:focus, QComboBox:focus, QSpinBox:focus, QDoubleSpinBox:focus {
+                border: 1px solid #1DB954;
+            }
             QProgressBar {
-                border: 1px solid #444444;
+                border: 1px solid #3A3A3A;
                 border-radius: 4px;
                 text-align: center;
                 color: white;
+                background-color: #2A2A2A;
             }
             QProgressBar::chunk {
-                background-color: #1DB954;
+                background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                                  stop:0 #1DB954, stop:1 #169C46);
                 border-radius: 3px;
             }
             QScrollBar:vertical {
@@ -834,13 +780,82 @@ class RedditScraperGUI(QMainWindow):
                 margin: 0px 0px 0px 0px;
             }
             QScrollBar::handle:vertical {
-                background: #4A4A4D;
+                background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                            stop:0 #4A4A4D, stop:1 #3A3A3D);
                 min-height: 20px;
                 border-radius: 5px;
             }
             QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
                 border: none;
                 background: none;
+            }
+            QGroupBox {
+                border: 1px solid #3A3A3A;
+                border-radius: 4px;
+                margin-top: 10px;
+                padding-top: 10px;
+            }
+            QGroupBox::title {
+                subcontrol-origin: margin;
+                subcontrol-position: top center;
+                padding: 0 5px;
+                color: #1DB954;
+            }
+        """)
+
+        # Specific styles for buttons
+        self.save_button.setStyleSheet("""
+            QPushButton {
+                background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                                  stop:0 #4CAF50, stop:1 #45A049);
+            }
+            QPushButton:hover {
+                background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                                  stop:0 #55C754, stop:1 #4CAF50);
+            }
+            QPushButton:pressed {
+                background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                                  stop:0 #45A049, stop:1 #3D8B40);
+            }
+        """)
+        
+        self.advanced_settings_button.setStyleSheet("""
+            QPushButton {
+                background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                                  stop:0 #008CBA, stop:1 #007B9E);
+            }
+            QPushButton:hover {
+                background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                                  stop:0 #009DCF, stop:1 #008CBA);
+            }
+            QPushButton:pressed {
+                background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                                  stop:0 #007B9E, stop:1 #006A87);
+            }
+        """)
+
+        self.start_button.setStyleSheet("""
+            QPushButton {
+                background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                                  stop:0 #1DB954, stop:1 #169C46);
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-weight: bold;
+                font-size: 16px;
+            }
+            QPushButton:hover {
+                background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                                  stop:0 #1ED760, stop:1 #1AAD4F);
+            }
+            QPushButton:pressed {
+                background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                                  stop:0 #169C46, stop:1 #14893E);
+            }
+            QPushButton:disabled {
+                background-color: #CCCCCC;
+                color: #666666;
             }
         """)
     
