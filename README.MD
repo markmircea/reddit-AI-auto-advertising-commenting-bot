@@ -1,71 +1,93 @@
-# Guide: Running a Python Script on a New Computer
+# Reddit AI Commenter Pro
 
-Follow these steps to run your Python script on a new computer:
+Reddit AI Commenter Pro is a Python application that scrapes Reddit posts, generates AI comments, and allows for review and posting of these comments.
+
+## File Structure
+
+- `reddit_scraper_gui.py`: Main application file with the GUI
+- `gui_components.py`: GUI-related classes and dialogs
+- `scraper.py`: Main scraping functionality
+- `utils.py`: Utility functions and constants
+- `styles.py`: Styling and visual aspects
+
+Note: If you see a `reddit_scraper.py` file in your directory, it's from the old version and can be safely removed.
+
+## Setup and Installation
 
 1. **Install Python**
-   - Download and install Python from [python.org](https://www.python.org/downloads/)
+   - Download and install Python 3.8 or later from [python.org](https://www.python.org/downloads/)
    - Ensure you check "Add Python to PATH" during installation
 
 2. **Set up a virtual environment (recommended)**
    - Open a terminal or command prompt
-   - Navigate to your project directory
+   - Navigate to the project directory
    - Create a virtual environment:
      ```
-     python -m venv myenv
+     python -m venv venv
      ```
    - Activate the virtual environment:
      - On Windows:
        ```
-       myenv\Scripts\activate
+       venv\Scripts\activate
        ```
      - On macOS and Linux:
        ```
-       source myenv/bin/activate
+       source venv/bin/activate
        ```
 
 3. **Install dependencies**
-   - If you have a `requirements.txt` file:
+   - With the virtual environment activated, run:
      ```
      pip install -r requirements.txt
      ```
-   - If not, install required packages individually:
+   - Install spaCy language model:
      ```
-     pip install package_name
-     ```
-     Install keyword vector
-     ```
-     python -m spacy download en_core_web_lg
-     ```
-   - Make sure Tensor flow version matches spacy
-     ```
-     pip install --upgrade spacy tensorflow
+     python -m spacy download en_core_web_md
      ```
 
-   - If you are having issues with crashing, disable TensorFlow neural word vectors, or modify the threshold to be higher.
+4. **Configure settings**
+   - Open `reddit_scraper_gui.py` and update any default settings if needed
 
-4. **Transfer your script**
-   - Copy your Python script file(s) to the new computer
-   - Place them in your project directory
+## Running the Application
 
-5. **Configure environment-specific settings**
-   - Set any necessary environment variables
-   - Update file paths in your script if needed
-
-6. **Run the script**
-   - In the terminal, with your virtual environment activated, run:
+1. Ensure your virtual environment is activated
+2. Run the following command:
    ```
-   .\venv\Scripts\activate
+   python reddit_scraper_gui.py
    ```
-     ```
-     python your_script.py
-     ```
+
+## Usage
+
+1. Enter your Reddit username and password
+2. Add subreddits you want to scrape
+3. Configure scraping settings (max articles, comments, etc.)
+4. Click "Start Scraping, Generating and Reviewing Comments"
+5. Review and select AI-generated comments
+6. The application will post selected comments to Reddit
+
+## Additional Notes
+
+- Make sure you comply with Reddit's terms of service and API usage guidelines
+- Be cautious when using automated posting features to avoid potential account restrictions
+
+## Troubleshooting
+
+- If you encounter issues with TensorFlow, you can disable neural word vectors or increase the similarity threshold in the advanced settings
+- For any crashes or errors, check the log file generated in the application directory
+
+## Creating Requirements File
+
+To update the requirements file with your current environment packages:
+
+```
+pip freeze > requirements.txt
+```
 
 Remember to deactivate your virtual environment when you're done:
 ```
 deactivate
 ```
 
-This process ensures that your script runs in an isolated environment with all necessary dependencies, regardless of the system-wide Python setup on the new computer.
+## License
 
-Create req text
-pip freeze > requirements.txt
+[Include your license information here]
