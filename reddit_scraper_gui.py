@@ -683,7 +683,7 @@ class RedditScraperGUI(QMainWindow):
          
 
         # New checkbox for not posting comments
-        self.do_not_post = QCheckBox("Generate AI comments only (do not post)")
+        self.do_not_post = QCheckBox("Generate AI comments only (do not review, do not post)")
         self.layout.addWidget(self.do_not_post)
 
         # Start button
@@ -1058,6 +1058,9 @@ class RedditScraperGUI(QMainWindow):
         self.update_log("Scraping process finished. Handling results...")
         self.driver = driver  # Store the driver object
         if self.do_not_post.isChecked():
+            self.update_log("Skipping Manual Review...")
+            
+        else:
             self.update_log("Review mode is active. Opening comment review dialog...")
             dialog = CommentReviewDialog(results, self)
             if dialog.exec() == QDialog.DialogCode.Accepted:
@@ -1066,9 +1069,7 @@ class RedditScraperGUI(QMainWindow):
                 self.post_selected_comments(selected_comments)
             else:
                 self.update_log("User cancelled comment review.")
-        else:
-            self.update_log("Automatically posting all generated comments...")
-            self.post_selected_comments(results)
+            
         self.display_results(results)
 
     def post_selected_comments(self, selected_comments):

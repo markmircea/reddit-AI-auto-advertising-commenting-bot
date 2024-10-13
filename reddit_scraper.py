@@ -21,6 +21,7 @@ from selenium.common.exceptions import (
     WebDriverException,
     StaleElementReferenceException,
 )
+import undetected_chromedriver as uc  
 import os
 os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
@@ -391,7 +392,7 @@ def generate_ai_comment(title, persona, ai_response_length=0, openrouter_api_key
     prompt += "\nGenerated comment:"
 
     custom_print(f"Sending request to AI model with prompt length: {len(prompt)} characters")
-    #return "HERE IS AI COMMENT"
+    return "HERE IS AI COMMENT"
     try:
         # Use the provided API key if it's not blank, otherwise use the default
         api_key = openrouter_api_key.strip() if openrouter_api_key and openrouter_api_key.strip() else DEFAULT_API_KEY
@@ -530,25 +531,24 @@ def login_and_scrape_reddit(
     similarity_threshold,  
     similarity_method,
 ):
-    
-    chrome_options = Options()
-    chrome_options.add_argument("--start-maximized")
+    options = uc.ChromeOptions()
+    options.add_argument("--start-maximized")
+   
 
     # Create and add the custom header extension
     if fingerprint_settings.get("enabled", False):
         header_extension = create_header_extension(fingerprint_settings.get("headers", []))
-        chrome_options.add_argument(f'--load-extension={header_extension}')
+        options.add_argument(f'--load-extension={header_extension}')
 
     # Apply proxy settings
     if proxy_settings.get("enabled", False):
         proxy_string = f"{proxy_settings['type'].lower()}://{proxy_settings['host']}:{proxy_settings['port']}"
-        chrome_options.add_argument(f'--proxy-server={proxy_string}')
+        options.add_argument(f'--proxy-server={proxy_string}')
         if proxy_settings.get("username") and proxy_settings.get("password"):
-            chrome_options.add_argument(f"--proxy-auth={proxy_settings['username']}:{proxy_settings['password']}")
+            options.add_argument(f"--proxy-auth={proxy_settings['username']}:{proxy_settings['password']}")
 
     service = Service(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service, options=chrome_options)
-
+    driver = uc.Chrome(options=options)
     # Apply JavaScript attributes using CDP
     if fingerprint_settings.get("enabled", False):
         js_attributes = fingerprint_settings.get("js_attributes", [])
