@@ -21,9 +21,13 @@ from selenium.common.exceptions import (
     WebDriverException,
     StaleElementReferenceException,
 )
+import os
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
 # Constants
+#OPENROUTER_API_KEY = "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"
 OPENROUTER_API_KEY = "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"
+
 YOUR_SITE_URL = "easyace.ai"
 YOUR_APP_NAME = "Reddit Scraper with AI Comments"
 
@@ -38,9 +42,9 @@ SORT_TYPES = ["hot", "new", "top", "rising"]
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+# Load the English model (do this at the beginning of your script)
 nlp = spacy.load("en_core_web_md")
 nltk.download('punkt_tab', quiet=True)
-ps = PorterStemmer()
 
 def semantic_similarity(keywords, title, threshold=0.5):
     if nlp is None:
@@ -69,19 +73,31 @@ def semantic_similarity(keywords, title, threshold=0.5):
 
     return False
 
+# Initialize the Porter Stemmer
+ps = PorterStemmer()
+
 def preprocess_text(text):
+    # Convert to lowercase
     text = text.lower()
+    # Remove apostrophes
     text = text.replace("'", "")
+    # Remove non-alphanumeric characters and replace with space
     text = re.sub(r'[^a-zA-Z0-9\s]', ' ', text)
+    # Tokenize the text
     tokens = nltk.word_tokenize(text)
+    # Stem the tokens
     stemmed_tokens = [ps.stem(token) for token in tokens]
     return ' '.join(stemmed_tokens)
 
 def simple_semantic_similarity(keywords, title):
     try:
+        # Preprocess the title
         processed_title = preprocess_text(title)
+        
+        # Preprocess and stem each keyword
         processed_keywords = [preprocess_text(keyword) for keyword in keywords]
         
+        # Check if any processed keyword is in the processed title
         for keyword in processed_keywords:
             if keyword in processed_title:
                 custom_print(f"Keyword '{keyword}' found in title: '{title}'")
@@ -93,6 +109,8 @@ def simple_semantic_similarity(keywords, title):
     except Exception as e:
         custom_print(f"Error in simple_semantic_similarity function: {str(e)}")
         return False
+
+    
 
 custom_print_function = print
 
@@ -176,16 +194,19 @@ def create_js_override_script(js_attributes):
                     var propName = parts[parts.length - 1];
                     var propValue = overrides[key];
 
+                    // Special handling for certain properties
                     if (key === 'navigator.userAgent') {
                         Object.defineProperty(navigator, 'userAgent', {get: function() { return propValue; }});
                     } else if (key === 'navigator.languages') {
                         Object.defineProperty(navigator, 'languages', {get: function() { return JSON.parse(propValue); }});
                     } else if (key.startsWith('navigator.') || key.startsWith('screen.')) {
+                        // For navigator and screen properties, use Object.defineProperty
                         Object.defineProperty(obj, propName, {
                             get: function() { return propValue; },
                             configurable: true
                         });
                     } else {
+                        // For other properties, try direct assignment
                         obj[propName] = propValue;
                     }
                 } catch (e) {
@@ -196,6 +217,7 @@ def create_js_override_script(js_attributes):
 
         applyOverrides();
         
+        // Reapply overrides when a new document is loaded in any frame
         var observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(mutation) {
                 if (mutation.type === 'childList') {
@@ -224,12 +246,14 @@ def verify_fingerprint_persistence(driver, fingerprint_settings):
     driver.switch_to.window(driver.window_handles[-1])
     driver.get("about:blank")
     
+    # Check JavaScript attributes
     for attr in fingerprint_settings.get("js_attributes", []):
         name, expected_value = attr.split(': ', 1)
         actual_value = driver.execute_script(f"return {name};")
         if str(actual_value) != expected_value:
             custom_print(f"Warning: JavaScript attribute {name} does not match. Expected {expected_value}, got {actual_value}")
     
+    # Check headers (this is tricky and might require visiting a test page)
     custom_print("Remember to manually verify header persistence by visiting a fingerprinting test site in a new tab")
     
     driver.close()
@@ -263,6 +287,7 @@ def extract_comments(driver, url, max_comments, scroll_retries, button_retries):
         consecutive_same_count = 0
 
         while len(comments) < max_comments and consecutive_same_count < scroll_retries:
+            # Try to click the "View more comments" button if it exists
             for _ in range(button_retries):
                 try:
                     load_more_button = WebDriverWait(driver, 1).until(
@@ -270,6 +295,7 @@ def extract_comments(driver, url, max_comments, scroll_retries, button_retries):
                     )
                     driver.execute_script("arguments[0].click();", load_more_button)
                     custom_print("Clicked 'View more comments' button")
+                    
                     break
                 except TimeoutException:
                     custom_print("No 'View more comments' button found or not clickable")
@@ -321,7 +347,7 @@ def extract_comments(driver, url, max_comments, scroll_retries, button_retries):
             if len(comments) < max_comments and consecutive_same_count < scroll_retries:
                 custom_print("Scrolling down to load more comments...")
                 driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-                time.sleep(2)
+                time.sleep(2)  # Wait for new comments to load
 
         if len(comments) < max_comments:
             custom_print(f"Could only find {len(comments)} comments. There may not be {max_comments} comments available.")
@@ -342,6 +368,7 @@ def extract_comments(driver, url, max_comments, scroll_retries, button_retries):
 def generate_ai_comment(title, persona, ai_response_length=0, openrouter_api_key=None, custom_model=None, custom_prompt=None, product_keywords=None, website_address=None):
     custom_print("Generating AI comment...")
     
+    # Default API key (replace with your actual default key)
     DEFAULT_API_KEY = "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"
     
     length_instruction = f"Generate a response that is approximately {ai_response_length} words long. " if ai_response_length > 0 else ""
@@ -364,8 +391,44 @@ def generate_ai_comment(title, persona, ai_response_length=0, openrouter_api_key
     prompt += "\nGenerated comment:"
 
     custom_print(f"Sending request to AI model with prompt length: {len(prompt)} characters")
-    return "HERE IS AI COMMENT"
+    #return "HERE IS AI COMMENT"
+    try:
+        # Use the provided API key if it's not blank, otherwise use the default
+        api_key = openrouter_api_key.strip() if openrouter_api_key and openrouter_api_key.strip() else DEFAULT_API_KEY
+        
+        headers = {
+            "Authorization": f"Bearer {api_key}",
+            "HTTP-Referer": YOUR_SITE_URL,
+            "X-Title": YOUR_APP_NAME,
+        }
+        
+        payload = {
+            "model": custom_model or "google/gemma-2-9b-it:free",
+            "messages": [{"role": "user", "content": prompt}],
+        }
+        response = requests.post(
+            url="https://openrouter.ai/api/v1/chat/completions",
+            headers=headers,
+            json=payload
+        )
+       
+        response.raise_for_status()
+        ai_comment = response.json()["choices"][0]["message"]["content"]
+        custom_print("AI comment generated successfully")
+        custom_print(f"Generated comment: {ai_comment}")
+        return ai_comment
+    except requests.exceptions.RequestException as e:
+        custom_print(f"Error making request to OpenRouter API: {str(e)}")
+        if hasattr(e, 'response') and e.response is not None:
+            custom_print(f"Response status code: {e.response.status_code}")
+            custom_print(f"Response content: {e.response.text}")
+        return None
+    except Exception as e:
+        custom_print(f"Unexpected error generating AI comment: {str(e)}")
+        return None
 
+
+   
 def post_comment(driver, ai_comment, post_url):
     custom_print(f"Attempting to post the AI-generated comment to URL: {post_url}")
     
@@ -374,9 +437,11 @@ def post_comment(driver, ai_comment, post_url):
         return False
 
     try:
+        # Extract post ID from URL
         post_id = post_url.split("/")[-3]
         custom_print(f"Extracted postid: {post_id}")
 
+        # Get CSRF token from cookie
         csrf_token = driver.get_cookie("csrf_token")
         if not csrf_token:
             custom_print("Error: CSRF token not found in cookies")
@@ -384,6 +449,7 @@ def post_comment(driver, ai_comment, post_url):
         csrf_token = csrf_token["value"]
         custom_print(f"CSRF Token: {csrf_token}")
 
+        # Prepare the comment data
         comment_data = {
             "content": json.dumps(
                 {
@@ -406,20 +472,38 @@ def post_comment(driver, ai_comment, post_url):
             "csrf_token": csrf_token,
         }
 
+        # Set up the request headers
         headers = {
             "Content-Type": "application/x-www-form-urlencoded",
         }
 
+        # Get all cookies from the driver
         cookies = {cookie["name"]: cookie["value"] for cookie in driver.get_cookies()}
         
         custom_print("Comment data and headers prepared successfully")
         
+        # For testing purposes, we'll just return True here
+        # Make the POST request
+    # response = requests.post(
+    #     f"https://www.reddit.com/svc/shreddit/t3_{post_id}/create-comment",
+    #     headers=headers,
+    #     cookies=cookies,
+    #     data=comment_data,
+    # )
+
+    # custom_print(f"Response status: {response.status_code}")
+    # if response.status_code == 200:
+    #     return True
+    # else:
+    #     return False
+        # In a real scenario, you would make the POST request here
         custom_print("Comment would be posted here in a real scenario")
         return True
 
     except Exception as e:
         custom_print(f"Error in post_comment: {str(e)}")
         return False
+
 
 def login_and_scrape_reddit(
     username,
@@ -450,10 +534,12 @@ def login_and_scrape_reddit(
     chrome_options = Options()
     chrome_options.add_argument("--start-maximized")
 
+    # Create and add the custom header extension
     if fingerprint_settings.get("enabled", False):
         header_extension = create_header_extension(fingerprint_settings.get("headers", []))
         chrome_options.add_argument(f'--load-extension={header_extension}')
 
+    # Apply proxy settings
     if proxy_settings.get("enabled", False):
         proxy_string = f"{proxy_settings['type'].lower()}://{proxy_settings['host']}:{proxy_settings['port']}"
         chrome_options.add_argument(f'--proxy-server={proxy_string}')
@@ -463,17 +549,19 @@ def login_and_scrape_reddit(
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=chrome_options)
 
+    # Apply JavaScript attributes using CDP
     if fingerprint_settings.get("enabled", False):
         js_attributes = fingerprint_settings.get("js_attributes", [])
         driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
             "source": create_js_override_script(js_attributes)
         })
         
+        # Verify persistence
         verify_fingerprint_persistence(driver, fingerprint_settings)
 
     custom_print("WebDriver initialized successfully")
 
-    all_collected_info = []
+    all_collected_info = []  # To store results from all subreddits
 
     try:
         custom_print("Navigating to Reddit login page...")
@@ -492,6 +580,9 @@ def login_and_scrape_reddit(
             custom_print("Logging in.. Waiting for articles to load...")
             
             try:
+                #WebDriverWait(driver, 240).until(
+                #EC.presence_of_element_located((By.CSS_SELECTOR, "shreddit-post"))
+                #)
                 wait_for_element(driver, By.CSS_SELECTOR, "shreddit-post")
                 custom_print("Logged in. Articles loaded successfully")
             except TimeoutException:
@@ -516,8 +607,10 @@ def login_and_scrape_reddit(
             last_height = driver.execute_script("return document.body.scrollHeight")
             processed_urls = set()
             no_new_posts_count = 0
-            max_no_new_posts = 10
+            max_no_new_posts = 10  # Maximum number of scrolls without new posts before giving up
 
+
+            # Split product keywords into keywords
             product_keywords = [kw.strip().lower() for kw in product_keywords.split(',')]
 
             while articles_scraped < max_articles:
@@ -543,6 +636,7 @@ def login_and_scrape_reddit(
                         custom_print(f"Post {articles_scraped + 1}/{max_articles} - Title: {title}")
                         custom_print(f"Post {articles_scraped + 1}/{max_articles} - URL: {url}")
 
+                        # Check if the title contains any of the product keywords
                         title = title.lower()
                         
                         if similarity_method == "TensorFlow (semantic_similarity)":
@@ -602,11 +696,12 @@ def login_and_scrape_reddit(
                         custom_print(f"No new posts found after {max_no_new_posts} scrolls. Moving to next subreddit.")
                         break
                 else:
-                    no_new_posts_count = 0
+                    no_new_posts_count = 0  # Reset the counter if new posts were processed
 
+                # Scroll down to load more content
                 last_height = driver.execute_script("return document.body.scrollHeight")
                 driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-                time.sleep(2)
+                time.sleep(2)  # Wait for new content to load
                 new_height = driver.execute_script("return document.body.scrollHeight")
                 if new_height == last_height:
                     no_new_posts_count += 1
@@ -616,7 +711,7 @@ def login_and_scrape_reddit(
                         break
                 else:
                     custom_print("Scrolled successfully, new content loaded.")
-                    no_new_posts_count = 0
+                    no_new_posts_count = 0  # Reset the counter if the page height changed
 
             all_collected_info.extend(collected_info)
             custom_print(f"Scraping completed for r/{subreddit}. Total relevant posts processed: {len(collected_info)}")
@@ -630,4 +725,5 @@ def login_and_scrape_reddit(
     return all_collected_info, driver
 
 if __name__ == "__main__":
+    # This block can be used for testing the script directly
     pass
