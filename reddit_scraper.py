@@ -576,10 +576,15 @@ def login_and_scrape_reddit(
         driver.get("https://www.reddit.com/login")
               
         custom_print("Waiting for username field...")
-        username_field = wait_for_element(driver, By.ID, "login-username")
+        #username_field = wait_for_element(driver, By.ID, "login-username")
+        username_field = WebDriverWait(driver, 999).until(
+                EC.presence_of_element_located((By.ID, "login-username"))
+            )
         custom_print("Waiting for password field...")
-        password_field = wait_for_element(driver, By.ID, "login-password")
-        
+        #password_field = wait_for_element(driver, By.ID, "login-password")
+        password_field = WebDriverWait(driver, 999).until(
+                EC.presence_of_element_located((By.ID, "login-password"))
+            )
         if username_field and password_field:
             custom_print("Entering username and password...")
             username_field.send_keys(username)
@@ -615,7 +620,7 @@ def login_and_scrape_reddit(
             driver.get(subreddit_url)
             custom_print("Waiting for page to load...")
             
-            WebDriverWait(driver, 240).until(
+            WebDriverWait(driver, 60).until(
                 EC.presence_of_element_located((By.TAG_NAME, "article"))
             )
             custom_print("Articles loaded.")
@@ -625,11 +630,16 @@ def login_and_scrape_reddit(
             last_height = driver.execute_script("return document.body.scrollHeight")
             processed_urls = set()
             no_new_posts_count = 0
-            max_no_new_posts = 50  # Maximum number of scrolls without new posts before giving up
 
 
             # Split product keywords into keywords
-            product_keywords = [kw.strip().lower() for kw in product_keywords.split(',')]
+            if isinstance(product_keywords, str):
+                product_keywords = [kw.strip().lower() for kw in product_keywords.split(',')]
+            elif isinstance(product_keywords, list):
+                product_keywords = [kw.strip().lower() for kw in product_keywords]
+            else:
+                custom_print("Error: product_keywords is neither a string nor a list")
+                product_keywords = []
 
             while articles_scraped < max_articles:
                 custom_print("Finding posts...")
@@ -653,7 +663,7 @@ def login_and_scrape_reddit(
 
                         custom_print(f"Post {articles_scraped + 1}/{max_articles} - Title: {title}")
                         custom_print(f"Post {articles_scraped + 1}/{max_articles} - URL: {url}")
-
+                        time.sleep(button_retries)
                         # Check if the title contains any of the product keywords
                         title = title.lower()
                         
@@ -709,9 +719,9 @@ def login_and_scrape_reddit(
 
                 if not new_posts_processed:
                     no_new_posts_count += 1
-                    custom_print(f"No new posts found. Scroll attempt {no_new_posts_count}/{max_no_new_posts}")
-                    if no_new_posts_count >= max_no_new_posts:
-                        custom_print(f"No new posts found after {max_no_new_posts} scrolls. Moving to next subreddit.")
+                    custom_print(f"No new posts found. Scroll attempt {no_new_posts_count}/{scroll_retries}")
+                    if no_new_posts_count >= scroll_retries:
+                        custom_print(f"No new posts found after {scroll_retries} scrolls. Moving to next subreddit.")
                         break
                 else:
                     no_new_posts_count = 0  # Reset the counter if new posts were processed
@@ -723,8 +733,8 @@ def login_and_scrape_reddit(
                 new_height = driver.execute_script("return document.body.scrollHeight")
                 if new_height == last_height:
                     no_new_posts_count += 1
-                    custom_print(f"Page height didn't change. Scroll attempt {no_new_posts_count}/{max_no_new_posts}")
-                    if no_new_posts_count >= max_no_new_posts:
+                    custom_print(f"Page height didn't change. Scroll attempt {no_new_posts_count}/{scroll_retries}")
+                    if no_new_posts_count >= scroll_retries:
                         custom_print("No more posts to load after multiple scroll attempts.")
                         break
                 else:

@@ -92,6 +92,7 @@ class CommentReviewDialog(QDialog):
         super().__init__(parent)
         self.setWindowTitle("Review AI Generated Comments")
         self.setGeometry(100, 100, 1200, 800)
+        self.parent = parent
 
         layout = QVBoxLayout(self)
 
@@ -148,11 +149,16 @@ class CommentReviewDialog(QDialog):
             if self.table.item(i, 4).checkState() == Qt.CheckState.Checked:
                 comment_html = self.table.item(i, 2).text()
                 comment_text = comment_html.replace('<br>', '\n').replace('<p style=\'white-space: pre-wrap;\'>', '').replace('</p>', '')
+                url = self.table.item(i, 2).data(Qt.ItemDataRole.UserRole)
+                if not url:
+                    if self.parent:
+                        self.parent.update_log(f"Warning: URL is missing for comment in row {i+1}")
+                    continue
                 comment = {
                     'title': self.table.item(i, 0).text(),
                     'subreddit': self.table.item(i, 1).text(),
                     'ai_comment': comment_text,
-                    'url': self.table.item(i, 2).data(Qt.ItemDataRole.UserRole)  # Retrieve URL from user role
+                    'url': url
                 }
                 selected_comments.append(comment)
         return selected_comments
@@ -528,12 +534,12 @@ class AdvancedSettingsDialog(QDialog):
         form_layout.addRow("OpenRouter API Key:", self.openrouter_api_key)
 
         self.scroll_retries = QSpinBox(self)
-        self.scroll_retries.setRange(0, 20)
-        form_layout.addRow("Comment Scroll Retry Attempts:", self.scroll_retries)
+        self.scroll_retries.setRange(0, 9999)
+        form_layout.addRow("Scroll Retry Attempts:", self.scroll_retries)
 
         self.button_retries = QSpinBox(self)
-        self.button_retries.setRange(0, 20)
-        form_layout.addRow("Comment 'View More' Button Retry Attempts:", self.button_retries)
+        self.button_retries.setRange(0, 9999)
+        form_layout.addRow("Sleep Time Between Articles:", self.button_retries)
 
         self.persona = QComboBox(self)
         self.persona.addItems(["normal", "teenager", "educated", "bot"])
@@ -605,8 +611,8 @@ class AdvancedSettingsDialog(QDialog):
 
     def set_settings(self, settings):
         self.openrouter_api_key.setText(settings.get("openrouter_api_key", ""))
-        self.scroll_retries.setValue(settings.get("scroll_retries", 2))
-        self.button_retries.setValue(settings.get("button_retries", 2))
+        self.scroll_retries.setValue(settings.get("scroll_retries", 20))
+        self.button_retries.setValue(settings.get("button_retries", 1))
         self.persona.setCurrentText(settings.get("persona", "normal"))
         self.custom_model.setText(settings.get("custom_model", ""))
         self.custom_prompt.setPlainText(settings.get("custom_prompt", ""))
@@ -1111,7 +1117,7 @@ class RedditScraperGUI(QMainWindow):
         self.driver = driver  # Store the driver object
         if self.do_not_post.isChecked():
             self.update_log("Skipping Manual Review...")
-            
+            self.display_results(results)
         else:
             self.update_log("Review mode is active. Opening comment review dialog...")
             dialog = CommentReviewDialog(results, self)
@@ -1122,7 +1128,6 @@ class RedditScraperGUI(QMainWindow):
             else:
                 self.update_log("User cancelled comment review.")
             
-        self.display_results(results)
         self.start_button.setEnabled(True)
         self.status_label.setText("Scraping completed")
 
@@ -1181,7 +1186,7 @@ class RedditScraperGUI(QMainWindow):
             self.results_display.append(f"URL: {post['url']}")
             if 'comments' in post:
                 self.results_display.append(f"Number of comments: {len(post['comments'])}")
-            self.results_display.append(f"AI comment: {post['ai_comment'][:100]}...")  # Display first 100 chars of AI comment
+            self.results_display.append(f"AI comment: {post['ai_comment']}...")  # Display first 100 chars of AI comment
             self.results_display.append("\n")
 
         self.results_display.append(f"Total posts scraped: {len(results)}")

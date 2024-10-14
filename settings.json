@@ -2,10 +2,12 @@
     "username": "easyacedotai",
     "password": "She-wolf11",
     "subreddits": [
-        "AskReddit"
+        "AskReddit",
+        "AITAH",
+        "Science"
     ],
     "sort_type": "top",
-    "max_articles": 150,
+    "max_articles": 100,
     "max_comments": 0,
     "min_wait_time": 4,
     "max_wait_time": 6,
@@ -19,10 +21,10 @@
         "persona": "normal",
         "custom_model": "google/gemma-2-9b-it:free",
         "custom_prompt": "I want you to generate an useful comment based on the {title} of this reddit post that incorporates my {website}. My {website} is about {product}. You should reply with the comment directly in a humorus fasion while also seeming human {length}",
-        "product_keywords": "food",
+        "product_keywords": "food, who, what, when, where, why, how",
         "website_address": "food.com",
-        "similarity_threshold": 0.5,
-        "similarity_method": "TensorFlow (semantic_similarity)",
+        "similarity_threshold": 0.18,
+        "similarity_method": "Simple (keyword matching only)",
         "tensorflow_sleep_time": 1.0
     }
 }
