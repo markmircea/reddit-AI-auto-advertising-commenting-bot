@@ -216,12 +216,12 @@ class ScraperWorker(QThread):
     def __init__(self, params):
         super().__init__()
         self.params = params
-        self.total_comments = self.calculate_total_comments()
+        self.total_articles = self.calculate_total_comments()
         self.current_comment = 0
         self.driver = None
         
     def calculate_total_comments(self):
-        return len(self.params['subreddits']) * self.params['max_articles'] * self.params['max_comments']
+        return len(self.params['subreddits']) * self.params['max_articles'] * (self.params['max_comments'] + 1)
 
 
     def run(self):
@@ -263,9 +263,9 @@ class ScraperWorker(QThread):
     def custom_print(self, message):
         self.update_log.emit(message)
         write_to_log_file(message)
-        if "Extracted comment" in message:
+        if "Processing post" in message:
             self.current_comment += 1
-            progress = int((self.current_comment / self.total_comments) * 100)
+            progress = int((self.current_comment / self.total_articles) * 100)
             self.update_progress.emit(progress)
             
 def write_to_log_file(message):

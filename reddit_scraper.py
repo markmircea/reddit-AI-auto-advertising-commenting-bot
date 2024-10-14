@@ -63,7 +63,7 @@ def semantic_similarity(keywords, title, threshold=0.5, sleep_time=1):
                 custom_print(f"Similarity between '{keyword}' and '{title}': {similarity}")
                 logger.info(f"Similarity between '{keyword}' and '{title}': {similarity}")
 
-                if similarity > threshold:
+                if similarity >= threshold:
                     return True
             except ValueError as e:
                 custom_print(f"Error processing keyword '{keyword}': {str(e)}")
@@ -532,7 +532,7 @@ def login_and_scrape_reddit(
     website_address,
     similarity_threshold,  
     similarity_method,
-    tensorflow_sleep_time
+    tensorflow_sleep_time,
 ):
     options = uc.ChromeOptions()
     options.add_argument("--start-maximized")
@@ -570,6 +570,7 @@ def login_and_scrape_reddit(
     all_collected_info = []  # To store results from all subreddits
 
     try:
+        custom_print(f"username:{username}                      \n subreddits:{subreddits}                     \n sort-type:{sort_type}                     \n max_articles:{max_articles}                     \n max_comments:{max_comments}                     \n min_wait_time:{min_wait_time}                     \n max_wait_time:{max_wait_time}                     \n Ai response length:{ai_response_length}                     \n proxy settings:{proxy_settings}                     \n openrouter api key:{openrouter_api_key} \n fingerprint settings: {fingerprint_settings}  \n comment scroll retries: {scroll_retries} \n comment button retries: {button_retries}                     \n persona:{persona}                     \n custom model:{custom_model}                     \n product keywords:{product_keywords}                     \n website:{website_address}                     \n similarity method:{similarity_method}                     \n similarity threshold:{similarity_threshold}                     \n tensorflow sleep time:{tensorflow_sleep_time}")                    
         custom_print("Navigating to Reddit login page...")
         driver.get("https://www.reddit.com/login/")
         
@@ -613,7 +614,7 @@ def login_and_scrape_reddit(
             last_height = driver.execute_script("return document.body.scrollHeight")
             processed_urls = set()
             no_new_posts_count = 0
-            max_no_new_posts = 10  # Maximum number of scrolls without new posts before giving up
+            max_no_new_posts = 20  # Maximum number of scrolls without new posts before giving up
 
 
             # Split product keywords into keywords

@@ -21,7 +21,8 @@
         "custom_prompt": "I want you to generate an useful comment based on the {title} of this reddit post that incorporates my {website}. My {website} is about {product}. You should reply with the comment directly in a humorus fasion while also seeming human {length}",
         "product_keywords": "food",
         "website_address": "food.com",
-        "similarity_threshold": 0.65,
-        "similarity_method": "TensorFlow (semantic_similarity)"
+        "similarity_threshold": 0.5,
+        "similarity_method": "TensorFlow (semantic_similarity)",
+        "tensorflow_sleep_time": 1.0
     }
 }
