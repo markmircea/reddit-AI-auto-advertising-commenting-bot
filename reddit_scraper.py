@@ -57,12 +57,14 @@ def semantic_similarity(keywords, title, threshold=0.5, sleep_time=1):
         title_doc = nlp(title)
         for keyword in keywords:
             try:
-                time.sleep(sleep_time)
+                time.sleep(sleep_time / 3)
                 keyword_doc = nlp(keyword)
+                time.sleep(sleep_time / 3)
                 similarity = title_doc.similarity(keyword_doc)
+                time.sleep(sleep_time / 3)
                 custom_print(f"Similarity between '{keyword}' and '{title}': {similarity}")
                 logger.info(f"Similarity between '{keyword}' and '{title}': {similarity}")
-
+                
                 if similarity >= threshold:
                     return True
             except ValueError as e:
@@ -533,37 +535,57 @@ def login_and_scrape_reddit(
     similarity_threshold,  
     similarity_method,
     tensorflow_sleep_time,
+    existing_driver=None,
 ):
     options = uc.ChromeOptions()
     options.add_argument("--start-maximized")
-    options.add_argument("--disable-webgl")
-    options.add_argument("--disable-audio-output")
-    options.add_argument("--font-rendering-hinting=none")
-   
+    
+    #chrome_options = Options()
+    #chrome_options.add_argument("--start-maximized")
 
-    # Create and add the custom header extension
-    if fingerprint_settings.get("enabled", False):
-        header_extension = create_header_extension(fingerprint_settings.get("headers", []))
-        options.add_argument(f'--load-extension={header_extension}')
-
-    # Apply proxy settings
-    if proxy_settings.get("enabled", False):
-        proxy_string = f"{proxy_settings['type'].lower()}://{proxy_settings['host']}:{proxy_settings['port']}"
-        options.add_argument(f'--proxy-server={proxy_string}')
-        if proxy_settings.get("username") and proxy_settings.get("password"):
-            options.add_argument(f"--proxy-auth={proxy_settings['username']}:{proxy_settings['password']}")
-
-    service = Service(ChromeDriverManager().install())
-    driver = uc.Chrome(options=options)
-    # Apply JavaScript attributes using CDP
-    if fingerprint_settings.get("enabled", False):
-        js_attributes = fingerprint_settings.get("js_attributes", [])
-        driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
-            "source": create_js_override_script(js_attributes)
-        })
+    #service = Service(ChromeDriverManager().install())
+    #driver = webdriver.Chrome(service=service, options=chrome_options)
+    if existing_driver:
+        driver = existing_driver
+        custom_print("Using existing WebDriver session")
         
-        # Verify persistence
-        verify_fingerprint_persistence(driver, fingerprint_settings)
+    else:
+        options = uc.ChromeOptions()
+        options.add_argument("--start-maximized")
+        
+        # Apply proxy settings
+        if proxy_settings.get("enabled", False):
+            proxy_string = f"{proxy_settings['type'].lower()}://{proxy_settings['host']}:{proxy_settings['port']}"
+            options.add_argument(f'--proxy-server={proxy_string}')
+            if proxy_settings.get("username") and proxy_settings.get("password"):
+                options.add_argument(f"--proxy-auth={proxy_settings['username']}:{proxy_settings['password']}")
+
+        driver = uc.Chrome(options=options)
+        custom_print("New WebDriver session initialized")
+
+        # Apply JavaScript attributes using CDP
+        if fingerprint_settings.get("enabled", False):
+            js_attributes = fingerprint_settings.get("js_attributes", [])
+            driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
+                "source": create_js_override_script(js_attributes)
+            })
+            
+            # Verify persistence
+            verify_fingerprint_persistence(driver, fingerprint_settings)
+        custom_print("Navigating to Reddit login page...")
+        driver.get("https://www.reddit.com/login")
+              
+        custom_print("Waiting for username field...")
+        username_field = wait_for_element(driver, By.ID, "login-username")
+        custom_print("Waiting for password field...")
+        password_field = wait_for_element(driver, By.ID, "login-password")
+        
+        if username_field and password_field:
+            custom_print("Entering username and password...")
+            username_field.send_keys(username)
+            password_field.send_keys(password)
+            
+            custom_print("Logging in.. Waiting for articles to load...")
 
     custom_print("WebDriver initialized successfully")
 
@@ -571,28 +593,17 @@ def login_and_scrape_reddit(
 
     try:
         custom_print(f"username:{username}                      \n subreddits:{subreddits}                     \n sort-type:{sort_type}                     \n max_articles:{max_articles}                     \n max_comments:{max_comments}                     \n min_wait_time:{min_wait_time}                     \n max_wait_time:{max_wait_time}                     \n Ai response length:{ai_response_length}                     \n proxy settings:{proxy_settings}                     \n openrouter api key:{openrouter_api_key} \n fingerprint settings: {fingerprint_settings}  \n comment scroll retries: {scroll_retries} \n comment button retries: {button_retries}                     \n persona:{persona}                     \n custom model:{custom_model}                     \n product keywords:{product_keywords}                     \n website:{website_address}                     \n similarity method:{similarity_method}                     \n similarity threshold:{similarity_threshold}                     \n tensorflow sleep time:{tensorflow_sleep_time}")                    
-        custom_print("Navigating to Reddit login page...")
-        driver.get("https://www.reddit.com/login/")
         
-        custom_print("Waiting for username field...")
-        username_field = wait_for_element(driver, By.ID, "login-username")
-        custom_print("Waiting for password field...")
-        password_field = wait_for_element(driver, By.ID, "login-password")
 
-        if username_field and password_field:
-            custom_print("Entering username and password...")
-            username_field.send_keys(username)
-            password_field.send_keys(password)
+        
             
-            custom_print("Logging in.. Waiting for articles to load...")
-            
-            try:
+        try:
                 #WebDriverWait(driver, 240).until(
                 #EC.presence_of_element_located((By.CSS_SELECTOR, "shreddit-post"))
                 #)
                 wait_for_element(driver, By.CSS_SELECTOR, "shreddit-post")
                 custom_print("Logged in. Articles loaded successfully")
-            except TimeoutException:
+        except TimeoutException:
                 custom_print("Timeout waiting for login.")
                 custom_print("Closing WebDriver...")
                 driver.quit()
@@ -614,7 +625,7 @@ def login_and_scrape_reddit(
             last_height = driver.execute_script("return document.body.scrollHeight")
             processed_urls = set()
             no_new_posts_count = 0
-            max_no_new_posts = 20  # Maximum number of scrolls without new posts before giving up
+            max_no_new_posts = 50  # Maximum number of scrolls without new posts before giving up
 
 
             # Split product keywords into keywords

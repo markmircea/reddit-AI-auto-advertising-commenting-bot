@@ -1,9 +1,19 @@
 Starting the scraping process...
+New WebDriver session initialized
+Navigating to Reddit login page...
+Navigating to Reddit login page...
+Waiting for username field...
+Waiting for username field...
+Waiting for password field...
+Waiting for password field...
+Entering username and password...
+Entering username and password...
+Logging in.. Waiting for articles to load...
 WebDriver initialized successfully
-username:bigbootyrob                      
+username:easyacedotai                      
  subreddits:['AskReddit']                     
  sort-type:top                     
- max_articles:150                     
+ max_articles:500                     
  max_comments:0                     
  min_wait_time:4                     
  max_wait_time:6                     
@@ -15,16 +25,16 @@ username:bigbootyrob
  comment button retries: 1                     
  persona:normal                     
  custom model:google/gemma-2-9b-it:free                     
- product keywords:food                     
+ product keywords:ai homework helper                     
  website:food.com                     
  similarity method:TensorFlow (semantic_similarity)                     
  similarity threshold:0.5                     
  tensorflow sleep time:1.0
-Navigating to Reddit login page...
-username:bigbootyrob                      
+WebDriver initialized successfully
+username:easyacedotai                      
  subreddits:['AskReddit']                     
  sort-type:top                     
- max_articles:150                     
+ max_articles:500                     
  max_comments:0                     
  min_wait_time:4                     
  max_wait_time:6                     
@@ -36,60 +46,53 @@ username:bigbootyrob
  comment button retries: 1                     
  persona:normal                     
  custom model:google/gemma-2-9b-it:free                     
- product keywords:food                     
+ product keywords:ai homework helper                     
  website:food.com                     
  similarity method:TensorFlow (semantic_similarity)                     
  similarity threshold:0.5                     
  tensorflow sleep time:1.0
-Navigating to Reddit login page...
-Waiting for username field...
-Waiting for username field...
-Waiting for password field...
-Waiting for password field...
-Entering username and password...
-Entering username and password...
-Logging in.. Waiting for articles to load...
-Logging in.. Waiting for articles to load...
 Logged in. Articles loaded successfully
-
-Starting to scrape subreddit: r/AskReddit
+Logged in. Articles loaded successfully
 
 Starting to scrape subreddit: r/AskReddit
 Waiting for page to load...
 Waiting for page to load...
 Articles loaded.
+Articles loaded.
 Finding posts...
 Finding posts...
 Found 3 posts
+Found 3 posts
 Processing post 1...
-Post 1/150 - Title: What's a sign to leave a party that not a lot of young people know?
-Post 1/150 - Title: What's a sign to leave a party that not a lot of young people know?
-Post 1/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2gbkc/whats_a_sign_to_leave_a_party_that_not_a_lot_of/
-Post 1/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2gbkc/whats_a_sign_to_leave_a_party_that_not_a_lot_of/
-Similarity between 'food' and 'what's a sign to leave a party that not a lot of young people know?': 0.40674644708633423
-Similarity between 'food' and 'what's a sign to leave a party that not a lot of young people know?': 0.40674644708633423
+Processing post 1...
+Post 1/500 - Title: Whats something you tried once and instantly knew that it wasn't for you?
+Post 1/500 - Title: Whats something you tried once and instantly knew that it wasn't for you?
+Post 1/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2yynh/whats_something_you_tried_once_and_instantly_knew/
+Post 1/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2yynh/whats_something_you_tried_once_and_instantly_knew/
+Similarity between 'ai homework helper' and 'whats something you tried once and instantly knew that it wasn't for you?': 0.4628244638442993
+Similarity between 'ai homework helper' and 'whats something you tried once and instantly knew that it wasn't for you?': 0.4628244638442993
 No relevant keywords found in post 1. Skipping...
 No relevant keywords found in post 1. Skipping...
 Processing post 2...
 Processing post 2...
-Post 2/150 - Title: What’s something that has a dangerously misleading name?
-Post 2/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2f91a/whats_something_that_has_a_dangerously_misleading/
-Post 2/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2f91a/whats_something_that_has_a_dangerously_misleading/
-Similarity between 'food' and 'what’s something that has a dangerously misleading name?': 0.39414849877357483
-Similarity between 'food' and 'what’s something that has a dangerously misleading name?': 0.39414849877357483
+Post 2/500 - Title: Whats your favorite breakfast dish that's not your standard bacon and eggs?
+Post 2/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2r37l/whats_your_favorite_breakfast_dish_thats_not_your/
+Post 2/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2r37l/whats_your_favorite_breakfast_dish_thats_not_your/
+Similarity between 'ai homework helper' and 'whats your favorite breakfast dish that's not your standard bacon and eggs?': 0.46473196148872375
 No relevant keywords found in post 2. Skipping...
 No relevant keywords found in post 2. Skipping...
 Processing post 3...
-Post 3/150 - Title: What creation truly show how scary humans can be?
-Post 3/150 - Title: What creation truly show how scary humans can be?
-Post 3/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2bf50/what_creation_truly_show_how_scary_humans_can_be/
-Similarity between 'food' and 'what creation truly show how scary humans can be?': 0.41845032572746277
-Similarity between 'food' and 'what creation truly show how scary humans can be?': 0.41845032572746277
+Processing post 3...
+Post 3/500 - Title: What were the signs that made you realized that you were burnt out?
+Post 3/500 - Title: What were the signs that made you realized that you were burnt out?
+Post 3/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2rnxa/what_were_the_signs_that_made_you_realized_that/
+Post 3/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2rnxa/what_were_the_signs_that_made_you_realized_that/
+Similarity between 'ai homework helper' and 'what were the signs that made you realized that you were burnt out?': 0.4389406144618988
+Similarity between 'ai homework helper' and 'what were the signs that made you realized that you were burnt out?': 0.4389406144618988
 No relevant keywords found in post 3. Skipping...
 Processed 3 posts so far
 No relevant keywords found in post 3. Skipping...
 Processed 3 posts so far
-Scrolled successfully, new content loaded.
 Scrolled successfully, new content loaded.
 Finding posts...
 Finding posts...
@@ -97,498 +100,579 @@ Found 53 posts
 Found 53 posts
 Processing post 4...
 Processing post 4...
-Post 4/150 - Title: What is something non sexual but feels very intimate? 
-Post 4/150 - Title: What is something non sexual but feels very intimate? 
-Post 4/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g278qa/what_is_something_non_sexual_but_feels_very/
-Post 4/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g278qa/what_is_something_non_sexual_but_feels_very/
-Similarity between 'food' and 'what is something non sexual but feels very intimate? ': 0.37227582931518555
-Similarity between 'food' and 'what is something non sexual but feels very intimate? ': 0.37227582931518555
+Post 4/500 - Title: What is an important hygiene practice that most people forget?
+Post 4/500 - Title: What is an important hygiene practice that most people forget?
+Post 4/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g365ur/what_is_an_important_hygiene_practice_that_most/
+Post 4/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g365ur/what_is_an_important_hygiene_practice_that_most/
+Similarity between 'ai homework helper' and 'what is an important hygiene practice that most people forget?': 0.4260764718055725
+Similarity between 'ai homework helper' and 'what is an important hygiene practice that most people forget?': 0.4260764718055725
 No relevant keywords found in post 4. Skipping...
 No relevant keywords found in post 4. Skipping...
 Processing post 5...
 Processing post 5...
-Post 5/150 - Title: What's a seemingly small decision you made that ended up drastically changing your life? 
-Post 5/150 - Title: What's a seemingly small decision you made that ended up drastically changing your life? 
-Post 5/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g29lsn/whats_a_seemingly_small_decision_you_made_that/
-Post 5/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g29lsn/whats_a_seemingly_small_decision_you_made_that/
-Similarity between 'food' and 'what's a seemingly small decision you made that ended up drastically changing your life? ': 0.3895297944545746
-Similarity between 'food' and 'what's a seemingly small decision you made that ended up drastically changing your life? ': 0.3895297944545746
-No relevant keywords found in post 5. Skipping...
-No relevant keywords found in post 5. Skipping...
+Post 5/500 - Title: What is your "I shouldn't have said that" moment, or have witnessed?
+Post 5/500 - Title: What is your "I shouldn't have said that" moment, or have witnessed?
+Post 5/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g31crm/what_is_your_i_shouldnt_have_said_that_moment_or/
+Post 5/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g31crm/what_is_your_i_shouldnt_have_said_that_moment_or/
+Similarity between 'ai homework helper' and 'what is your "i shouldn't have said that" moment, or have witnessed?': 0.505887508392334
+Relevant content found in post 5
+Generating AI comment for post 5...
+Generating AI comment...
+Sending request to AI model with prompt length: 382 characters
+Relevant content found in post 5
+Generating AI comment for post 5...
+Generating AI comment...
+Sending request to AI model with prompt length: 382 characters
 Processing post 6...
 Processing post 6...
-Post 6/150 - Title: What’s something you think everyone should experience at least once in their lifetime?
-Post 6/150 - Title: What’s something you think everyone should experience at least once in their lifetime?
-Post 6/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2js7y/whats_something_you_think_everyone_should/
-Post 6/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2js7y/whats_something_you_think_everyone_should/
-Similarity between 'food' and 'what’s something you think everyone should experience at least once in their lifetime?': 0.39626544713974
-Similarity between 'food' and 'what’s something you think everyone should experience at least once in their lifetime?': 0.39626544713974
+Post 6/500 - Title: If you could learn the answer to one mystery in the universe, what would it be?
+Post 6/500 - Title: If you could learn the answer to one mystery in the universe, what would it be?
+Post 6/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g31jdo/if_you_could_learn_the_answer_to_one_mystery_in/
+Post 6/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g31jdo/if_you_could_learn_the_answer_to_one_mystery_in/
+Similarity between 'ai homework helper' and 'if you could learn the answer to one mystery in the universe, what would it be?': 0.4234682619571686
+Similarity between 'ai homework helper' and 'if you could learn the answer to one mystery in the universe, what would it be?': 0.4234682619571686
 No relevant keywords found in post 6. Skipping...
 No relevant keywords found in post 6. Skipping...
 Processing post 7...
 Processing post 7...
-Post 7/150 - Title: what’s the worst hookup you’ve ever had? 
-Post 7/150 - Title: what’s the worst hookup you’ve ever had? 
-Post 7/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ni65/whats_the_worst_hookup_youve_ever_had/
-Post 7/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ni65/whats_the_worst_hookup_youve_ever_had/
-Similarity between 'food' and 'what’s the worst hookup you’ve ever had? ': 0.3609974682331085
-Similarity between 'food' and 'what’s the worst hookup you’ve ever had? ': 0.3609974682331085
+Post 7/500 - Title: What habits of women were you unaware of until you got a girlfriend or wife?
+Post 7/500 - Title: What habits of women were you unaware of until you got a girlfriend or wife?
+Post 7/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g30sjf/what_habits_of_women_were_you_unaware_of_until/
+Post 7/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g30sjf/what_habits_of_women_were_you_unaware_of_until/
+Similarity between 'ai homework helper' and 'what habits of women were you unaware of until you got a girlfriend or wife?': 0.3976297378540039
 No relevant keywords found in post 7. Skipping...
 No relevant keywords found in post 7. Skipping...
 Processing post 8...
-Post 8/150 - Title: What the worst date you have ever been on?
-Post 8/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2lct9/what_the_worst_date_you_have_ever_been_on/
-Post 8/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2lct9/what_the_worst_date_you_have_ever_been_on/
-Similarity between 'food' and 'what the worst date you have ever been on?': 0.368593692779541
+Processing post 8...
+Post 8/500 - Title: What is the one snack/food you don’t keep in your house because you have no self control around it? 
+Post 8/500 - Title: What is the one snack/food you don’t keep in your house because you have no self control around it? 
+Post 8/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2u6ao/what_is_the_one_snackfood_you_dont_keep_in_your/
+Post 8/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2u6ao/what_is_the_one_snackfood_you_dont_keep_in_your/
+Similarity between 'ai homework helper' and 'what is the one snack/food you don’t keep in your house because you have no self control around it? ': 0.4627167284488678
+Similarity between 'ai homework helper' and 'what is the one snack/food you don’t keep in your house because you have no self control around it? ': 0.4627167284488678
 No relevant keywords found in post 8. Skipping...
 No relevant keywords found in post 8. Skipping...
 Processing post 9...
 Processing post 9...
-Post 9/150 - Title: What’s a 10/10 song that not many people know about?
-Post 9/150 - Title: What’s a 10/10 song that not many people know about?
-Post 9/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g27ilj/whats_a_1010_song_that_not_many_people_know_about/
-Post 9/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g27ilj/whats_a_1010_song_that_not_many_people_know_about/
-Similarity between 'food' and 'what’s a 10/10 song that not many people know about?': 0.3637143075466156
-Similarity between 'food' and 'what’s a 10/10 song that not many people know about?': 0.3637143075466156
+Post 9/500 - Title: What changed the way you see the world?
+Post 9/500 - Title: What changed the way you see the world?
+Post 9/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cyz0/what_changed_the_way_you_see_the_world/
+Post 9/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cyz0/what_changed_the_way_you_see_the_world/
+Similarity between 'ai homework helper' and 'what changed the way you see the world?': 0.41607484221458435
+Similarity between 'ai homework helper' and 'what changed the way you see the world?': 0.41607484221458435
 No relevant keywords found in post 9. Skipping...
 No relevant keywords found in post 9. Skipping...
 Processing post 10...
 Processing post 10...
-Post 10/150 - Title: What was the worst morning you could wake up to?
-Post 10/150 - Title: What was the worst morning you could wake up to?
-Post 10/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ml9e/what_was_the_worst_morning_you_could_wake_up_to/
-Post 10/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ml9e/what_was_the_worst_morning_you_could_wake_up_to/
-Similarity between 'food' and 'what was the worst morning you could wake up to?': 0.3913412094116211
+Post 10/500 - Title: What is a truly genderless name in your opinion? 
+Post 10/500 - Title: What is a truly genderless name in your opinion? 
+Post 10/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g31skt/what_is_a_truly_genderless_name_in_your_opinion/
+Post 10/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g31skt/what_is_a_truly_genderless_name_in_your_opinion/
+Similarity between 'ai homework helper' and 'what is a truly genderless name in your opinion? ': 0.39956796169281006
+Similarity between 'ai homework helper' and 'what is a truly genderless name in your opinion? ': 0.39956796169281006
 No relevant keywords found in post 10. Skipping...
 No relevant keywords found in post 10. Skipping...
 Processing post 11...
 Processing post 11...
-Post 11/150 - Title: How do we stop overthinking?
-Post 11/150 - Title: How do we stop overthinking?
-Post 11/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2lmg8/how_do_we_stop_overthinking/
-Post 11/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2lmg8/how_do_we_stop_overthinking/
-Similarity between 'food' and 'how do we stop overthinking?': 0.31017395853996277
-Similarity between 'food' and 'how do we stop overthinking?': 0.31017395853996277
+Post 11/500 - Title: What food is actually healthier than it looks?
+Post 11/500 - Title: What food is actually healthier than it looks?
+Post 11/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2yubp/what_food_is_actually_healthier_than_it_looks/
+Post 11/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2yubp/what_food_is_actually_healthier_than_it_looks/
+Similarity between 'ai homework helper' and 'what food is actually healthier than it looks?': 0.4227232038974762
+Similarity between 'ai homework helper' and 'what food is actually healthier than it looks?': 0.4227232038974762
 No relevant keywords found in post 11. Skipping...
 No relevant keywords found in post 11. Skipping...
 Processing post 12...
 Processing post 12...
-Post 12/150 - Title: What's the first image that comes to mind when you hear the phrase "punchable face"?
-Post 12/150 - Title: What's the first image that comes to mind when you hear the phrase "punchable face"?
-Post 12/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2kbxn/whats_the_first_image_that_comes_to_mind_when_you/
-Post 12/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2kbxn/whats_the_first_image_that_comes_to_mind_when_you/
-Similarity between 'food' and 'what's the first image that comes to mind when you hear the phrase "punchable face"?': 0.39115867018699646
+Post 12/500 - Title: What's a problem today that was caused by the Cold War?
+Post 12/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2saw1/whats_a_problem_today_that_was_caused_by_the_cold/
+Post 12/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2saw1/whats_a_problem_today_that_was_caused_by_the_cold/
+Similarity between 'ai homework helper' and 'what's a problem today that was caused by the cold war?': 0.3979317545890808
+Similarity between 'ai homework helper' and 'what's a problem today that was caused by the cold war?': 0.3979317545890808
 No relevant keywords found in post 12. Skipping...
 No relevant keywords found in post 12. Skipping...
 Processing post 13...
-Processing post 13...
-Post 13/150 - Title: What's the most important advice, that you would remember for a long time and from who it was?
-Post 13/150 - Title: What's the most important advice, that you would remember for a long time and from who it was?
-Post 13/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2mrhx/whats_the_most_important_advice_that_you_would/
-Post 13/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2mrhx/whats_the_most_important_advice_that_you_would/
-Similarity between 'food' and 'what's the most important advice, that you would remember for a long time and from who it was?': 0.39256352186203003
-Similarity between 'food' and 'what's the most important advice, that you would remember for a long time and from who it was?': 0.39256352186203003
+Post 13/500 - Title: What’s the worst movie you’ve ever seen in your entire life? 
+Post 13/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g32pop/whats_the_worst_movie_youve_ever_seen_in_your/
+Post 13/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g32pop/whats_the_worst_movie_youve_ever_seen_in_your/
+Similarity between 'ai homework helper' and 'what’s the worst movie you’ve ever seen in your entire life? ': 0.46878114342689514
 No relevant keywords found in post 13. Skipping...
+Similarity between 'ai homework helper' and 'what’s the worst movie you’ve ever seen in your entire life? ': 0.46878114342689514
 No relevant keywords found in post 13. Skipping...
 Processing post 14...
 Processing post 14...
-Post 14/150 - Title: What is the funniest prank a parent, grandparent, aunt or uncle has ever pulled on you, siblings and cousins?
-Post 14/150 - Title: What is the funniest prank a parent, grandparent, aunt or uncle has ever pulled on you, siblings and cousins?
-Post 14/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2bl0m/what_is_the_funniest_prank_a_parent_grandparent/
-Post 14/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2bl0m/what_is_the_funniest_prank_a_parent_grandparent/
-Similarity between 'food' and 'what is the funniest prank a parent, grandparent, aunt or uncle has ever pulled on you, siblings and cousins?': 0.3794236481189728
-Similarity between 'food' and 'what is the funniest prank a parent, grandparent, aunt or uncle has ever pulled on you, siblings and cousins?': 0.3794236481189728
+Post 14/500 - Title: What’s your favorite quote?
+Post 14/500 - Title: What’s your favorite quote?
+Post 14/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g31fuz/whats_your_favorite_quote/
+Post 14/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g31fuz/whats_your_favorite_quote/
+Similarity between 'ai homework helper' and 'what’s your favorite quote?': 0.4646565914154053
+Similarity between 'ai homework helper' and 'what’s your favorite quote?': 0.4646565914154053
 No relevant keywords found in post 14. Skipping...
 No relevant keywords found in post 14. Skipping...
 Processing post 15...
 Processing post 15...
-Post 15/150 - Title: What is the best non-sexual, non-drug related physical sensation you’ve ever experienced?
-Post 15/150 - Title: What is the best non-sexual, non-drug related physical sensation you’ve ever experienced?
-Post 15/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2mlxl/what_is_the_best_nonsexual_nondrug_related/
-Post 15/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2mlxl/what_is_the_best_nonsexual_nondrug_related/
-Similarity between 'food' and 'what is the best non-sexual, non-drug related physical sensation you’ve ever experienced?': 0.38941094279289246
-Similarity between 'food' and 'what is the best non-sexual, non-drug related physical sensation you’ve ever experienced?': 0.38941094279289246
+Post 15/500 - Title: What's something you knew was wrong but still went for it?
+Post 15/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3b2ww/whats_something_you_knew_was_wrong_but_still_went/
+Similarity between 'ai homework helper' and 'what's something you knew was wrong but still went for it?': 0.47037965059280396
+Similarity between 'ai homework helper' and 'what's something you knew was wrong but still went for it?': 0.47037965059280396
 No relevant keywords found in post 15. Skipping...
 No relevant keywords found in post 15. Skipping...
 Processing post 16...
 Processing post 16...
-Post 16/150 - Title: What's a mind-blowing fact about the universe you would like everybody to know?
-Post 16/150 - Title: What's a mind-blowing fact about the universe you would like everybody to know?
-Post 16/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2azbj/whats_a_mindblowing_fact_about_the_universe_you/
-Post 16/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2azbj/whats_a_mindblowing_fact_about_the_universe_you/
-Similarity between 'food' and 'what's a mind-blowing fact about the universe you would like everybody to know?': 0.42417147755622864
+Post 16/500 - Title: If you were the first person on Mars,what would your first words be?
+Post 16/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g307kv/if_you_were_the_first_person_on_marswhat_would/
+Post 16/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g307kv/if_you_were_the_first_person_on_marswhat_would/
+Similarity between 'ai homework helper' and 'if you were the first person on mars,what would your first words be?': 0.4488561451435089
+Similarity between 'ai homework helper' and 'if you were the first person on mars,what would your first words be?': 0.4488561451435089
 No relevant keywords found in post 16. Skipping...
 No relevant keywords found in post 16. Skipping...
 Processing post 17...
-Post 17/150 - Title: For people who’ve gone through a breakup, what was the hardest part for you?
-Post 17/150 - Title: For people who’ve gone through a breakup, what was the hardest part for you?
-Post 17/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2litx/for_people_whove_gone_through_a_breakup_what_was/
-Post 17/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2litx/for_people_whove_gone_through_a_breakup_what_was/
-Similarity between 'food' and 'for people who’ve gone through a breakup, what was the hardest part for you?': 0.3678816854953766
-Similarity between 'food' and 'for people who’ve gone through a breakup, what was the hardest part for you?': 0.3678816854953766
+Processing post 17...
+Post 17/500 - Title: When was a moment that made it extremely clear about your feelings for someone?
+Post 17/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cgdd/when_was_a_moment_that_made_it_extremely_clear/
+Post 17/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cgdd/when_was_a_moment_that_made_it_extremely_clear/
+Similarity between 'ai homework helper' and 'when was a moment that made it extremely clear about your feelings for someone?': 0.43472909927368164
+Similarity between 'ai homework helper' and 'when was a moment that made it extremely clear about your feelings for someone?': 0.43472909927368164
 No relevant keywords found in post 17. Skipping...
 No relevant keywords found in post 17. Skipping...
 Processing post 18...
 Processing post 18...
-Post 18/150 - Title: What's something you miss from your childhood? 
-Post 18/150 - Title: What's something you miss from your childhood? 
-Post 18/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2b50w/whats_something_you_miss_from_your_childhood/
-Post 18/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2b50w/whats_something_you_miss_from_your_childhood/
-Similarity between 'food' and 'what's something you miss from your childhood? ': 0.39986947178840637
-Similarity between 'food' and 'what's something you miss from your childhood? ': 0.39986947178840637
+Post 18/500 - Title: Where do you see the most beauty in the world around you?
+Post 18/500 - Title: Where do you see the most beauty in the world around you?
+Post 18/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3bahi/where_do_you_see_the_most_beauty_in_the_world/
+Post 18/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3bahi/where_do_you_see_the_most_beauty_in_the_world/
+Similarity between 'ai homework helper' and 'where do you see the most beauty in the world around you?': 0.4079444706439972
+Similarity between 'ai homework helper' and 'where do you see the most beauty in the world around you?': 0.4079444706439972
 No relevant keywords found in post 18. Skipping...
 No relevant keywords found in post 18. Skipping...
 Processing post 19...
-Post 19/150 - Title: What‘s the craziest thing you did for love?
-Post 19/150 - Title: What‘s the craziest thing you did for love?
-Post 19/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g26kgp/whats_the_craziest_thing_you_did_for_love/
-Post 19/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g26kgp/whats_the_craziest_thing_you_did_for_love/
-Similarity between 'food' and 'what‘s the craziest thing you did for love?': 0.3672831952571869
-Similarity between 'food' and 'what‘s the craziest thing you did for love?': 0.3672831952571869
+Processing post 19...
+Post 19/500 - Title: What is your favorite joke? 
+Post 19/500 - Title: What is your favorite joke? 
+Post 19/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g31cic/what_is_your_favorite_joke/
+Post 19/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g31cic/what_is_your_favorite_joke/
+Similarity between 'ai homework helper' and 'what is your favorite joke? ': 0.47863107919692993
+Similarity between 'ai homework helper' and 'what is your favorite joke? ': 0.47863107919692993
 No relevant keywords found in post 19. Skipping...
 No relevant keywords found in post 19. Skipping...
 Processing post 20...
 Processing post 20...
-Post 20/150 - Title: Whats your favorite breakfast dish that's not your standard bacon and eggs?
-Post 20/150 - Title: Whats your favorite breakfast dish that's not your standard bacon and eggs?
-Post 20/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2r37l/whats_your_favorite_breakfast_dish_thats_not_your/
-Post 20/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2r37l/whats_your_favorite_breakfast_dish_thats_not_your/
-Similarity between 'food' and 'whats your favorite breakfast dish that's not your standard bacon and eggs?': 0.631350576877594
-Similarity between 'food' and 'whats your favorite breakfast dish that's not your standard bacon and eggs?': 0.631350576877594
-Relevant content found in post 20
-Generating AI comment for post 20...
-Generating AI comment...
-Sending request to AI model with prompt length: 375 characters
-Generating AI comment for post 20...
-Generating AI comment...
-Sending request to AI model with prompt length: 375 characters
+Post 20/500 - Title: What’s the most valuable piece of safety advice you've ever learned?
+Post 20/500 - Title: What’s the most valuable piece of safety advice you've ever learned?
+Post 20/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g371qx/whats_the_most_valuable_piece_of_safety_advice/
+Post 20/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g371qx/whats_the_most_valuable_piece_of_safety_advice/
+Similarity between 'ai homework helper' and 'what’s the most valuable piece of safety advice you've ever learned?': 0.38664722442626953
+Similarity between 'ai homework helper' and 'what’s the most valuable piece of safety advice you've ever learned?': 0.38664722442626953
+No relevant keywords found in post 20. Skipping...
+No relevant keywords found in post 20. Skipping...
 Processing post 21...
 Processing post 21...
-Post 21/150 - Title: What is your immediate red flag when dating someone new?
-Post 21/150 - Title: What is your immediate red flag when dating someone new?
-Post 21/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2bi6b/what_is_your_immediate_red_flag_when_dating/
-Post 21/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2bi6b/what_is_your_immediate_red_flag_when_dating/
-Similarity between 'food' and 'what is your immediate red flag when dating someone new?': 0.45686715841293335
-Similarity between 'food' and 'what is your immediate red flag when dating someone new?': 0.45686715841293335
+Post 21/500 - Title: What's one small thing that can completely ruin your day?
+Post 21/500 - Title: What's one small thing that can completely ruin your day?
+Post 21/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g31gbd/whats_one_small_thing_that_can_completely_ruin/
+Post 21/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g31gbd/whats_one_small_thing_that_can_completely_ruin/
+Similarity between 'ai homework helper' and 'what's one small thing that can completely ruin your day?': 0.4535583257675171
+Similarity between 'ai homework helper' and 'what's one small thing that can completely ruin your day?': 0.4535583257675171
 No relevant keywords found in post 21. Skipping...
 No relevant keywords found in post 21. Skipping...
 Processing post 22...
 Processing post 22...
-Post 22/150 - Title: What's something absolutely normal in your country that's hard to explain to people not from there? 
-Post 22/150 - Title: What's something absolutely normal in your country that's hard to explain to people not from there? 
-Post 22/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2pqta/whats_something_absolutely_normal_in_your_country/
-Post 22/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2pqta/whats_something_absolutely_normal_in_your_country/
-Similarity between 'food' and 'what's something absolutely normal in your country that's hard to explain to people not from there? ': 0.41736283898353577
-Similarity between 'food' and 'what's something absolutely normal in your country that's hard to explain to people not from there? ': 0.41736283898353577
+Post 22/500 - Title: How do you think future generations will judge the decisions we’re making today?
+Post 22/500 - Title: How do you think future generations will judge the decisions we’re making today?
+Post 22/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2walq/how_do_you_think_future_generations_will_judge/
+Post 22/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2walq/how_do_you_think_future_generations_will_judge/
+Similarity between 'ai homework helper' and 'how do you think future generations will judge the decisions we’re making today?': 0.45384758710861206
+Similarity between 'ai homework helper' and 'how do you think future generations will judge the decisions we’re making today?': 0.45384758710861206
 No relevant keywords found in post 22. Skipping...
 No relevant keywords found in post 22. Skipping...
 Processing post 23...
 Processing post 23...
-Post 23/150 - Title: What’s a movie you could watch over and over again?
-Post 23/150 - Title: What’s a movie you could watch over and over again?
-Post 23/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2p6dm/whats_a_movie_you_could_watch_over_and_over_again/
-Post 23/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2p6dm/whats_a_movie_you_could_watch_over_and_over_again/
-Similarity between 'food' and 'what’s a movie you could watch over and over again?': 0.42974400520324707
-Similarity between 'food' and 'what’s a movie you could watch over and over again?': 0.42974400520324707
+Post 23/500 - Title: What methods do you have for Dealing with anxiety?
+Post 23/500 - Title: What methods do you have for Dealing with anxiety?
+Post 23/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g37p15/what_methods_do_you_have_for_dealing_with_anxiety/
+Post 23/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g37p15/what_methods_do_you_have_for_dealing_with_anxiety/
+Similarity between 'ai homework helper' and 'what methods do you have for dealing with anxiety?': 0.4646308720111847
+Similarity between 'ai homework helper' and 'what methods do you have for dealing with anxiety?': 0.4646308720111847
 No relevant keywords found in post 23. Skipping...
 No relevant keywords found in post 23. Skipping...
 Processing post 24...
 Processing post 24...
-Post 24/150 - Title: If you can eat only one food for the rest of your life, what would it be?
-Post 24/150 - Title: If you can eat only one food for the rest of your life, what would it be?
-Post 24/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2l8hr/if_you_can_eat_only_one_food_for_the_rest_of_your/
-Post 24/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2l8hr/if_you_can_eat_only_one_food_for_the_rest_of_your/
-Similarity between 'food' and 'if you can eat only one food for the rest of your life, what would it be?': 0.5408286452293396
-Similarity between 'food' and 'if you can eat only one food for the rest of your life, what would it be?': 0.5408286452293396
-Relevant content found in post 24
-Generating AI comment for post 24...
-Generating AI comment...
-Sending request to AI model with prompt length: 373 characters
-Relevant content found in post 24
-Generating AI comment for post 24...
-Generating AI comment...
-Sending request to AI model with prompt length: 373 characters
+Post 24/500 - Title: What is a fear you've faced and how did you face it?
+Post 24/500 - Title: What is a fear you've faced and how did you face it?
+Post 24/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cb2z/what_is_a_fear_youve_faced_and_how_did_you_face_it/
+Post 24/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cb2z/what_is_a_fear_youve_faced_and_how_did_you_face_it/
+Similarity between 'ai homework helper' and 'what is a fear you've faced and how did you face it?': 0.4416845738887787
+Similarity between 'ai homework helper' and 'what is a fear you've faced and how did you face it?': 0.4416845738887787
+No relevant keywords found in post 24. Skipping...
+No relevant keywords found in post 24. Skipping...
 Processing post 25...
 Processing post 25...
-Post 25/150 - Title: What were the signs that made you realized that you were burnt out?
-Post 25/150 - Title: What were the signs that made you realized that you were burnt out?
-Post 25/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2rnxa/what_were_the_signs_that_made_you_realized_that/
-Post 25/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2rnxa/what_were_the_signs_that_made_you_realized_that/
-Similarity between 'food' and 'what were the signs that made you realized that you were burnt out?': 0.3684338629245758
-Similarity between 'food' and 'what were the signs that made you realized that you were burnt out?': 0.3684338629245758
+Post 25/500 - Title: What's the strangest thing you've seen someone do in public that they thought was completely normal?
+Post 25/500 - Title: What's the strangest thing you've seen someone do in public that they thought was completely normal?
+Post 25/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2udz0/whats_the_strangest_thing_youve_seen_someone_do/
+Post 25/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2udz0/whats_the_strangest_thing_youve_seen_someone_do/
+Similarity between 'ai homework helper' and 'what's the strangest thing you've seen someone do in public that they thought was completely normal?': 0.4406026601791382
+Similarity between 'ai homework helper' and 'what's the strangest thing you've seen someone do in public that they thought was completely normal?': 0.4406026601791382
 No relevant keywords found in post 25. Skipping...
 No relevant keywords found in post 25. Skipping...
 Processing post 26...
 Processing post 26...
-Post 26/150 - Title: People who got cheated on, how did you find out?
-Post 26/150 - Title: People who got cheated on, how did you find out?
-Post 26/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2de3h/people_who_got_cheated_on_how_did_you_find_out/
-Post 26/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2de3h/people_who_got_cheated_on_how_did_you_find_out/
-Similarity between 'food' and 'people who got cheated on, how did you find out?': 0.37593016028404236
-Similarity between 'food' and 'people who got cheated on, how did you find out?': 0.37593016028404236
+Post 26/500 - Title: What is your favorite cant live without fast food cheat meal when your on a diet?
+Post 26/500 - Title: What is your favorite cant live without fast food cheat meal when your on a diet?
+Post 26/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g39nof/what_is_your_favorite_cant_live_without_fast_food/
+Post 26/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g39nof/what_is_your_favorite_cant_live_without_fast_food/
+Similarity between 'ai homework helper' and 'what is your favorite cant live without fast food cheat meal when your on a diet?': 0.47425034642219543
+Similarity between 'ai homework helper' and 'what is your favorite cant live without fast food cheat meal when your on a diet?': 0.47425034642219543
 No relevant keywords found in post 26. Skipping...
 No relevant keywords found in post 26. Skipping...
 Processing post 27...
-Processing post 27...
-Post 27/150 - Title: What is your craziest Halloween experience?
-Post 27/150 - Title: What is your craziest Halloween experience?
-Post 27/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2b9yn/what_is_your_craziest_halloween_experience/
-Post 27/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2b9yn/what_is_your_craziest_halloween_experience/
-Similarity between 'food' and 'what is your craziest halloween experience?': 0.3954271078109741
-Similarity between 'food' and 'what is your craziest halloween experience?': 0.3954271078109741
+Post 27/500 - Title: If everything was free in a store for 30 minutes, what store are you shopping at?
+Post 27/500 - Title: If everything was free in a store for 30 minutes, what store are you shopping at?
+Post 27/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cgpr/if_everything_was_free_in_a_store_for_30_minutes/
+Post 27/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cgpr/if_everything_was_free_in_a_store_for_30_minutes/
+Similarity between 'ai homework helper' and 'if everything was free in a store for 30 minutes, what store are you shopping at?': 0.34149616956710815
+Similarity between 'ai homework helper' and 'if everything was free in a store for 30 minutes, what store are you shopping at?': 0.34149616956710815
 No relevant keywords found in post 27. Skipping...
 No relevant keywords found in post 27. Skipping...
 Processing post 28...
-Post 28/150 - Title: What's a secret that you think would shock everyone if it came out?
-Post 28/150 - Title: What's a secret that you think would shock everyone if it came out?
-Post 28/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2q1mn/whats_a_secret_that_you_think_would_shock/
-Post 28/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2q1mn/whats_a_secret_that_you_think_would_shock/
-Similarity between 'food' and 'what's a secret that you think would shock everyone if it came out?': 0.3758551776409149
-Similarity between 'food' and 'what's a secret that you think would shock everyone if it came out?': 0.3758551776409149
+Processing post 28...
+Post 28/500 - Title: What's something that feels illegal but isn't?
+Post 28/500 - Title: What's something that feels illegal but isn't?
+Post 28/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2rpi2/whats_something_that_feels_illegal_but_isnt/
+Post 28/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2rpi2/whats_something_that_feels_illegal_but_isnt/
+Similarity between 'ai homework helper' and 'what's something that feels illegal but isn't?': 0.45970115065574646
+Similarity between 'ai homework helper' and 'what's something that feels illegal but isn't?': 0.45970115065574646
 No relevant keywords found in post 28. Skipping...
 No relevant keywords found in post 28. Skipping...
 Processing post 29...
-Post 29/150 - Title: What fashion trends baffle you?
-Post 29/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2h7xl/what_fashion_trends_baffle_you/
-Post 29/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2h7xl/what_fashion_trends_baffle_you/
-Similarity between 'food' and 'what fashion trends baffle you?': 0.34051376581192017
-Similarity between 'food' and 'what fashion trends baffle you?': 0.34051376581192017
+Processing post 29...
+Post 29/500 - Title: If you had to pick something, what would you erase from your memory so you can experience it again?
+Post 29/500 - Title: If you had to pick something, what would you erase from your memory so you can experience it again?
+Post 29/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2uget/if_you_had_to_pick_something_what_would_you_erase/
+Post 29/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2uget/if_you_had_to_pick_something_what_would_you_erase/
+Similarity between 'ai homework helper' and 'if you had to pick something, what would you erase from your memory so you can experience it again?': 0.46662694215774536
+Similarity between 'ai homework helper' and 'if you had to pick something, what would you erase from your memory so you can experience it again?': 0.46662694215774536
 No relevant keywords found in post 29. Skipping...
 No relevant keywords found in post 29. Skipping...
 Processing post 30...
 Processing post 30...
-Post 30/150 - Title: If you could choose any fictional universe to live in for a year, which would it be and why?
-Post 30/150 - Title: If you could choose any fictional universe to live in for a year, which would it be and why?
-Post 30/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2aqq3/if_you_could_choose_any_fictional_universe_to/
-Post 30/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2aqq3/if_you_could_choose_any_fictional_universe_to/
-Similarity between 'food' and 'if you could choose any fictional universe to live in for a year, which would it be and why?': 0.42213720083236694
+Post 30/500 - Title: How would a person who hates you describe you to their friends?
+Post 30/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cius/how_would_a_person_who_hates_you_describe_you_to/
+Post 30/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cius/how_would_a_person_who_hates_you_describe_you_to/
+Similarity between 'ai homework helper' and 'how would a person who hates you describe you to their friends?': 0.4757024049758911
+Similarity between 'ai homework helper' and 'how would a person who hates you describe you to their friends?': 0.4757024049758911
 No relevant keywords found in post 30. Skipping...
-Similarity between 'food' and 'if you could choose any fictional universe to live in for a year, which would it be and why?': 0.42213720083236694
 No relevant keywords found in post 30. Skipping...
 Processing post 31...
 Processing post 31...
-Post 31/150 - Title: What emotion do you feel the most in your life? 
-Post 31/150 - Title: What emotion do you feel the most in your life? 
-Post 31/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g27if1/what_emotion_do_you_feel_the_most_in_your_life/
-Post 31/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g27if1/what_emotion_do_you_feel_the_most_in_your_life/
-Similarity between 'food' and 'what emotion do you feel the most in your life? ': 0.3930092751979828
-Similarity between 'food' and 'what emotion do you feel the most in your life? ': 0.3930092751979828
+Post 31/500 - Title: How would you spend your time in prison if you were imprisoned for life?
+Post 31/500 - Title: How would you spend your time in prison if you were imprisoned for life?
+Post 31/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g36m8z/how_would_you_spend_your_time_in_prison_if_you/
+Post 31/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g36m8z/how_would_you_spend_your_time_in_prison_if_you/
+Similarity between 'ai homework helper' and 'how would you spend your time in prison if you were imprisoned for life?': 0.41057249903678894
+Similarity between 'ai homework helper' and 'how would you spend your time in prison if you were imprisoned for life?': 0.41057249903678894
 No relevant keywords found in post 31. Skipping...
 No relevant keywords found in post 31. Skipping...
 Processing post 32...
 Processing post 32...
-Post 32/150 - Title: What Is Your Worst Online Dating Experience?
-Post 32/150 - Title: What Is Your Worst Online Dating Experience?
-Post 32/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g27fwi/what_is_your_worst_online_dating_experience/
-Post 32/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g27fwi/what_is_your_worst_online_dating_experience/
-Similarity between 'food' and 'what is your worst online dating experience?': 0.35244929790496826
-Similarity between 'food' and 'what is your worst online dating experience?': 0.35244929790496826
+Post 32/500 - Title: When have you ever had a dream that when you woke up thought was real?
+Post 32/500 - Title: When have you ever had a dream that when you woke up thought was real?
+Post 32/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cswv/when_have_you_ever_had_a_dream_that_when_you_woke/
+Post 32/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cswv/when_have_you_ever_had_a_dream_that_when_you_woke/
+Similarity between 'ai homework helper' and 'when have you ever had a dream that when you woke up thought was real?': 0.4863797426223755
 No relevant keywords found in post 32. Skipping...
 No relevant keywords found in post 32. Skipping...
 Processing post 33...
-Post 33/150 - Title: If you could choose any celebrity to narrate the story of your life, who would it be?
-Post 33/150 - Title: If you could choose any celebrity to narrate the story of your life, who would it be?
-Post 33/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2d623/if_you_could_choose_any_celebrity_to_narrate_the/
-Post 33/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2d623/if_you_could_choose_any_celebrity_to_narrate_the/
-Similarity between 'food' and 'if you could choose any celebrity to narrate the story of your life, who would it be?': 0.3805997967720032
-Similarity between 'food' and 'if you could choose any celebrity to narrate the story of your life, who would it be?': 0.3805997967720032
+Post 33/500 - Title: What’s your go-to comfort food?
+Post 33/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3clts/whats_your_goto_comfort_food/
+Post 33/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3clts/whats_your_goto_comfort_food/
+Similarity between 'ai homework helper' and 'what’s your go-to comfort food?': 0.42085501551628113
+Similarity between 'ai homework helper' and 'what’s your go-to comfort food?': 0.42085501551628113
 No relevant keywords found in post 33. Skipping...
 No relevant keywords found in post 33. Skipping...
 Processing post 34...
 Processing post 34...
-Post 34/150 - Title: whats your top favorite video game ?
-Post 34/150 - Title: whats your top favorite video game ?
-Post 34/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2mgha/whats_your_top_favorite_video_game/
-Post 34/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2mgha/whats_your_top_favorite_video_game/
-Similarity between 'food' and 'whats your top favorite video game ?': 0.40041622519493103
-Similarity between 'food' and 'whats your top favorite video game ?': 0.40041622519493103
+Post 34/500 - Title: What was something you saw or experienced that you couldn’t explain? 
+Post 34/500 - Title: What was something you saw or experienced that you couldn’t explain? 
+Post 34/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2vydm/what_was_something_you_saw_or_experienced_that/
+Post 34/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2vydm/what_was_something_you_saw_or_experienced_that/
+Similarity between 'ai homework helper' and 'what was something you saw or experienced that you couldn’t explain? ': 0.4601186513900757
+Similarity between 'ai homework helper' and 'what was something you saw or experienced that you couldn’t explain? ': 0.4601186513900757
 No relevant keywords found in post 34. Skipping...
 No relevant keywords found in post 34. Skipping...
 Processing post 35...
 Processing post 35...
-Post 35/150 - Title: People who got cheated on but gave them a second chance, how did the second chance turn out?
-Post 35/150 - Title: People who got cheated on but gave them a second chance, how did the second chance turn out?
-Post 35/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2jot1/people_who_got_cheated_on_but_gave_them_a_second/
-Post 35/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2jot1/people_who_got_cheated_on_but_gave_them_a_second/
-Similarity between 'food' and 'people who got cheated on but gave them a second chance, how did the second chance turn out?': 0.3836650252342224
-Similarity between 'food' and 'people who got cheated on but gave them a second chance, how did the second chance turn out?': 0.3836650252342224
+Post 35/500 - Title: What's a scientific or technological advancement that you are currently excited about and eagerly awaiting? 
+Post 35/500 - Title: What's a scientific or technological advancement that you are currently excited about and eagerly awaiting? 
+Post 35/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g34glv/whats_a_scientific_or_technological_advancement/
+Post 35/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g34glv/whats_a_scientific_or_technological_advancement/
+Similarity between 'ai homework helper' and 'what's a scientific or technological advancement that you are currently excited about and eagerly awaiting? ': 0.4827617406845093
+Similarity between 'ai homework helper' and 'what's a scientific or technological advancement that you are currently excited about and eagerly awaiting? ': 0.4827617406845093
 No relevant keywords found in post 35. Skipping...
 No relevant keywords found in post 35. Skipping...
 Processing post 36...
 Processing post 36...
-Post 36/150 - Title: What's something that feels illegal but isn't?
-Post 36/150 - Title: What's something that feels illegal but isn't?
-Post 36/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2rpi2/whats_something_that_feels_illegal_but_isnt/
-Post 36/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2rpi2/whats_something_that_feels_illegal_but_isnt/
-Similarity between 'food' and 'what's something that feels illegal but isn't?': 0.35961952805519104
-Similarity between 'food' and 'what's something that feels illegal but isn't?': 0.35961952805519104
+Post 36/500 - Title: What’s the riskiest thing you've ever done in the heat of the moment?
+Post 36/500 - Title: What’s the riskiest thing you've ever done in the heat of the moment?
+Post 36/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ufrq/whats_the_riskiest_thing_youve_ever_done_in_the/
+Post 36/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ufrq/whats_the_riskiest_thing_youve_ever_done_in_the/
+Similarity between 'ai homework helper' and 'what’s the riskiest thing you've ever done in the heat of the moment?': 0.4077756702899933
+Similarity between 'ai homework helper' and 'what’s the riskiest thing you've ever done in the heat of the moment?': 0.4077756702899933
 No relevant keywords found in post 36. Skipping...
 No relevant keywords found in post 36. Skipping...
 Processing post 37...
 Processing post 37...
-Post 37/150 - Title: What circumstances led you to leave a date early?
-Post 37/150 - Title: What circumstances led you to leave a date early?
-Post 37/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2nk9l/what_circumstances_led_you_to_leave_a_date_early/
-Post 37/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2nk9l/what_circumstances_led_you_to_leave_a_date_early/
-Similarity between 'food' and 'what circumstances led you to leave a date early?': 0.36190301179885864
+Post 37/500 - Title: What role do you think fiction and storytelling play in shaping our reality?
+Post 37/500 - Title: What role do you think fiction and storytelling play in shaping our reality?
+Post 37/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2wc3i/what_role_do_you_think_fiction_and_storytelling/
+Post 37/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2wc3i/what_role_do_you_think_fiction_and_storytelling/
+Similarity between 'ai homework helper' and 'what role do you think fiction and storytelling play in shaping our reality?': 0.46138671040534973
+Similarity between 'ai homework helper' and 'what role do you think fiction and storytelling play in shaping our reality?': 0.46138671040534973
 No relevant keywords found in post 37. Skipping...
 No relevant keywords found in post 37. Skipping...
 Processing post 38...
-Post 38/150 - Title: What are some unwritten rules of partying that everyone should know?
-Post 38/150 - Title: What are some unwritten rules of partying that everyone should know?
-Post 38/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ksxm/what_are_some_unwritten_rules_of_partying_that/
-Post 38/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ksxm/what_are_some_unwritten_rules_of_partying_that/
-Similarity between 'food' and 'what are some unwritten rules of partying that everyone should know?': 0.3660137951374054
-Similarity between 'food' and 'what are some unwritten rules of partying that everyone should know?': 0.3660137951374054
+Processing post 38...
+Post 38/500 - Title: What’s the most ridiculous thing you believed as a child?
+Post 38/500 - Title: What’s the most ridiculous thing you believed as a child?
+Post 38/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cw8f/whats_the_most_ridiculous_thing_you_believed_as_a/
+Post 38/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cw8f/whats_the_most_ridiculous_thing_you_believed_as_a/
+Similarity between 'ai homework helper' and 'what’s the most ridiculous thing you believed as a child?': 0.3756047189235687
+Similarity between 'ai homework helper' and 'what’s the most ridiculous thing you believed as a child?': 0.3756047189235687
 No relevant keywords found in post 38. Skipping...
 No relevant keywords found in post 38. Skipping...
 Processing post 39...
 Processing post 39...
-Post 39/150 - Title: What is the first movie you ever remember watching in a theater?
-Post 39/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2f2ww/what_is_the_first_movie_you_ever_remember/
-Post 39/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2f2ww/what_is_the_first_movie_you_ever_remember/
-Similarity between 'food' and 'what is the first movie you ever remember watching in a theater?': 0.3976849317550659
-Similarity between 'food' and 'what is the first movie you ever remember watching in a theater?': 0.3976849317550659
+Post 39/500 - Title: What is the meanest thing someone ever said to you?
+Post 39/500 - Title: What is the meanest thing someone ever said to you?
+Post 39/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2x7oo/what_is_the_meanest_thing_someone_ever_said_to_you/
+Post 39/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2x7oo/what_is_the_meanest_thing_someone_ever_said_to_you/
+Similarity between 'ai homework helper' and 'what is the meanest thing someone ever said to you?': 0.4567357897758484
+Similarity between 'ai homework helper' and 'what is the meanest thing someone ever said to you?': 0.4567357897758484
 No relevant keywords found in post 39. Skipping...
 No relevant keywords found in post 39. Skipping...
 Processing post 40...
-Processing post 40...
-Post 40/150 - Title: If animals could talk, which one would be the rudest, and what would it say?
-Post 40/150 - Title: If animals could talk, which one would be the rudest, and what would it say?
-Post 40/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2p8bj/if_animals_could_talk_which_one_would_be_the/
-Post 40/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2p8bj/if_animals_could_talk_which_one_would_be_the/
-Similarity between 'food' and 'if animals could talk, which one would be the rudest, and what would it say?': 0.3996506631374359
-Similarity between 'food' and 'if animals could talk, which one would be the rudest, and what would it say?': 0.3996506631374359
+Post 40/500 - Title: What’s a hobby you suggest everyone should take up to improve their mental health?
+Post 40/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3dj3f/whats_a_hobby_you_suggest_everyone_should_take_up/
+Post 40/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3dj3f/whats_a_hobby_you_suggest_everyone_should_take_up/
+Similarity between 'ai homework helper' and 'what’s a hobby you suggest everyone should take up to improve their mental health?': 0.42359820008277893
+Similarity between 'ai homework helper' and 'what’s a hobby you suggest everyone should take up to improve their mental health?': 0.42359820008277893
 No relevant keywords found in post 40. Skipping...
 No relevant keywords found in post 40. Skipping...
 Processing post 41...
 Processing post 41...
-Post 41/150 - Title: What instantly killed the crush you had on someone?
-Post 41/150 - Title: What instantly killed the crush you had on someone?
-Post 41/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2p5td/what_instantly_killed_the_crush_you_had_on_someone/
-Post 41/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2p5td/what_instantly_killed_the_crush_you_had_on_someone/
-Similarity between 'food' and 'what instantly killed the crush you had on someone?': 0.40080535411834717
-Similarity between 'food' and 'what instantly killed the crush you had on someone?': 0.40080535411834717
+Post 41/500 - Title: What’s the most embarrassing thing you did as a teenager?
+Post 41/500 - Title: What’s the most embarrassing thing you did as a teenager?
+Post 41/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g30m62/whats_the_most_embarrassing_thing_you_did_as_a/
+Post 41/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g30m62/whats_the_most_embarrassing_thing_you_did_as_a/
+Similarity between 'ai homework helper' and 'what’s the most embarrassing thing you did as a teenager?': 0.41806167364120483
+Similarity between 'ai homework helper' and 'what’s the most embarrassing thing you did as a teenager?': 0.41806167364120483
 No relevant keywords found in post 41. Skipping...
 No relevant keywords found in post 41. Skipping...
 Processing post 42...
 Processing post 42...
-Post 42/150 - Title: What is “kinky” to you?
-Post 42/150 - Title: What is “kinky” to you?
-Post 42/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2nqci/what_is_kinky_to_you/
-Similarity between 'food' and 'what is “kinky” to you?': 0.4006212055683136
-Similarity between 'food' and 'what is “kinky” to you?': 0.4006212055683136
+Post 42/500 - Title: What activities make you feel the most relaxed in your daily life?
+Post 42/500 - Title: What activities make you feel the most relaxed in your daily life?
+Post 42/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3auqf/what_activities_make_you_feel_the_most_relaxed_in/
+Post 42/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3auqf/what_activities_make_you_feel_the_most_relaxed_in/
+Similarity between 'ai homework helper' and 'what activities make you feel the most relaxed in your daily life?': 0.3798658847808838
+Similarity between 'ai homework helper' and 'what activities make you feel the most relaxed in your daily life?': 0.3798658847808838
 No relevant keywords found in post 42. Skipping...
 No relevant keywords found in post 42. Skipping...
 Processing post 43...
-Processing post 43...
-Post 43/150 - Title: what should have never been invented?
-Post 43/150 - Title: what should have never been invented?
-Post 43/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2c5pd/what_should_have_never_been_invented/
-Post 43/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2c5pd/what_should_have_never_been_invented/
-Similarity between 'food' and 'what should have never been invented?': 0.3593873381614685
-Similarity between 'food' and 'what should have never been invented?': 0.3593873381614685
+Post 43/500 - Title: What’s one piece of advice you’d give your teenage self?
+Post 43/500 - Title: What’s one piece of advice you’d give your teenage self?
+Post 43/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3d7vb/whats_one_piece_of_advice_youd_give_your_teenage/
+Post 43/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3d7vb/whats_one_piece_of_advice_youd_give_your_teenage/
+Similarity between 'ai homework helper' and 'what’s one piece of advice you’d give your teenage self?': 0.4428039789199829
 No relevant keywords found in post 43. Skipping...
 No relevant keywords found in post 43. Skipping...
 Processing post 44...
 Processing post 44...
-Post 44/150 - Title: What’s the greatest album you’ve ever heard(No Skips)?
-Post 44/150 - Title: What’s the greatest album you’ve ever heard(No Skips)?
-Post 44/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g290yw/whats_the_greatest_album_youve_ever_heardno_skips/
-Post 44/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g290yw/whats_the_greatest_album_youve_ever_heardno_skips/
-Similarity between 'food' and 'what’s the greatest album you’ve ever heard(no skips)?': 0.36047083139419556
-Similarity between 'food' and 'what’s the greatest album you’ve ever heard(no skips)?': 0.36047083139419556
+Post 44/500 - Title: What can’t you believe is still a thing this year?
+Post 44/500 - Title: What can’t you believe is still a thing this year?
+Post 44/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cfzc/what_cant_you_believe_is_still_a_thing_this_year/
+Post 44/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cfzc/what_cant_you_believe_is_still_a_thing_this_year/
+Similarity between 'ai homework helper' and 'what can’t you believe is still a thing this year?': 0.457040399312973
+Similarity between 'ai homework helper' and 'what can’t you believe is still a thing this year?': 0.457040399312973
 No relevant keywords found in post 44. Skipping...
 No relevant keywords found in post 44. Skipping...
 Processing post 45...
 Processing post 45...
-Post 45/150 - Title: What is your most cherished memory with a partner? Past or present?
-Post 45/150 - Title: What is your most cherished memory with a partner? Past or present?
-Post 45/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2rxnj/what_is_your_most_cherished_memory_with_a_partner/
-Post 45/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2rxnj/what_is_your_most_cherished_memory_with_a_partner/
-Similarity between 'food' and 'what is your most cherished memory with a partner? past or present?': 0.3850933611392975
-Similarity between 'food' and 'what is your most cherished memory with a partner? past or present?': 0.3850933611392975
+Post 45/500 - Title: What’s the most awkward situation you’ve ever found yourself in?
+Post 45/500 - Title: What’s the most awkward situation you’ve ever found yourself in?
+Post 45/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2uejg/whats_the_most_awkward_situation_youve_ever_found/
+Post 45/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2uejg/whats_the_most_awkward_situation_youve_ever_found/
+Similarity between 'ai homework helper' and 'what’s the most awkward situation you’ve ever found yourself in?': 0.4800146818161011
 No relevant keywords found in post 45. Skipping...
 No relevant keywords found in post 45. Skipping...
 Processing post 46...
 Processing post 46...
-Post 46/150 - Title: What life stats would you like to see after your death?
-Post 46/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g26yxv/what_life_stats_would_you_like_to_see_after_your/
-Post 46/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g26yxv/what_life_stats_would_you_like_to_see_after_your/
-Similarity between 'food' and 'what life stats would you like to see after your death?': 0.3751680254936218
-Similarity between 'food' and 'what life stats would you like to see after your death?': 0.3751680254936218
+Post 46/500 - Title: What modern trend do you think future generations will look back on and find absurd?
+Post 46/500 - Title: What modern trend do you think future generations will look back on and find absurd?
+Post 46/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2y7hu/what_modern_trend_do_you_think_future_generations/
+Post 46/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2y7hu/what_modern_trend_do_you_think_future_generations/
+Similarity between 'ai homework helper' and 'what modern trend do you think future generations will look back on and find absurd?': 0.4688566327095032
 No relevant keywords found in post 46. Skipping...
 No relevant keywords found in post 46. Skipping...
 Processing post 47...
 Processing post 47...
-Post 47/150 - Title: If animals could talk, what do you think your pet would say to you?
-Post 47/150 - Title: If animals could talk, what do you think your pet would say to you?
-Post 47/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2l809/if_animals_could_talk_what_do_you_think_your_pet/
-Post 47/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2l809/if_animals_could_talk_what_do_you_think_your_pet/
-Similarity between 'food' and 'if animals could talk, what do you think your pet would say to you?': 0.405327171087265
-Similarity between 'food' and 'if animals could talk, what do you think your pet would say to you?': 0.405327171087265
+Post 47/500 - Title: What’s a smart financial habit that’s made a big difference in your life?
+Post 47/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2u0io/whats_a_smart_financial_habit_thats_made_a_big/
+Post 47/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2u0io/whats_a_smart_financial_habit_thats_made_a_big/
+Similarity between 'ai homework helper' and 'what’s a smart financial habit that’s made a big difference in your life?': 0.4019961357116699
+Similarity between 'ai homework helper' and 'what’s a smart financial habit that’s made a big difference in your life?': 0.4019961357116699
 No relevant keywords found in post 47. Skipping...
 No relevant keywords found in post 47. Skipping...
 Processing post 48...
 Processing post 48...
-Post 48/150 - Title: what does love feel like?
-Post 48/150 - Title: what does love feel like?
-Post 48/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2l4l6/what_does_love_feel_like/
-Post 48/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2l4l6/what_does_love_feel_like/
-Similarity between 'food' and 'what does love feel like?': 0.3444865345954895
-Similarity between 'food' and 'what does love feel like?': 0.3444865345954895
+Post 48/500 - Title: what is more important in life money or satisfaction ?
+Post 48/500 - Title: what is more important in life money or satisfaction ?
+Post 48/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3ck3d/what_is_more_important_in_life_money_or/
+Post 48/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3ck3d/what_is_more_important_in_life_money_or/
+Similarity between 'ai homework helper' and 'what is more important in life money or satisfaction ?': 0.3294345736503601
+Similarity between 'ai homework helper' and 'what is more important in life money or satisfaction ?': 0.3294345736503601
 No relevant keywords found in post 48. Skipping...
 No relevant keywords found in post 48. Skipping...
 Processing post 49...
 Processing post 49...
-Post 49/150 - Title: Whats the dumbest way you hurt yourself?
-Post 49/150 - Title: Whats the dumbest way you hurt yourself?
-Post 49/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k65c/whats_the_dumbest_way_you_hurt_yourself/
-Post 49/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k65c/whats_the_dumbest_way_you_hurt_yourself/
-Similarity between 'food' and 'whats the dumbest way you hurt yourself?': 0.34356603026390076
+Post 49/500 - Title: When did you lose the hope on humanity ?
+Post 49/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2uj5b/when_did_you_lose_the_hope_on_humanity/
+Post 49/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2uj5b/when_did_you_lose_the_hope_on_humanity/
+Similarity between 'ai homework helper' and 'when did you lose the hope on humanity ?': 0.44236087799072266
+Similarity between 'ai homework helper' and 'when did you lose the hope on humanity ?': 0.44236087799072266
 No relevant keywords found in post 49. Skipping...
 No relevant keywords found in post 49. Skipping...
 Processing post 50...
 Processing post 50...
-Post 50/150 - Title: who are you when no one is looking?
-Post 50/150 - Title: who are you when no one is looking?
-Post 50/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2lfg8/who_are_you_when_no_one_is_looking/
-Post 50/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2lfg8/who_are_you_when_no_one_is_looking/
-Similarity between 'food' and 'who are you when no one is looking?': 0.35132962465286255
-Similarity between 'food' and 'who are you when no one is looking?': 0.35132962465286255
+Post 50/500 - Title: What makes a conversation awkward for you?
+Post 50/500 - Title: What makes a conversation awkward for you?
+Post 50/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2tojo/what_makes_a_conversation_awkward_for_you/
+Post 50/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2tojo/what_makes_a_conversation_awkward_for_you/
+Similarity between 'ai homework helper' and 'what makes a conversation awkward for you?': 0.3977310061454773
+Similarity between 'ai homework helper' and 'what makes a conversation awkward for you?': 0.3977310061454773
 No relevant keywords found in post 50. Skipping...
 No relevant keywords found in post 50. Skipping...
 Processing post 51...
 Processing post 51...
-Post 51/150 - Title: What was the moment you realized, "Oh Shit, my roommate is a psychopath" after meeting them?
-Post 51/150 - Title: What was the moment you realized, "Oh Shit, my roommate is a psychopath" after meeting them?
-Post 51/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2jzc8/what_was_the_moment_you_realized_oh_shit_my/
-Post 51/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2jzc8/what_was_the_moment_you_realized_oh_shit_my/
-Similarity between 'food' and 'what was the moment you realized, "oh shit, my roommate is a psychopath" after meeting them?': 0.3924550414085388
+Post 51/500 - Title: What job had the worst impact on your mental health?
+Post 51/500 - Title: What job had the worst impact on your mental health?
+Post 51/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2swsn/what_job_had_the_worst_impact_on_your_mental/
+Post 51/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2swsn/what_job_had_the_worst_impact_on_your_mental/
+Similarity between 'ai homework helper' and 'what job had the worst impact on your mental health?': 0.3881971538066864
+Similarity between 'ai homework helper' and 'what job had the worst impact on your mental health?': 0.3881971538066864
 No relevant keywords found in post 51. Skipping...
 No relevant keywords found in post 51. Skipping...
 Processing post 52...
 Processing post 52...
-Post 52/150 - Title: What helps you sleep faster?
-Post 52/150 - Title: What helps you sleep faster?
-Post 52/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g27sw1/what_helps_you_sleep_faster/
-Post 52/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g27sw1/what_helps_you_sleep_faster/
-Similarity between 'food' and 'what helps you sleep faster?': 0.3807457685470581
-Similarity between 'food' and 'what helps you sleep faster?': 0.3807457685470581
+Post 52/500 - Title: What’s your go-to karaoke song?
+Post 52/500 - Title: What’s your go-to karaoke song?
+Post 52/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3drsb/whats_your_goto_karaoke_song/
+Post 52/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3drsb/whats_your_goto_karaoke_song/
+Similarity between 'ai homework helper' and 'what’s your go-to karaoke song?': 0.46343427896499634
+Similarity between 'ai homework helper' and 'what’s your go-to karaoke song?': 0.46343427896499634
 No relevant keywords found in post 52. Skipping...
 No relevant keywords found in post 52. Skipping...
 Processing post 53...
-Processing post 53...
-Post 53/150 - Title: What makes a conversation awkward for you?
-Post 53/150 - Title: What makes a conversation awkward for you?
-Post 53/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2tojo/what_makes_a_conversation_awkward_for_you/
-Post 53/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2tojo/what_makes_a_conversation_awkward_for_you/
-Similarity between 'food' and 'what makes a conversation awkward for you?': 0.3429320156574249
-Similarity between 'food' and 'what makes a conversation awkward for you?': 0.3429320156574249
+Post 53/500 - Title: What wouldn’t exist if everyone on earth had the same preferences as you?
+Post 53/500 - Title: What wouldn’t exist if everyone on earth had the same preferences as you?
+Post 53/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g38wl7/what_wouldnt_exist_if_everyone_on_earth_had_the/
+Post 53/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g38wl7/what_wouldnt_exist_if_everyone_on_earth_had_the/
+Similarity between 'ai homework helper' and 'what wouldn’t exist if everyone on earth had the same preferences as you?': 0.4861913025379181
+Similarity between 'ai homework helper' and 'what wouldn’t exist if everyone on earth had the same preferences as you?': 0.4861913025379181
 No relevant keywords found in post 53. Skipping...
 Processed 53 posts so far
 No relevant keywords found in post 53. Skipping...
 Processed 53 posts so far
+Page height didn't change. Scroll attempt 1/50
+Finding posts...
+Finding posts...
+Found 53 posts
+Found 53 posts
+Processed 53 posts so far
+Processed 53 posts so far
+No new posts found. Scroll attempt 2/50
+No new posts found. Scroll attempt 2/50
+Page height didn't change. Scroll attempt 3/50
+Finding posts...
+Finding posts...
+Found 53 posts
+Found 53 posts
+Processed 53 posts so far
+Processed 53 posts so far
+No new posts found. Scroll attempt 4/50
+No new posts found. Scroll attempt 4/50
+Page height didn't change. Scroll attempt 5/50
+Page height didn't change. Scroll attempt 5/50
+Finding posts...
+Finding posts...
+Found 53 posts
+Found 53 posts
+Processed 53 posts so far
+Processed 53 posts so far
+No new posts found. Scroll attempt 6/50
+No new posts found. Scroll attempt 6/50
+Page height didn't change. Scroll attempt 7/50
+Page height didn't change. Scroll attempt 7/50
+Finding posts...
+Finding posts...
+Found 53 posts
+Processed 53 posts so far
+No new posts found. Scroll attempt 8/50
+No new posts found. Scroll attempt 8/50
+Page height didn't change. Scroll attempt 9/50
+Finding posts...
+Finding posts...
+Found 53 posts
+Found 53 posts
+Processed 53 posts so far
+Processed 53 posts so far
+No new posts found. Scroll attempt 10/50
+No new posts found. Scroll attempt 10/50
+Page height didn't change. Scroll attempt 11/50
+Page height didn't change. Scroll attempt 11/50
+Finding posts...
+Finding posts...
+Found 53 posts
+Found 53 posts
+Processed 53 posts so far
+Processed 53 posts so far
+No new posts found. Scroll attempt 12/50
+No new posts found. Scroll attempt 12/50
+Page height didn't change. Scroll attempt 13/50
+Page height didn't change. Scroll attempt 13/50
+Finding posts...
+Finding posts...
+Found 53 posts
+Found 53 posts
+Processed 53 posts so far
+No new posts found. Scroll attempt 14/50
+No new posts found. Scroll attempt 14/50
+Page height didn't change. Scroll attempt 15/50
+Page height didn't change. Scroll attempt 15/50
+Finding posts...
+Finding posts...
+Found 53 posts
+Processed 53 posts so far
+Processed 53 posts so far
+No new posts found. Scroll attempt 16/50
+No new posts found. Scroll attempt 16/50
+Page height didn't change. Scroll attempt 17/50
+Page height didn't change. Scroll attempt 17/50
+Finding posts...
+Finding posts...
+Found 53 posts
+Found 53 posts
+Processed 53 posts so far
+No new posts found. Scroll attempt 18/50
+No new posts found. Scroll attempt 18/50
+Page height didn't change. Scroll attempt 19/50
+Finding posts...
+Finding posts...
+Found 53 posts
+Processed 53 posts so far
+Processed 53 posts so far
+No new posts found. Scroll attempt 20/50
+No new posts found. Scroll attempt 20/50
 Scrolled successfully, new content loaded.
 Scrolled successfully, new content loaded.
 Finding posts...
@@ -596,243 +680,300 @@ Finding posts...
 Found 78 posts
 Found 78 posts
 Processing post 54...
-Post 54/150 - Title: what is the most attractive feature somebody could have?
-Post 54/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2hs8g/what_is_the_most_attractive_feature_somebody/
-Post 54/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2hs8g/what_is_the_most_attractive_feature_somebody/
-Similarity between 'food' and 'what is the most attractive feature somebody could have?': 0.37698057293891907
-Similarity between 'food' and 'what is the most attractive feature somebody could have?': 0.37698057293891907
-No relevant keywords found in post 54. Skipping...
-No relevant keywords found in post 54. Skipping...
+Processing post 54...
+Post 54/500 - Title: What is some 2010s kids nostalgia?
+Post 54/500 - Title: What is some 2010s kids nostalgia?
+Post 54/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2uq7i/what_is_some_2010s_kids_nostalgia/
+Post 54/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2uq7i/what_is_some_2010s_kids_nostalgia/
+Similarity between 'ai homework helper' and 'what is some 2010s kids nostalgia?': 0.5266395807266235
+Similarity between 'ai homework helper' and 'what is some 2010s kids nostalgia?': 0.5266395807266235
+Relevant content found in post 54
+Generating AI comment for post 54...
+Generating AI comment...
+Relevant content found in post 54
+Sending request to AI model with prompt length: 348 characters
+Generating AI comment for post 54...
+Generating AI comment...
+Sending request to AI model with prompt length: 348 characters
 Processing post 55...
 Processing post 55...
-Post 55/150 - Title: What makes you cry?
-Post 55/150 - Title: What makes you cry?
-Post 55/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2m0lg/what_makes_you_cry/
-Post 55/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2m0lg/what_makes_you_cry/
-Similarity between 'food' and 'what makes you cry?': 0.35612624883651733
-Similarity between 'food' and 'what makes you cry?': 0.35612624883651733
+Post 55/500 - Title: what are some things that your partner did that made you realise that they are a keeper?
+Post 55/500 - Title: what are some things that your partner did that made you realise that they are a keeper?
+Post 55/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cv0s/what_are_some_things_that_your_partner_did_that/
+Post 55/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cv0s/what_are_some_things_that_your_partner_did_that/
+Similarity between 'ai homework helper' and 'what are some things that your partner did that made you realise that they are a keeper?': 0.4931987524032593
+Similarity between 'ai homework helper' and 'what are some things that your partner did that made you realise that they are a keeper?': 0.4931987524032593
 No relevant keywords found in post 55. Skipping...
 No relevant keywords found in post 55. Skipping...
 Processing post 56...
 Processing post 56...
-Post 56/150 - Title: What’s a word or phrase people need to stop using?
-Post 56/150 - Title: What’s a word or phrase people need to stop using?
-Post 56/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g29ik2/whats_a_word_or_phrase_people_need_to_stop_using/
-Post 56/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g29ik2/whats_a_word_or_phrase_people_need_to_stop_using/
-Similarity between 'food' and 'what’s a word or phrase people need to stop using?': 0.4113004207611084
-No relevant keywords found in post 56. Skipping...
-No relevant keywords found in post 56. Skipping...
+Post 56/500 - Title:  What’s a skill you wish you had?
+Post 56/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cgao/whats_a_skill_you_wish_you_had/
+Post 56/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cgao/whats_a_skill_you_wish_you_had/
+Similarity between 'ai homework helper' and ' what’s a skill you wish you had?': 0.511956512928009
+Similarity between 'ai homework helper' and ' what’s a skill you wish you had?': 0.511956512928009
+Relevant content found in post 56
+Generating AI comment for post 56...
+Generating AI comment...
+Sending request to AI model with prompt length: 347 characters
+Relevant content found in post 56
+Generating AI comment for post 56...
+Generating AI comment...
+Sending request to AI model with prompt length: 347 characters
 Processing post 57...
-Post 57/150 - Title: What’s one rule you wish you could break without any consequences?
-Post 57/150 - Title: What’s one rule you wish you could break without any consequences?
-Post 57/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2pqeh/whats_one_rule_you_wish_you_could_break_without/
-Post 57/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2pqeh/whats_one_rule_you_wish_you_could_break_without/
-Similarity between 'food' and 'what’s one rule you wish you could break without any consequences?': 0.38631248474121094
-Similarity between 'food' and 'what’s one rule you wish you could break without any consequences?': 0.38631248474121094
+Processing post 57...
+Post 57/500 - Title: What's the best life lesson you've learned and how do you apply it in your daily life?
+Post 57/500 - Title: What's the best life lesson you've learned and how do you apply it in your daily life?
+Post 57/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cjcf/whats_the_best_life_lesson_youve_learned_and_how/
+Post 57/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cjcf/whats_the_best_life_lesson_youve_learned_and_how/
+Similarity between 'ai homework helper' and 'what's the best life lesson you've learned and how do you apply it in your daily life?': 0.4478946626186371
+Similarity between 'ai homework helper' and 'what's the best life lesson you've learned and how do you apply it in your daily life?': 0.4478946626186371
 No relevant keywords found in post 57. Skipping...
 No relevant keywords found in post 57. Skipping...
 Processing post 58...
 Processing post 58...
-Post 58/150 - Title: What’s something you wish you could unsee?
-Post 58/150 - Title: What’s something you wish you could unsee?
-Post 58/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ovry/whats_something_you_wish_you_could_unsee/
-Post 58/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ovry/whats_something_you_wish_you_could_unsee/
-Similarity between 'food' and 'what’s something you wish you could unsee?': 0.3606243133544922
-Similarity between 'food' and 'what’s something you wish you could unsee?': 0.3606243133544922
+Post 58/500 - Title: What’s a habit you want to break?
+Post 58/500 - Title: What’s a habit you want to break?
+Post 58/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3dg8c/whats_a_habit_you_want_to_break/
+Post 58/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3dg8c/whats_a_habit_you_want_to_break/
+Similarity between 'ai homework helper' and 'what’s a habit you want to break?': 0.45785951614379883
 No relevant keywords found in post 58. Skipping...
 No relevant keywords found in post 58. Skipping...
 Processing post 59...
 Processing post 59...
-Post 59/150 - Title: What would scare you if an AI said it?
-Post 59/150 - Title: What would scare you if an AI said it?
-Post 59/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k20b/what_would_scare_you_if_an_ai_said_it/
-Post 59/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k20b/what_would_scare_you_if_an_ai_said_it/
-Similarity between 'food' and 'what would scare you if an ai said it?': 0.36488020420074463
+Post 59/500 - Title: What did you not appreciate until you had it?
+Post 59/500 - Title: What did you not appreciate until you had it?
+Post 59/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g351cu/what_did_you_not_appreciate_until_you_had_it/
+Post 59/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g351cu/what_did_you_not_appreciate_until_you_had_it/
+Similarity between 'ai homework helper' and 'what did you not appreciate until you had it?': 0.4880993664264679
+Similarity between 'ai homework helper' and 'what did you not appreciate until you had it?': 0.4880993664264679
 No relevant keywords found in post 59. Skipping...
 No relevant keywords found in post 59. Skipping...
 Processing post 60...
-Post 60/150 - Title: Why do you think forgiveness is so difficult for many people?
-Post 60/150 - Title: Why do you think forgiveness is so difficult for many people?
-Post 60/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2kxf9/why_do_you_think_forgiveness_is_so_difficult_for/
-Post 60/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2kxf9/why_do_you_think_forgiveness_is_so_difficult_for/
-Similarity between 'food' and 'why do you think forgiveness is so difficult for many people?': 0.36721071600914
-Similarity between 'food' and 'why do you think forgiveness is so difficult for many people?': 0.36721071600914
+Processing post 60...
+Post 60/500 - Title: What was that disgusting thing someone you were dating told you and it changed your image of them?
+Post 60/500 - Title: What was that disgusting thing someone you were dating told you and it changed your image of them?
+Post 60/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cbyu/what_was_that_disgusting_thing_someone_you_were/
+Post 60/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cbyu/what_was_that_disgusting_thing_someone_you_were/
+Similarity between 'ai homework helper' and 'what was that disgusting thing someone you were dating told you and it changed your image of them?': 0.46509069204330444
+Similarity between 'ai homework helper' and 'what was that disgusting thing someone you were dating told you and it changed your image of them?': 0.46509069204330444
 No relevant keywords found in post 60. Skipping...
 No relevant keywords found in post 60. Skipping...
 Processing post 61...
 Processing post 61...
-Post 61/150 - Title: Have you ever told truth when someone ask are you fine? Why?
-Post 61/150 - Title: Have you ever told truth when someone ask are you fine? Why?
-Post 61/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2jzhr/have_you_ever_told_truth_when_someone_ask_are_you/
-Post 61/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2jzhr/have_you_ever_told_truth_when_someone_ask_are_you/
-Similarity between 'food' and 'have you ever told truth when someone ask are you fine? why?': 0.362631618976593
-Similarity between 'food' and 'have you ever told truth when someone ask are you fine? why?': 0.362631618976593
+Post 61/500 - Title: If you could witness any historical event firsthand, what would it be?
+Post 61/500 - Title: If you could witness any historical event firsthand, what would it be?
+Post 61/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g344bb/if_you_could_witness_any_historical_event/
+Post 61/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g344bb/if_you_could_witness_any_historical_event/
+Similarity between 'ai homework helper' and 'if you could witness any historical event firsthand, what would it be?': 0.42087259888648987
+Similarity between 'ai homework helper' and 'if you could witness any historical event firsthand, what would it be?': 0.42087259888648987
 No relevant keywords found in post 61. Skipping...
 No relevant keywords found in post 61. Skipping...
 Processing post 62...
 Processing post 62...
-Post 62/150 - Title: If you could time travel but only for 10 minutes, where and when would you go?
-Post 62/150 - Title: If you could time travel but only for 10 minutes, where and when would you go?
-Post 62/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2pnwu/if_you_could_time_travel_but_only_for_10_minutes/
-Post 62/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2pnwu/if_you_could_time_travel_but_only_for_10_minutes/
-Similarity between 'food' and 'if you could time travel but only for 10 minutes, where and when would you go?': 0.36683782935142517
-Similarity between 'food' and 'if you could time travel but only for 10 minutes, where and when would you go?': 0.36683782935142517
+Post 62/500 - Title: Which illegal drugs have you taken in your life?
+Post 62/500 - Title: Which illegal drugs have you taken in your life?
+Post 62/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2zode/which_illegal_drugs_have_you_taken_in_your_life/
+Post 62/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2zode/which_illegal_drugs_have_you_taken_in_your_life/
+Similarity between 'ai homework helper' and 'which illegal drugs have you taken in your life?': 0.3971133232116699
+Similarity between 'ai homework helper' and 'which illegal drugs have you taken in your life?': 0.3971133232116699
 No relevant keywords found in post 62. Skipping...
 No relevant keywords found in post 62. Skipping...
 Processing post 63...
 Processing post 63...
-Post 63/150 - Title: If you could give your younger self one piece of advice, what would it be?
-Post 63/150 - Title: If you could give your younger self one piece of advice, what would it be?
-Post 63/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2lfsk/if_you_could_give_your_younger_self_one_piece_of/
-Post 63/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2lfsk/if_you_could_give_your_younger_self_one_piece_of/
-Similarity between 'food' and 'if you could give your younger self one piece of advice, what would it be?': 0.3719191253185272
-Similarity between 'food' and 'if you could give your younger self one piece of advice, what would it be?': 0.3719191253185272
+Post 63/500 - Title: What’s the most important quality you look for in a partner?
+Post 63/500 - Title: What’s the most important quality you look for in a partner?
+Post 63/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3clyr/whats_the_most_important_quality_you_look_for_in/
+Post 63/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3clyr/whats_the_most_important_quality_you_look_for_in/
+Similarity between 'ai homework helper' and 'what’s the most important quality you look for in a partner?': 0.32480353116989136
+Similarity between 'ai homework helper' and 'what’s the most important quality you look for in a partner?': 0.32480353116989136
 No relevant keywords found in post 63. Skipping...
 No relevant keywords found in post 63. Skipping...
 Processing post 64...
 Processing post 64...
-Post 64/150 - Title: What gave you confidence?
-Post 64/150 - Title: What gave you confidence?
-Post 64/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2l9um/what_gave_you_confidence/
-Post 64/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2l9um/what_gave_you_confidence/
-Similarity between 'food' and 'what gave you confidence?': 0.3068768382072449
-Similarity between 'food' and 'what gave you confidence?': 0.3068768382072449
+Post 64/500 - Title: If you could eliminate one common annoyance from your daily life, what would it be?
+Post 64/500 - Title: If you could eliminate one common annoyance from your daily life, what would it be?
+Post 64/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g344e0/if_you_could_eliminate_one_common_annoyance_from/
+Post 64/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g344e0/if_you_could_eliminate_one_common_annoyance_from/
+Similarity between 'ai homework helper' and 'if you could eliminate one common annoyance from your daily life, what would it be?': 0.43737512826919556
+Similarity between 'ai homework helper' and 'if you could eliminate one common annoyance from your daily life, what would it be?': 0.43737512826919556
 No relevant keywords found in post 64. Skipping...
 No relevant keywords found in post 64. Skipping...
 Processing post 65...
-Post 65/150 - Title: Who’s your favorite anime character of all time?
-Post 65/150 - Title: Who’s your favorite anime character of all time?
-Post 65/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2kh5y/whos_your_favorite_anime_character_of_all_time/
-Post 65/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2kh5y/whos_your_favorite_anime_character_of_all_time/
-Similarity between 'food' and 'who’s your favorite anime character of all time?': 0.4469244182109833
-Similarity between 'food' and 'who’s your favorite anime character of all time?': 0.4469244182109833
+Processing post 65...
+Post 65/500 - Title: whats your favourite season? 
+Post 65/500 - Title: whats your favourite season? 
+Post 65/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2zdts/whats_your_favourite_season/
+Post 65/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2zdts/whats_your_favourite_season/
+Similarity between 'ai homework helper' and 'whats your favourite season? ': 0.46373772621154785
+Similarity between 'ai homework helper' and 'whats your favourite season? ': 0.46373772621154785
 No relevant keywords found in post 65. Skipping...
 No relevant keywords found in post 65. Skipping...
 Processing post 66...
 Processing post 66...
-Post 66/150 - Title: What’s a book that changed your perspective on life?
-Post 66/150 - Title: What’s a book that changed your perspective on life?
-Post 66/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2plwz/whats_a_book_that_changed_your_perspective_on_life/
-Post 66/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2plwz/whats_a_book_that_changed_your_perspective_on_life/
-Similarity between 'food' and 'what’s a book that changed your perspective on life?': 0.3839995563030243
-Similarity between 'food' and 'what’s a book that changed your perspective on life?': 0.3839995563030243
+Post 66/500 - Title: What’s a book that impacted you?
+Post 66/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3d2uz/whats_a_book_that_impacted_you/
+Post 66/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3d2uz/whats_a_book_that_impacted_you/
+Similarity between 'ai homework helper' and 'what’s a book that impacted you?': 0.4451840817928314
+Similarity between 'ai homework helper' and 'what’s a book that impacted you?': 0.4451840817928314
 No relevant keywords found in post 66. Skipping...
 No relevant keywords found in post 66. Skipping...
 Processing post 67...
 Processing post 67...
-Post 67/150 - Title: What makes you feel like a loser?
-Post 67/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2mcit/what_makes_you_feel_like_a_loser/
-Post 67/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2mcit/what_makes_you_feel_like_a_loser/
-Similarity between 'food' and 'what makes you feel like a loser?': 0.3665672838687897
+Post 67/500 - Title: If you could instantly become fluent in any language, which would you choose?
+Post 67/500 - Title: If you could instantly become fluent in any language, which would you choose?
+Post 67/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3c5hr/if_you_could_instantly_become_fluent_in_any/
+Post 67/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3c5hr/if_you_could_instantly_become_fluent_in_any/
+Similarity between 'ai homework helper' and 'if you could instantly become fluent in any language, which would you choose?': 0.4318508803844452
+Similarity between 'ai homework helper' and 'if you could instantly become fluent in any language, which would you choose?': 0.4318508803844452
 No relevant keywords found in post 67. Skipping...
 No relevant keywords found in post 67. Skipping...
 Processing post 68...
-Processing post 68...
-Post 68/150 - Title: What’s the worst way someone hurt you emotionally?
-Post 68/150 - Title: What’s the worst way someone hurt you emotionally?
-Post 68/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2iro0/whats_the_worst_way_someone_hurt_you_emotionally/
-Post 68/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2iro0/whats_the_worst_way_someone_hurt_you_emotionally/
-Similarity between 'food' and 'what’s the worst way someone hurt you emotionally?': 0.38820740580558777
-Similarity between 'food' and 'what’s the worst way someone hurt you emotionally?': 0.38820740580558777
-No relevant keywords found in post 68. Skipping...
-No relevant keywords found in post 68. Skipping...
+Post 68/500 - Title: What’s one reason why you wouldn’t want to live forever?
+Post 68/500 - Title: What’s one reason why you wouldn’t want to live forever?
+Post 68/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2zc2k/whats_one_reason_why_you_wouldnt_want_to_live/
+Post 68/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2zc2k/whats_one_reason_why_you_wouldnt_want_to_live/
+Similarity between 'ai homework helper' and 'what’s one reason why you wouldn’t want to live forever?': 0.5117487907409668
+Similarity between 'ai homework helper' and 'what’s one reason why you wouldn’t want to live forever?': 0.5117487907409668
+Relevant content found in post 68
+Generating AI comment for post 68...
+Generating AI comment...
+Sending request to AI model with prompt length: 370 characters
+Relevant content found in post 68
+Generating AI comment for post 68...
+Generating AI comment...
+Sending request to AI model with prompt length: 370 characters
 Processing post 69...
 Processing post 69...
-Post 69/150 - Title: What makes you happy when youre down?
-Post 69/150 - Title: What makes you happy when youre down?
-Post 69/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2dm7x/what_makes_you_happy_when_youre_down/
-Post 69/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2dm7x/what_makes_you_happy_when_youre_down/
-Similarity between 'food' and 'what makes you happy when youre down?': 0.36738061904907227
+Post 69/500 - Title: What’s your favorite holiday tradition?
+Post 69/500 - Title: What’s your favorite holiday tradition?
+Post 69/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3dprf/whats_your_favorite_holiday_tradition/
+Post 69/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3dprf/whats_your_favorite_holiday_tradition/
+Similarity between 'ai homework helper' and 'what’s your favorite holiday tradition?': 0.4882805645465851
+Similarity between 'ai homework helper' and 'what’s your favorite holiday tradition?': 0.4882805645465851
 No relevant keywords found in post 69. Skipping...
 No relevant keywords found in post 69. Skipping...
 Processing post 70...
-Post 70/150 - Title: What’s the toughest pill you’ve had to swallow?
-Post 70/150 - Title: What’s the toughest pill you’ve had to swallow?
-Post 70/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2mm62/whats_the_toughest_pill_youve_had_to_swallow/
-Post 70/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2mm62/whats_the_toughest_pill_youve_had_to_swallow/
-Similarity between 'food' and 'what’s the toughest pill you’ve had to swallow?': 0.4518655836582184
-Similarity between 'food' and 'what’s the toughest pill you’ve had to swallow?': 0.4518655836582184
-No relevant keywords found in post 70. Skipping...
-No relevant keywords found in post 70. Skipping...
+Processing post 70...
+Post 70/500 - Title: What things do you want to do before you die? 
+Post 70/500 - Title: What things do you want to do before you die? 
+Post 70/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cqxi/what_things_do_you_want_to_do_before_you_die/
+Post 70/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cqxi/what_things_do_you_want_to_do_before_you_die/
+Similarity between 'ai homework helper' and 'what things do you want to do before you die? ': 0.5294710397720337
+Similarity between 'ai homework helper' and 'what things do you want to do before you die? ': 0.5294710397720337
+Relevant content found in post 70
+Generating AI comment for post 70...
+Generating AI comment...
+Sending request to AI model with prompt length: 360 characters
+Relevant content found in post 70
+Generating AI comment for post 70...
+Generating AI comment...
+Sending request to AI model with prompt length: 360 characters
 Processing post 71...
-Processing post 71...
-Post 71/150 - Title: What animal would look the silliest wearing a top hat?
-Post 71/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2kdfq/what_animal_would_look_the_silliest_wearing_a_top/
-Post 71/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2kdfq/what_animal_would_look_the_silliest_wearing_a_top/
-Similarity between 'food' and 'what animal would look the silliest wearing a top hat?': 0.445696085691452
-Similarity between 'food' and 'what animal would look the silliest wearing a top hat?': 0.445696085691452
+Post 71/500 - Title: What’s your favorite anime?
+Post 71/500 - Title: What’s your favorite anime?
+Post 71/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3c4vf/whats_your_favorite_anime/
+Post 71/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3c4vf/whats_your_favorite_anime/
+Similarity between 'ai homework helper' and 'what’s your favorite anime?': 0.4885501563549042
+Similarity between 'ai homework helper' and 'what’s your favorite anime?': 0.4885501563549042
 No relevant keywords found in post 71. Skipping...
 No relevant keywords found in post 71. Skipping...
 Processing post 72...
 Processing post 72...
-Post 72/150 - Title: What can make this world a better place to live? 
-Post 72/150 - Title: What can make this world a better place to live? 
-Post 72/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2jg6e/what_can_make_this_world_a_better_place_to_live/
-Post 72/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2jg6e/what_can_make_this_world_a_better_place_to_live/
-Similarity between 'food' and 'what can make this world a better place to live? ': 0.47532734274864197
-Similarity between 'food' and 'what can make this world a better place to live? ': 0.47532734274864197
+Post 72/500 - Title: What’s a small act of kindness that someone did for you that you’ll never forget?
+Post 72/500 - Title: What’s a small act of kindness that someone did for you that you’ll never forget?
+Post 72/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g349wi/whats_a_small_act_of_kindness_that_someone_did/
+Post 72/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g349wi/whats_a_small_act_of_kindness_that_someone_did/
+Similarity between 'ai homework helper' and 'what’s a small act of kindness that someone did for you that you’ll never forget?': 0.4717997908592224
+Similarity between 'ai homework helper' and 'what’s a small act of kindness that someone did for you that you’ll never forget?': 0.4717997908592224
 No relevant keywords found in post 72. Skipping...
 No relevant keywords found in post 72. Skipping...
 Processing post 73...
 Processing post 73...
-Post 73/150 - Title: What will you never be able to do in your life, no matter how badly you want to? 
-Post 73/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2fgji/what_will_you_never_be_able_to_do_in_your_life_no/
-Post 73/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2fgji/what_will_you_never_be_able_to_do_in_your_life_no/
-Similarity between 'food' and 'what will you never be able to do in your life, no matter how badly you want to? ': 0.38543373346328735
-Similarity between 'food' and 'what will you never be able to do in your life, no matter how badly you want to? ': 0.38543373346328735
+Post 73/500 - Title: People who almost got married, what stopped you?
+Post 73/500 - Title: People who almost got married, what stopped you?
+Post 73/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2vdml/people_who_almost_got_married_what_stopped_you/
+Post 73/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2vdml/people_who_almost_got_married_what_stopped_you/
+Similarity between 'ai homework helper' and 'people who almost got married, what stopped you?': 0.49265795946121216
+Similarity between 'ai homework helper' and 'people who almost got married, what stopped you?': 0.49265795946121216
 No relevant keywords found in post 73. Skipping...
 No relevant keywords found in post 73. Skipping...
 Processing post 74...
 Processing post 74...
-Post 74/150 - Title: What's something you miss from your childhood?
-Post 74/150 - Title: What's something you miss from your childhood?
-Post 74/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2e6sv/whats_something_you_miss_from_your_childhood/
-Post 74/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2e6sv/whats_something_you_miss_from_your_childhood/
-Similarity between 'food' and 'what's something you miss from your childhood?': 0.39986947178840637
-Similarity between 'food' and 'what's something you miss from your childhood?': 0.39986947178840637
+Post 74/500 - Title: If you could swap lives with any fictional character for a day, who would it be and why?
+Post 74/500 - Title: If you could swap lives with any fictional character for a day, who would it be and why?
+Post 74/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g34d43/if_you_could_swap_lives_with_any_fictional/
+Post 74/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g34d43/if_you_could_swap_lives_with_any_fictional/
+Similarity between 'ai homework helper' and 'if you could swap lives with any fictional character for a day, who would it be and why?': 0.4349530041217804
+Similarity between 'ai homework helper' and 'if you could swap lives with any fictional character for a day, who would it be and why?': 0.4349530041217804
 No relevant keywords found in post 74. Skipping...
 No relevant keywords found in post 74. Skipping...
 Processing post 75...
 Processing post 75...
-Post 75/150 - Title: What job had the worst impact on your mental health?
-Post 75/150 - Title: What job had the worst impact on your mental health?
-Post 75/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2swsn/what_job_had_the_worst_impact_on_your_mental/
-Post 75/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2swsn/what_job_had_the_worst_impact_on_your_mental/
-Similarity between 'food' and 'what job had the worst impact on your mental health?': 0.39242082834243774
-Similarity between 'food' and 'what job had the worst impact on your mental health?': 0.39242082834243774
+Post 75/500 - Title: If you could erase one memory from your mind, what would it be and why?
+Post 75/500 - Title: If you could erase one memory from your mind, what would it be and why?
+Post 75/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3c6bp/if_you_could_erase_one_memory_from_your_mind_what/
+Post 75/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3c6bp/if_you_could_erase_one_memory_from_your_mind_what/
+Similarity between 'ai homework helper' and 'if you could erase one memory from your mind, what would it be and why?': 0.49603602290153503
+Similarity between 'ai homework helper' and 'if you could erase one memory from your mind, what would it be and why?': 0.49603602290153503
 No relevant keywords found in post 75. Skipping...
 No relevant keywords found in post 75. Skipping...
 Processing post 76...
 Processing post 76...
-Post 76/150 - Title: If you could design a theme park based on your life, what attractions would it have?
-Post 76/150 - Title: If you could design a theme park based on your life, what attractions would it have?
-Post 76/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2opef/if_you_could_design_a_theme_park_based_on_your/
-Post 76/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2opef/if_you_could_design_a_theme_park_based_on_your/
-Similarity between 'food' and 'if you could design a theme park based on your life, what attractions would it have?': 0.41110628843307495
-Similarity between 'food' and 'if you could design a theme park based on your life, what attractions would it have?': 0.41110628843307495
+Post 76/500 - Title: What’s a song that always puts you in a good mood, no matter what?
+Post 76/500 - Title: What’s a song that always puts you in a good mood, no matter what?
+Post 76/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g344dk/whats_a_song_that_always_puts_you_in_a_good_mood/
+Post 76/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g344dk/whats_a_song_that_always_puts_you_in_a_good_mood/
+Similarity between 'ai homework helper' and 'what’s a song that always puts you in a good mood, no matter what?': 0.4592055380344391
+Similarity between 'ai homework helper' and 'what’s a song that always puts you in a good mood, no matter what?': 0.4592055380344391
 No relevant keywords found in post 76. Skipping...
 No relevant keywords found in post 76. Skipping...
 Processing post 77...
-Processing post 77...
-Post 77/150 - Title: How do you see yourself in the next 5 years?
-Post 77/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2meyp/how_do_you_see_yourself_in_the_next_5_years/
-Post 77/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2meyp/how_do_you_see_yourself_in_the_next_5_years/
-Similarity between 'food' and 'how do you see yourself in the next 5 years?': 0.4269345998764038
-Similarity between 'food' and 'how do you see yourself in the next 5 years?': 0.4269345998764038
+Post 77/500 - Title: At what point in life were u most happy?
+Post 77/500 - Title: At what point in life were u most happy?
+Post 77/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g321e2/at_what_point_in_life_were_u_most_happy/
+Post 77/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g321e2/at_what_point_in_life_were_u_most_happy/
+Similarity between 'ai homework helper' and 'at what point in life were u most happy?': 0.4314490854740143
+Similarity between 'ai homework helper' and 'at what point in life were u most happy?': 0.4314490854740143
 No relevant keywords found in post 77. Skipping...
 No relevant keywords found in post 77. Skipping...
 Processing post 78...
 Processing post 78...
-Post 78/150 - Title: What's your favourite activity when you don't have to work? 
-Post 78/150 - Title: What's your favourite activity when you don't have to work? 
-Post 78/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2lwf8/whats_your_favourite_activity_when_you_dont_have/
-Post 78/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2lwf8/whats_your_favourite_activity_when_you_dont_have/
-Similarity between 'food' and 'what's your favourite activity when you don't have to work? ': 0.3920660614967346
-Similarity between 'food' and 'what's your favourite activity when you don't have to work? ': 0.3920660614967346
-No relevant keywords found in post 78. Skipping...
+Post 78/500 - Title: What are your biggest turnoffs when dating?
+Post 78/500 - Title: What are your biggest turnoffs when dating?
+Post 78/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3c9oi/what_are_your_biggest_turnoffs_when_dating/
+Post 78/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3c9oi/what_are_your_biggest_turnoffs_when_dating/
+Similarity between 'ai homework helper' and 'what are your biggest turnoffs when dating?': 0.5425986647605896
+Similarity between 'ai homework helper' and 'what are your biggest turnoffs when dating?': 0.5425986647605896
+Relevant content found in post 78
+Generating AI comment for post 78...
+Generating AI comment...
+Sending request to AI model with prompt length: 357 characters
 Processed 78 posts so far
-No relevant keywords found in post 78. Skipping...
+Relevant content found in post 78
+Generating AI comment for post 78...
+Generating AI comment...
+Sending request to AI model with prompt length: 357 characters
 Processed 78 posts so far
+Page height didn't change. Scroll attempt 1/50
+Page height didn't change. Scroll attempt 1/50
+Finding posts...
+Finding posts...
+Found 78 posts
+Processed 78 posts so far
+Processed 78 posts so far
+No new posts found. Scroll attempt 2/50
+No new posts found. Scroll attempt 2/50
+Scrolled successfully, new content loaded.
+Scrolled successfully, new content loaded.
+Finding posts...
+Finding posts...
+Found 25 posts
+Found 25 posts
+Processed 78 posts so far
+Processed 78 posts so far
+No new posts found. Scroll attempt 1/50
+No new posts found. Scroll attempt 1/50
 Scrolled successfully, new content loaded.
 Scrolled successfully, new content loaded.
 Finding posts...
@@ -841,256 +982,273 @@ Found 50 posts
 Found 50 posts
 Processing post 79...
 Processing post 79...
-Post 79/150 - Title: If money wasn't an issue what would you do with your life?
-Post 79/150 - Title: If money wasn't an issue what would you do with your life?
-Post 79/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2l0sy/if_money_wasnt_an_issue_what_would_you_do_with/
-Post 79/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2l0sy/if_money_wasnt_an_issue_what_would_you_do_with/
-Similarity between 'food' and 'if money wasn't an issue what would you do with your life?': 0.3749355375766754
-Similarity between 'food' and 'if money wasn't an issue what would you do with your life?': 0.3749355375766754
+Post 79/500 - Title: What’s a belief or philosophy you hold that most people would disagree with?
+Post 79/500 - Title: What’s a belief or philosophy you hold that most people would disagree with?
+Post 79/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g33uc0/whats_a_belief_or_philosophy_you_hold_that_most/
+Post 79/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g33uc0/whats_a_belief_or_philosophy_you_hold_that_most/
+Similarity between 'ai homework helper' and 'what’s a belief or philosophy you hold that most people would disagree with?': 0.421321839094162
+Similarity between 'ai homework helper' and 'what’s a belief or philosophy you hold that most people would disagree with?': 0.421321839094162
 No relevant keywords found in post 79. Skipping...
 No relevant keywords found in post 79. Skipping...
 Processing post 80...
-Processing post 80...
-Post 80/150 - Title: Which animal do you think has the best parenting skills?
-Post 80/150 - Title: Which animal do you think has the best parenting skills?
-Post 80/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k4y7/which_animal_do_you_think_has_the_best_parenting/
-Post 80/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k4y7/which_animal_do_you_think_has_the_best_parenting/
-Similarity between 'food' and 'which animal do you think has the best parenting skills?': 0.44630590081214905
-Similarity between 'food' and 'which animal do you think has the best parenting skills?': 0.44630590081214905
+Post 80/500 - Title: Which car did you drive for the first time in your life?
+Post 80/500 - Title: Which car did you drive for the first time in your life?
+Post 80/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g321yl/which_car_did_you_drive_for_the_first_time_in/
+Post 80/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g321yl/which_car_did_you_drive_for_the_first_time_in/
+Similarity between 'ai homework helper' and 'which car did you drive for the first time in your life?': 0.35768720507621765
+Similarity between 'ai homework helper' and 'which car did you drive for the first time in your life?': 0.35768720507621765
 No relevant keywords found in post 80. Skipping...
 No relevant keywords found in post 80. Skipping...
 Processing post 81...
-Processing post 81...
-Post 81/150 - Title: What does being sucessful mean to you?
-Post 81/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ltie/what_does_being_sucessful_mean_to_you/
-Post 81/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ltie/what_does_being_sucessful_mean_to_you/
-Similarity between 'food' and 'what does being sucessful mean to you?': 0.35370221734046936
+Post 81/500 - Title: What’s the most ridiculous thing you believed as a kid?
+Post 81/500 - Title: What’s the most ridiculous thing you believed as a kid?
+Post 81/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g31ws7/whats_the_most_ridiculous_thing_you_believed_as_a/
+Post 81/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g31ws7/whats_the_most_ridiculous_thing_you_believed_as_a/
+Similarity between 'ai homework helper' and 'what’s the most ridiculous thing you believed as a kid?': 0.42648419737815857
+Similarity between 'ai homework helper' and 'what’s the most ridiculous thing you believed as a kid?': 0.42648419737815857
 No relevant keywords found in post 81. Skipping...
 No relevant keywords found in post 81. Skipping...
 Processing post 82...
 Processing post 82...
-Post 82/150 - Title: What's a gift that everyone loves?
-Post 82/150 - Title: What's a gift that everyone loves?
-Post 82/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2qdrl/whats_a_gift_that_everyone_loves/
-Post 82/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2qdrl/whats_a_gift_that_everyone_loves/
-Similarity between 'food' and 'what's a gift that everyone loves?': 0.3956296443939209
-Similarity between 'food' and 'what's a gift that everyone loves?': 0.3956296443939209
+Post 82/500 - Title: What's the advice you would give to newbies in the work you are doing?
+Post 82/500 - Title: What's the advice you would give to newbies in the work you are doing?
+Post 82/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cqxb/whats_the_advice_you_would_give_to_newbies_in_the/
+Post 82/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cqxb/whats_the_advice_you_would_give_to_newbies_in_the/
+Similarity between 'ai homework helper' and 'what's the advice you would give to newbies in the work you are doing?': 0.47554811835289
+Similarity between 'ai homework helper' and 'what's the advice you would give to newbies in the work you are doing?': 0.47554811835289
 No relevant keywords found in post 82. Skipping...
 No relevant keywords found in post 82. Skipping...
 Processing post 83...
 Processing post 83...
-Post 83/150 - Title: Are you happy right now? Why?
-Post 83/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2m1ch/are_you_happy_right_now_why/
-Post 83/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2m1ch/are_you_happy_right_now_why/
-Similarity between 'food' and 'are you happy right now? why?': 0.35342317819595337
-Similarity between 'food' and 'are you happy right now? why?': 0.35342317819595337
+Post 83/500 - Title: Where do you feel most at peace?
+Post 83/500 - Title: Where do you feel most at peace?
+Post 83/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g35aq0/where_do_you_feel_most_at_peace/
+Post 83/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g35aq0/where_do_you_feel_most_at_peace/
+Similarity between 'ai homework helper' and 'where do you feel most at peace?': 0.4678437411785126
+Similarity between 'ai homework helper' and 'where do you feel most at peace?': 0.4678437411785126
 No relevant keywords found in post 83. Skipping...
 No relevant keywords found in post 83. Skipping...
 Processing post 84...
 Processing post 84...
-Post 84/150 - Title: How do you deal with the knowledge that one day you will not exist?
-Post 84/150 - Title: How do you deal with the knowledge that one day you will not exist?
-Post 84/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2iw9p/how_do_you_deal_with_the_knowledge_that_one_day/
-Post 84/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2iw9p/how_do_you_deal_with_the_knowledge_that_one_day/
-Similarity between 'food' and 'how do you deal with the knowledge that one day you will not exist?': 0.3841208517551422
+Post 84/500 - Title: Whats your ideal first date?
+Post 84/500 - Title: Whats your ideal first date?
+Post 84/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2y5z4/whats_your_ideal_first_date/
+Post 84/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2y5z4/whats_your_ideal_first_date/
+Similarity between 'ai homework helper' and 'whats your ideal first date?': 0.42154890298843384
+Similarity between 'ai homework helper' and 'whats your ideal first date?': 0.42154890298843384
 No relevant keywords found in post 84. Skipping...
 No relevant keywords found in post 84. Skipping...
 Processing post 85...
 Processing post 85...
-Post 85/150 - Title: what's something that will make you feel instantly old? 
-Post 85/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g29j00/whats_something_that_will_make_you_feel_instantly/
-Post 85/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g29j00/whats_something_that_will_make_you_feel_instantly/
-Similarity between 'food' and 'what's something that will make you feel instantly old? ': 0.39674562215805054
-Similarity between 'food' and 'what's something that will make you feel instantly old? ': 0.39674562215805054
-No relevant keywords found in post 85. Skipping...
-No relevant keywords found in post 85. Skipping...
+Post 85/500 - Title: People who are depressed, how do you deal with it?
+Post 85/500 - Title: People who are depressed, how do you deal with it?
+Post 85/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2pxzv/people_who_are_depressed_how_do_you_deal_with_it/
+Post 85/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2pxzv/people_who_are_depressed_how_do_you_deal_with_it/
+Similarity between 'ai homework helper' and 'people who are depressed, how do you deal with it?': 0.5178434252738953
+Relevant content found in post 85
+Generating AI comment for post 85...
+Generating AI comment...
+Sending request to AI model with prompt length: 364 characters
+Relevant content found in post 85
+Generating AI comment for post 85...
+Generating AI comment...
+Sending request to AI model with prompt length: 364 characters
 Processing post 86...
-Processing post 86...
-Post 86/150 - Title: You wake up covered in whipped cream, what's your next move?
-Post 86/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g27zyd/you_wake_up_covered_in_whipped_cream_whats_your/
-Post 86/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g27zyd/you_wake_up_covered_in_whipped_cream_whats_your/
-Similarity between 'food' and 'you wake up covered in whipped cream, what's your next move?': 0.4907446503639221
-No relevant keywords found in post 86. Skipping...
-No relevant keywords found in post 86. Skipping...
+Post 86/500 - Title: What’s a random fact that you love? 
+Post 86/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3do96/whats_a_random_fact_that_you_love/
+Post 86/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3do96/whats_a_random_fact_that_you_love/
+Similarity between 'ai homework helper' and 'what’s a random fact that you love? ': 0.5096787810325623
+Relevant content found in post 86
+Generating AI comment for post 86...
+Generating AI comment...
+Sending request to AI model with prompt length: 350 characters
+Relevant content found in post 86
+Generating AI comment for post 86...
+Generating AI comment...
+Sending request to AI model with prompt length: 350 characters
 Processing post 87...
 Processing post 87...
-Post 87/150 - Title: What is something you did this week that you're proud of?
-Post 87/150 - Title: What is something you did this week that you're proud of?
-Post 87/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g27d1c/what_is_something_you_did_this_week_that_youre/
-Post 87/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g27d1c/what_is_something_you_did_this_week_that_youre/
-Similarity between 'food' and 'what is something you did this week that you're proud of?': 0.3550190329551697
-Similarity between 'food' and 'what is something you did this week that you're proud of?': 0.3550190329551697
+Post 87/500 - Title: How do you stay positive about finding a partner when you’re 30 and never had one your entire life ?
+Post 87/500 - Title: How do you stay positive about finding a partner when you’re 30 and never had one your entire life ?
+Post 87/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g37g2w/how_do_you_stay_positive_about_finding_a_partner/
+Post 87/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g37g2w/how_do_you_stay_positive_about_finding_a_partner/
+Similarity between 'ai homework helper' and 'how do you stay positive about finding a partner when you’re 30 and never had one your entire life ?': 0.47252920269966125
+Similarity between 'ai homework helper' and 'how do you stay positive about finding a partner when you’re 30 and never had one your entire life ?': 0.47252920269966125
 No relevant keywords found in post 87. Skipping...
 No relevant keywords found in post 87. Skipping...
 Processing post 88...
-Processing post 88...
-Post 88/150 - Title: What’s a skill you wish you had?
-Post 88/150 - Title: What’s a skill you wish you had?
-Post 88/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2pbqf/whats_a_skill_you_wish_you_had/
-Post 88/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2pbqf/whats_a_skill_you_wish_you_had/
-Similarity between 'food' and 'what’s a skill you wish you had?': 0.37837541103363037
-Similarity between 'food' and 'what’s a skill you wish you had?': 0.37837541103363037
+Post 88/500 - Title: What is stopping you from becoming the best version of yourself? 
+Post 88/500 - Title: What is stopping you from becoming the best version of yourself? 
+Post 88/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g36zmb/what_is_stopping_you_from_becoming_the_best/
+Post 88/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g36zmb/what_is_stopping_you_from_becoming_the_best/
+Similarity between 'ai homework helper' and 'what is stopping you from becoming the best version of yourself? ': 0.3911925256252289
+Similarity between 'ai homework helper' and 'what is stopping you from becoming the best version of yourself? ': 0.3911925256252289
 No relevant keywords found in post 88. Skipping...
 No relevant keywords found in post 88. Skipping...
 Processing post 89...
 Processing post 89...
-Post 89/150 - Title: How did you all lose or win the genetic lottery?
-Post 89/150 - Title: How did you all lose or win the genetic lottery?
-Post 89/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2nn7f/how_did_you_all_lose_or_win_the_genetic_lottery/
-Post 89/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2nn7f/how_did_you_all_lose_or_win_the_genetic_lottery/
-Similarity between 'food' and 'how did you all lose or win the genetic lottery?': 0.39801910519599915
-Similarity between 'food' and 'how did you all lose or win the genetic lottery?': 0.39801910519599915
+Post 89/500 - Title: Who is your favorite fictional character, and why?
+Post 89/500 - Title: Who is your favorite fictional character, and why?
+Post 89/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g36s4v/who_is_your_favorite_fictional_character_and_why/
+Post 89/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g36s4v/who_is_your_favorite_fictional_character_and_why/
+Similarity between 'ai homework helper' and 'who is your favorite fictional character, and why?': 0.4704052805900574
+Similarity between 'ai homework helper' and 'who is your favorite fictional character, and why?': 0.4704052805900574
 No relevant keywords found in post 89. Skipping...
 No relevant keywords found in post 89. Skipping...
 Processing post 90...
 Processing post 90...
-Post 90/150 - Title: What’s a fictional character that has influenced you more than a real person?
-Post 90/150 - Title: What’s a fictional character that has influenced you more than a real person?
-Post 90/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2irn0/whats_a_fictional_character_that_has_influenced/
-Post 90/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2irn0/whats_a_fictional_character_that_has_influenced/
-Similarity between 'food' and 'what’s a fictional character that has influenced you more than a real person?': 0.36673256754875183
-Similarity between 'food' and 'what’s a fictional character that has influenced you more than a real person?': 0.36673256754875183
+Post 90/500 - Title: What’s a trend you wish would come back?
+Post 90/500 - Title: What’s a trend you wish would come back?
+Post 90/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g30v8e/whats_a_trend_you_wish_would_come_back/
+Post 90/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g30v8e/whats_a_trend_you_wish_would_come_back/
+Similarity between 'ai homework helper' and 'what’s a trend you wish would come back?': 0.4585798680782318
 No relevant keywords found in post 90. Skipping...
 No relevant keywords found in post 90. Skipping...
 Processing post 91...
 Processing post 91...
-Post 91/150 - Title: What’s one thing that could have debunked an entire show?
-Post 91/150 - Title: What’s one thing that could have debunked an entire show?
-Post 91/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2irdy/whats_one_thing_that_could_have_debunked_an/
-Post 91/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2irdy/whats_one_thing_that_could_have_debunked_an/
-Similarity between 'food' and 'what’s one thing that could have debunked an entire show?': 0.37708207964897156
-Similarity between 'food' and 'what’s one thing that could have debunked an entire show?': 0.37708207964897156
+Post 91/500 - Title: What advice would you give your 16 year old self? 
+Post 91/500 - Title: What advice would you give your 16 year old self? 
+Post 91/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2x23a/what_advice_would_you_give_your_16_year_old_self/
+Post 91/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2x23a/what_advice_would_you_give_your_16_year_old_self/
+Similarity between 'ai homework helper' and 'what advice would you give your 16 year old self? ': 0.44668400287628174
+Similarity between 'ai homework helper' and 'what advice would you give your 16 year old self? ': 0.44668400287628174
 No relevant keywords found in post 91. Skipping...
 No relevant keywords found in post 91. Skipping...
 Processing post 92...
 Processing post 92...
-Post 92/150 - Title: If you wanted to figure out how smart someone is, what question would you ask him/her? Why? 
-Post 92/150 - Title: If you wanted to figure out how smart someone is, what question would you ask him/her? Why? 
-Post 92/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g26vz1/if_you_wanted_to_figure_out_how_smart_someone_is/
-Post 92/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g26vz1/if_you_wanted_to_figure_out_how_smart_someone_is/
-Similarity between 'food' and 'if you wanted to figure out how smart someone is, what question would you ask him/her? why? ': 0.3868744671344757
-Similarity between 'food' and 'if you wanted to figure out how smart someone is, what question would you ask him/her? why? ': 0.3868744671344757
+Post 92/500 - Title: If you could ask your future self one question, what would it be?
+Post 92/500 - Title: If you could ask your future self one question, what would it be?
+Post 92/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g36te6/if_you_could_ask_your_future_self_one_question/
+Post 92/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g36te6/if_you_could_ask_your_future_self_one_question/
+Similarity between 'ai homework helper' and 'if you could ask your future self one question, what would it be?': 0.46268659830093384
+Similarity between 'ai homework helper' and 'if you could ask your future self one question, what would it be?': 0.46268659830093384
 No relevant keywords found in post 92. Skipping...
 No relevant keywords found in post 92. Skipping...
 Processing post 93...
 Processing post 93...
-Post 93/150 - Title: What would you have told yourself during your hardest moments?
-Post 93/150 - Title: What would you have told yourself during your hardest moments?
-Post 93/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2qx6o/what_would_you_have_told_yourself_during_your/
-Post 93/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2qx6o/what_would_you_have_told_yourself_during_your/
-Similarity between 'food' and 'what would you have told yourself during your hardest moments?': 0.3594168424606323
-Similarity between 'food' and 'what would you have told yourself during your hardest moments?': 0.3594168424606323
+Post 93/500 - Title: Why do you think people hold on to grudges?
+Post 93/500 - Title: Why do you think people hold on to grudges?
+Post 93/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g364qi/why_do_you_think_people_hold_on_to_grudges/
+Post 93/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g364qi/why_do_you_think_people_hold_on_to_grudges/
+Similarity between 'ai homework helper' and 'why do you think people hold on to grudges?': 0.48815447092056274
 No relevant keywords found in post 93. Skipping...
 No relevant keywords found in post 93. Skipping...
 Processing post 94...
-Post 94/150 - Title: What’s your favorite childhood memory?
-Post 94/150 - Title: What’s your favorite childhood memory?
-Post 94/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2org8/whats_your_favorite_childhood_memory/
-Post 94/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2org8/whats_your_favorite_childhood_memory/
-Similarity between 'food' and 'what’s your favorite childhood memory?': 0.4812264144420624
-Similarity between 'food' and 'what’s your favorite childhood memory?': 0.4812264144420624
+Processing post 94...
+Post 94/500 - Title: What’s the most bizarre food combination you’ve ever tried, and did you like it?
+Post 94/500 - Title: What’s the most bizarre food combination you’ve ever tried, and did you like it?
+Post 94/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g33u7w/whats_the_most_bizarre_food_combination_youve/
+Post 94/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g33u7w/whats_the_most_bizarre_food_combination_youve/
+Similarity between 'ai homework helper' and 'what’s the most bizarre food combination you’ve ever tried, and did you like it?': 0.48951756954193115
 No relevant keywords found in post 94. Skipping...
 No relevant keywords found in post 94. Skipping...
 Processing post 95...
 Processing post 95...
-Post 95/150 - Title: What's your favourite holiday destination ?
-Post 95/150 - Title: What's your favourite holiday destination ?
-Post 95/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2nxa3/whats_your_favourite_holiday_destination/
-Post 95/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2nxa3/whats_your_favourite_holiday_destination/
-Similarity between 'food' and 'what's your favourite holiday destination ?': 0.4944658577442169
-Similarity between 'food' and 'what's your favourite holiday destination ?': 0.4944658577442169
+Post 95/500 - Title: What quote(s) do you like the most?
+Post 95/500 - Title: What quote(s) do you like the most?
+Post 95/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2uhoe/what_quotes_do_you_like_the_most/
+Post 95/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2uhoe/what_quotes_do_you_like_the_most/
+Similarity between 'ai homework helper' and 'what quote(s) do you like the most?': 0.4681943953037262
+Similarity between 'ai homework helper' and 'what quote(s) do you like the most?': 0.4681943953037262
 No relevant keywords found in post 95. Skipping...
 No relevant keywords found in post 95. Skipping...
 Processing post 96...
-Processing post 96...
-Post 96/150 - Title: What’s something you got overly obsessed about?
-Post 96/150 - Title: What’s something you got overly obsessed about?
-Post 96/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2no4i/whats_something_you_got_overly_obsessed_about/
-Post 96/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2no4i/whats_something_you_got_overly_obsessed_about/
-Similarity between 'food' and 'what’s something you got overly obsessed about?': 0.39053744077682495
-Similarity between 'food' and 'what’s something you got overly obsessed about?': 0.39053744077682495
+Post 96/500 - Title: Who's the most important person in your life?
+Post 96/500 - Title: Who's the most important person in your life?
+Post 96/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2s2pk/whos_the_most_important_person_in_your_life/
+Post 96/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2s2pk/whos_the_most_important_person_in_your_life/
+Similarity between 'ai homework helper' and 'who's the most important person in your life?': 0.3565608263015747
+Similarity between 'ai homework helper' and 'who's the most important person in your life?': 0.3565608263015747
 No relevant keywords found in post 96. Skipping...
 No relevant keywords found in post 96. Skipping...
 Processing post 97...
-Post 97/150 - Title: If you became a vampire , who would you hunt?
-Post 97/150 - Title: If you became a vampire , who would you hunt?
-Post 97/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k83n/if_you_became_a_vampire_who_would_you_hunt/
-Post 97/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k83n/if_you_became_a_vampire_who_would_you_hunt/
-Similarity between 'food' and 'if you became a vampire , who would you hunt?': 0.3869559168815613
-Similarity between 'food' and 'if you became a vampire , who would you hunt?': 0.3869559168815613
-No relevant keywords found in post 97. Skipping...
-No relevant keywords found in post 97. Skipping...
+Processing post 97...
+Post 97/500 - Title: What would you have told yourself during your hardest moments?
+Post 97/500 - Title: What would you have told yourself during your hardest moments?
+Post 97/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2qx6o/what_would_you_have_told_yourself_during_your/
+Post 97/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2qx6o/what_would_you_have_told_yourself_during_your/
+Similarity between 'ai homework helper' and 'what would you have told yourself during your hardest moments?': 0.5421743988990784
+Similarity between 'ai homework helper' and 'what would you have told yourself during your hardest moments?': 0.5421743988990784
+Relevant content found in post 97
+Generating AI comment for post 97...
+Generating AI comment...
+Sending request to AI model with prompt length: 376 characters
+Relevant content found in post 97
+Generating AI comment for post 97...
+Generating AI comment...
+Sending request to AI model with prompt length: 376 characters
 Processing post 98...
 Processing post 98...
-Post 98/150 - Title: Gamers of reddit, what is the best experience of your life?
-Post 98/150 - Title: Gamers of reddit, what is the best experience of your life?
-Post 98/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k5ut/gamers_of_reddit_what_is_the_best_experience_of/
-Post 98/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k5ut/gamers_of_reddit_what_is_the_best_experience_of/
-Similarity between 'food' and 'gamers of reddit, what is the best experience of your life?': 0.3896268308162689
-Similarity between 'food' and 'gamers of reddit, what is the best experience of your life?': 0.3896268308162689
+Post 98/500 - Title: What's a gift that everyone loves?
+Post 98/500 - Title: What's a gift that everyone loves?
+Post 98/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2qdrl/whats_a_gift_that_everyone_loves/
+Post 98/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2qdrl/whats_a_gift_that_everyone_loves/
+Similarity between 'ai homework helper' and 'what's a gift that everyone loves?': 0.4890129268169403
+Similarity between 'ai homework helper' and 'what's a gift that everyone loves?': 0.4890129268169403
 No relevant keywords found in post 98. Skipping...
 No relevant keywords found in post 98. Skipping...
 Processing post 99...
 Processing post 99...
-Post 99/150 - Title: What position do you fall asleep in most? 
-Post 99/150 - Title: What position do you fall asleep in most? 
-Post 99/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2jnyr/what_position_do_you_fall_asleep_in_most/
-Post 99/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2jnyr/what_position_do_you_fall_asleep_in_most/
-Similarity between 'food' and 'what position do you fall asleep in most? ': 0.40909481048583984
-Similarity between 'food' and 'what position do you fall asleep in most? ': 0.40909481048583984
-No relevant keywords found in post 99. Skipping...
-No relevant keywords found in post 99. Skipping...
+Post 99/500 - Title: Why do you think people are so fascinated by true crime stories?
+Post 99/500 - Title: Why do you think people are so fascinated by true crime stories?
+Post 99/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cteo/why_do_you_think_people_are_so_fascinated_by_true/
+Post 99/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cteo/why_do_you_think_people_are_so_fascinated_by_true/
+Similarity between 'ai homework helper' and 'why do you think people are so fascinated by true crime stories?': 0.5100256204605103
+Similarity between 'ai homework helper' and 'why do you think people are so fascinated by true crime stories?': 0.5100256204605103
+Relevant content found in post 99
+Generating AI comment for post 99...
+Generating AI comment...
+Sending request to AI model with prompt length: 378 characters
+Relevant content found in post 99
+Generating AI comment for post 99...
+Generating AI comment...
+Sending request to AI model with prompt length: 378 characters
 Processing post 100...
 Processing post 100...
-Post 100/150 - Title: What do you truly feel is unfair about your life?
-Post 100/150 - Title: What do you truly feel is unfair about your life?
-Post 100/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2h8lw/what_do_you_truly_feel_is_unfair_about_your_life/
-Post 100/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2h8lw/what_do_you_truly_feel_is_unfair_about_your_life/
-Similarity between 'food' and 'what do you truly feel is unfair about your life?': 0.3661004900932312
-Similarity between 'food' and 'what do you truly feel is unfair about your life?': 0.3661004900932312
+Post 100/500 - Title: What is best signs that tells you when it is right time to quit your job?
+Post 100/500 - Title: What is best signs that tells you when it is right time to quit your job?
+Post 100/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3br9y/what_is_best_signs_that_tells_you_when_it_is/
+Post 100/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3br9y/what_is_best_signs_that_tells_you_when_it_is/
+Similarity between 'ai homework helper' and 'what is best signs that tells you when it is right time to quit your job?': 0.4475090205669403
 No relevant keywords found in post 100. Skipping...
 No relevant keywords found in post 100. Skipping...
 Processing post 101...
 Processing post 101...
-Post 101/150 - Title: What are your favorite songs with non-sense lyrics? 
-Post 101/150 - Title: What are your favorite songs with non-sense lyrics? 
-Post 101/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2fvyl/what_are_your_favorite_songs_with_nonsense_lyrics/
-Post 101/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2fvyl/what_are_your_favorite_songs_with_nonsense_lyrics/
-Similarity between 'food' and 'what are your favorite songs with non-sense lyrics? ': 0.40176108479499817
-Similarity between 'food' and 'what are your favorite songs with non-sense lyrics? ': 0.40176108479499817
+Post 101/500 - Title: what's something you wish society accepted as normal ?
+Post 101/500 - Title: what's something you wish society accepted as normal ?
+Post 101/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g39twv/whats_something_you_wish_society_accepted_as/
+Post 101/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g39twv/whats_something_you_wish_society_accepted_as/
+Similarity between 'ai homework helper' and 'what's something you wish society accepted as normal ?': 0.46337080001831055
+Similarity between 'ai homework helper' and 'what's something you wish society accepted as normal ?': 0.46337080001831055
 No relevant keywords found in post 101. Skipping...
 No relevant keywords found in post 101. Skipping...
 Processing post 102...
-Processing post 102...
-Post 102/150 - Title: What’s a fictional character you relate to the most?
-Post 102/150 - Title: What’s a fictional character you relate to the most?
-Post 102/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ew8u/whats_a_fictional_character_you_relate_to_the_most/
-Post 102/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ew8u/whats_a_fictional_character_you_relate_to_the_most/
-Similarity between 'food' and 'what’s a fictional character you relate to the most?': 0.37643158435821533
-No relevant keywords found in post 102. Skipping...
-No relevant keywords found in post 102. Skipping...
+Post 102/500 - Title: What’s like… your point?
+Post 102/500 - Title: What’s like… your point?
+Post 102/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g365wz/whats_like_your_point/
+Post 102/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g365wz/whats_like_your_point/
+Similarity between 'ai homework helper' and 'what’s like… your point?': 0.5320514440536499
+Similarity between 'ai homework helper' and 'what’s like… your point?': 0.5320514440536499
+Relevant content found in post 102
+Generating AI comment for post 102...
+Generating AI comment...
+Sending request to AI model with prompt length: 338 characters
+Relevant content found in post 102
+Generating AI comment for post 102...
+Generating AI comment...
+Sending request to AI model with prompt length: 338 characters
 Processing post 103...
 Processing post 103...
-Post 103/150 - Title: What’s the worst trend that’s ever existed?
-Post 103/150 - Title: What’s the worst trend that’s ever existed?
-Post 103/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ew03/whats_the_worst_trend_thats_ever_existed/
-Post 103/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ew03/whats_the_worst_trend_thats_ever_existed/
-Similarity between 'food' and 'what’s the worst trend that’s ever existed?': 0.41782689094543457
-Similarity between 'food' and 'what’s the worst trend that’s ever existed?': 0.41782689094543457
+Post 103/500 - Title: what are you looking forward to doing today?
+Post 103/500 - Title: what are you looking forward to doing today?
+Post 103/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2vs89/what_are_you_looking_forward_to_doing_today/
+Post 103/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2vs89/what_are_you_looking_forward_to_doing_today/
+Similarity between 'ai homework helper' and 'what are you looking forward to doing today?': 0.4703230559825897
+Similarity between 'ai homework helper' and 'what are you looking forward to doing today?': 0.4703230559825897
 No relevant keywords found in post 103. Skipping...
+Processed 103 posts so far
 No relevant keywords found in post 103. Skipping...
 Processed 103 posts so far
-Processed 103 posts so far
-Page height didn't change. Scroll attempt 1/10
-Finding posts...
-Finding posts...
-Found 25 posts
-Found 25 posts
-Processed 103 posts so far
-Processed 103 posts so far
-No new posts found. Scroll attempt 2/10
-No new posts found. Scroll attempt 2/10
-Scrolled successfully, new content loaded.
 Scrolled successfully, new content loaded.
 Finding posts...
 Finding posts...
@@ -1098,329 +1256,443 @@ Found 50 posts
 Found 50 posts
 Processing post 104...
 Processing post 104...
-Post 104/150 - Title: What’s something you wish was taught in school?
-Post 104/150 - Title: What’s something you wish was taught in school?
-Post 104/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ev8j/whats_something_you_wish_was_taught_in_school/
-Post 104/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ev8j/whats_something_you_wish_was_taught_in_school/
-Similarity between 'food' and 'what’s something you wish was taught in school?': 0.40710240602493286
-Similarity between 'food' and 'what’s something you wish was taught in school?': 0.40710240602493286
+Post 104/500 - Title: Whats the scariest movie you saw growing up?
+Post 104/500 - Title: Whats the scariest movie you saw growing up?
+Post 104/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3bkf6/whats_the_scariest_movie_you_saw_growing_up/
+Post 104/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3bkf6/whats_the_scariest_movie_you_saw_growing_up/
+Similarity between 'ai homework helper' and 'whats the scariest movie you saw growing up?': 0.47678256034851074
+Similarity between 'ai homework helper' and 'whats the scariest movie you saw growing up?': 0.47678256034851074
 No relevant keywords found in post 104. Skipping...
 No relevant keywords found in post 104. Skipping...
 Processing post 105...
 Processing post 105...
-Post 105/150 - Title: If you could see your stats after you die, what would you want to see?
-Post 105/150 - Title: If you could see your stats after you die, what would you want to see?
-Post 105/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2eokd/if_you_could_see_your_stats_after_you_die_what/
-Post 105/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2eokd/if_you_could_see_your_stats_after_you_die_what/
-Similarity between 'food' and 'if you could see your stats after you die, what would you want to see?': 0.3674962818622589
-Similarity between 'food' and 'if you could see your stats after you die, what would you want to see?': 0.3674962818622589
-No relevant keywords found in post 105. Skipping...
-No relevant keywords found in post 105. Skipping...
+Post 105/500 - Title: When do you think you’ve learned the most about yourself?
+Post 105/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3979t/when_do_you_think_youve_learned_the_most_about/
+Post 105/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3979t/when_do_you_think_youve_learned_the_most_about/
+Similarity between 'ai homework helper' and 'when do you think you’ve learned the most about yourself?': 0.5712787508964539
+Similarity between 'ai homework helper' and 'when do you think you’ve learned the most about yourself?': 0.5712787508964539
+Relevant content found in post 105
+Generating AI comment for post 105...
+Generating AI comment...
+Sending request to AI model with prompt length: 371 characters
+Relevant content found in post 105
+Generating AI comment for post 105...
+Generating AI comment...
+Sending request to AI model with prompt length: 371 characters
 Processing post 106...
 Processing post 106...
-Post 106/150 - Title: What increases your life expectancy by 20 years?
-Post 106/150 - Title: What increases your life expectancy by 20 years?
-Post 106/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g27zmf/what_increases_your_life_expectancy_by_20_years/
-Post 106/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g27zmf/what_increases_your_life_expectancy_by_20_years/
-Similarity between 'food' and 'what increases your life expectancy by 20 years?': 0.411164253950119
-Similarity between 'food' and 'what increases your life expectancy by 20 years?': 0.411164253950119
+Post 106/500 - Title: What stresses you out?
+Post 106/500 - Title: What stresses you out?
+Post 106/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g38r9s/what_stresses_you_out/
+Post 106/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g38r9s/what_stresses_you_out/
+Similarity between 'ai homework helper' and 'what stresses you out?': 0.42711204290390015
+Similarity between 'ai homework helper' and 'what stresses you out?': 0.42711204290390015
 No relevant keywords found in post 106. Skipping...
 No relevant keywords found in post 106. Skipping...
 Processing post 107...
 Processing post 107...
-Post 107/150 - Title: What elements do you look for in a game to keep you engaged?
-Post 107/150 - Title: What elements do you look for in a game to keep you engaged?
-Post 107/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g25p76/what_elements_do_you_look_for_in_a_game_to_keep/
-Post 107/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g25p76/what_elements_do_you_look_for_in_a_game_to_keep/
-Similarity between 'food' and 'what elements do you look for in a game to keep you engaged?': 0.37604767084121704
-Similarity between 'food' and 'what elements do you look for in a game to keep you engaged?': 0.37604767084121704
+Post 107/500 - Title: What’s your favorite way to connect with nature?
+Post 107/500 - Title: What’s your favorite way to connect with nature?
+Post 107/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g36rq9/whats_your_favorite_way_to_connect_with_nature/
+Post 107/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g36rq9/whats_your_favorite_way_to_connect_with_nature/
+Similarity between 'ai homework helper' and 'what’s your favorite way to connect with nature?': 0.44360947608947754
+Similarity between 'ai homework helper' and 'what’s your favorite way to connect with nature?': 0.44360947608947754
 No relevant keywords found in post 107. Skipping...
 No relevant keywords found in post 107. Skipping...
 Processing post 108...
 Processing post 108...
-Post 108/150 - Title: If you could instantly master one instrument, which would you choose?
-Post 108/150 - Title: If you could instantly master one instrument, which would you choose?
-Post 108/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g25hmd/if_you_could_instantly_master_one_instrument/
-Post 108/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g25hmd/if_you_could_instantly_master_one_instrument/
-Similarity between 'food' and 'if you could instantly master one instrument, which would you choose?': 0.3692428171634674
-Similarity between 'food' and 'if you could instantly master one instrument, which would you choose?': 0.3692428171634674
+Post 108/500 - Title: What’s a compliment you wish people gave more often?
+Post 108/500 - Title: What’s a compliment you wish people gave more often?
+Post 108/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g348l5/whats_a_compliment_you_wish_people_gave_more_often/
+Post 108/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g348l5/whats_a_compliment_you_wish_people_gave_more_often/
+Similarity between 'ai homework helper' and 'what’s a compliment you wish people gave more often?': 0.46392136812210083
+Similarity between 'ai homework helper' and 'what’s a compliment you wish people gave more often?': 0.46392136812210083
 No relevant keywords found in post 108. Skipping...
 No relevant keywords found in post 108. Skipping...
 Processing post 109...
 Processing post 109...
-Post 109/150 - Title: What's a problem today that was caused by the Cold War?
-Post 109/150 - Title: What's a problem today that was caused by the Cold War?
-Post 109/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2saw1/whats_a_problem_today_that_was_caused_by_the_cold/
-Post 109/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2saw1/whats_a_problem_today_that_was_caused_by_the_cold/
-Similarity between 'food' and 'what's a problem today that was caused by the cold war?': 0.37800222635269165
-Similarity between 'food' and 'what's a problem today that was caused by the cold war?': 0.37800222635269165
+Post 109/500 - Title: Whats something you would want said in your funeral? 
+Post 109/500 - Title: Whats something you would want said in your funeral? 
+Post 109/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g333gs/whats_something_you_would_want_said_in_your/
+Post 109/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g333gs/whats_something_you_would_want_said_in_your/
+Similarity between 'ai homework helper' and 'whats something you would want said in your funeral? ': 0.48345351219177246
 No relevant keywords found in post 109. Skipping...
 No relevant keywords found in post 109. Skipping...
 Processing post 110...
 Processing post 110...
-Post 110/150 - Title: Who's the most important person in your life?
-Post 110/150 - Title: Who's the most important person in your life?
-Post 110/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2s2pk/whos_the_most_important_person_in_your_life/
-Post 110/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2s2pk/whos_the_most_important_person_in_your_life/
-Similarity between 'food' and 'who's the most important person in your life?': 0.40663984417915344
-Similarity between 'food' and 'who's the most important person in your life?': 0.40663984417915344
+Post 110/500 - Title: What movie scene traumatized you as a kid ?
+Post 110/500 - Title: What movie scene traumatized you as a kid ?
+Post 110/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g318yk/what_movie_scene_traumatized_you_as_a_kid/
+Post 110/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g318yk/what_movie_scene_traumatized_you_as_a_kid/
+Similarity between 'ai homework helper' and 'what movie scene traumatized you as a kid ?': 0.4928363263607025
 No relevant keywords found in post 110. Skipping...
 No relevant keywords found in post 110. Skipping...
 Processing post 111...
 Processing post 111...
-Post 111/150 - Title: What’s the most spontaneous thing you’ve ever done?
-Post 111/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2q5oy/whats_the_most_spontaneous_thing_youve_ever_done/
-Post 111/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2q5oy/whats_the_most_spontaneous_thing_youve_ever_done/
-Similarity between 'food' and 'what’s the most spontaneous thing you’ve ever done?': 0.3743300437927246
-Similarity between 'food' and 'what’s the most spontaneous thing you’ve ever done?': 0.3743300437927246
+Post 111/500 - Title: What is your favourite animal?
+Post 111/500 - Title: What is your favourite animal?
+Post 111/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3097k/what_is_your_favourite_animal/
+Post 111/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3097k/what_is_your_favourite_animal/
+Similarity between 'ai homework helper' and 'what is your favourite animal?': 0.42994874715805054
+Similarity between 'ai homework helper' and 'what is your favourite animal?': 0.42994874715805054
 No relevant keywords found in post 111. Skipping...
 No relevant keywords found in post 111. Skipping...
 Processing post 112...
-Post 112/150 - Title: People who are depressed, how do you deal with it?
-Post 112/150 - Title: People who are depressed, how do you deal with it?
-Post 112/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2pxzv/people_who_are_depressed_how_do_you_deal_with_it/
-Post 112/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2pxzv/people_who_are_depressed_how_do_you_deal_with_it/
-Similarity between 'food' and 'people who are depressed, how do you deal with it?': 0.3726251423358917
-Similarity between 'food' and 'people who are depressed, how do you deal with it?': 0.3726251423358917
+Processing post 112...
+Post 112/500 - Title: Actors who work at haunted houses/horror escape rooms, how often have you been punched or attacked?
+Post 112/500 - Title: Actors who work at haunted houses/horror escape rooms, how often have you been punched or attacked?
+Post 112/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2x2tq/actors_who_work_at_haunted_houseshorror_escape/
+Post 112/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2x2tq/actors_who_work_at_haunted_houseshorror_escape/
+Similarity between 'ai homework helper' and 'actors who work at haunted houses/horror escape rooms, how often have you been punched or attacked?': 0.43092048168182373
+Similarity between 'ai homework helper' and 'actors who work at haunted houses/horror escape rooms, how often have you been punched or attacked?': 0.43092048168182373
 No relevant keywords found in post 112. Skipping...
 No relevant keywords found in post 112. Skipping...
 Processing post 113...
 Processing post 113...
-Post 113/150 - Title: What is truly love it or hate it?
-Post 113/150 - Title: What is truly love it or hate it?
-Post 113/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2olnr/what_is_truly_love_it_or_hate_it/
-Post 113/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2olnr/what_is_truly_love_it_or_hate_it/
-Similarity between 'food' and 'what is truly love it or hate it?': 0.3771730363368988
-Similarity between 'food' and 'what is truly love it or hate it?': 0.3771730363368988
+Post 113/500 - Title: What did people in their 20s do after work on an average weekday before technology? 
+Post 113/500 - Title: What did people in their 20s do after work on an average weekday before technology? 
+Post 113/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2wy30/what_did_people_in_their_20s_do_after_work_on_an/
+Post 113/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2wy30/what_did_people_in_their_20s_do_after_work_on_an/
+Similarity between 'ai homework helper' and 'what did people in their 20s do after work on an average weekday before technology? ': 0.4916132092475891
+Similarity between 'ai homework helper' and 'what did people in their 20s do after work on an average weekday before technology? ': 0.4916132092475891
 No relevant keywords found in post 113. Skipping...
 No relevant keywords found in post 113. Skipping...
 Processing post 114...
 Processing post 114...
-Post 114/150 - Title: Fans of Marvel, which joke/reference from the latest Deadpool movie did you like ?
-Post 114/150 - Title: Fans of Marvel, which joke/reference from the latest Deadpool movie did you like ?
-Post 114/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k4ww/fans_of_marvel_which_jokereference_from_the/
-Post 114/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k4ww/fans_of_marvel_which_jokereference_from_the/
-Similarity between 'food' and 'fans of marvel, which joke/reference from the latest deadpool movie did you like ?': 0.3649735748767853
+Post 114/500 - Title: Redditors who have been in coma for a long time (>1 yr) what was it like to "wake up" again? And how did you adjust to literally a long fast forward?
+Post 114/500 - Title: Redditors who have been in coma for a long time (>1 yr) what was it like to "wake up" again? And how did you adjust to literally a long fast forward?
+Post 114/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3d19f/redditors_who_have_been_in_coma_for_a_long_time_1/
+Post 114/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3d19f/redditors_who_have_been_in_coma_for_a_long_time_1/
+Similarity between 'ai homework helper' and 'redditors who have been in coma for a long time (>1 yr) what was it like to "wake up" again? and how did you adjust to literally a long fast forward?': 0.4499799311161041
+Similarity between 'ai homework helper' and 'redditors who have been in coma for a long time (>1 yr) what was it like to "wake up" again? and how did you adjust to literally a long fast forward?': 0.4499799311161041
 No relevant keywords found in post 114. Skipping...
 No relevant keywords found in post 114. Skipping...
 Processing post 115...
-Processing post 115...
-Post 115/150 - Title: Why are you awake right now?
-Post 115/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ih80/why_are_you_awake_right_now/
-Post 115/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ih80/why_are_you_awake_right_now/
-Similarity between 'food' and 'why are you awake right now?': 0.349610835313797
-Similarity between 'food' and 'why are you awake right now?': 0.349610835313797
-No relevant keywords found in post 115. Skipping...
-No relevant keywords found in post 115. Skipping...
+Post 115/500 - Title: What movies,shows, or books do you wish you could experience again for the first time?
+Post 115/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3a7d8/what_moviesshows_or_books_do_you_wish_you_could/
+Post 115/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3a7d8/what_moviesshows_or_books_do_you_wish_you_could/
+Similarity between 'ai homework helper' and 'what movies,shows, or books do you wish you could experience again for the first time?': 0.5041487812995911
+Similarity between 'ai homework helper' and 'what movies,shows, or books do you wish you could experience again for the first time?': 0.5041487812995911
+Relevant content found in post 115
+Generating AI comment for post 115...
+Generating AI comment...
+Sending request to AI model with prompt length: 400 characters
+Relevant content found in post 115
+Generating AI comment for post 115...
+Generating AI comment...
+Sending request to AI model with prompt length: 400 characters
 Processing post 116...
 Processing post 116...
-Post 116/150 - Title: What’s the worst first impression you made on a person? 
-Post 116/150 - Title: What’s the worst first impression you made on a person? 
-Post 116/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2i2vp/whats_the_worst_first_impression_you_made_on_a/
-Post 116/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2i2vp/whats_the_worst_first_impression_you_made_on_a/
-Similarity between 'food' and 'what’s the worst first impression you made on a person? ': 0.38587111234664917
-Similarity between 'food' and 'what’s the worst first impression you made on a person? ': 0.38587111234664917
+Post 116/500 - Title: What’s the most unexpected compliment you’ve ever received? 
+Post 116/500 - Title: What’s the most unexpected compliment you’ve ever received? 
+Post 116/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g39opu/whats_the_most_unexpected_compliment_youve_ever/
+Post 116/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g39opu/whats_the_most_unexpected_compliment_youve_ever/
+Similarity between 'ai homework helper' and 'what’s the most unexpected compliment you’ve ever received? ': 0.448412150144577
+Similarity between 'ai homework helper' and 'what’s the most unexpected compliment you’ve ever received? ': 0.448412150144577
 No relevant keywords found in post 116. Skipping...
 No relevant keywords found in post 116. Skipping...
 Processing post 117...
 Processing post 117...
-Post 117/150 - Title: What is you’re experience with children being absouloutely unfiltered?
-Post 117/150 - Title: What is you’re experience with children being absouloutely unfiltered?
-Post 117/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ha3n/what_is_youre_experience_with_children_being/
-Post 117/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2ha3n/what_is_youre_experience_with_children_being/
-Similarity between 'food' and 'what is you’re experience with children being absouloutely unfiltered?': 0.43625950813293457
-Similarity between 'food' and 'what is you’re experience with children being absouloutely unfiltered?': 0.43625950813293457
+Post 117/500 - Title: What swear word do you use the most when arguing with someone?
+Post 117/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g39kez/what_swear_word_do_you_use_the_most_when_arguing/
+Post 117/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g39kez/what_swear_word_do_you_use_the_most_when_arguing/
+Similarity between 'ai homework helper' and 'what swear word do you use the most when arguing with someone?': 0.46856844425201416
+Similarity between 'ai homework helper' and 'what swear word do you use the most when arguing with someone?': 0.46856844425201416
 No relevant keywords found in post 117. Skipping...
 No relevant keywords found in post 117. Skipping...
 Processing post 118...
 Processing post 118...
-Post 118/150 - Title: Guys, what was your "shit, I'm kinda lonely" moment?
-Post 118/150 - Title: Guys, what was your "shit, I'm kinda lonely" moment?
-Post 118/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2gqj2/guys_what_was_your_shit_im_kinda_lonely_moment/
-Post 118/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2gqj2/guys_what_was_your_shit_im_kinda_lonely_moment/
-Similarity between 'food' and 'guys, what was your "shit, i'm kinda lonely" moment?': 0.37398168444633484
-Similarity between 'food' and 'guys, what was your "shit, i'm kinda lonely" moment?': 0.37398168444633484
+Post 118/500 - Title: What is the coolest most thought provoking quote?
+Post 118/500 - Title: What is the coolest most thought provoking quote?
+Post 118/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g37ysq/what_is_the_coolest_most_thought_provoking_quote/
+Post 118/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g37ysq/what_is_the_coolest_most_thought_provoking_quote/
+Similarity between 'ai homework helper' and 'what is the coolest most thought provoking quote?': 0.42273303866386414
 No relevant keywords found in post 118. Skipping...
 No relevant keywords found in post 118. Skipping...
 Processing post 119...
 Processing post 119...
-Post 119/150 - Title: Millennials what’s the most impressive tech innovation you've witnessed growing up?
-Post 119/150 - Title: Millennials what’s the most impressive tech innovation you've witnessed growing up?
-Post 119/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2fo0m/millennials_whats_the_most_impressive_tech/
-Post 119/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2fo0m/millennials_whats_the_most_impressive_tech/
-Similarity between 'food' and 'millennials what’s the most impressive tech innovation you've witnessed growing up?': 0.39634764194488525
-Similarity between 'food' and 'millennials what’s the most impressive tech innovation you've witnessed growing up?': 0.39634764194488525
+Post 119/500 - Title: What animal would you be for an entire day ?
+Post 119/500 - Title: What animal would you be for an entire day ?
+Post 119/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g360z0/what_animal_would_you_be_for_an_entire_day/
+Post 119/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g360z0/what_animal_would_you_be_for_an_entire_day/
+Similarity between 'ai homework helper' and 'what animal would you be for an entire day ?': 0.40658706426620483
+Similarity between 'ai homework helper' and 'what animal would you be for an entire day ?': 0.40658706426620483
 No relevant keywords found in post 119. Skipping...
 No relevant keywords found in post 119. Skipping...
 Processing post 120...
 Processing post 120...
-Post 120/150 - Title: What would your high school self think if they saw you today?
-Post 120/150 - Title: What would your high school self think if they saw you today?
-Post 120/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2b5w3/what_would_your_high_school_self_think_if_they/
-Post 120/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2b5w3/what_would_your_high_school_self_think_if_they/
-Similarity between 'food' and 'what would your high school self think if they saw you today?': 0.3695436418056488
-Similarity between 'food' and 'what would your high school self think if they saw you today?': 0.3695436418056488
+Post 120/500 - Title: What is a motivational quote that people love using but makes absolutely no sense to you?
+Post 120/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g35w1k/what_is_a_motivational_quote_that_people_love/
+Similarity between 'ai homework helper' and 'what is a motivational quote that people love using but makes absolutely no sense to you?': 0.43640273809432983
+Similarity between 'ai homework helper' and 'what is a motivational quote that people love using but makes absolutely no sense to you?': 0.43640273809432983
 No relevant keywords found in post 120. Skipping...
 No relevant keywords found in post 120. Skipping...
 Processing post 121...
 Processing post 121...
-Post 121/150 - Title: What Quote that you heard or read lives in your head rent free?
-Post 121/150 - Title: What Quote that you heard or read lives in your head rent free?
-Post 121/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2sj3q/what_quote_that_you_heard_or_read_lives_in_your/
-Post 121/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2sj3q/what_quote_that_you_heard_or_read_lives_in_your/
-Similarity between 'food' and 'what quote that you heard or read lives in your head rent free?': 0.38250234723091125
-Similarity between 'food' and 'what quote that you heard or read lives in your head rent free?': 0.38250234723091125
-No relevant keywords found in post 121. Skipping...
-No relevant keywords found in post 121. Skipping...
+Post 121/500 - Title: What is the weirdest band name you have ever heard of?
+Post 121/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g35vne/what_is_the_weirdest_band_name_you_have_ever/
+Post 121/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g35vne/what_is_the_weirdest_band_name_you_have_ever/
+Similarity between 'ai homework helper' and 'what is the weirdest band name you have ever heard of?': 0.5048850178718567
+Relevant content found in post 121
+Generating AI comment for post 121...
+Generating AI comment...
+Sending request to AI model with prompt length: 368 characters
+Relevant content found in post 121
+Generating AI comment for post 121...
+Generating AI comment...
+Sending request to AI model with prompt length: 368 characters
 Processing post 122...
-Processing post 122...
-Post 122/150 - Title: What’s the weirdest compliment you’ve ever received?
-Post 122/150 - Title: What’s the weirdest compliment you’ve ever received?
-Post 122/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2pr1j/whats_the_weirdest_compliment_youve_ever_received/
-Post 122/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2pr1j/whats_the_weirdest_compliment_youve_ever_received/
-Similarity between 'food' and 'what’s the weirdest compliment you’ve ever received?': 0.331903874874115
-Similarity between 'food' and 'what’s the weirdest compliment you’ve ever received?': 0.331903874874115
+Post 122/500 - Title: What can be considered a blessing for some but a curse to others? 
+Post 122/500 - Title: What can be considered a blessing for some but a curse to others? 
+Post 122/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g35vmd/what_can_be_considered_a_blessing_for_some_but_a/
+Post 122/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g35vmd/what_can_be_considered_a_blessing_for_some_but_a/
+Similarity between 'ai homework helper' and 'what can be considered a blessing for some but a curse to others? ': 0.3872879147529602
+Similarity between 'ai homework helper' and 'what can be considered a blessing for some but a curse to others? ': 0.3872879147529602
 No relevant keywords found in post 122. Skipping...
 No relevant keywords found in post 122. Skipping...
 Processing post 123...
-Processing post 123...
-Post 123/150 - Title: What’s the most memorable piece of advice you’ve received from a mentor or teacher?
-Post 123/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2phmq/whats_the_most_memorable_piece_of_advice_youve/
-Post 123/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2phmq/whats_the_most_memorable_piece_of_advice_youve/
-Similarity between 'food' and 'what’s the most memorable piece of advice you’ve received from a mentor or teacher?': 0.37396425008773804
-Similarity between 'food' and 'what’s the most memorable piece of advice you’ve received from a mentor or teacher?': 0.37396425008773804
-No relevant keywords found in post 123. Skipping...
-No relevant keywords found in post 123. Skipping...
+Post 123/500 - Title: Reddit, how do you eat your baguette?
+Post 123/500 - Title: Reddit, how do you eat your baguette?
+Post 123/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g35e67/reddit_how_do_you_eat_your_baguette/
+Post 123/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g35e67/reddit_how_do_you_eat_your_baguette/
+Similarity between 'ai homework helper' and 'reddit, how do you eat your baguette?': 0.5393803119659424
+Similarity between 'ai homework helper' and 'reddit, how do you eat your baguette?': 0.5393803119659424
+Relevant content found in post 123
+Generating AI comment for post 123...
+Generating AI comment...
+Sending request to AI model with prompt length: 351 characters
+Relevant content found in post 123
+Generating AI comment for post 123...
+Generating AI comment...
+Sending request to AI model with prompt length: 351 characters
 Processing post 124...
 Processing post 124...
-Post 124/150 - Title: What’s your guilty pleasure song?
-Post 124/150 - Title: What’s your guilty pleasure song?
-Post 124/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2p9gd/whats_your_guilty_pleasure_song/
-Post 124/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2p9gd/whats_your_guilty_pleasure_song/
-Similarity between 'food' and 'what’s your guilty pleasure song?': 0.369402140378952
-No relevant keywords found in post 124. Skipping...
-Similarity between 'food' and 'what’s your guilty pleasure song?': 0.369402140378952
-No relevant keywords found in post 124. Skipping...
+Post 124/500 - Title: What food hack should everyone know?
+Post 124/500 - Title: What food hack should everyone know?
+Post 124/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g353xn/what_food_hack_should_everyone_know/
+Post 124/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g353xn/what_food_hack_should_everyone_know/
+Similarity between 'ai homework helper' and 'what food hack should everyone know?': 0.5476241707801819
+Similarity between 'ai homework helper' and 'what food hack should everyone know?': 0.5476241707801819
+Relevant content found in post 124
+Relevant content found in post 124
+Generating AI comment for post 124...
+Generating AI comment...
+Sending request to AI model with prompt length: 350 characters
+Generating AI comment for post 124...
+Generating AI comment...
+Sending request to AI model with prompt length: 350 characters
 Processing post 125...
 Processing post 125...
-Post 125/150 - Title: What’s a unique way you’ve celebrated a personal achievement?
-Post 125/150 - Title: What’s a unique way you’ve celebrated a personal achievement?
-Post 125/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2p9am/whats_a_unique_way_youve_celebrated_a_personal/
-Post 125/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2p9am/whats_a_unique_way_youve_celebrated_a_personal/
-Similarity between 'food' and 'what’s a unique way you’ve celebrated a personal achievement?': 0.3352225124835968
-Similarity between 'food' and 'what’s a unique way you’ve celebrated a personal achievement?': 0.3352225124835968
+Post 125/500 - Title: Whats something you almost died from?
+Post 125/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g34991/whats_something_you_almost_died_from/
+Post 125/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g34991/whats_something_you_almost_died_from/
+Similarity between 'ai homework helper' and 'whats something you almost died from?': 0.4553561210632324
+Similarity between 'ai homework helper' and 'whats something you almost died from?': 0.4553561210632324
 No relevant keywords found in post 125. Skipping...
 No relevant keywords found in post 125. Skipping...
 Processing post 126...
-Processing post 126...
-Post 126/150 - Title: what is a food combination that is not common but so tasty?
-Post 126/150 - Title: what is a food combination that is not common but so tasty?
-Post 126/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2p286/what_is_a_food_combination_that_is_not_common_but/
-Post 126/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2p286/what_is_a_food_combination_that_is_not_common_but/
-Similarity between 'food' and 'what is a food combination that is not common but so tasty?': 0.5171382427215576
-Similarity between 'food' and 'what is a food combination that is not common but so tasty?': 0.5171382427215576
-Relevant content found in post 126
-Generating AI comment for post 126...
-Generating AI comment...
-Sending request to AI model with prompt length: 359 characters
-Relevant content found in post 126
-Generating AI comment for post 126...
-Generating AI comment...
-Sending request to AI model with prompt length: 359 characters
+Post 126/500 - Title: What’s something that instantly makes you lose respect for someone?
+Post 126/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g32095/whats_something_that_instantly_makes_you_lose/
+Post 126/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g32095/whats_something_that_instantly_makes_you_lose/
+Similarity between 'ai homework helper' and 'what’s something that instantly makes you lose respect for someone?': 0.43039533495903015
+Similarity between 'ai homework helper' and 'what’s something that instantly makes you lose respect for someone?': 0.43039533495903015
+No relevant keywords found in post 126. Skipping...
+No relevant keywords found in post 126. Skipping...
 Processing post 127...
-Post 127/150 - Title: What’s a place you’ve always wanted to visit that feels like it’s straight out of a fairy tale?
-Post 127/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2p0v3/whats_a_place_youve_always_wanted_to_visit_that/
-Post 127/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2p0v3/whats_a_place_youve_always_wanted_to_visit_that/
-Similarity between 'food' and 'what’s a place you’ve always wanted to visit that feels like it’s straight out of a fairy tale?': 0.39266034960746765
-Similarity between 'food' and 'what’s a place you’ve always wanted to visit that feels like it’s straight out of a fairy tale?': 0.39266034960746765
+Processing post 127...
+Post 127/500 - Title: What’s a seemingly small decision you made that ended up changing your entire life?
+Post 127/500 - Title: What’s a seemingly small decision you made that ended up changing your entire life?
+Post 127/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2z9c2/whats_a_seemingly_small_decision_you_made_that/
+Post 127/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2z9c2/whats_a_seemingly_small_decision_you_made_that/
+Similarity between 'ai homework helper' and 'what’s a seemingly small decision you made that ended up changing your entire life?': 0.43670961260795593
+Similarity between 'ai homework helper' and 'what’s a seemingly small decision you made that ended up changing your entire life?': 0.43670961260795593
 No relevant keywords found in post 127. Skipping...
 No relevant keywords found in post 127. Skipping...
 Processing post 128...
 Processing post 128...
-Post 128/150 - Title: People who have a dog, what's it like?
-Post 128/150 - Title: People who have a dog, what's it like?
-Post 128/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k2ku/people_who_have_a_dog_whats_it_like/
-Post 128/150 - URL: https://www.reddit.com/r/AskReddit/comments/1g2k2ku/people_who_have_a_dog_whats_it_like/
-Similarity between 'food' and 'people who have a dog, what's it like?': 0.3906228244304657
-Similarity between 'food' and 'people who have a dog, what's it like?': 0.3906228244304657
+Post 128/500 - Title: What’s the biggest “bullet you dodged” that still gives you chills when you think about it?
+Post 128/500 - Title: What’s the biggest “bullet you dodged” that still gives you chills when you think about it?
+Post 128/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2woqn/whats_the_biggest_bullet_you_dodged_that_still/
+Post 128/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2woqn/whats_the_biggest_bullet_you_dodged_that_still/
+Similarity between 'ai homework helper' and 'what’s the biggest “bullet you dodged” that still gives you chills when you think about it?': 0.49940329790115356
+Similarity between 'ai homework helper' and 'what’s the biggest “bullet you dodged” that still gives you chills when you think about it?': 0.49940329790115356
 No relevant keywords found in post 128. Skipping...
 Processed 128 posts so far
 No relevant keywords found in post 128. Skipping...
 Processed 128 posts so far
-Page height didn't change. Scroll attempt 1/10
-Page height didn't change. Scroll attempt 1/10
+Page height didn't change. Scroll attempt 1/50
+Page height didn't change. Scroll attempt 1/50
+Finding posts...
+Finding posts...
+Found 50 posts
+Found 50 posts
+Processed 128 posts so far
+No new posts found. Scroll attempt 2/50
+No new posts found. Scroll attempt 2/50
+Page height didn't change. Scroll attempt 3/50
+Finding posts...
+Finding posts...
+Found 50 posts
+Found 50 posts
+Processed 128 posts so far
+No new posts found. Scroll attempt 4/50
+No new posts found. Scroll attempt 4/50
+Page height didn't change. Scroll attempt 5/50
+Finding posts...
+Finding posts...
+Found 50 posts
+Processed 128 posts so far
+Processed 128 posts so far
+No new posts found. Scroll attempt 6/50
+No new posts found. Scroll attempt 6/50
+Page height didn't change. Scroll attempt 7/50
+Page height didn't change. Scroll attempt 7/50
 Finding posts...
 Finding posts...
 Found 50 posts
 Found 50 posts
 Processed 128 posts so far
 Processed 128 posts so far
-No new posts found. Scroll attempt 2/10
-No new posts found. Scroll attempt 2/10
-Page height didn't change. Scroll attempt 3/10
-Page height didn't change. Scroll attempt 3/10
-Finding posts...
-Finding posts...
-Found 50 posts
-Found 50 posts
-Processed 128 posts so far
-No new posts found. Scroll attempt 4/10
-No new posts found. Scroll attempt 4/10
-Page height didn't change. Scroll attempt 5/10
-Page height didn't change. Scroll attempt 5/10
-Finding posts...
-Finding posts...
-Found 50 posts
-Found 50 posts
-Processed 128 posts so far
-No new posts found. Scroll attempt 6/10
-Processed 128 posts so far
-No new posts found. Scroll attempt 6/10
-Page height didn't change. Scroll attempt 7/10
-Page height didn't change. Scroll attempt 7/10
-Finding posts...
-Finding posts...
-Found 50 posts
-Found 50 posts
-Processed 128 posts so far
-No new posts found. Scroll attempt 8/10
-No new posts found. Scroll attempt 8/10
-Page height didn't change. Scroll attempt 9/10
-Page height didn't change. Scroll attempt 9/10
+No new posts found. Scroll attempt 8/50
+No new posts found. Scroll attempt 8/50
+Page height didn't change. Scroll attempt 9/50
+Page height didn't change. Scroll attempt 9/50
 Finding posts...
 Finding posts...
 Found 50 posts
 Found 50 posts
 Processed 128 posts so far
 Processed 128 posts so far
-No new posts found. Scroll attempt 10/10
-No new posts found. Scroll attempt 10/10
-No new posts found after 10 scrolls. Moving to next subreddit.
-Scraping completed for r/AskReddit. Total relevant posts processed: 3
-Scraping process completed.
-Scraping completed for all subreddits. Total relevant posts processed: 3
-No new posts found after 10 scrolls. Moving to next subreddit.
-Scraping completed for r/AskReddit. Total relevant posts processed: 3
-Scraping process completed.
-Scraping completed for all subreddits. Total relevant posts processed: 3
-Scraping process completed.
-Scraping process finished. Handling results...
-Review mode is active. Opening comment review dialog...
-User selected 1 comments for posting.
-Preparing to post 1 comments...
-Waiting 5.85 seconds before posting comment...
-Posting comment for 'if you can eat only one food for the rest of your life, what would it be?' in r/AskReddit...
-Comment URL: https://www.reddit.com/r/AskReddit/comments/1g2l8hr/if_you_can_eat_only_one_food_for_the_rest_of_your/
-AI Comment: HERE IS AI COMMENT...
-Attempting to post the AI-generated comment to URL: https://www.reddit.com/r/AskReddit/comments/1g2l8hr/if_you_can_eat_only_one_food_for_the_rest_of_your/
-Attempting to post the AI-generated comment to URL: https://www.reddit.com/r/AskReddit/comments/1g2l8hr/if_you_can_eat_only_one_food_for_the_rest_of_your/
-Extracted postid: 1g2l8hr
-Extracted postid: 1g2l8hr
-CSRF Token: c7ca53e4f863e1ed383c3ed9b13ac8c5
-CSRF Token: c7ca53e4f863e1ed383c3ed9b13ac8c5
-Comment data and headers prepared successfully
-Comment data and headers prepared successfully
-Comment would be posted here in a real scenario
-Comment would be posted here in a real scenario
-Successfully posted comment in r/AskReddit
-All selected comments have been processed.
+No new posts found. Scroll attempt 10/50
+No new posts found. Scroll attempt 10/50
+Page height didn't change. Scroll attempt 11/50
+Finding posts...
+Finding posts...
+Found 50 posts
+Found 50 posts
+Processed 128 posts so far
+Processed 128 posts so far
+No new posts found. Scroll attempt 12/50
+No new posts found. Scroll attempt 12/50
+Page height didn't change. Scroll attempt 13/50
+Page height didn't change. Scroll attempt 13/50
+Finding posts...
+Finding posts...
+Found 50 posts
+Found 50 posts
+Processed 128 posts so far
+Processed 128 posts so far
+No new posts found. Scroll attempt 14/50
+No new posts found. Scroll attempt 14/50
+Page height didn't change. Scroll attempt 15/50
+Page height didn't change. Scroll attempt 15/50
+Finding posts...
+Finding posts...
+Found 50 posts
+Processed 128 posts so far
+Processed 128 posts so far
+No new posts found. Scroll attempt 16/50
+No new posts found. Scroll attempt 16/50
+Page height didn't change. Scroll attempt 17/50
+Finding posts...
+Finding posts...
+Found 50 posts
+Processed 128 posts so far
+Processed 128 posts so far
+No new posts found. Scroll attempt 18/50
+No new posts found. Scroll attempt 18/50
+Page height didn't change. Scroll attempt 19/50
+Page height didn't change. Scroll attempt 19/50
+Finding posts...
+Finding posts...
+Found 50 posts
+Found 50 posts
+Processed 128 posts so far
+No new posts found. Scroll attempt 20/50
+Page height didn't change. Scroll attempt 21/50
+Page height didn't change. Scroll attempt 21/50
+Finding posts...
+Finding posts...
+Found 50 posts
+Found 50 posts
+Processed 128 posts so far
+Processed 128 posts so far
+No new posts found. Scroll attempt 22/50
+No new posts found. Scroll attempt 22/50
+Page height didn't change. Scroll attempt 23/50
+Page height didn't change. Scroll attempt 23/50
+Finding posts...
+Finding posts...
+Found 50 posts
+Found 50 posts
+Processed 128 posts so far
+Processed 128 posts so far
+No new posts found. Scroll attempt 24/50
+No new posts found. Scroll attempt 24/50
+Page height didn't change. Scroll attempt 25/50
+Page height didn't change. Scroll attempt 25/50
+Finding posts...
+Finding posts...
+Found 50 posts
+Found 50 posts
+Processed 128 posts so far
+No new posts found. Scroll attempt 26/50
+No new posts found. Scroll attempt 26/50
+Page height didn't change. Scroll attempt 27/50
+Page height didn't change. Scroll attempt 27/50
+Finding posts...
+Finding posts...
+Found 50 posts
+Found 50 posts
+Processing post 129...
+Processing post 129...
+Post 129/500 - Title: What’s a subtle sign that someone is interested in you?
+Post 129/500 - Title: What’s a subtle sign that someone is interested in you?
+Post 129/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2shgn/whats_a_subtle_sign_that_someone_is_interested_in/
+Post 129/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g2shgn/whats_a_subtle_sign_that_someone_is_interested_in/
+Similarity between 'ai homework helper' and 'what’s a subtle sign that someone is interested in you?': 0.41301894187927246
+Similarity between 'ai homework helper' and 'what’s a subtle sign that someone is interested in you?': 0.41301894187927246
+No relevant keywords found in post 129. Skipping...
+No relevant keywords found in post 129. Skipping...
+Processing post 130...
+Processing post 130...
+Post 130/500 - Title: What’s the most important lesson you’ve learned about friendship?
+Post 130/500 - Title: What’s the most important lesson you’ve learned about friendship?
+Post 130/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3e9me/whats_the_most_important_lesson_youve_learned/
+Post 130/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3e9me/whats_the_most_important_lesson_youve_learned/
+Similarity between 'ai homework helper' and 'what’s the most important lesson you’ve learned about friendship?': 0.452326238155365
+No relevant keywords found in post 130. Skipping...
+Similarity between 'ai homework helper' and 'what’s the most important lesson you’ve learned about friendship?': 0.452326238155365
+No relevant keywords found in post 130. Skipping...
+Processing post 131...
+Post 131/500 - Title: What’s a hobby you picked up as an adult that you wish you’d started earlier?
+Post 131/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3d15h/whats_a_hobby_you_picked_up_as_an_adult_that_you/
+Processing post 131...
+Post 131/500 - Title: What’s a hobby you picked up as an adult that you wish you’d started earlier?
+Post 131/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3d15h/whats_a_hobby_you_picked_up_as_an_adult_that_you/
+Similarity between 'ai homework helper' and 'what’s a hobby you picked up as an adult that you wish you’d started earlier?': 0.47269517183303833
+Similarity between 'ai homework helper' and 'what’s a hobby you picked up as an adult that you wish you’d started earlier?': 0.47269517183303833
+No relevant keywords found in post 131. Skipping...
+No relevant keywords found in post 131. Skipping...
+Processing post 132...
+Processing post 132...
+Post 132/500 - Title: What’s something you’ve learned the hard way?
+Post 132/500 - Title: What’s something you’ve learned the hard way?
+Post 132/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cjzq/whats_something_youve_learned_the_hard_way/
+Post 132/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cjzq/whats_something_youve_learned_the_hard_way/
+Similarity between 'ai homework helper' and 'what’s something you’ve learned the hard way?': 0.5182167291641235
+Similarity between 'ai homework helper' and 'what’s something you’ve learned the hard way?': 0.5182167291641235
+Relevant content found in post 132
+Generating AI comment for post 132...
+Generating AI comment...
+Sending request to AI model with prompt length: 359 characters
+Relevant content found in post 132
+Generating AI comment for post 132...
+Generating AI comment...
+Sending request to AI model with prompt length: 359 characters
+Processing post 133...
+Processing post 133...
+Post 133/500 - Title: Who is a character in a book that you wish were real?
+Post 133/500 - Title: Who is a character in a book that you wish were real?
+Post 133/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cii2/who_is_a_character_in_a_book_that_you_wish_were/
+Post 133/500 - URL: https://www.reddit.com/r/AskReddit/comments/1g3cii2/who_is_a_character_in_a_book_that_you_wish_were/

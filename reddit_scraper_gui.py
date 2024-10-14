@@ -218,7 +218,7 @@ class ScraperWorker(QThread):
         self.params = params
         self.total_articles = self.calculate_total_comments()
         self.current_comment = 0
-        self.driver = None
+        self.driver = params.get('existing_driver')
         
     def calculate_total_comments(self):
         return len(self.params['subreddits']) * self.params['max_articles'] * (self.params['max_comments'] + 1)
@@ -252,7 +252,8 @@ class ScraperWorker(QThread):
                 website_address=self.params['website_address'],
                 similarity_threshold=self.params['similarity_threshold'],  # Add this line
                 similarity_method=self.params['similarity_method'],
-                tensorflow_sleep_time=self.params['tensorflow_sleep_time'] 
+                tensorflow_sleep_time=self.params['tensorflow_sleep_time'],
+                existing_driver=self.driver
             )
             self.update_log.emit("Scraping process completed.")
             self.scraping_finished.emit(all_results, self.driver)
@@ -658,8 +659,8 @@ class RedditScraperGUI(QMainWindow):
         self.layout.addWidget(separator)
 
         # Input fields
-        self.username = self.create_input("Username:", "bigbootyrob")
-        self.password = self.create_input("Password:", "1893Apple", is_password=True)
+        self.username = self.create_input("Username:", "EASYACEdotAI")
+        self.password = self.create_input("Password:", "She-wolf11", is_password=True)
 
         # Subreddit input and list
         subreddit_layout = QHBoxLayout()
@@ -1094,7 +1095,7 @@ class RedditScraperGUI(QMainWindow):
             "similarity_threshold": self.advanced_settings.get("similarity_threshold", 0.5),
             "similarity_method": self.advanced_settings.get("similarity_method", "TensorFlow (semantic_similarity)"),
             "tensorflow_sleep_time": self.advanced_settings.get("tensorflow_sleep_time", 1.0),
-
+            "existing_driver": getattr(self, 'driver', None),
             **self.advanced_settings  # Include advanced settings
         }
 
