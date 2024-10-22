@@ -625,7 +625,7 @@ class AdvancedSettingsDialog(QDialog):
 class RedditScraperGUI(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Reddit AI Commenter Pro")
+        self.setWindowTitle("Reddit AI Commenter Pro - BETA v1.1 - redditbot.easyace.ai")
         self.setGeometry(100, 100, 1200, 800)
         self.setWindowIcon(SVGIcon(ICONS["reddit"]))
 

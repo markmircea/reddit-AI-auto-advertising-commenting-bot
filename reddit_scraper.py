@@ -394,8 +394,8 @@ def generate_ai_comment(title, persona, ai_response_length=0, openrouter_api_key
 
     prompt += "\nGenerated comment:"
 
-    custom_print(f"Sending request to AI model with prompt length: {len(prompt)} characters")
-    return "HERE IS AI COMMENT"
+    #custom_print(f"Sending request to AI model with prompt length: {len(prompt)} characters")
+    #return "HERE IS AI COMMENT"
     try:
         # Use the provided API key if it's not blank, otherwise use the default
         api_key = openrouter_api_key.strip() if openrouter_api_key and openrouter_api_key.strip() else DEFAULT_API_KEY
@@ -432,8 +432,86 @@ def generate_ai_comment(title, persona, ai_response_length=0, openrouter_api_key
         return None
 
 
-   
 def post_comment(driver, ai_comment, post_url):
+    
+    custom_print(f"Attempting to post comment to URL: {post_url}")
+    
+    if not post_url:
+        custom_print("Error: post_url is None or empty")
+        return False
+
+    try:
+        # Extract post ID from URL
+        post_id = post_url.split("/")[-3]
+        custom_print(f"Extracted postid: {post_id}")
+
+        # Get CSRF token from cookie
+        csrf_token = driver.get_cookie("csrf_token")
+        if not csrf_token:
+            custom_print("Error: CSRF token not found in cookies")
+            return False
+        csrf_token = csrf_token["value"]
+        
+        # Prepare headers matching the browser request
+        headers = {
+            "accept": "text/vnd.reddit.partial+html, application/json",
+            "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+            "content-type": "application/x-www-form-urlencoded",
+            "sec-ch-ua": '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"',
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": '"Windows"',
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "same-origin",
+            "Referer": post_url,
+            "Referrer-Policy": "strict-origin-when-cross-origin"
+        }
+
+        # Prepare the comment content in the exact format Reddit expects
+        comment_content = {
+            "document": [{
+                "e": "par",
+                "c": [{
+                    "e": "text",
+                    "t": ai_comment,
+                    "f": [[0, 0, len(ai_comment)]]
+                }]
+            }]
+        }
+
+        # Prepare the form data
+        form_data = {
+            "content": json.dumps(comment_content),
+            "mode": "richText",
+            "richTextMedia": "[]",
+            "csrf_token": csrf_token
+        }
+
+        # Get all cookies from the driver
+        cookies = {cookie["name"]: cookie["value"] for cookie in driver.get_cookies()}
+
+        # Make the POST request
+        response = requests.post(
+            f"https://www.reddit.com/svc/shreddit/t3_{post_id}/create-comment",
+            headers=headers,
+            cookies=cookies,
+            data=form_data
+        )
+
+        # Check response
+        if response.status_code == 200:
+            custom_print("Comment posted successfully")
+            return True
+        else:
+            custom_print(f"Failed to post comment. Status code: {response.status_code}")
+            custom_print(f"Response content: {response.text}")
+            return False
+
+    except Exception as e:
+        custom_print(f"Error in post_comment: {str(e)}")
+        return False
+    
+#def post_comment(driver, ai_comment, post_url):
     custom_print(f"Attempting to post the AI-generated comment to URL: {post_url}")
     
     if not post_url:
@@ -488,18 +566,18 @@ def post_comment(driver, ai_comment, post_url):
         
         # For testing purposes, we'll just return True here
         # Make the POST request
-    # response = requests.post(
-    #     f"https://www.reddit.com/svc/shreddit/t3_{post_id}/create-comment",
-    #     headers=headers,
-    #     cookies=cookies,
-    #     data=comment_data,
-    # )
+        response = requests.post(
+            f"https://www.reddit.com/svc/shreddit/t3_{post_id}/create-comment",
+            headers=headers,
+            cookies=cookies,
+            data=comment_data,
+        )
 
-    # custom_print(f"Response status: {response.status_code}")
-    # if response.status_code == 200:
-    #     return True
-    # else:
-    #     return False
+        custom_print(f"Response status: {response.status_code}")
+        if response.status_code == 200:
+         return True
+        else:
+         return False
         # In a real scenario, you would make the POST request here
         custom_print("Comment would be posted here in a real scenario")
         return True
