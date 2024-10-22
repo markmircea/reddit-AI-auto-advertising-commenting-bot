@@ -26,8 +26,7 @@ import os
 os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
 # Constants
-#OPENROUTER_API_KEY = "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"
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = ""
 
 YOUR_SITE_URL = "easyace.ai"
 YOUR_APP_NAME = "Reddit Scraper with AI Comments"
