@@ -1,3 +1,4 @@
+![redditbot](https://github.com/user-attachments/assets/662a75ab-c373-44b3-93f8-bf9cd4e7afbe)
 # Reddit AI Commenter Pro
 
 Reddit AI Commenter Pro is a Python application that scrapes Reddit posts, generates AI comments, and allows for review and posting of these comments.
