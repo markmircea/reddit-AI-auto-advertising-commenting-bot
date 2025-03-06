@@ -4,6 +4,7 @@ import os
 import random
 import time
 import traceback
+import datetime
 from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, 
                              QLabel, QLineEdit, QComboBox, QSpinBox, QDoubleSpinBox, QCheckBox, QPushButton, 
                              QTextEdit, QProgressBar, QListWidget, QMenuBar, QMenu, QDialog,
@@ -48,6 +49,7 @@ ICONS = {
     "add": '''<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>''',
     "remove": '''<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line></svg>''',
     "start": '''<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>''',
+    "stop": '''<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect></svg>''',
     "reddit": '''<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>'''
 
 }
@@ -267,6 +269,8 @@ class ScraperWorker(QThread):
             self.update_status.emit(f"Error: {str(e)}")
             self.update_log.emit(f"Error in ScraperWorker: {str(e)}")
             print(f"Error in ScraperWorker: {str(e)}")
+            # Signal to update UI state on error
+            self.scraping_finished.emit([], None)
     def custom_print(self, message):
         self.update_log.emit(message)
         write_to_log_file(message)
@@ -717,10 +721,19 @@ class RedditScraperGUI(QMainWindow):
         self.do_not_post = QCheckBox("Generate AI comments only (do not review, do not post)")
         self.layout.addWidget(self.do_not_post)
 
-        # Start button
+        # Start and Stop buttons
+        button_layout = QHBoxLayout()
+        
         self.start_button = QPushButton(SVGIcon(ICONS["start"]), "Start Scraping, Generating and Reviewing Comments")
         self.start_button.clicked.connect(self.start_scraping)
-        self.layout.addWidget(self.start_button)
+        button_layout.addWidget(self.start_button)
+        
+        self.stop_button = QPushButton(SVGIcon(ICONS["stop"]), "Stop")
+        self.stop_button.clicked.connect(self.stop_scraping)
+        self.stop_button.setEnabled(False)  # Disabled initially
+        button_layout.addWidget(self.stop_button)
+        
+        self.layout.addLayout(button_layout)
 
         # Progress bar and status
         self.progress_bar = QProgressBar()
@@ -899,6 +912,31 @@ class RedditScraperGUI(QMainWindow):
                 color: #666666;
             }
         """)
+        
+        self.stop_button.setStyleSheet("""
+            QPushButton {
+                background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                                  stop:0 #E53935, stop:1 #C62828);
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-weight: bold;
+                font-size: 16px;
+            }
+            QPushButton:hover {
+                background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                                  stop:0 #F44336, stop:1 #D32F2F);
+            }
+            QPushButton:pressed {
+                background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                                  stop:0 #C62828, stop:1 #B71C1C);
+            }
+            QPushButton:disabled {
+                background-color: #CCCCCC;
+                color: #666666;
+            }
+        """)
     
     def open_proxy_settings(self):
         dialog = ProxySettingsDialog(self)
@@ -1068,17 +1106,49 @@ class RedditScraperGUI(QMainWindow):
             row = self.subreddit_list.row(current_item)
             self.subreddit_list.takeItem(row)
 
+    def stop_scraping(self):
+        """Stop the scraping process and close the web driver."""
+        self.update_log("Stopping the scraping process...")
+        self.update_status("Stopping...")
+        
+        # Close the web driver if it exists
+        if hasattr(self, 'driver') and self.driver:
+            try:
+                self.update_log("Closing the web driver...")
+                self.driver.quit()
+                self.driver = None
+                self.update_log("Web driver closed successfully.")
+            except Exception as e:
+                self.update_log(f"Error closing web driver: {str(e)}")
+        
+        # Reset UI state
+        self.start_button.setEnabled(True)
+        self.stop_button.setEnabled(False)
+        self.update_status("Stopped")
+        self.update_log("Scraping process stopped. You can start again to begin a new session.")
+
     def start_scraping(self):
         clear_log_file()
         self.start_button.setEnabled(False)
+        self.stop_button.setEnabled(True)
         self.progress_bar.setValue(0)
         self.log_display.clear()
         self.results_display.clear()
+
+        # If there's an existing driver from a previous session, close it first
+        if hasattr(self, 'driver') and self.driver:
+            try:
+                self.update_log("Closing previous web driver session...")
+                self.driver.quit()
+                self.driver = None
+            except Exception as e:
+                self.update_log(f"Error closing previous web driver: {str(e)}")
 
         subreddits = [self.subreddit_list.item(i).text() for i in range(self.subreddit_list.count())]
         if not subreddits:
             self.update_status("Please add at least one subreddit before starting.")
             self.start_button.setEnabled(True)
+            self.stop_button.setEnabled(False)
             return
 
         params = {
@@ -1128,7 +1198,9 @@ class RedditScraperGUI(QMainWindow):
             else:
                 self.update_log("User cancelled comment review.")
             
+        # Update UI state
         self.start_button.setEnabled(True)
+        self.stop_button.setEnabled(False)
         self.status_label.setText("Scraping completed")
 
     def post_selected_comments(self, selected_comments):
@@ -1162,6 +1234,7 @@ class RedditScraperGUI(QMainWindow):
         self.update_status("Finished posting selected comments")
         self.update_log("All selected comments have been processed.")
         self.start_button.setEnabled(True)
+        self.stop_button.setEnabled(False)
 
     def update_log(self, message):
         write_to_log_file(message)
@@ -1191,6 +1264,7 @@ class RedditScraperGUI(QMainWindow):
 
         self.results_display.append(f"Total posts scraped: {len(results)}")
         self.start_button.setEnabled(True)
+        self.stop_button.setEnabled(False)
         self.status_label.setText("Scraping completed")
 
     def save_results(self):

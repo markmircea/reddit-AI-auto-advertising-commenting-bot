@@ -1,6 +1,14 @@
 ![redditbot](https://github.com/user-attachments/assets/662a75ab-c373-44b3-93f8-bf9cd4e7afbe)
 # Reddit AI Commenter Pro
 
+
+--TODO
+keywords should look for exact match, not match inside words, case INsenesitive
+youtube video
+google search
+
+
+
 Reddit AI Commenter Pro is a Python application that scrapes Reddit posts, generates AI comments, and allows for review and posting of these comments.
 
 ## File Structure
@@ -29,7 +37,8 @@ Note: If you see a `reddit_scraper.py` file in your directory, it's from the old
    - Activate the virtual environment:
      - On Windows:
        ```
-       venv\Scripts\activate
+       venv\Scripts\activate or        .venv\Scripts\activate
+
        ```
      - On macOS and Linux:
        ```

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit AI Commenter Pro - Next-Gen Engagement Tool</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-glow">
+        <div class="glow-point" id="glow1"></div>
+        <div class="glow-point" id="glow2"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo">Reddit AI Commenter Pro</div>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#ai-personas" class="nav-link">AI Personas</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+            </div>
+            <button class="cta-button">Download Now</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Elevate Your Reddit Presence</h1>
+            <p>Intelligent AI-powered commenting system that generates authentic, contextual responses across multiple subreddits to boost your engagement and visibility.</p>
+            <button class="cta-button">Get Started Today</button>
+        </div>
+        <div class="scroll-indicator">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M19 12l-7 7-7-7"/>
+            </svg>
+        </div>
+        <div class="waves">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2 class="section-title">Powerful Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3>Advanced AI Models</h3>
+                <p>Leverage the power of GPT-4, Claude 3.5, and Gemma through OpenRouter integration for human-like responses that engage authentically with Reddit communities.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Smart Keyword Detection</h3>
+                <p>Target relevant posts with precision using TensorFlow neural word vectors and semantic similarity matching to find the perfect opportunities for engagement.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👁️</div>
+                <h3>Comment Review System</h3>
+                <p>Full control over AI-generated comments with an intuitive review and editing interface before posting, ensuring your brand voice is always on point.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>Multi-Subreddit Scanning</h3>
+                <p>Monitor multiple subreddits simultaneously with customizable sorting options (hot, new, top, rising) to maximize your reach and engagement opportunities.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Privacy Protection</h3>
+                <p>Advanced browser fingerprinting and proxy support ensure maximum security and anonymity while operating across Reddit's ecosystem.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚙️</div>
+                <h3>Customizable AI Personas</h3>
+                <p>Choose from multiple AI personas (teenager, normal, educated, bot) or create custom prompts to match your desired tone and style for different communities.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Configure Your Settings</h3>
+                    <p>Enter your Reddit credentials, select target subreddits, and customize your scanning parameters. Set up keyword targeting to find posts relevant to your interests or business.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Scan and Generate</h3>
+                    <p>The bot scans selected subreddits for posts matching your keywords, then uses advanced AI models to generate contextually relevant, engaging comments tailored to each post.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Review and Edit</h3>
+                    <p>Review AI-generated comments in the intuitive interface, make any necessary edits or adjustments to ensure they match your voice and goals perfectly.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Post and Engage</h3>
+                    <p>Approved comments are posted to Reddit with customizable timing to appear natural. Monitor engagement and responses to build your presence authentically.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="features">
+        <h2 class="section-title">See It In Action</h2>
+        <div class="demo-container">
+            <div class="demo-header">
+                <div class="demo-dot red"></div>
+                <div class="demo-dot yellow"></div>
+                <div class="demo-dot green"></div>
+            </div>
+            <div class="demo-content">
+                <div class="demo-row">
+                    <div class="demo-label">Subreddit:</div>
+                    <div class="demo-value">r/AskReddit</div>
+                </div>
+                <div class="demo-row">
+                    <div class="demo-label">Post Title:</div>
+                    <div class="demo-value">What's a product that's actually worth the money?</div>
+                </div>
+                <div class="demo-row">
+                    <div class="demo-label">Keywords:</div>
+                    <div class="demo-value">
+                        <span class="badge primary">product</span>
+                        <span class="badge secondary">worth</span>
+                        <span class="badge accent">money</span>
+                        <span class="badge reddit">value</span>
+                    </div>
+                </div>
+                <div class="demo-row">
+                    <div class="demo-label">AI Persona:</div>
+                    <div class="demo-value">Normal</div>
+                </div>
+                <div class="demo-row">
+                    <div class="demo-label">Generated Comment:</div>
+                    <div class="demo-value">
+                        <div class="demo-comment">I've found that investing in a good quality mattress is absolutely worth every penny. We spend about a third of our lives sleeping, and the difference between waking up refreshed vs. with back pain is huge. I recently got one from SleepEasy.com after researching for weeks, and it's been a game-changer for my sleep quality and overall health. Sometimes the products that seem expensive upfront save you money (and health issues) in the long run!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ai-personas" class="ai-personas">
+        <h2 class="section-title">AI Personas</h2>
+        <div class="personas-grid">
+            <div class="persona-card">
+                <h3>Teenager</h3>
+                <p>Casual, informal style with occasional spelling mistakes and grammatical errors.</p>
+                <div class="persona-example">
+                    omg this is sooo true!! i tried like 5 diff mattresses b4 finding the right 1. sleep is important af and u dont realize how much it matters till u get a good nights sleep for once lol. totally worth spending the $$ on!!
+                </div>
+            </div>
+            <div class="persona-card">
+                <h3>Normal</h3>
+                <p>Balanced, conversational tone with natural language patterns.</p>
+                <div class="persona-example">
+                    I've found that investing in a good quality mattress is absolutely worth every penny. We spend about a third of our lives sleeping, and the difference between waking up refreshed vs. with back pain is huge. I recently got one after researching for weeks, and it's been a game-changer for my sleep quality.
+                </div>
+            </div>
+            <div class="persona-card">
+                <h3>Educated</h3>
+                <p>Sophisticated vocabulary and complex sentence structures with minimal errors.</p>
+                <div class="persona-example">
+                    In my experience, a high-quality mattress represents one of the most prudent investments one can make for their overall well-being. Given that approximately one-third of our lives is spent in slumber, the correlation between sleep quality and cognitive function, immune response, and general health outcomes is well-documented in contemporary research. After extensive comparative analysis, I procured a mattress that optimally balances support and comfort.
+                </div>
+            </div>
+            <div class="persona-card">
+                <h3>Bot</h3>
+                <p>Perfect grammar and structured responses, similar to AI assistants.</p>
+                <div class="persona-example">
+                    A high-quality mattress is definitely worth the investment. Here are three reasons why:
+
+1. Sleep quality directly impacts health, productivity, and mood
+2. The average person spends 26 years sleeping in their lifetime
+3. Quality mattresses typically last 7-10 years, making the cost per use quite reasonable
+
+For optimal results, look for mattresses with proper support for your specific sleeping position and body type.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="status-section">
+        <h2 class="section-title">Advanced Capabilities</h2>
+        <div class="status-grid">
+            <div class="status-card">
+                <h3>✨ Core Features</h3>
+                <ul style="list-style: none;">
+                    <li>• AI Comment Generation</li>
+                    <li>• Multi-Subreddit Scanning</li>
+                    <li>• Smart Keyword Detection</li>
+                    <li>• Comment Review System</li>
+                    <li>• Multiple AI Personas</li>
+                    <li>• Custom Prompts</li>
+                </ul>
+            </div>
+            <div class="status-card">
+                <h3>🔒 Security Features</h3>
+                <ul style="list-style: none;">
+                    <li>• Browser Fingerprinting</li>
+                    <li>• Proxy Support</li>
+                    <li>• Custom User Agents</li>
+                    <li>• Randomized Timing</li>
+                    <li>• Session Management</li>
+                    <li>• Local Execution</li>
+                </ul>
+            </div>
+            <div class="status-card">
+                <h3>🧠 AI Capabilities</h3>
+                <ul style="list-style: none;">
+                    <li>• OpenRouter Integration</li>
+                    <li>• Multiple AI Models</li>
+                    <li>• TensorFlow Semantic Matching</li>
+                    <li>• Custom Response Length</li>
+                    <li>• Product Keyword Integration</li>
+                    <li>• Website Mention Options</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <h2 class="section-title">Pricing Plans</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Basic</h3>
+                <div class="price">$49<span>/month</span></div>
+                <ul class="pricing-features">
+                    <li>5 Subreddits</li>
+                    <li>100 Comments/day</li>
+                    <li>Basic AI Models</li>
+                    <li>Standard Personas</li>
+                    <li>Email Support</li>
+                </ul>
+                <button class="pricing-button">Get Started</button>
+            </div>
+            <div class="pricing-card popular">
+                <div class="popular-tag">POPULAR</div>
+                <h3>Professional</h3>
+                <div class="price">$99<span>/month</span></div>
+                <ul class="pricing-features">
+                    <li>20 Subreddits</li>
+                    <li>500 Comments/day</li>
+                    <li>Advanced AI Models</li>
+                    <li>All Personas + Custom</li>
+                    <li>Proxy Support</li>
+                    <li>Priority Support</li>
+                </ul>
+                <button class="pricing-button">Get Started</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Enterprise</h3>
+                <div class="price">$249<span>/month</span></div>
+                <ul class="pricing-features">
+                    <li>Unlimited Subreddits</li>
+                    <li>Unlimited Comments</li>
+                    <li>Premium AI Models</li>
+                    <li>Custom Prompts & Personas</li>
+                    <li>Advanced Security Features</li>
+                    <li>Dedicated Account Manager</li>
+                    <li>API Access</li>
+                </ul>
+                <button class="pricing-button">Contact Sales</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <div class="faq-question">Is this against Reddit's terms of service?</div>
+            <div class="faq-answer">
+                <p>Reddit AI Commenter Pro is designed to help you create authentic, valuable contributions to Reddit communities. While automated content can potentially violate Reddit's terms if used improperly, our tool focuses on helping you create quality content that adds value to discussions. We recommend using the review feature to ensure all comments align with community guidelines and Reddit's terms of service. Always use the tool responsibly and ethically.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How does the keyword targeting work?</div>
+            <div class="faq-answer">
+                <p>Our keyword targeting system uses two methods: simple keyword matching and advanced TensorFlow semantic similarity. Simple matching looks for exact keywords in post titles, while semantic similarity uses neural word vectors to understand the context and meaning behind posts, allowing for more intelligent targeting even when exact keywords aren't present. You can adjust the similarity threshold to control how closely a post must match your keywords.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Can I customize the AI responses?</div>
+            <div class="faq-answer">
+                <p>Absolutely! Reddit AI Commenter Pro offers multiple customization options. You can select from four different personas (teenager, normal, educated, bot), specify response length, create custom prompts with variables for post title and product information, and even choose different AI models through OpenRouter integration. Additionally, all generated comments can be reviewed and edited before posting.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">What security features are included?</div>
+            <div class="faq-answer">
+                <p>We take security and privacy seriously. The tool includes browser fingerprinting capabilities to customize user agent, platform, and screen resolution. It also supports proxy settings with various types (HTTP, HTTPS, SOCKS4, SOCKS5) and authentication. All processing happens locally on your machine, and no data is sent to our servers beyond what's needed for the AI generation through OpenRouter.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Do I need technical knowledge to use this tool?</div>
+            <div class="faq-answer">
+                <p>No technical knowledge is required! Reddit AI Commenter Pro features an intuitive graphical user interface that makes it easy to configure all settings, review comments, and monitor activity. The setup process is straightforward, and our comprehensive documentation guides you through each step. For advanced users, there are additional customization options available.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Transform Your Reddit Presence?</h2>
+            <p>Join thousands of users who are leveraging AI to create meaningful engagement on Reddit. Get started today and see the difference intelligent automation can make.</p>
+            <button class="cta-button">Download Reddit AI Commenter Pro</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Reddit AI Commenter Pro</h3>
+                <p>The next generation of intelligent Reddit engagement tools, powered by advanced AI and designed for seamless integration with Reddit's ecosystem.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#ai-personas">AI Personas</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">API Reference</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">GDPR Compliance</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Reddit AI Commenter Pro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

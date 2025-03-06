@@ -3,7 +3,7 @@ import requests
 import json
 import random
 import os
-import spacy
+#import spacy
 import logging
 import re
 import nltk
@@ -28,7 +28,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 # Constants
 OPENROUTER_API_KEY = ""
 
-YOUR_SITE_URL = "easyace.ai"
+YOUR_SITE_URL = "AIBrainL.ink"
 YOUR_APP_NAME = "Reddit Scraper with AI Comments"
 
 PERSONAS = {
@@ -43,39 +43,39 @@ SORT_TYPES = ["hot", "new", "top", "rising"]
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 # Load the English model (do this at the beginning of your script)
-nlp = spacy.load("en_core_web_md")
+#nlp = spacy.load("en_core_web_md")
 nltk.download('punkt_tab', quiet=True)
 
-def semantic_similarity(keywords, title, threshold=0.5, sleep_time=1):
-    if nlp is None:
-        custom_print("spaCy model not loaded. Skipping semantic similarity check.")
-        return False
+# def semantic_similarity(keywords, title, threshold=0.5, sleep_time=1):
+#     if nlp is None:
+#         custom_print("spaCy model not loaded. Skipping semantic similarity check.")
+#         return False
 
-    try:
+#     try:
         
-        title_doc = nlp(title)
-        for keyword in keywords:
-            try:
-                time.sleep(sleep_time / 3)
-                keyword_doc = nlp(keyword)
-                time.sleep(sleep_time / 3)
-                similarity = title_doc.similarity(keyword_doc)
-                time.sleep(sleep_time / 3)
-                custom_print(f"Similarity between '{keyword}' and '{title}': {similarity}")
-                logger.info(f"Similarity between '{keyword}' and '{title}': {similarity}")
+#         title_doc = nlp(title)
+#         for keyword in keywords:
+#             try:
+#                 time.sleep(sleep_time / 3)
+#                 keyword_doc = nlp(keyword)
+#                 time.sleep(sleep_time / 3)
+#                 similarity = title_doc.similarity(keyword_doc)
+#                 time.sleep(sleep_time / 3)
+#                 custom_print(f"Similarity between '{keyword}' and '{title}': {similarity}")
+#                 logger.info(f"Similarity between '{keyword}' and '{title}': {similarity}")
                 
-                if similarity >= threshold:
-                    return True
-            except ValueError as e:
-                custom_print(f"Error processing keyword '{keyword}': {str(e)}")
-                logger.info(f"Error processing keyword '{keyword}': {str(e)}")
-                continue
-    except Exception as e:
-        custom_print(f"Error in semantic_similarity function: {str(e)}")
-        logger.info(f"Error in semantic_similarity function: {str(e)}")
-        return False
+#                 if similarity >= threshold:
+#                     return True
+#             except ValueError as e:
+#                 custom_print(f"Error processing keyword '{keyword}': {str(e)}")
+#                 logger.info(f"Error processing keyword '{keyword}': {str(e)}")
+#                 continue
+#     except Exception as e:
+#         custom_print(f"Error in semantic_similarity function: {str(e)}")
+#         logger.info(f"Error in semantic_similarity function: {str(e)}")
+#         return False
 
-    return False
+#     return False
 
 # Initialize the Porter Stemmer
 ps = PorterStemmer()
@@ -637,7 +637,11 @@ def login_and_scrape_reddit(
             if proxy_settings.get("username") and proxy_settings.get("password"):
                 options.add_argument(f"--proxy-auth={proxy_settings['username']}:{proxy_settings['password']}")
 
-        driver = uc.Chrome(options=options)
+        # Explicitly specify Chrome version to match the installed version
+        driver = uc.Chrome(
+            options=options,
+            version_main=133  # Set to match your Chrome version 133.0.6943.142
+        )
         custom_print("New WebDriver session initialized")
 
         # Apply JavaScript attributes using CDP
