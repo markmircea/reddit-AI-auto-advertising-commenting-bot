@@ -111,24 +111,26 @@ body {
 .hero {
     min-height: 100vh;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    padding: 2rem;
+    justify-content: space-between;
+    padding: 8rem 2rem 2rem;
     position: relative;
     overflow: hidden;
     background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
 }
 
 .hero-content {
-    max-width: 900px;
+    max-width: 50%;
     z-index: 1;
-    text-align: center;
+    text-align: left;
     opacity: 0;
     transform: translateY(30px);
+    padding-right: 2rem;
 }
 
 .hero h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     line-height: 1.1;
     margin-bottom: 1.5rem;
     background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
@@ -139,12 +141,51 @@ body {
 }
 
 .hero p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 2.5rem;
     color: rgba(255, 255, 255, 0.8);
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+.hero-screenshot {
+    max-width: 45%;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.hero-img {
+    max-width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 25px 50px rgba(99, 102, 241, 0.4);
+}
+
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+        padding-top: 6rem;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-screenshot {
+        max-width: 90%;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
 }
 
 .features {
@@ -725,6 +766,27 @@ body {
     100% {
         transform: translateX(-50%);
     }
+}
+
+.app-screenshot {
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.screenshot-img {
+    max-width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.screenshot-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
 }
 
 .demo-container {

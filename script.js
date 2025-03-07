@@ -9,6 +9,15 @@ window.addEventListener('DOMContentLoaded', () => {
         duration: 1.5,
         ease: 'power3.out'
     });
+    
+    // Hero screenshot animation
+    gsap.to('.hero-screenshot', {
+        opacity: 1,
+        y: 0,
+        duration: 1.5,
+        delay: 0.5,
+        ease: 'power3.out'
+    });
 
     // Feature cards animation
     gsap.utils.toArray('.feature-card').forEach((card, i) => {
@@ -116,6 +125,20 @@ window.addEventListener('DOMContentLoaded', () => {
     gsap.to('.cta-content', {
         scrollTrigger: {
             trigger: '.cta-content',
+            start: 'top bottom-=100',
+            end: 'top center',
+            toggleActions: 'play none none reverse'
+        },
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power3.out'
+    });
+
+    // App screenshot animation
+    gsap.to('.app-screenshot', {
+        scrollTrigger: {
+            trigger: '.app-screenshot',
             start: 'top bottom-=100',
             end: 'top center',
             toggleActions: 'play none none reverse'
