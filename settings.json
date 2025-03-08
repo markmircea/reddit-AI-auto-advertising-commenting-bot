@@ -1,6 +1,6 @@
 {
-    "username": "bigbootyrob",
-    "password": "1893Apple",
+    "username": "",
+    "password": "",
     "subreddits": [
         "startups",
         "retail",
@@ -26,7 +26,7 @@
     "proxy_settings": {},
     "fingerprint_settings": {},
     "advanced_settings": {
-        "openrouter_api_key": "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",
+        "openrouter_api_key": "",
         "scroll_retries": 3,
         "button_retries": 1,
         "persona": "normal",
