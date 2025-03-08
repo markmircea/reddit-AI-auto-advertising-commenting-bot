@@ -555,7 +555,7 @@ class AdvancedSettingsDialog(QDialog):
 
         # New fields for product keywords and website address
         self.product_keywords = QLineEdit(self)
-        self.product_keywords.setPlaceholderText("Enter product keywords (seperated by , )")
+        self.product_keywords.setPlaceholderText("Enter product keywords (seperated by , ) - used to identify which titles are relevent and will be commented on")
         form_layout.addRow("Product Keywords (seperate by , ):", self.product_keywords)
         
         # Add similarity threshold input
@@ -563,17 +563,17 @@ class AdvancedSettingsDialog(QDialog):
         self.similarity_threshold.setRange(0.0, 1.0)
         self.similarity_threshold.setSingleStep(0.01)
         self.similarity_threshold.setValue(0.5)  # Default value
-        form_layout.addRow("Similarity Threshold (1 is exact match, for Tensorflow only):", self.similarity_threshold)
+        form_layout.addRow("Similarity Threshold (1 is exact match, for Tensorflow only) (NOT FUNCTIONAL YET):", self.similarity_threshold)
         
         self.tensorflow_sleep_time = QDoubleSpinBox(self)
         self.tensorflow_sleep_time.setRange(0.0, 10.0)
         self.tensorflow_sleep_time.setSingleStep(0.1)
         self.tensorflow_sleep_time.setValue(1.0)  # Default value
-        form_layout.addRow("TensorFlow Sleep Time (seconds, for Tensorflow only):", self.tensorflow_sleep_time)
+        form_layout.addRow("TensorFlow Sleep Time (seconds, for Tensorflow only) (NOT FUNCTIONAL YET):", self.tensorflow_sleep_time)
 
         
         self.similarity_method = QComboBox(self)
-        self.similarity_method.addItems(["Simple (keyword matching only)", "TensorFlow (semantic_similarity)"])
+        self.similarity_method.addItems(["Simple (keyword matching only)", "TensorFlow (semantic_similarity) (NOT FUNCTIONAL YET)"])
         form_layout.addRow("Similarity Method:", self.similarity_method)
 
 
@@ -586,7 +586,7 @@ class AdvancedSettingsDialog(QDialog):
         # Custom prompt input
         prompt_label = QLabel("Custom AI Prompt:")
         self.custom_prompt = QTextEdit(self)
-        self.custom_prompt.setPlaceholderText("Enter your custom prompt here. Use {title}, {length}, {product}, and {website} as placeholders. ex: I want you to generate an useful comment based on the {title} of this reddit post that incorporates my {website}. My {website} is about {product}. {length}")
+        self.custom_prompt.setPlaceholderText("Enter your custom prompt here. Use {title}, {length}, {product}, and {website} as placeholders. ex: I want you to generate an useful comment based on the {title} of this reddit post that incorporates my {website}. My {website} is about the following keywords {product}. {length}")
         self.custom_prompt.setMinimumHeight(100)
         layout.addWidget(prompt_label)
         layout.addWidget(self.custom_prompt)
@@ -629,7 +629,7 @@ class AdvancedSettingsDialog(QDialog):
 class RedditScraperGUI(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Reddit AI Commenter Pro - BETA v1.1 - redditbot.easyace.ai")
+        self.setWindowTitle("Reddit AI Commenter Pro - BETA v1.1 - reddit.aibrainl.ink")
         self.setGeometry(100, 100, 1200, 800)
         self.setWindowIcon(SVGIcon(ICONS["reddit"]))
 
@@ -669,8 +669,8 @@ class RedditScraperGUI(QMainWindow):
         self.layout.addWidget(separator)
 
         # Input fields
-        self.username = self.create_input("Username:", "EASYACEdotAI")
-        self.password = self.create_input("Password:", "She-wolf11", is_password=True)
+        self.username = self.create_input("Username:", "https://AIBrain.Link/")
+        self.password = self.create_input("Password:", "", is_password=True)
 
         # Subreddit input and list
         subreddit_layout = QHBoxLayout()
@@ -698,7 +698,7 @@ class RedditScraperGUI(QMainWindow):
         self.layout.addWidget(self.sort_type)
 
         self.max_articles = self.create_spinbox("Max Articles per Subreddit:", 1, 1000, 10)
-        self.max_comments = self.create_spinbox("Max Comments per Article:", 0, 1000, 10)        
+        self.max_comments = self.create_spinbox("Max Comments per Article: (NOT FUNCTIONAL YET)", 0, 1000, 10)        
         
         # Wait time input fields
         wait_time_layout = QHBoxLayout()
@@ -1169,7 +1169,7 @@ class RedditScraperGUI(QMainWindow):
             "custom_prompt": self.advanced_settings.get("custom_prompt", "").strip(),
             "product_keywords": self.advanced_settings.get("product_keywords", ""),
             "similarity_threshold": self.advanced_settings.get("similarity_threshold", 0.5),
-            "similarity_method": self.advanced_settings.get("similarity_method", "TensorFlow (semantic_similarity)"),
+            "similarity_method": self.advanced_settings.get("similarity_method", "TensorFlow (semantic_similarity) (NOT FUNCTIONAL YET)"),
             "tensorflow_sleep_time": self.advanced_settings.get("tensorflow_sleep_time", 1.0),
             "existing_driver": getattr(self, 'driver', None),
             **self.advanced_settings  # Include advanced settings
@@ -1287,7 +1287,7 @@ class RedditScraperGUI(QMainWindow):
 
     def buy_license(self):
         # Open the license purchase website
-        QDesktopServices.openUrl(QUrl("https://your-license-purchase-url.com"))
+        QDesktopServices.openUrl(QUrl("https://reddit.aibrainl.ink"))
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

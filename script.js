@@ -1,5 +1,44 @@
 gsap.registerPlugin(ScrollTrigger);
 
+// Image expansion functionality
+function expandImage(img) {
+    // Create modal overlay
+    const overlay = document.createElement('div');
+    overlay.style.position = 'fixed';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+    overlay.style.display = 'flex';
+    overlay.style.justifyContent = 'center';
+    overlay.style.alignItems = 'center';
+    overlay.style.zIndex = '9999';
+    overlay.style.cursor = 'pointer';
+    
+    // Create expanded image
+    const expandedImg = document.createElement('img');
+    expandedImg.src = img.src;
+    expandedImg.alt = img.alt;
+    expandedImg.style.maxWidth = '90%';
+    expandedImg.style.maxHeight = '90%';
+    expandedImg.style.objectFit = 'contain';
+    expandedImg.style.border = '1px solid rgba(255, 255, 255, 0.1)';
+    expandedImg.style.borderRadius = '8px';
+    expandedImg.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.4)';
+    
+    // Add image to overlay
+    overlay.appendChild(expandedImg);
+    
+    // Add overlay to body
+    document.body.appendChild(overlay);
+    
+    // Close overlay when clicked
+    overlay.addEventListener('click', function() {
+        document.body.removeChild(overlay);
+    });
+}
+
 // Initialize GSAP animations
 window.addEventListener('DOMContentLoaded', () => {
     // Hero content animation
@@ -249,15 +288,22 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Button hover effect
+    // Simple button hover effect
     document.querySelectorAll('.cta-button, .pricing-button').forEach(button => {
-        button.addEventListener('mousemove', (e) => {
-            const rect = button.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            button.style.setProperty('--x', `${x}px`);
-            button.style.setProperty('--y', `${y}px`);
+        button.addEventListener('mouseenter', () => {
+            gsap.to(button, {
+                scale: 1.05,
+                duration: 0.3,
+                ease: 'power2.out'
+            });
+        });
+        
+        button.addEventListener('mouseleave', () => {
+            gsap.to(button, {
+                scale: 1,
+                duration: 0.3,
+                ease: 'power2.out'
+            });
         });
     });
 

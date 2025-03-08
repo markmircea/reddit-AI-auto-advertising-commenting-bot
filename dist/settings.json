@@ -1,0 +1,34 @@
+{
+    "username": "bigbootyrob",
+    "password": "1893Apple",
+    "subreddits": [
+        "startups",
+        "retail",
+        "ecommerce",
+        "marketing",
+        "sales",
+        "restaurantsTechnology",
+        "sideproject"
+    ],
+    "sort_type": "new",
+    "max_articles": 5,
+    "max_comments": 0,
+    "min_wait_time": 50,
+    "max_wait_time": 150,
+    "ai_response_length": 30,
+    "proxy_settings": {},
+    "fingerprint_settings": {},
+    "advanced_settings": {
+        "openrouter_api_key": "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",
+        "scroll_retries": 3,
+        "button_retries": 1,
+        "persona": "normal",
+        "custom_model": "openai/o3-mini-high",
+        "custom_prompt": "I want you to generate an useful comment based on the {title} of this reddit post that incorporates my {website}. My {website} is about AI business process automation to help businesses save money. You should reply with the title directly in a while also seeming human {length}",
+        "product_keywords": "business, AI, artificial intelligence, company",
+        "website_address": "https://AIBrainL.ink",
+        "similarity_threshold": 0.18,
+        "similarity_method": "Simple (keyword matching only)",
+        "tensorflow_sleep_time": 1.0
+    }
+}

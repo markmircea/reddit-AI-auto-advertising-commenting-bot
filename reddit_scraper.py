@@ -387,7 +387,7 @@ def generate_ai_comment(title, persona, ai_response_length=0, openrouter_api_key
     else:
         prompt = f"{PERSONAS[persona]} {length_instruction}Based on the following article title, generate an appropriate and insightful comment response. "
         if product_keywords:
-            prompt += f"Incorporate information about this product: {product_keywords}. "
+            prompt += f"Incorporate information about these keywords: {product_keywords}. "
         if website_address:
             prompt += f"Include this website in your response: {website_address}. "
         prompt += f"\n\nTitle: {title}\n"
